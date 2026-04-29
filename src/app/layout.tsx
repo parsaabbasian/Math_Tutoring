@@ -3,8 +3,8 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Avin Math | Personal Tutor",
-  description: "Avin Mosavi's personal math tutoring website.",
+  title: "Avin Math Tutoring",
+  description: "Avin Mousavi's personal math tutoring website.",
 };
 
 export default function RootLayout({

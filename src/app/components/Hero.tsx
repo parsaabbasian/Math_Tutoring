@@ -13,7 +13,7 @@ export default function Hero() {
             <span className="gradient-text">Confidence & Joy</span>
           </h1>
           <p className={styles.description}>
-            Join personalized, interactive math classes tailored to your learning style. Whether you are aiming for top grades or simply want to understand the fundamentals, I am here to help.
+            I am a Canadian engineering student and high school graduate offering math tutoring based on the Canadian curriculum. My lessons emphasize conceptual understanding, problem-solving, and analytical thinking, tailored specifically to your needs.
           </p>
           <div className={styles.actions}>
             <Link href="/#join" className="btn-primary">Start Learning Today</Link>
@@ -21,16 +21,16 @@ export default function Hero() {
           </div>
           <div className={styles.stats}>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>500+</span>
-              <span className={styles.statLabel}>Students</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>98%</span>
-              <span className={styles.statLabel}>Success Rate</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>10+</span>
+              <span className={styles.statNumber}>1+</span>
               <span className={styles.statLabel}>Years Exp.</span>
+            </div>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>2</span>
+              <span className={styles.statLabel}>Languages (En/Fa)</span>
+            </div>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>$20</span>
+              <span className={styles.statLabel}>CAD / Hour</span>
             </div>
           </div>
         </div>
