@@ -1,0 +1,120 @@
+.about {
+  background: var(--surface);
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.videoPlaceholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, var(--surface-alt) 0%, var(--border) 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.videoPlaceholder:hover {
+  box-shadow: var(--shadow-md);
+  transform: scale(1.02);
+}
+
+.playButton {
+  width: 64px;
+  height: 64px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 16px var(--primary-light);
+  transition: var(--transition);
+}
+
+.videoPlaceholder:hover .playButton {
+  transform: scale(1.1);
+}
+
+.videoText {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutText {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  font-size: 1.125rem;
+}
+
+.portfolio {
+  margin-top: 24px;
+  background: var(--surface-alt);
+  padding: 32px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.portfolioTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.portfolioList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.portfolioList li {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.contactInfo {
+  margin-top: 32px;
+}
+
+.contactLink {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  color: var(--foreground);
+  transition: var(--transition);
+}
+
+.contactLink:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .aboutContainer {
+    grid-template-columns: 1fr;
+  }
+}
