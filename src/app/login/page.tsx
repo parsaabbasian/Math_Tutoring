@@ -26,7 +26,7 @@ export default function Login() {
           &larr; Back to Home
         </Link>
       </div>
-      
+
       <div className={styles.loginContainer}>
         <div className={styles.loginBox}>
           <div className={styles.brand}>
@@ -37,30 +37,30 @@ export default function Login() {
           <form onSubmit={handleLogin} className={styles.form}>
             <div className={styles.inputGroup}>
               <label htmlFor="email" className={styles.label}>Email Address</label>
-              <input 
-                type="email" 
-                id="email" 
+              <input
+                type="email"
+                id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className={styles.input} 
-                required 
-                placeholder="student@example.com" 
+                className={styles.input}
+                required
+                placeholder="student@example.com"
               />
             </div>
-            
+
             <div className={styles.inputGroup}>
               <div className={styles.passwordLabelRow}>
                 <label htmlFor="password" className={styles.label}>Password</label>
                 <a href="#" className={styles.forgotPassword}>Forgot Password?</a>
               </div>
-              <input 
-                type="password" 
-                id="password" 
+              <input
+                type="password"
+                id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className={styles.input} 
-                required 
-                placeholder="••••••••" 
+                className={styles.input}
+                required
+                placeholder="••••••••"
               />
             </div>
 
