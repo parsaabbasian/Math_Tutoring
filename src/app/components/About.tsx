@@ -11,18 +11,19 @@ export default function About() {
         <div className={styles.aboutContent}>
           <h2 className="section-title" style={{ textAlign: 'left' }}>Who I Am</h2>
           <p className={styles.aboutText}>
-            Hi, I'm <strong>Avin Mosavi</strong>. With a deep passion for mathematics and over a decade of experience, I've dedicated my career to making math accessible, engaging, and genuinely enjoyable for students of all levels.
+            Hi, I'm <strong>Avin Mousavi</strong>. I am a graduate of the Canadian education system and currently a bachelor's degree student in engineering. With a strong foundation in the Ontario Curriculum, I am fully familiar with the Canadian method of teaching mathematics, which emphasizes conceptual understanding, problem-solving, and analytical thinking.
           </p>
           <p className={styles.aboutText}>
-            My teaching philosophy revolves around building a strong foundation. I believe that once a student truly understands the "why" behind the numbers, the "how" becomes second nature. Whether it's algebra, calculus, or basic arithmetic, I tailor my approach to fit your unique learning style.
+            I have experience teaching students from elementary to high school. My teaching method is based on conceptual education, proceeding step-by-step with examples and targeted practice. I first assess the student's level and then tailor my approach to their specific needs. My goal is to strengthen your deep understanding of mathematics, increase self-confidence, and ensure academic success. I am fluent in both Persian and English, and I can teach in whichever language you prefer.
           </p>
           <div className={styles.portfolio}>
-            <h3 className={styles.portfolioTitle}>My Qualifications</h3>
+            <h3 className={styles.portfolioTitle}>Experience & Qualifications</h3>
             <ul className={styles.portfolioList}>
-              <li>🎓 M.Sc. in Mathematics</li>
-              <li>🏆 10+ Years of Tutoring Experience</li>
-              <li>🌟 Expert in High School and College Level Math</li>
-              <li>💻 Seamless Online Teaching Environment</li>
+              <li>🎓 Bachelor of Engineering student</li>
+              <li>📜 Diploma from the Canadian education system (Ontario Curriculum)</li>
+              <li>🌟 Experience teaching mathematics from elementary to high school</li>
+              <li>💻 Private math tutoring in a university environment</li>
+              <li>🗣️ Full fluency in English and Persian</li>
             </ul>
           </div>
           <div className={styles.contactInfo}>

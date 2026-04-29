@@ -30,7 +30,7 @@ export default function Login() {
       <div className={styles.loginContainer}>
         <div className={styles.loginBox}>
           <div className={styles.brand}>
-            <span className={styles.logo}>Avin <span className="gradient-text">Math</span></span>
+            <span className={styles.logo}>Avin <span className="gradient-text">Math Tutoring</span></span>
             <p className={styles.subtitle}>Welcome back! Please login to your account.</p>
           </div>
 

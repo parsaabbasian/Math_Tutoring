@@ -7,7 +7,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
-          Avin <span className="gradient-text">Math</span>
+          Avin <span className="gradient-text">Math Tutoring</span>
         </Link>
         <nav className={styles.nav}>
           <Link href="/#how-it-works" className={styles.navLink}>How it Works</Link>

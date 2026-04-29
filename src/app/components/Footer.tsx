@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.brand}>
-          <span className={styles.logo}>Avin <span className="gradient-text">Math</span></span>
+          <span className={styles.logo}>Avin <span className="gradient-text">Math Tutoring</span></span>
           <p className={styles.tagline}>Empowering students through personalized mathematics education.</p>
         </div>
         <div className={styles.links}>
@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
       <div className={styles.bottomBar}>
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} Avin Mosavi. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Avin Mousavi. All rights reserved.</p>
         </div>
       </div>
     </footer>
