@@ -38,7 +38,7 @@ export default function Hero() {
           <div className={styles.imageWrapper}>
             <Image 
               src="/avin_portrait.png" 
-              alt="Avin Mosavi - Math Tutor" 
+              alt="Avin Mousavi - Math Tutor" 
               width={500} 
               height={600} 
               className={styles.image}

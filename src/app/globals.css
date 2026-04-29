@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary: #f25b22; /* Vibrant Orange like Darsoon */
-  --primary-hover: #d94a15;
-  --primary-light: rgba(242, 91, 34, 0.1);
+  --primary: #0a7373; /* Deep Teal from logo */
+  --primary-hover: #085959;
+  --primary-light: rgba(10, 115, 115, 0.1);
   --background: #fdfdfd;
   --foreground: #1a1a1a;
   --surface: #ffffff;
@@ -131,7 +131,7 @@ button {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary) 0%, #ff8c42 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #12b8b8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
