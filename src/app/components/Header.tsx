@@ -22,7 +22,7 @@ export default function Header() {
         <span className={styles.decorSymbol}>x</span>
         <span className={styles.decorSymbol}>∞</span>
       </div>
-      
+
       <div className={`${styles.containerWide} ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
           <Image
@@ -36,7 +36,7 @@ export default function Header() {
         </Link>
 
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           className={styles.mobileMenuToggle}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
