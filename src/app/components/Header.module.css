@@ -155,25 +155,10 @@
   font-size: 1.4rem;
 }
 
-.decorSymbol:nth-child(1) {
-  top: 20%;
-  left: 15%;
-}
-
-.decorSymbol:nth-child(2) {
-  top: 40%;
-  left: 45%;
-}
-
-.decorSymbol:nth-child(3) {
-  top: 15%;
-  left: 75%;
-}
-
-.decorSymbol:nth-child(4) {
-  top: 50%;
-  left: 90%;
-}
+.decorSymbol:nth-child(1) { top: 25%; left: 3%; }
+.decorSymbol:nth-child(2) { top: 45%; left: 8%; }
+.decorSymbol:nth-child(3) { top: 20%; right: 3%; }
+.decorSymbol:nth-child(4) { top: 50%; right: 8%; }
 
 @media (max-width: 768px) {
   .headerDecor {
