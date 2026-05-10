@@ -26,49 +26,49 @@
 .symbol1 {
   width: 150px;
   top: 8%;
-  left: 5%;
+  left: 2%;
   animation: drift 25s ease-in-out infinite alternate;
 }
 
 .symbol2 {
   width: 120px;
   top: 20%;
-  right: 8%;
+  right: 2%;
   animation: drift 30s ease-in-out infinite alternate-reverse;
 }
 
 .symbol3 {
   width: 180px;
   bottom: 15%;
-  left: 8%;
+  left: 3%;
   animation: drift 35s ease-in-out infinite alternate;
 }
 
 .symbol4 {
   width: 160px;
   bottom: 8%;
-  right: 5%;
+  right: 3%;
   animation: drift 28s ease-in-out infinite alternate-reverse;
 }
 
 .symbol5 {
   width: 110px;
   top: 50%;
-  right: 15%;
+  right: 1%;
   animation: drift 40s ease-in-out infinite alternate;
 }
 
 .symbol6 {
   width: 140px;
   top: 40%;
-  left: 12%;
+  left: 1%;
   animation: drift 32s ease-in-out infinite alternate-reverse;
 }
 
 .symbol7 {
   width: 120px;
-  top: 5%;
-  left: 45%;
+  top: 2%;
+  left: 25%;
   animation: drift 38s ease-in-out infinite alternate;
 }
 
