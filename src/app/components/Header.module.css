@@ -1,7 +1,5 @@
 .header {
   background: transparent;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
   left: 0;
@@ -15,8 +13,6 @@
 
 [data-theme='dark'] .header {
   background: transparent;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .containerWide {
