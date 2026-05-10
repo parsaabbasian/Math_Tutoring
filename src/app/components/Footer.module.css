@@ -65,7 +65,32 @@
 
 @media (max-width: 768px) {
   .footerContainer {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .tagline {
+    font-size: 0.75rem;
+    max-width: 100%;
+  }
+
+  .linksTitle {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .link {
+    font-size: 0.75rem;
+  }
+
+  .logoImage {
+    height: 80px;
+    margin-bottom: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerContainer {
+    gap: 8px;
   }
 }
