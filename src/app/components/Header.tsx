@@ -5,37 +5,13 @@ import styles from './Header.module.css';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
 import LanguageSwitcher from './LanguageSwitcher';
-import { useState, useEffect } from 'react';
 
 export default function Header() {
   const { language } = useLanguage();
   const t = translations[language].nav;
-  const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      if (currentScrollY > 100) { // Only hide after some scrolling
-        if (currentScrollY > lastScrollY) {
-          setIsHidden(true); // Scrolling down
-        } else {
-          setIsHidden(false); // Scrolling up
-        }
-      } else {
-        setIsHidden(false); // At the top
-      }
-      
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
 
   return (
-    <header className={`${styles.header} ${isHidden ? styles.headerHidden : ''}`}>
+    <header className={styles.header}>
       <div className={`${styles.containerWide} ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
           <Image
