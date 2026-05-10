@@ -1,3 +1,4 @@
+// Deployment Trigger: 2026-05-10
 import type { Metadata } from "next";
 import { Outfit, Inter, Vazirmatn } from "next/font/google";
 import { ThemeProvider } from "./components/ThemeProvider";
