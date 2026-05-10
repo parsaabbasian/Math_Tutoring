@@ -1,6 +1,7 @@
 export const translations = {
   en: {
     nav: {
+      brand: "Avin Math Tutoring",
       about: "Who I Am",
       howItWorks: "How it Works",
       join: "Join Classes"
@@ -95,6 +96,7 @@ export const translations = {
   },
   fa: {
     nav: {
+      brand: "Avin Math Tutoring",
       about: "درباره من",
       howItWorks: "نحوه برگزاری",
       join: "ثبت‌نام کلاس‌ها"

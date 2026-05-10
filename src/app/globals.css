@@ -14,16 +14,16 @@
   --surface-alt: #f1f5f9;
   --border: #e2e8f0;
   --text-muted: #475569;
-  
+
   --shadow-sm: 0 2px 8px rgba(0, 50, 50, 0.04);
   --shadow-md: 0 12px 32px rgba(0, 50, 50, 0.08);
   --shadow-lg: 0 24px 60px rgba(0, 50, 50, 0.12);
-  
+
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 32px;
   --radius-full: 9999px;
-  
+
   --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -145,20 +145,46 @@ button {
 
 /* Animations */
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes pulse-soft {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(10, 115, 115, 0.4); }
-  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(10, 115, 115, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(10, 115, 115, 0); }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(10, 115, 115, 0.4);
+  }
+
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(10, 115, 115, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(10, 115, 115, 0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-in {

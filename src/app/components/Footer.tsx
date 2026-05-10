@@ -12,7 +12,11 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.brand}>
-          <span className={styles.logo}>Avin <span className="gradient-text">Math Tutoring</span></span>
+          {language === 'en' ? (
+            <span className={styles.logo}>Avin <span className="gradient-text">Math Tutoring</span></span>
+          ) : (
+            <span className={styles.logo}>{nav.brand}</span>
+          )}
           <p className={styles.tagline}>{t.tagline}</p>
         </div>
         <div className={styles.links}>

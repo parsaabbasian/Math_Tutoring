@@ -43,20 +43,6 @@ export default function Hero() {
             <Link href="/#join" className="btn-primary pulse-btn">{t.ctaStart}</Link>
             <Link href="/#about" className="btn-outline">{t.ctaMeet}</Link>
           </div>
-          <div className={`${styles.stats} fade-in`}>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>100%</span>
-              <span className={styles.statLabel}>{t.stats.satisfaction}</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>{language === 'fa' ? 'دوزبانه' : 'Bilingual'}</span>
-              <span className={styles.statLabel}>{t.stats.bilingual}</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>{language === 'fa' ? '۲۰$' : '$20'}</span>
-              <span className={styles.statLabel}>{t.stats.price}</span>
-            </div>
-          </div>
           
           <div className={styles.trustBadges}>
             <span><CheckIcon /> {t.trust.ontario}</span>

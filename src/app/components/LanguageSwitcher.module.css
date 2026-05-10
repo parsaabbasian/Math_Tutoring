@@ -1,34 +1,26 @@
 .switcher {
   display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 4px 12px;
-  background: var(--surface-alt);
-  border: 1px solid var(--border);
-  border-radius: 30px;
-  transition: var(--transition);
-}
-
-.button {
-  background: none;
-  border: none;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
   color: var(--text-muted);
-  font-size: 0.8rem;
-  font-weight: 700;
-  cursor: pointer;
-  padding: 2px 4px;
   transition: var(--transition);
+  border: 1px solid transparent;
+  background: transparent;
 }
 
-.button:hover {
+.switcher:hover {
+  background: var(--surface-alt);
   color: var(--primary);
+  border-color: var(--border);
 }
 
-.button.active {
-  color: var(--primary);
+.icon {
+  opacity: 0.7;
 }
 
-.divider {
-  color: var(--border);
-  font-size: 0.8rem;
+.label {
+  font-size: 0.95rem;
+  font-weight: 500;
 }
