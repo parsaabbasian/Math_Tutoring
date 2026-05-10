@@ -67,6 +67,14 @@
   .footerContainer {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+    text-align: center;
+  }
+
+  .brand, .links, .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .tagline {
@@ -86,6 +94,8 @@
   .logoImage {
     height: 80px;
     margin-bottom: -20px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
