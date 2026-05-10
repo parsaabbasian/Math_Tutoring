@@ -10,8 +10,8 @@ export default function Header() {
           Avin <span className="gradient-text">Math Tutoring</span>
         </Link>
         <nav className={styles.nav}>
-          <Link href="/#how-it-works" className={styles.navLink}>How it Works</Link>
           <Link href="/#about" className={styles.navLink}>Who I Am</Link>
+          <Link href="/#how-it-works" className={styles.navLink}>How it Works</Link>
           <Link href="/login" className={styles.navLink}>Login</Link>
           <ThemeToggle />
           <Link href="/#join" className="btn-primary">Join Classes</Link>
