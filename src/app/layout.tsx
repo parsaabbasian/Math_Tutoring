@@ -4,7 +4,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Avin Math Tutoring",
-  description: "Avin Mousavi's personal math tutoring website.",
+  description: "Personalized math tutoring by Avin Mousavi, tailored to the Canadian curriculum.",
+  icons: {
+    icon: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
 };
 
 export default function RootLayout({
