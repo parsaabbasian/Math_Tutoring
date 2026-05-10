@@ -5,19 +5,6 @@ export default function About() {
     <section id="about" className={`section ${styles.about}`}>
       <div className={styles.aboutBg}></div>
       <div className={`container ${styles.aboutContainer}`}>
-        <div className={`${styles.videoWrapper} fade-in`}>
-          <div className={styles.videoContainer}>
-            <video 
-              className={styles.videoPlayer}
-              controls
-              playsInline
-            >
-              <source src="/videos/309.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-
         <div className={`${styles.aboutContent} fade-in`}>
           <span className={styles.subtitle}>My Journey</span>
           <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '24px' }}>Who I Am</h2>
@@ -37,6 +24,19 @@ export default function About() {
           <p className={styles.aboutText} style={{ marginTop: '16px', marginBottom: 0 }}>
             Whether you need help catching up or advancing ahead, lessons are always <strong>personalized</strong> to your unique learning style.
           </p>
+        </div>
+
+        <div className={`${styles.videoWrapper} fade-in`}>
+          <div className={styles.videoContainer}>
+            <video 
+              className={styles.videoPlayer}
+              controls
+              playsInline
+            >
+              <source src="/videos/309.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
     </section>
