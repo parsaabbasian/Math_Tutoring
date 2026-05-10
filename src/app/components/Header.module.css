@@ -47,6 +47,12 @@
   margin-left: 5px;
 }
 
+[dir='rtl'] .logoImage {
+  transform-origin: right center;
+  margin-left: 0;
+  margin-right: 5px;
+}
+
 .logoText {
   font-family: var(--font-heading);
   font-size: 1.4rem;

@@ -16,10 +16,17 @@
 }
 
 .logoImage {
-  height: 40px;
+  height: 120px;
   width: auto;
   object-fit: contain;
-  margin-bottom: 16px;
+  margin-left: -15px;
+  margin-top: -20px;
+  margin-bottom: 0px;
+}
+
+[dir='rtl'] .logoImage {
+  margin-left: 0;
+  margin-right: -15px;
 }
 
 .tagline {
