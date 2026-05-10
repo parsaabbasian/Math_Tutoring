@@ -49,6 +49,11 @@ export default function HowItWorks() {
   const { language, isRTL } = useLanguage();
   const t = translations[language].howItWorks;
 
+  const toPersianNumber = (num: number) => {
+    const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    return num.toString().replace(/\d/g, (d) => persianDigits[parseInt(d)]);
+  };
+
   const icons = [<AssessmentIcon />, <LessonPlanIcon />, <BilingualIcon />, <MethodIcon />, <OnlineIcon />];
 
   return (
@@ -60,7 +65,9 @@ export default function HowItWorks() {
         <div className={styles.grid}>
           {t.steps.map((step, index) => (
             <div key={index} className={`${styles.card} fade-in`} style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className={styles.stepNumber}>{index + 1}</div>
+              <div className={styles.stepNumber}>
+                {language === 'fa' ? toPersianNumber(index + 1) : index + 1}
+              </div>
               <div className={styles.iconWrapper}>
                 <span className={styles.icon}>{icons[index]}</span>
               </div>

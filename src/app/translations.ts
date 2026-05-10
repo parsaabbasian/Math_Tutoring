@@ -25,11 +25,13 @@ export const translations = {
     about: {
       subtitle: "My Journey",
       title: "Who I Am",
-      p1: "Hi! My name is Avin, and I am a Mechanical Engineering student at York University with a strong passion for mathematics, teaching, and helping students build confidence in their learning journey.",
-      p2: "I graduated from the OSSD program in Canada and am highly familiar with the Canadian teaching system, learning expectations, and methods used across different grade levels.",
-      p3: "Over the past years, I have worked privately with students from elementary to high school, focusing on making math simple, understandable, and enjoyable. My unique bilingual approach allows me to teach fluently in both English and Persian (Farsi), which is especially helpful for bilingual families.",
-      p4: "As an engineering student, I use analytical thinking and structured problem-solving to help students develop strong foundations for long-term academic success.",
-      p5: "Whether you need help catching up or advancing ahead, lessons are always personalized to your unique learning style."
+      p1: "Hi! My name is <strong>Avin</strong>, and I am a <strong>Mechanical Engineering</strong> student at <strong>York University</strong> with a strong passion for mathematics, teaching, and helping students build confidence in their learning journey.",
+      p2: "I graduated from the <strong>OSSD program</strong> in Canada and am highly familiar with the Canadian teaching system, learning expectations, and methods used across different grade levels.",
+      p3: "Over the past years, I have worked privately with students from elementary to high school, focusing on making <strong>math simple, understandable, and enjoyable</strong>. My unique <strong>bilingual</strong> approach allows me to teach fluently in both <strong>English and Persian (Farsi)</strong> – especially helpful for bilingual families.",
+      p4: "As an engineering student, I use <strong>analytical thinking and structured problem-solving</strong> to help students develop strong foundations for long-term academic success.",
+      p5: "Whether you need help catching up or advancing ahead, lessons are always personalized to your unique learning style.",
+      readMore: "Read More",
+      showLess: "Show Less"
     },
     howItWorks: {
       title: "How Classes Work",
@@ -111,11 +113,13 @@ export const translations = {
     about: {
       subtitle: "مسیر من",
       title: "درباره من",
-      p1: "سلام! نام من آوین است، دانشجوی مهندسی مکانیک در دانشگاه یورک. من اشتیاق زیادی به ریاضیات و تدریس دارم و هدفم کمک به دانش‌آموزان برای کسب اعتماد به نفس در مسیر یادگیری است.",
-      p2: "من فارغ‌التحصیل برنامه OSSD در کانادا هستم و با سیستم آموزشی، انتظارات یادگیری و روش‌های تدریس در تمامی پایه‌ها کاملاً آشنایی دارم.",
-      p3: "در سال‌های گذشته، به طور خصوصی با دانش‌آموزان از مقطع ابتدایی تا دبیرستان کار کرده‌ام و تمرکزم بر ساده، قابل فهم و لذت‌بخش کردن ریاضی بوده است. رویکرد دوزبانه من اجازه می‌دهد تا به هر دو زبان انگلیسی و فارسی تدریس کنم که برای خانواده‌های دوزبانه بسیار مفید است.",
-      p4: "به عنوان یک دانشجوی مهندسی، از تفکر تحلیلی و حل مسئله ساختاریافته برای کمک به دانش‌آموزان در ایجاد پایه‌ای قوی برای موفقیت تحصیلی بلندمدت استفاده می‌کنم.",
-      p5: "چه برای جبران عقب‌افتادگی و چه برای پیشرفت بیشتر، جلسات همیشه بر اساس سبک یادگیری منحصر به فرد شما شخصی‌سازی می‌شوند."
+      p1: "سلام! نام من <strong>آوین</strong> است، دانشجوی <strong>مهندسی مکانیک در دانشگاه یورک</strong>. من اشتیاق زیادی به ریاضیات و تدریس دارم و هدفم کمک به دانش‌آموزان برای کسب اعتماد به نفس در مسیر یادگیری است.",
+      p2: "من فارغ‌التحصیل <strong>برنامه OSSD</strong> در کانادا هستم و با سیستم آموزشی، انتظارات یادگیری و روش‌های تدریس در تمامی پایه‌ها کاملاً آشنایی دارم.",
+      p3: "در سال‌های گذشته، به طور خصوصی با دانش‌آموزان از مقطع ابتدایی تا دبیرستان کار کرده‌ام و تمرکزم بر <strong>ساده، قابل فهم و لذت‌بخش کردن ریاضی</strong> بوده است. رویکرد <strong>دوزبانه</strong> من اجازه می‌دهد تا به هر دو زبان <strong>انگلیسی و فارسی</strong> تدریس کنم که برای خانواده‌های دوزبانه بسیار مفید است.",
+      p4: "به عنوان یک دانشجوی مهندسی، از <strong>تفکر تحلیلی و حل مسئله ساختاریافته</strong> برای کمک به دانش‌آموزان در ایجاد پایه‌ای قوی برای موفقیت تحصیلی بلندمدت استفاده می‌کنم.",
+      p5: "چه برای جبران عقب‌افتادگی و چه برای پیشرفت بیشتر، جلسات همیشه بر اساس سبک یادگیری منحصر به فرد شما <strong>شخصی‌سازی</strong> می‌شوند.",
+      readMore: "ادامه مطلب",
+      showLess: "نمایش کمتر"
     },
     howItWorks: {
       title: "نحوه برگزاری کلاس‌ها",
