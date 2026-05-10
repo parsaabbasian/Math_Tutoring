@@ -12,57 +12,64 @@
 .symbol {
   position: absolute;
   color: var(--primary);
-  opacity: 0.15;
-  filter: blur(25px);
+  opacity: 0.22;
+  filter: blur(15px);
   transition: all 1s ease-out;
 }
 
 [data-theme='dark'] .symbol {
   color: var(--primary);
-  opacity: 0.12;
-  filter: blur(35px);
+  opacity: 0.18;
+  filter: blur(25px);
 }
 
 .symbol1 {
-  width: 400px;
-  top: -50px;
-  left: -50px;
+  width: 300px;
+  top: 5%;
+  left: 2%;
   animation: drift 25s ease-in-out infinite alternate;
 }
 
 .symbol2 {
-  width: 350px;
-  top: 10%;
-  right: -50px;
+  width: 250px;
+  top: 15%;
+  right: 5%;
   animation: drift 30s ease-in-out infinite alternate-reverse;
 }
 
 .symbol3 {
-  width: 500px;
-  bottom: 5%;
-  left: -100px;
+  width: 350px;
+  bottom: 10%;
+  left: 5%;
   animation: drift 35s ease-in-out infinite alternate;
 }
 
 .symbol4 {
-  width: 450px;
-  bottom: -50px;
-  right: -50px;
+  width: 320px;
+  bottom: 5%;
+  right: 2%;
   animation: drift 28s ease-in-out infinite alternate-reverse;
 }
 
 .symbol5 {
-  width: 300px;
-  top: 40%;
-  right: 15%;
+  width: 220px;
+  top: 45%;
+  right: 12%;
   animation: drift 40s ease-in-out infinite alternate;
 }
 
 .symbol6 {
-  width: 320px;
-  top: 30%;
-  left: 5%;
+  width: 280px;
+  top: 35%;
+  left: 10%;
   animation: drift 32s ease-in-out infinite alternate-reverse;
+}
+
+.symbol7 {
+  width: 240px;
+  top: 2%;
+  left: 45%;
+  animation: drift 38s ease-in-out infinite alternate;
 }
 
 @keyframes drift {
