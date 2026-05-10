@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
 import { ThemeProvider } from "./components/ThemeProvider";
+import { LanguageProvider } from "./context/LanguageContext";
 import "./globals.css";
 
 const outfit = Outfit({ 
@@ -20,8 +22,6 @@ export const metadata: Metadata = {
     apple: "/images/favicon.png",
   },
 };
-
-import { LanguageProvider } from "./context/LanguageContext";
 
 export default function RootLayout({
   children,
