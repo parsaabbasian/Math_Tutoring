@@ -36,32 +36,27 @@ export const translations = {
     },
     howItWorks: {
       title: "How Classes Work",
-      subtitle: "A personalized, effective process designed to help you achieve your academic goals with confidence.",
+      subtitle: "A personalized process designed for your academic success.",
       steps: [
         {
-          title: "Free Initial Assessment",
-          description: "Every student begins with a short assessment or discussion session to help identify your current level and goals.",
-          points: ["Current academic level", "Strengths and weaknesses", "School curriculum expectations", "Learning style and goals"]
+          title: "Initial Assessment",
+          description: "A free session to identify your current level and learning goals."
         },
         {
-          title: "Personalized Lesson Plans",
-          description: "Each lesson is customized specifically for the student. Teaching is adjusted based on your individual needs.",
-          points: ["Grade level & School curriculum", "Pace of learning", "Areas needing improvement", "Homework and test preparation"]
+          title: "Customized Plans",
+          description: "Every lesson is tailored to your school's curriculum and pace."
         },
         {
-          title: "Bilingual Environment",
-          description: "Lessons are available in both English and Persian (Farsi) for maximum comfort and understanding.",
-          points: ["English instruction", "Persian (Farsi) instruction", "Switch between languages", "Comfortable for bilingual families"]
+          title: "Bilingual Lessons",
+          description: "Fluent instruction in both English and Persian for your comfort."
         },
         {
-          title: "Conceptual Teaching",
-          description: "Instead of memorization, lessons focus on understanding concepts deeply and building strong foundations.",
-          points: ["Understanding concepts deeply", "Logical thinking", "Analytical problem solving", "Future-ready foundations"]
+          title: "Conceptual Growth",
+          description: "Focus on deep understanding rather than simple memorization."
         },
         {
-          title: "Online & Flexible",
-          description: "Classes are conducted online, allowing you to learn comfortably from home with flexible scheduling.",
-          points: ["Homework support", "Test and exam preparation", "Weekly tutoring", "Advanced learning support"]
+          title: "Flexible & Online",
+          description: "Learn from home with scheduling that fits your busy life."
         }
       ]
     },
@@ -131,32 +126,27 @@ export const translations = {
     },
     howItWorks: {
       title: "نحوه برگزاری کلاس‌ها",
-      subtitle: "فرآیندی شخصی‌سازی شده و موثر برای دستیابی به اهداف تحصیلی با اعتماد به نفس کامل.",
+      subtitle: "فرآیندی شخصی‌سازی شده برای موفقیت تحصیلی شما.",
       steps: [
         {
-          title: "ارزیابی اولیه رایگان",
-          description: "هر دانش‌آموز با یک ارزیابی کوتاه یا جلسه گفتگو شروع می‌کند تا سطح فعلی و اهداف او مشخص شود.",
-          points: ["سطح آکادمیک فعلی", "نقاط قوت و ضعف", "انتظارات برنامه آموزشی مدرسه", "سبک یادگیری و اهداف"]
+          title: "ارزیابی اولیه",
+          description: "جلسه‌ای رایگان برای تعیین سطح و مشخص کردن اهداف آموزشی شما."
         },
         {
-          title: "برنامه‌های آموزشی شخصی‌سازی شده",
-          description: "هر درس به طور اختصاصی برای دانش‌آموز طراحی می‌شود. تدریس بر اساس نیازهای فردی شما تنظیم می‌گردد.",
-          points: ["پایه تحصیلی و برنامه آموزشی", "سرعت یادگیری", "مباحث نیازمند بهبود", "آمادگی تکالیف و آزمون‌ها"]
+          title: "برنامه‌های اختصاصی",
+          description: "هر جلسه بر اساس برنامه درسی مدرسه و سرعت یادگیری شما طراحی می‌شود."
         },
         {
-          title: "محیط دوزبانه",
-          description: "کلاس‌ها به هر دو زبان انگلیسی و فارسی برای راحتی و درک حداکثری در دسترس هستند.",
-          points: ["آموزش به زبان انگلیسی", "آموزش به زبان فارسی", "تغییر بین زبان‌ها", "مناسب برای خانواده‌های دوزبانه"]
+          title: "آموزش دوزبانه",
+          description: "تدریس مسلط به دو زبان انگلیسی و فارسی برای درک و راحتی حداکثری."
         },
         {
-          title: "آموزش مفهومی",
-          description: "به جای حفظ کردن، درس‌ها بر درک عمیق مفاهیم و ایجاد پایه‌های قوی تمرکز دارند.",
-          points: ["درک عمیق مفاهیم", "تفکر منطقی", "حل مسئله تحلیلی", "پایه‌ریزی برای موفقیت‌های آینده"]
+          title: "رشد مفهومی",
+          description: "تمرکز بر درک عمیق مفاهیم به جای حفظ کردن ساده مطالب."
         },
         {
           title: "آنلاین و منعطف",
-          description: "کلاس‌ها به صورت آنلاین برگزار می‌شوند و به شما اجازه می‌دهند با زمان‌بندی منعطف در خانه یاد بگیرید.",
-          points: ["پشتیبانی تکالیف", "آمادگی آزمون و امتحانات", "تدریس هفتگی", "حمایت از یادگیری پیشرفته"]
+          description: "یادگیری در خانه با زمان‌بندی متناسب با برنامه‌های روزمره شما."
         }
       ]
     },
