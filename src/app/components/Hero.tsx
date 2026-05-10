@@ -67,7 +67,7 @@ export default function Hero() {
                   It will automatically appear here.
               ───────────────────────────────────────── */}
               <img
-                src="/avin-photo.webp"
+                src="/images/avin-photo.webp"
                 alt="Avin Mousavi — Math Tutor"
                 className={styles.photo}
                 onError={(e) => {
@@ -83,7 +83,7 @@ export default function Hero() {
                   <circle cx="12" cy="13" r="4"/>
                 </svg>
                 <p className={styles.placeholderText}>Add your photo</p>
-                <p className={styles.placeholderHint}>/public/avin-photo.webp</p>
+                <p className={styles.placeholderHint}>/public/images/avin-photo.webp</p>
               </div>
             </div>
             {/* Name & title — always visible below the circle */}

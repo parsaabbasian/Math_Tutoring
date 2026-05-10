@@ -177,7 +177,7 @@
 
 /* Fallback when no photo */
 .photoPlaceholder {
-  display: flex;
+  display: none; /* shown only if image fails to load */
   flex-direction: column;
   align-items: center;
   justify-content: center;
