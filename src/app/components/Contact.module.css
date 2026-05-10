@@ -19,7 +19,7 @@
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 80px;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   z-index: 1;
 }
