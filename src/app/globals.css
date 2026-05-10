@@ -87,7 +87,7 @@ button {
   background: var(--primary);
   color: white;
   padding: 12px 24px;
-  border-radius: var(--radius-full);
+  border-radius: 8px;
   font-weight: 600;
   font-size: 1rem;
   display: inline-flex;
