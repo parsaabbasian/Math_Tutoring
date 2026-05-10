@@ -20,48 +20,68 @@ export default function Hero() {
       <div className={`container ${styles.heroGrid}`}>
         <div className={styles.textContent}>
           <div className={`${styles.badge} fade-in`}>
-            <SparkleIcon /> {t.badge}
+            ✨ {language === 'en' ? 'Top-Rated Canadian Math Tutoring' : 'برترین آموزش ریاضی در کانادا'}
           </div>
           <h1 className={`${styles.title} fade-in`}>
             {language === 'en' ? (
-              <>Master Mathematics with <br /><span className="gradient-text">Confidence & Joy</span></>
+              <>Crush Your Math Goals <br /><span className="gradient-text">Without the Stress.</span></>
             ) : (
-              <>ریاضی را با <br /><span className="gradient-text">اعتماد به نفس و لذت</span> بیاموزید</>
+              <>ریاضی رو بترکون، <br /><span className="gradient-text">بدون استرس!</span></>
             )}
           </h1>
           <p className={`${styles.description} fade-in`}>
-            {t.description}
+            {language === 'en' 
+              ? "Expert guidance for OSSD & University levels. We don't just teach math; we build the confidence to solve anything. English & Persian supported."
+              : "آموزش تخصصی منطبق با برنامه درسی کانادا (OSSD). ما فقط ریاضی درس نمیدیم؛ ما اعتماد به نفس حل هر مسئله‌ای رو در تو می‌سازیم."}
           </p>
           <div className={`${styles.actions} fade-in`}>
-            <Link href="/#join" className="btn-primary">{t.ctaStart}</Link>
-            <Link href="/#about" className="btn-outline">{t.ctaMeet}</Link>
+            <Link href="/#join" className="btn-primary" style={{ padding: '18px 44px', fontSize: '1.2rem', borderRadius: '16px' }}>{t.ctaStart}</Link>
+            <Link href="/#about" className="btn-outline" style={{ padding: '16px 36px', borderRadius: '16px' }}>{t.ctaMeet}</Link>
           </div>
         </div>
 
         <div className={`${styles.visualContent} fade-in`}>
-          <div className={styles.workspaceCard}>
-            <div className={styles.notebookHeader}>
-              <div className={styles.dots}>
-                <span></span><span></span><span></span>
+          <div className={styles.collageContainer}>
+            {/* The "Notebook" Element */}
+            <div className={styles.paperPiece}>
+              <div className={styles.paperHeader}>Lesson Snapshot</div>
+              <div className={styles.paperBody}>
+                <div className={styles.handwriting}>f(x) = sin(x)</div>
+                <div className={styles.graphSketch}>
+                  <svg viewBox="0 0 100 60" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M10 30 Q 30 10 50 30 T 90 30" stroke="var(--primary)" strokeWidth="2" />
+                    <line x1="10" y1="30" x2="90" y2="30" stroke="#eee" />
+                    <line x1="50" y1="10" x2="50" y2="50" stroke="#eee" />
+                  </svg>
+                </div>
               </div>
-              <div className={styles.subject}>{language === 'en' ? 'Personalized Session' : 'جلسه شخصی‌سازی شده'}</div>
             </div>
-            <div className={styles.notebookBody}>
-              <div className={styles.mathLine}>f(x) = ax² + bx + c</div>
-              <div className={styles.mathLine}>Δ = b² - 4ac</div>
-              <div className={styles.sketch}>
-                <svg viewBox="0 0 100 60" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.6">
-                  <path d="M10 50 L50 10 L90 50 Z" strokeDasharray="4 2" />
-                  <circle cx="50" cy="35" r="15" stroke="var(--primary)" />
-                  <path d="M10 50 Q 50 20 90 50" stroke="var(--accent)" />
+
+            {/* The "Polaroid" Photo */}
+            <div className={styles.polaroid}>
+              <div className={styles.photoPlaceholder}>
+                <svg viewBox="0 0 100 100" fill="none" stroke="var(--primary-light)">
+                  <circle cx="50" cy="50" r="30" fill="var(--primary-light)" opacity="0.2" />
+                  <path d="M30 70 L50 30 L70 70" stroke="var(--primary)" strokeWidth="2" />
                 </svg>
               </div>
-              <div className={styles.mathLine} style={{ opacity: 0.5 }}>sin²θ + cos²θ = 1</div>
+              <div className={styles.photoCaption}>{language === 'en' ? 'Study Mode' : 'وقت مطالعه'}</div>
             </div>
-            <div className={styles.floatingTag}>{language === 'en' ? 'Bilingual' : 'دوزبانه'}</div>
-            <div className={styles.floatingTag2}>{language === 'en' ? 'Interactive' : 'تعاملی'}</div>
+
+            {/* The "Goal" Sticky Note */}
+            <div className={styles.stickyNote}>
+              <div className={styles.stickyText}>
+                <strong>Goal:</strong> <br /> 
+                Next Exam: A+ 🚀
+              </div>
+            </div>
+
+            {/* Floating "Stickers" & Decor */}
+            <div className={styles.mathSticker} style={{ top: '-10px', left: '20%' }}>∑</div>
+            <div className={styles.mathSticker} style={{ bottom: '20px', right: '10%', background: 'var(--accent)', color: 'white' }}>π</div>
+            <div className={styles.ruler}></div>
           </div>
-          
+
           <div className={styles.experienceCard}>
             <div className={styles.expNumber}>OSSD</div>
             <div className={styles.expLabel}>{language === 'en' ? 'Curriculum Expert' : 'متخصص برنامه آموزشی'}</div>
