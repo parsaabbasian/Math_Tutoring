@@ -1,6 +1,6 @@
 .header {
   background: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -8,11 +8,17 @@
   z-index: 9999;
   display: flex;
   align-items: center;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
-[data-theme='dark'] .header {
-  background: transparent;
+.scrolled {
+  background: #eff6f6;
+  border-bottom: 1px solid rgba(0, 91, 91, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .scrolled {
+  background: #0d1a1a;
 }
 
 .containerWide {
