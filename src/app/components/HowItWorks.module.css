@@ -1,177 +1,241 @@
+/* ─── HOW IT WORKS ───
+   Horizontal connected timeline — all steps visible at once
+──────────────────────────────────────── */
+
 .howItWorks {
   background: var(--surface-alt);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
+/* ── Timeline outer wrapper ── */
+.timeline {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
 }
 
-.card {
-  background: var(--surface);
-  padding: 40px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  position: relative;
-  transition: var(--transition);
+/* Horizontal connecting line through the step numbers */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 28px; /* vertically centers on the step circles */
+  left: calc(28px);
+  right: calc(28px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary) 100%);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+[dir='rtl'] .timeline::before {
+  left: calc(28px);
+  right: calc(28px);
+}
+
+/* Each step column */
+.step {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 12px;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary);
-}
-
-.stepNumber {
+/* The connector arrow between steps */
+.step:not(:last-child)::after {
+  content: '›';
   position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 4rem;
-  font-weight: 900;
-  color: var(--foreground);
-  opacity: 0.08;
-  line-height: 1;
-  pointer-events: none;
-  transition: var(--transition);
-}
-
-.card:hover .stepNumber {
-  opacity: 0.15;
-  transform: translateY(-5px);
-}
-
-.iconWrapper {
-  width: 64px;
-  height: 64px;
-  background: var(--primary-light);
+  top: 17px;
+  right: -10px;
+  font-size: 1.8rem;
   color: var(--primary);
-  border-radius: var(--radius-md);
+  opacity: 0.4;
+  z-index: 2;
+  line-height: 1;
+}
+
+[dir='rtl'] .step:not(:last-child)::after {
+  content: '‹';
+  right: auto;
+  left: -10px;
+}
+
+/* Circle with step number */
+.stepCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary);
+  z-index: 1;
+  position: relative;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.step:hover .stepCircle {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* Card content */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  padding: 24px 20px;
+  width: 100%;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 220px;
+}
+
+.step:hover .card {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+/* Icon */
+.iconWrapper {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 4px;
   transition: var(--transition);
 }
 
-[dir="rtl"] .iconWrapper {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-[dir="rtl"] .stepNumber {
-  right: auto;
-  left: 25px;
-}
-
-.card:hover .iconWrapper {
+.step:hover .iconWrapper {
   background: var(--primary);
   color: white;
-  transform: rotate(-5deg) scale(1.1);
 }
 
 .cardTitle {
-  font-size: 1.5rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  color: var(--foreground);
+  margin: 0;
 }
 
 .cardDescription {
+  font-size: 0.82rem;
   color: var(--text-muted);
-  font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 .pointList {
   list-style: none;
-  margin-top: auto;
   border-top: 1px solid var(--border);
-  padding-top: 20px;
+  padding-top: 10px;
+  margin-top: auto;
+  text-align: left;
+}
+
+[dir='rtl'] .pointList {
+  text-align: right;
 }
 
 .pointList li {
-  font-size: 0.9rem;
-  color: var(--foreground);
-  margin-bottom: 8px;
-  padding-left: 20px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+  padding-left: 14px;
   position: relative;
 }
 
-[dir="rtl"] .pointList li {
-  padding-left: 0;
-  padding-right: 20px;
-}
-
 .pointList li::before {
-  content: '→';
+  content: '·';
   position: absolute;
   left: 0;
   color: var(--primary);
   font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
 }
 
-[dir="rtl"] .pointList li::before {
-  content: '←';
+[dir='rtl'] .pointList li {
+  padding-left: 0;
+  padding-right: 14px;
+}
+
+[dir='rtl'] .pointList li::before {
   left: auto;
   right: 0;
 }
 
-.extraInfo {
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.infoBlock {
-  background: var(--surface-alt);
-  padding: 40px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-}
-
-.infoTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: var(--primary);
-}
-
-.infoList {
-  list-style: none;
-}
-
-.infoList li {
-  margin-bottom: 12px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.finalNote {
-  margin-top: 60px;
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  font-style: italic;
-}
-
-@media (max-width: 992px) {
-  .extraInfo {
-    grid-template-columns: 1fr;
+/* ── RESPONSIVE: vertical timeline on mobile ── */
+@media (max-width: 900px) {
+  .timeline {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
   }
-}
 
-@media (max-width: 640px) {
+  .timeline::before {
+    top: 28px;
+    left: 27px;
+    right: auto;
+    width: 2px;
+    height: calc(100% - 56px);
+    background: linear-gradient(180deg, var(--primary) 0%, var(--primary) 100%);
+  }
+
+  [dir='rtl'] .timeline::before {
+    left: auto;
+    right: 27px;
+  }
+
+  .step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 0 24px 0;
+    gap: 20px;
+  }
+
+  [dir='rtl'] .step {
+    text-align: right;
+    flex-direction: row-reverse;
+  }
+
+  .step:not(:last-child)::after {
+    display: none;
+  }
+
+  .stepCircle {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
   .card {
-    padding: 30px;
+    min-height: auto;
+  }
+
+  .pointList {
+    text-align: left;
+  }
+
+  [dir='rtl'] .pointList {
+    text-align: right;
   }
 }
