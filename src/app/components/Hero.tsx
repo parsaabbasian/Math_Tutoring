@@ -100,32 +100,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Stats Bar ── */}
-      <div className={styles.statsBar}>
-        <div className="container">
-          <div className={styles.statsRow}>
-            <div className={styles.statItem}>
-              <strong>100%</strong>
-              <span>{t.stats.satisfaction}</span>
-            </div>
-            <div className={styles.statDivider}></div>
-            <div className={styles.statItem}>
-              <strong>{language === 'en' ? 'Bilingual' : 'دوزبانه'}</strong>
-              <span>{language === 'en' ? 'English & Persian' : 'فارسی و انگلیسی'}</span>
-            </div>
-            <div className={styles.statDivider}></div>
-            <div className={styles.statItem}>
-              <strong>OSSD</strong>
-              <span>{language === 'en' ? 'Curriculum Expert' : 'متخصص برنامه درسی'}</span>
-            </div>
-            <div className={styles.statDivider}></div>
-            <div className={styles.statItem}>
-              <strong>$20</strong>
-              <span>{t.stats.price}</span>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </section>
   );
 }
