@@ -9,7 +9,7 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      <div className={`container ${styles.heroGrid}`}>
+      <div className={`${styles.containerWide} ${styles.heroGrid}`}>
 
         {/* ── LEFT: Text ── */}
         <div className={styles.textSide}>
