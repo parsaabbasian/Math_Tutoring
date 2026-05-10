@@ -2,13 +2,34 @@
 import { useState } from 'react';
 import styles from './Contact.module.css';
 
+const MailIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+  </svg>
+);
+
+const GlobeIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="2" y1="12" x2="22" y2="12"></line>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+  </svg>
+);
+
+const LaptopIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+    <line x1="2" y1="20" x2="22" y2="20"></line>
+  </svg>
+);
+
 export default function Contact() {
   const [status, setStatus] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('Request sent successfully! Avin will contact you soon.');
-    // In a real application, this would send an API request.
   };
 
   return (
@@ -24,21 +45,21 @@ export default function Contact() {
           
           <div className={styles.contactDetails}>
             <div className={styles.detailItem}>
-              <div className={styles.detailIcon}>✉</div>
+              <div className={styles.detailIcon}><MailIcon /></div>
               <div>
                 <h4 className={styles.detailTitle}>Email</h4>
                 <p className={styles.detailValue}>avin.math@gmail.com</p>
               </div>
             </div>
             <div className={styles.detailItem}>
-              <div className={styles.detailIcon}>🌍</div>
+              <div className={styles.detailIcon}><GlobeIcon /></div>
               <div>
                 <h4 className={styles.detailTitle}>Bilingual Support</h4>
                 <p className={styles.detailValue}>English & Persian (Farsi)</p>
               </div>
             </div>
             <div className={styles.detailItem}>
-              <div className={styles.detailIcon}>💻</div>
+              <div className={styles.detailIcon}><LaptopIcon /></div>
               <div>
                 <h4 className={styles.detailTitle}>Location</h4>
                 <p className={styles.detailValue}>100% Online & Flexible</p>
