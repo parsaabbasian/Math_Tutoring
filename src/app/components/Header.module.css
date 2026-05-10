@@ -8,7 +8,6 @@
   display: flex;
   align-items: center;
   background: var(--surface);
-  border-bottom: 1px solid var(--border);
   transition: var(--transition);
 }
 
