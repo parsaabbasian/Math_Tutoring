@@ -1,7 +1,7 @@
 // Deployment Trigger: 2026-05-10
 import type { Metadata } from "next";
 import { Outfit, Inter, Vazirmatn } from "next/font/google";
-import { ThemeProvider } from "./components/ThemeProvider";
+
 import { LanguageProvider } from "./context/LanguageContext";
 import "./globals.css";
 
@@ -37,33 +37,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${inter.variable} ${vazir.variable}`}>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var savedTheme = localStorage.getItem('theme');
-                  var theme = savedTheme;
-                  if (!theme) {
-                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                  }
-                  document.documentElement.setAttribute('data-theme', theme);
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-      </head>
+    <html lang="en" className={`${outfit.variable} ${inter.variable} ${vazir.variable}`}>
       <body>
         <LanguageProvider>
-          <ThemeProvider>
-            <MathBackground />
-            <main style={{ position: 'relative', zIndex: 1 }}>
-              {children}
-            </main>
-          </ThemeProvider>
+          <MathBackground />
+          <main style={{ position: 'relative', zIndex: 1 }}>
+            {children}
+          </main>
         </LanguageProvider>
       </body>
     </html>
