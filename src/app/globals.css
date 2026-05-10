@@ -26,13 +26,15 @@
 }
 
 [data-theme='dark'] {
-  --background: #081414;
+  --primary: #00b3b3; /* Brighter, more vibrant teal for dark mode */
+  --primary-hover: #00cccc;
+  --background: #0f1115;
   --foreground: #ffffff;
-  --surface: #0f1f1f;
-  --surface-alt: #1a2f2f;
-  --border: #253f3f;
-  --text-muted: #a3bebe;
-  --primary-light: rgba(0, 180, 180, 0.15);
+  --surface: #1b1e23;
+  --surface-alt: #252a31;
+  --border: #2d343d;
+  --text-muted: #94a3b8;
+  --primary-light: rgba(0, 179, 179, 0.15);
 }
 
 html {
