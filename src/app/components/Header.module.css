@@ -7,9 +7,9 @@
   z-index: 9999;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #f0f9f9 0%, #e8f5f5 100%);
-  border-bottom: 2px solid var(--primary);
-  box-shadow: 0 8px 32px rgba(0, 91, 91, 0.12);
+  background: linear-gradient(135deg, #f5fafa 0%, #eff8f8 100%);
+  border-bottom: 2px solid #126B6B;
+  box-shadow: 0 8px 32px rgba(18, 107, 107, 0.12);
   transition: var(--transition);
   overflow: hidden;
 }
@@ -22,11 +22,11 @@
   right: 0;
   bottom: 0;
   background-image: 
-    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='5' y='85' font-size='50' font-family='Georgia, serif' fill='%23005B5B' opacity='0.08'%3E∑%3C/text%3E%3Ctext x='65' y='90' font-size='45' font-family='Georgia, serif' fill='%23008080' opacity='0.07'%3Eπ%3C/text%3E%3Ctext x='35' y='35' font-size='35' font-family='Georgia, serif' fill='%23005B5B' opacity='0.06'%3E∞%3C/text%3E%3Ctext x='75' y='45' font-size='40' font-family='Georgia, serif' fill='%23008080' opacity='0.07'%3E∫%3C/text%3E%3Ctext x='10' y='30' font-size='28' font-family='Georgia, serif' fill='%23005B5B' opacity='0.05'%3E∂%3C/text%3E%3Ctext x='95' y='75' font-size='32' font-family='Georgia, serif' fill='%23008080' opacity='0.06'%3E√%3C/text%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='20' y='130' font-size='60' font-family='Georgia, serif' fill='%23005B5B' opacity='0.06'%3E±%3C/text%3E%3Ctext x='110' y='110' font-size='55' font-family='Georgia, serif' fill='%23008080' opacity='0.055'%3E∮%3C/text%3E%3Ctext x='50' y='50' font-size='45' font-family='Georgia, serif' fill='%23005B5B' opacity='0.05'%3E≈%3C/text%3E%3Ctext x='120' y='60' font-size='50' font-family='Georgia, serif' fill='%23008080' opacity='0.06'%3E∇%3C/text%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='15' y='100' font-size='55' font-family='Georgia, serif' fill='%23005B5B' opacity='0.065'%3E∴%3C/text%3E%3Ctext x='80' y='80' font-size='48' font-family='Georgia, serif' fill='%23008080' opacity='0.06'%3E∝%3C/text%3E%3Ctext x='45' y='35' font-size='40' font-family='Georgia, serif' fill='%23005B5B' opacity='0.055'%3E≠%3C/text%3E%3Ctext x='95' y='40' font-size='35' font-family='Georgia, serif' fill='%23008080' opacity='0.05'%3Eℵ%3C/text%3E%3C/svg%3E");
-  background-size: 120px 120px, 180px 180px, 140px 140px;
-  background-position: 0 0, 60px 60px, 30px 30px;
+    url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='100' font-size='60' font-family='Georgia, serif' fill='%23126B6B' opacity='0.08'%3E∑%3C/text%3E%3Ctext x='75' y='85' font-size='50' font-family='Georgia, serif' fill='%23126B6B' opacity='0.07'%3Eπ%3C/text%3E%3Ctext x='50' y='40' font-size='45' font-family='Georgia, serif' fill='%23126B6B' opacity='0.065'%3Ee%3C/text%3E%3Ctext x='85' y='120' font-size='55' font-family='Georgia, serif' fill='%23126B6B' opacity='0.07'%3E∫%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='20' y='130' font-size='70' font-family='Georgia, serif' fill='%23126B6B' opacity='0.06'%3Esin(x)dx%3C/text%3E%3Ctext x='110' y='80' font-size='45' font-family='Georgia, serif' fill='%23126B6B' opacity='0.055'%3Eφ%3C/text%3E%3Ctext x='40' y='50' font-size='60' font-family='Georgia, serif' fill='%23126B6B' opacity='0.065'%3E∫%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='15' y='110' font-size='65' font-family='Georgia, serif' fill='%23126B6B' opacity='0.07'%3Esin(x)%3C/text%3E%3Ctext x='80' y='70' font-size='50' font-family='Georgia, serif' fill='%23126B6B' opacity='0.065'%3Eπ%3C/text%3E%3Ctext x='45' y='35' font-size='55' font-family='Georgia, serif' fill='%23126B6B' opacity='0.06'%3Eφ%3C/text%3E%3C/svg%3E");
+  background-size: 140px 140px, 180px 180px, 160px 160px;
+  background-position: 0 0, 70px 70px, 40px 40px;
   z-index: 0;
   pointer-events: none;
   animation: patternFloat 25s ease-in-out infinite;
@@ -38,15 +38,16 @@
 }
 
 [data-theme='dark'] .header {
-  background: linear-gradient(135deg, #1a1a1e 0%, #252529 100%);
-  border-bottom: 2px solid var(--primary);
+  background: linear-gradient(135deg, #0d3c3c 0%, #0f4a4a 100%);
+  border-bottom: 2px solid #17a2a2;
+  box-shadow: 0 8px 32px rgba(18, 107, 107, 0.25);
 }
 
 [data-theme='dark'] .header::before {
   background-image: 
-    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='5' y='85' font-size='50' font-family='Georgia, serif' fill='%23005B5B' opacity='0.15'%3E∑%3C/text%3E%3Ctext x='65' y='90' font-size='45' font-family='Georgia, serif' fill='%23008080' opacity='0.14'%3Eπ%3C/text%3E%3Ctext x='35' y='35' font-size='35' font-family='Georgia, serif' fill='%23005B5B' opacity='0.12'%3E∞%3C/text%3E%3Ctext x='75' y='45' font-size='40' font-family='Georgia, serif' fill='%23008080' opacity='0.14'%3E∫%3C/text%3E%3Ctext x='10' y='30' font-size='28' font-family='Georgia, serif' fill='%23005B5B' opacity='0.1'%3E∂%3C/text%3E%3Ctext x='95' y='75' font-size='32' font-family='Georgia, serif' fill='%23008080' opacity='0.12'%3E√%3C/text%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='20' y='130' font-size='60' font-family='Georgia, serif' fill='%23005B5B' opacity='0.12'%3E±%3C/text%3E%3Ctext x='110' y='110' font-size='55' font-family='Georgia, serif' fill='%23008080' opacity='0.11'%3E∮%3C/text%3E%3Ctext x='50' y='50' font-size='45' font-family='Georgia, serif' fill='%23005B5B' opacity='0.1'%3E≈%3C/text%3E%3Ctext x='120' y='60' font-size='50' font-family='Georgia, serif' fill='%23008080' opacity='0.12'%3E∇%3C/text%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='15' y='100' font-size='55' font-family='Georgia, serif' fill='%23005B5B' opacity='0.13'%3E∴%3C/text%3E%3Ctext x='80' y='80' font-size='48' font-family='Georgia, serif' fill='%23008080' opacity='0.12'%3E∝%3C/text%3E%3Ctext x='45' y='35' font-size='40' font-family='Georgia, serif' fill='%23005B5B' opacity='0.11'%3E≠%3C/text%3E%3Ctext x='95' y='40' font-size='35' font-family='Georgia, serif' fill='%23008080' opacity='0.1'%3Eℵ%3C/text%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='100' font-size='60' font-family='Georgia, serif' fill='%2317a2a2' opacity='0.16'%3E∑%3C/text%3E%3Ctext x='75' y='85' font-size='50' font-family='Georgia, serif' fill='%2317a2a2' opacity='0.15'%3Eπ%3C/text%3E%3Ctext x='50' y='40' font-size='45' font-family='Georgia, serif' fill='%2317a2a2' opacity='0.14'%3Ee%3C/text%3E%3Ctext x='85' y='120' font-size='55' font-family='Georgia, serif' fill='%2317a2a2' opacity='0.16'%3E∫%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='20' y='130' font-size='70' font-family='Georgia, serif' fill='%2317a2a2' opacity='0.12'%3Esin(x)dx%3C/text%3E%3Ctext x='110' y='80' font-size='45' font-family='Georgia, serif' fill='%2317a2a2' opacity='0.11'%3Eφ%3C/text%3E%3Ctext x='40' y='50' font-size='60' font-family='Georgia, serif' fill='%2317a2a2' opacity='0.13'%3E∫%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='15' y='110' font-size='65' font-family='Georgia, serif' fill='%2317a2a2' opacity='0.15'%3Esin(x)%3C/text%3E%3Ctext x='80' y='70' font-size='50' font-family='Georgia, serif' fill='%2317a2a2' opacity='0.14'%3Eπ%3C/text%3E%3Ctext x='45' y='35' font-size='55' font-family='Georgia, serif' fill='%2317a2a2' opacity='0.12'%3Eφ%3C/text%3E%3C/svg%3E");
 }
 
 .headerContent {
@@ -61,24 +62,60 @@
 .logo {
   display: flex;
   align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: rgba(18, 107, 107, 0.08);
+  transition: var(--transition);
   flex-shrink: 0;
 }
 
+.logo:hover .logoIcon {
+  background: rgba(18, 107, 107, 0.15);
+  transform: rotate(-5deg);
+}
+
+[data-theme='dark'] .logoIcon {
+  background: rgba(23, 162, 162, 0.15);
+}
+
+[data-theme='dark'] .logo:hover .logoIcon {
+  background: rgba(23, 162, 162, 0.25);
+}
+
 .logoText {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: var(--primary);
+  color: #126B6B;
   letter-spacing: -0.5px;
   display: flex;
   align-items: baseline;
-  margin-left: -2px;
-  text-shadow: 0 2px 4px rgba(0, 91, 91, 0.1);
+  text-shadow: 0 2px 4px rgba(18, 107, 107, 0.1);
+}
+
+[data-theme='dark'] .logoText {
+  color: #17a2a2;
+  text-shadow: 0 2px 8px rgba(23, 162, 162, 0.2);
 }
 
 .logoAccent {
   font-weight: 500;
-  margin-left: 8px;
-  opacity: 0.9;
+  margin-left: 4px;
+  opacity: 0.85;
+  font-size: 0.95rem;
 }
 
 .nav {
@@ -94,8 +131,12 @@
 }
 
 .navLink:hover {
-  color: var(--primary);
+  color: #126B6B;
   transform: translateY(-2px);
+}
+
+[data-theme='dark'] .navLink:hover {
+  color: #17a2a2;
 }
 
 @media (max-width: 768px) {
@@ -107,7 +148,16 @@
     height: 70px;
   }
   
+  .logoIcon {
+    width: 44px;
+    height: 44px;
+  }
+  
   .logoText {
-    font-size: 1.4rem;
+    font-size: 1rem;
+  }
+  
+  .logoAccent {
+    font-size: 0.8rem;
   }
 }
