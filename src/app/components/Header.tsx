@@ -17,10 +17,30 @@ export default function Header() {
     <header className={styles.header}>
       {/* Decorative Symbols for Header Background */}
       <div className={styles.headerDecor}>
-        <span className={styles.decorSymbol}>∑</span>
-        <span className={styles.decorSymbol}>√</span>
-        <span className={styles.decorSymbol}>x</span>
-        <span className={styles.decorSymbol}>∞</span>
+        {/* Sigma */}
+        <div className={styles.decorSymbol}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M18 6H6l7 6-7 6h12" /><path d="M6 6v1M6 17v1" />
+          </svg>
+        </div>
+        {/* Square Root */}
+        <div className={styles.decorSymbol}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 14.5h2.5l3 7L15.5 3H21" />
+          </svg>
+        </div>
+        {/* Algebra x */}
+        <div className={styles.decorSymbol}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M8 8c0 0 3 4 3 8 0 4-3 4-3 4M16 8c0 0-3 4-3 8 0 4 3 4 3 4" />
+          </svg>
+        </div>
+        {/* Infinity */}
+        <div className={styles.decorSymbol}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M7 9c-3 0-4 3-4 3s1 3 4 3 5-3 5-3 2-3 5-3 4 3 4 3-1 3-4 3-5-3-5-3-2-3-5-3z" />
+          </svg>
+        </div>
       </div>
 
       <div className={`${styles.containerWide} ${styles.headerContent}`}>
@@ -54,7 +74,13 @@ export default function Header() {
           <div className={styles.switcherWrapper}>
             <LanguageSwitcher />
           </div>
-          <Link href="/#join" className="btn-primary" onClick={() => setIsMenuOpen(false)}>{t.join}</Link>
+          <Link href="/#join" className="btn-primary" onClick={() => setIsMenuOpen(false)}>
+            {t.join}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '8px' }}>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </Link>
         </nav>
       </div>
     </header>
