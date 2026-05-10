@@ -59,7 +59,9 @@ export default function RootLayout({
         <LanguageProvider>
           <ThemeProvider>
             <MathBackground />
-            {children}
+            <main style={{ position: 'relative', zIndex: 1 }}>
+              {children}
+            </main>
           </ThemeProvider>
         </LanguageProvider>
       </body>
