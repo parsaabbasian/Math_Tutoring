@@ -180,6 +180,21 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    height: 60px;
+  }
+
+  .headerContent {
+    padding-top: 0;
+  }
+
+  .logoImage {
+    height: 38px;
+    transform: scale(1.0);
+    top: 0;
+    margin-left: 0;
+  }
+
   .headerDecor {
     display: none;
   }
