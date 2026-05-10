@@ -80,7 +80,12 @@ export const translations = {
         message: "Additional Info (Optional)",
         submit: "Send Request",
         success: "Request sent successfully! Avin will contact you soon.",
-        grades: ['Middle School', 'High School (Grade 9-12)', 'College / University', 'Other']
+        grades: ['Middle School', 'High School (Grade 9-12)', 'College / University', 'Other'],
+        type: "Tutoring Type",
+        online: "Online",
+        inPerson: "In-person",
+        address: "Address or Postal Code",
+        notEligible: "In-person tutoring is currently only available in the North York / Vaughan area. We'd love to help you Online!",
       }
     },
     footer: {
@@ -171,7 +176,12 @@ export const translations = {
         message: "اطلاعات بیشتر (اختیاری)",
         submit: "ارسال درخواست",
         success: "درخواست با موفقیت ارسال شد! آوین به زودی با شما تماس می‌گیرد.",
-        grades: ["مدرسه راهنمایی", "دبیرستان (کلاس ۹-۱۲)", "کالج / دانشگاه", "سایر موارد"]
+        grades: ["مدرسه راهنمایی", "دبیرستان (کلاس ۹-۱۲)", "کالج / دانشگاه", "سایر موارد"],
+        type: "نوع آموزش",
+        online: "آنلاین",
+        inPerson: "حضوری",
+        address: "آدرس یا کد پستی",
+        notEligible: "آموزش حضوری در حال حاضر فقط در منطقه North York و Vaughan امکان‌پذیر است. خوشحال می‌شویم به صورت آنلاین در خدمت شما باشیم!",
       }
     },
     footer: {

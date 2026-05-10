@@ -44,9 +44,32 @@ export default function Contact() {
   const { language, isRTL } = useLanguage();
   const t = translations[language].contact;
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [tutoringType, setTutoringType] = useState<'online' | 'in-person'>('online');
+  const [address, setAddress] = useState('');
+  const [isEligible, setIsEligible] = useState(true);
+
+  const checkEligibility = (val: string) => {
+    if (tutoringType === 'online') {
+      setIsEligible(true);
+      return;
+    }
+    
+    const validRegions = ['north york', 'vaughan', 'm2m', 'm2n', 'm2r', 'm3h', 'm3j', 'm3k', 'm3l', 'm3m', 'm3n', 'l4j', 'l4k', 'l4c', 'l6a'];
+    const normalized = val.toLowerCase().trim();
+    
+    if (normalized.length < 3) {
+      setIsEligible(true); // Don't show error while typing early
+      return;
+    }
+
+    const eligible = validRegions.some(region => normalized.includes(region));
+    setIsEligible(eligible);
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (tutoringType === 'in-person' && !isEligible) return;
+    
     setStatus('loading');
 
     const form = e.currentTarget;
@@ -62,6 +85,8 @@ export default function Contact() {
       if (res.ok) {
         setStatus('success');
         form.reset();
+        setTutoringType('online');
+        setAddress('');
       } else {
         setStatus('error');
       }
@@ -147,6 +172,48 @@ export default function Contact() {
                     <input type="tel" id="phone" name="phone" className={styles.input} placeholder={language === 'fa' ? "۰۹۱۲۰۰۰۰۰۰۰" : "(555) 000-0000"} />
                   </div>
                 </div>
+
+                {/* Tutoring Type Selector */}
+                <div className={styles.inputGroup}>
+                  <label className={styles.label}>{t.form.type}</label>
+                  <div className={styles.typeSelector}>
+                    <button
+                      type="button"
+                      className={`${styles.typeBtn} ${tutoringType === 'online' ? styles.active : ''}`}
+                      onClick={() => { setTutoringType('online'); setIsEligible(true); }}
+                    >
+                      {t.form.online}
+                    </button>
+                    <button
+                      type="button"
+                      className={`${styles.typeBtn} ${tutoringType === 'in-person' ? styles.active : ''}`}
+                      onClick={() => { setTutoringType('in-person'); checkEligibility(address); }}
+                    >
+                      {t.form.inPerson}
+                    </button>
+                  </div>
+                  <input type="hidden" name="tutoringType" value={tutoringType} />
+                </div>
+
+                {/* Conditional Address Field */}
+                {tutoringType === 'in-person' && (
+                  <div className={`${styles.inputGroup} fade-in`}>
+                    <label htmlFor="address" className={styles.label}>{t.form.address}</label>
+                    <input 
+                      type="text" 
+                      id="address" 
+                      name="address" 
+                      className={`${styles.input} ${!isEligible ? styles.inputError : ''}`} 
+                      required 
+                      value={address}
+                      onChange={(e) => { setAddress(e.target.value); checkEligibility(e.target.value); }}
+                      placeholder={language === 'fa' ? "مثلاً: North York, M2N..." : "e.g. North York, M2N..."} 
+                    />
+                    {!isEligible && (
+                      <p className={styles.eligibilityError}>{t.form.notEligible}</p>
+                    )}
+                  </div>
+                )}
 
                 <div className={styles.inputGroup}>
                   <label className={styles.label}>{t.form.grade}</label>
