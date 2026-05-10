@@ -15,6 +15,14 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      {/* Decorative Symbols for Header Background */}
+      <div className={styles.headerDecor}>
+        <span className={styles.decorSymbol}>∑</span>
+        <span className={styles.decorSymbol}>√</span>
+        <span className={styles.decorSymbol}>x</span>
+        <span className={styles.decorSymbol}>∞</span>
+      </div>
+      
       <div className={`${styles.containerWide} ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
           <Image
