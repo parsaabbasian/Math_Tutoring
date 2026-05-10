@@ -259,6 +259,87 @@
   background: #fef2f2 !important;
 }
 
+.availabilityToggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.availabilityToggle:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+/* Availability Grid Styles */
+.availabilityGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--surface-alt);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.timeLabels {
+  display: grid;
+  grid-template-columns: 80px repeat(3, 1fr);
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.timeLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dayRow {
+  display: grid;
+  grid-template-columns: 80px repeat(3, 1fr);
+  gap: 4px;
+  align-items: center;
+}
+
+.dayLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.slotBtn {
+  height: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.slotBtn:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.slotBtn.selectedSlot {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px var(--primary-light);
+}
+
 @media (max-width: 992px) {
   .contactContainer {
     grid-template-columns: 1fr;
