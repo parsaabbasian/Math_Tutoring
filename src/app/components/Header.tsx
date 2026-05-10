@@ -6,15 +6,25 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
 import LanguageSwitcher from './LanguageSwitcher';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
   const { language } = useLanguage();
   const t = translations[language].nav;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       {/* Decorative Symbols for Header Background */}
       <div className={styles.headerDecor}>
         {/* Delta */}
