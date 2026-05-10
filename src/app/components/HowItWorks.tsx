@@ -106,22 +106,9 @@ export default function HowItWorks() {
         </div>
 
         <div className={styles.extraInfo}>
-          <div className={`${styles.infoBlock} fade-in`}>
-            <h3 className={styles.infoTitle}>Experience & Qualifications</h3>
-            <ul className={styles.infoList}>
-              <li>🎓 Ontario Secondary School Diploma (OSSD) Graduate</li>
-              <li>⚙️ Mechanical Engineering Student at York University</li>
-              <li>🏫 Private math tutoring for elementary and high school students</li>
-              <li>🇨🇦 Familiarity with the Ontario Curriculum and Canadian system</li>
-              <li>🗣️ Bilingual instruction in English and Persian (Farsi)</li>
-              <li>💡 Experience simplifying complex concepts</li>
-              <li>🧬 Strong academic background in math, physics, and engineering</li>
-            </ul>
-          </div>
-
-          <div className={`${styles.infoBlock} fade-in`}>
+          <div className={`${styles.infoBlock} fade-in`} style={{ gridColumn: '1 / -1' }}>
             <h3 className={styles.infoTitle}>Why Choose Avin Math Tutoring</h3>
-            <ul className={styles.infoList}>
+            <ul className={styles.infoList} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '12px' }}>
               <li>✨ Personalized one-on-one attention</li>
               <li>🌍 Bilingual teaching support</li>
               <li>📚 Canadian curriculum expertise</li>
