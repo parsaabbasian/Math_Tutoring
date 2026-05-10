@@ -153,10 +153,23 @@
   font-size: 1.1rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .aboutContainer {
     grid-template-columns: 1fr;
     gap: 60px;
+    text-align: center;
+  }
+
+  .textContent {
+    align-items: center;
+  }
+
+  .readMoreBtn {
+    align-self: center;
+  }
+
+  .aboutText {
+    text-align: center;
   }
 
   .experienceBadge {
