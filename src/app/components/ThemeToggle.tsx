@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
+import { useTheme } from './ThemeProvider';
 import styles from './ThemeToggle.module.css';
 
 const SunIcon = () => (
