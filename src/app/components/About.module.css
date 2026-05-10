@@ -17,9 +17,9 @@
 
 .aboutContainer {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1.1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: start;
   position: relative;
   z-index: 1;
 }
@@ -50,6 +50,64 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expandableContent {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expandableContent.expanded {
+  max-height: 1000px;
+  opacity: 1;
+  margin-top: 16px;
+}
+
+.readMoreBtn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  width: fit-content;
+  transition: var(--transition);
+}
+
+.readMoreBtn:hover {
+  color: var(--primary-hover);
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .readMoreBtn:hover {
+  transform: translateX(-4px);
+}
+
+.arrowDown {
+  display: inline-block;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.arrowUp {
+  display: inline-block;
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
 }
 
 .experienceBadge {

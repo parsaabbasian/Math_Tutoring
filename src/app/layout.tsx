@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Outfit, Inter } from "next/font/google";
+import { Outfit, Inter, Vazirmatn } from "next/font/google";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { LanguageProvider } from "./context/LanguageContext";
 import "./globals.css";
+
+const vazir = Vazirmatn({
+  subsets: ["arabic"],
+  variable: "--font-vazir",
+});
 
 const outfit = Outfit({ 
   subsets: ["latin"],
@@ -29,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${inter.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${inter.variable} ${vazir.variable}`}>
       <body>
         <LanguageProvider>
           <ThemeProvider>

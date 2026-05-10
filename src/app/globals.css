@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
+  --font-main: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: var(--font-outfit), sans-serif;
+
   --primary: #005B5B;
   --primary-hover: #004d4d;
   --primary-light: rgba(0, 91, 91, 0.1);
@@ -38,11 +41,17 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-main);
   color: var(--foreground);
   background: var(--background);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+[lang="fa"] *,
+[dir="rtl"] * {
+  font-family: var(--font-vazir), var(--font-main) !important;
+  letter-spacing: 0 !important;
 }
 
 * {
