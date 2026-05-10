@@ -1,15 +1,20 @@
+/* ─── HERO SECTION ───
+   Premium, warm, clean, conversion-focused
+   Light background · Teal accents · Rounded · Spacious
+──────────────────────────────────────── */
+
 .hero {
   background: var(--background);
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 100px 0 60px;
+  padding: 100px 0 80px;
 }
 
 /* Two-column grid */
 .heroGrid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
   align-items: center;
 }
@@ -18,8 +23,8 @@
 .textSide {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 28px;
+  align-items: flex-start;
 }
 
 [dir='rtl'] .textSide {
@@ -27,11 +32,12 @@
   text-align: right;
 }
 
+/* Headline */
 .headline {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--foreground);
   margin: 0;
@@ -41,15 +47,16 @@
   color: var(--primary);
 }
 
+/* Supporting text */
 .sub {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
-  line-height: 1.75;
-  max-width: 480px;
+  line-height: 1.8;
+  max-width: 500px;
   margin: 0;
 }
 
-/* CTAs */
+/* CTA Row */
 .ctaRow {
   display: flex;
   align-items: center;
@@ -64,7 +71,7 @@
   color: white;
   font-size: 1rem;
   font-weight: 700;
-  padding: 15px 32px;
+  padding: 14px 28px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(18, 107, 107, 0.22);
   transition: var(--transition);
@@ -77,41 +84,24 @@
   color: white;
 }
 
-.ctaVideo {
+.ctaSecondary {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--foreground);
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px 0;
-  transition: var(--transition);
-}
-.ctaVideo:hover {
-  color: var(--primary);
-}
-
-.playIcon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
   border: 2px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
+  padding: 12px 24px;
+  border-radius: 12px;
   transition: var(--transition);
-  flex-shrink: 0;
+  white-space: nowrap;
 }
-.ctaVideo:hover .playIcon {
+.ctaSecondary:hover {
   border-color: var(--primary);
-  background: var(--primary-light);
+  color: var(--primary);
 }
 
-/* ── RIGHT ── */
+/* ── RIGHT: Photo + Video ── */
 .imageSide {
   display: flex;
   flex-direction: column;
@@ -119,16 +109,19 @@
   gap: 16px;
 }
 
+/* Media container — photo shows by default, video on click */
 .mediaWrap {
   position: relative;
   width: 100%;
-  max-width: 340px;
-  margin: 0 auto;
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
   background: var(--surface-alt);
-  box-shadow: var(--shadow-lg);
-  aspect-ratio: 4 / 5;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 16px 40px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  aspect-ratio: 3 / 4;
+  max-width: 360px;
 }
 
 .photo {
@@ -139,37 +132,34 @@
   display: block;
 }
 
-/* Play overlay on photo */
+/* Frosted glass play pill at the bottom of photo */
 .playOverlay {
   position: absolute;
-  bottom: 20px;
+  bottom: 18px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  border: none;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 999px;
-  padding: 10px 20px;
+  padding: 9px 18px 9px 10px;
   cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--foreground);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
   white-space: nowrap;
 }
 .playOverlay:hover {
-  background: white;
+  background: rgba(255, 255, 255, 0.98);
   transform: translateX(-50%) translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .playBtn {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--primary);
   color: white;
@@ -177,13 +167,16 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  padding-left: 2px;
 }
 
 .playLabel {
+  font-size: 0.82rem;
+  font-weight: 700;
   color: var(--foreground);
 }
 
-/* Video frame */
+/* Video inline player */
 .videoFrame {
   position: relative;
   width: 100%;
@@ -199,26 +192,26 @@
 
 .closeVideo {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 32px;
-  height: 32px;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
 }
 .closeVideo:hover {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
-/* Name tag */
+/* Name badge below image */
 .nameTag {
   display: flex;
   flex-direction: column;
@@ -227,25 +220,24 @@
   text-align: center;
 }
 .nameTag strong {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--foreground);
 }
 .nameTag span {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  font-weight: 500;
 }
 
-/* Responsive */
+/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .hero {
-    padding: 100px 0 40px;
-    align-items: flex-start;
+    padding: 100px 0 60px;
+    min-height: auto;
   }
   .heroGrid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 48px;
   }
   .textSide {
     align-items: center;
@@ -262,8 +254,8 @@
     justify-content: center;
   }
   .mediaWrap {
-    max-width: 400px;
+    max-width: 340px;
     margin: 0 auto;
-    aspect-ratio: 4 / 4;
+    aspect-ratio: 1 / 1;
   }
 }
