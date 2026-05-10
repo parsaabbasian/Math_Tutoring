@@ -63,11 +63,11 @@ export default function Hero() {
               {/* ─────────────────────────────────────────
                   TO ADD AVIN'S PHOTO:
                   Place the image file at:
-                    /public/avin-photo.jpg
+                    /public/avin-photo.webp
                   It will automatically appear here.
               ───────────────────────────────────────── */}
               <img
-                src="/avin-photo.jpg"
+                src="/avin-photo.webp"
                 alt="Avin Mousavi — Math Tutor"
                 className={styles.photo}
                 onError={(e) => {
@@ -83,7 +83,7 @@ export default function Hero() {
                   <circle cx="12" cy="13" r="4"/>
                 </svg>
                 <p className={styles.placeholderText}>Add your photo</p>
-                <p className={styles.placeholderHint}>/public/avin-photo.jpg</p>
+                <p className={styles.placeholderHint}>/public/avin-photo.webp</p>
               </div>
             </div>
             {/* Name & title — always visible below the circle */}
