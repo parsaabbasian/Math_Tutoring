@@ -17,28 +17,28 @@ export default function Header() {
     <header className={styles.header}>
       {/* Decorative Symbols for Header Background */}
       <div className={styles.headerDecor}>
-        {/* Sigma */}
+        {/* Delta */}
         <div className={styles.decorSymbol}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M18 6H6l7 6-7 6h12" /><path d="M6 6v1M6 17v1" />
+            <path d="M12 4l-9 16h18L12 4z" />
           </svg>
         </div>
-        {/* Square Root */}
+        {/* Integral */}
         <div className={styles.decorSymbol}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M3 14.5h2.5l3 7L15.5 3H21" />
+            <path d="M7 19c2 0 3-1 3-3V8c0-2-1-3-3-3m10 0c-2 0-3 1-3 3v8c0 2 1 3 3 3" />
           </svg>
         </div>
-        {/* Algebra x */}
+        {/* Pi */}
         <div className={styles.decorSymbol}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M8 8c0 0 3 4 3 8 0 4-3 4-3 4M16 8c0 0-3 4-3 8 0 4 3 4 3 4" />
+            <path d="M4 7h16M7 7v10M17 7v10" /><path d="M17 17c0-2 2-2 2-2" />
           </svg>
         </div>
-        {/* Infinity */}
+        {/* Theta */}
         <div className={styles.decorSymbol}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M7 9c-3 0-4 3-4 3s1 3 4 3 5-3 5-3 2-3 5-3 4 3 4 3-1 3-4 3-5-3-5-3-2-3-5-3z" />
+            <ellipse cx="12" cy="12" rx="6" ry="8" /><path d="M6 12h12" />
           </svg>
         </div>
       </div>
