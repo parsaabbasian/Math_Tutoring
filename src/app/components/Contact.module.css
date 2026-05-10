@@ -10,7 +10,6 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 90% 90%, var(--primary-light) 0%, transparent 40%);
   z-index: 0;
   pointer-events: none;
 }
