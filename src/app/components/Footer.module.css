@@ -1,14 +1,14 @@
 .footer {
   background: var(--background);
   border-top: 1px solid var(--border);
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .footerContainer {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 48px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .brand {
