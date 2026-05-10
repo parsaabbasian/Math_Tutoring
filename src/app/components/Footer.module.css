@@ -36,14 +36,14 @@
 .linksTitle {
   font-size: 1.125rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .links,
 .socials {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .link {
