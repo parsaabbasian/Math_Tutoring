@@ -1,5 +1,7 @@
 'use client';
 import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 import styles from './Contact.module.css';
 
 const MailIcon = () => (
@@ -25,11 +27,13 @@ const LaptopIcon = () => (
 );
 
 export default function Contact() {
+  const { language, isRTL } = useLanguage();
+  const t = translations[language].contact;
   const [status, setStatus] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('Request sent successfully! Avin will contact you soon.');
+    setStatus(t.form.success);
   };
 
   return (
@@ -37,32 +41,30 @@ export default function Contact() {
       <div className={styles.contactBg}></div>
       <div className={`container ${styles.contactContainer}`}>
         <div className={`${styles.infoSection} fade-in`}>
-          <span className={styles.subtitle}>Get in Touch</span>
-          <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '24px' }}>Join The Classes</h2>
-          <p className={styles.infoDescription}>
-            Take the first step towards math excellence. Fill out the form, and I will get back to you within 24 hours to schedule your free initial assessment.
-          </p>
+          <span className={styles.subtitle}>{t.subtitle}</span>
+          <h2 className="section-title" style={{ textAlign: isRTL ? 'right' : 'left', marginBottom: '24px' }}>{t.title}</h2>
+          <p className={styles.infoDescription}>{t.description}</p>
           
           <div className={styles.contactDetails}>
             <div className={styles.detailItem}>
               <div className={styles.detailIcon}><MailIcon /></div>
               <div>
-                <h4 className={styles.detailTitle}>Email</h4>
+                <h4 className={styles.detailTitle}>{t.info.email}</h4>
                 <p className={styles.detailValue}>avin.math@gmail.com</p>
               </div>
             </div>
             <div className={styles.detailItem}>
               <div className={styles.detailIcon}><GlobeIcon /></div>
               <div>
-                <h4 className={styles.detailTitle}>Bilingual Support</h4>
-                <p className={styles.detailValue}>English & Persian (Farsi)</p>
+                <h4 className={styles.detailTitle}>{t.info.bilingual}</h4>
+                <p className={styles.detailValue}>{t.info.bilingualDesc}</p>
               </div>
             </div>
             <div className={styles.detailItem}>
               <div className={styles.detailIcon}><LaptopIcon /></div>
               <div>
-                <h4 className={styles.detailTitle}>Location</h4>
-                <p className={styles.detailValue}>100% Online & Flexible</p>
+                <h4 className={styles.detailTitle}>{t.info.location}</h4>
+                <p className={styles.detailValue}>{t.info.locationDesc}</p>
               </div>
             </div>
           </div>
@@ -72,26 +74,26 @@ export default function Contact() {
           <div className={styles.formContainer}>
             <form onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.inputGroup}>
-                <label htmlFor="studentName" className={styles.label}>Student Name</label>
-                <input type="text" id="studentName" name="studentName" className={styles.input} required placeholder="Full Name" />
+                <label htmlFor="studentName" className={styles.label}>{t.form.studentName}</label>
+                <input type="text" id="studentName" name="studentName" className={styles.input} required placeholder={language === 'fa' ? "نام و نام خانوادگی" : "Full Name"} />
               </div>
               
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="email" className={styles.label}>Email Address</label>
+                  <label htmlFor="email" className={styles.label}>{t.form.email}</label>
                   <input type="email" id="email" name="email" className={styles.input} required placeholder="email@example.com" />
                 </div>
                 
                 <div className={styles.inputGroup}>
-                  <label htmlFor="phone" className={styles.label}>Phone Number</label>
-                  <input type="tel" id="phone" name="phone" className={styles.input} required placeholder="(555) 000-0000" />
+                  <label htmlFor="phone" className={styles.label}>{t.form.phone}</label>
+                  <input type="tel" id="phone" name="phone" className={styles.input} required placeholder={language === 'fa' ? "۰۹۱۲۰۰۰۰۰۰۰" : "(555) 000-0000"} />
                 </div>
               </div>
 
             <div className={styles.inputGroup}>
-              <label className={styles.label}>Current Grade / Level</label>
+              <label className={styles.label}>{t.form.grade}</label>
               <div className={styles.gradeGrid}>
-                {['Middle School', 'High School (Grade 9-12)', 'College / University', 'Other'].map((grade) => (
+                {t.form.grades.map((grade) => (
                   <label key={grade} className={styles.gradeCard}>
                     <input type="radio" name="grade" value={grade} required className={styles.radioInput} />
                     <span className={styles.gradeName}>{grade}</span>
@@ -101,12 +103,12 @@ export default function Contact() {
             </div>
 
               <div className={styles.inputGroup}>
-                <label htmlFor="message" className={styles.label}>Additional Info (Optional)</label>
-                <textarea id="message" name="message" className={styles.textarea} placeholder="Any specific goals or topics you want to focus on?"></textarea>
+                <label htmlFor="message" className={styles.label}>{t.form.message}</label>
+                <textarea id="message" name="message" className={styles.textarea} placeholder={language === 'fa' ? "هرگونه هدف یا موضوع خاصی که می‌خواهید روی آن تمرکز کنید..." : "Any specific goals or topics you want to focus on?"}></textarea>
               </div>
 
               <button type="submit" className={`btn-primary ${styles.submitButton}`}>
-                Send Request <span>→</span>
+                {t.form.submit} <span style={{ transform: isRTL ? 'rotate(180deg)' : 'none', display: 'inline-block' }}>→</span>
               </button>
               
               {status && <div className={styles.statusMessage}>{status}</div>}

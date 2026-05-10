@@ -1,29 +1,24 @@
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 import styles from './About.module.css';
 
 export default function About() {
+  const { language } = useLanguage();
+  const t = translations[language].about;
+
   return (
     <section id="about" className={`section ${styles.about}`}>
       <div className={styles.aboutBg}></div>
       <div className={`container ${styles.aboutContainer}`}>
         <div className={`${styles.aboutContent} fade-in`}>
-          <span className={styles.subtitle}>My Journey</span>
-          <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '24px' }}>Who I Am</h2>
-          <p className={styles.aboutText}>
-            Hi! My name is <strong>Avin</strong>, and I am a <strong>Mechanical Engineering student at York University</strong> with a strong passion for mathematics, teaching, and helping students build confidence in their learning journey. 
-          </p>
-          <p className={styles.aboutText}>
-            I graduated from the <strong>OSSD program</strong> in Canada and am highly familiar with the Canadian teaching system, learning expectations, and methods used across different grade levels.
-          </p>
-          <p className={styles.aboutText}>
-            Over the past years, I have worked privately with students from elementary to high school, focusing on making math <strong>simple, understandable, and enjoyable</strong>. My unique <strong>bilingual approach</strong> allows me to teach fluently in both <strong>English and Persian (Farsi)</strong>, which is especially helpful for bilingual families.
-          </p>
-          <p className={styles.aboutText}>
-            As an engineering student, I use <strong>analytical thinking and structured problem-solving</strong> to help students develop strong foundations for long-term academic success.
-          </p>
+          <span className={styles.subtitle}>{t.subtitle}</span>
+          <h2 className="section-title" style={{ textAlign: language === 'fa' ? 'right' : 'left', marginBottom: '24px' }}>{t.title}</h2>
+          <p className={styles.aboutText}>{t.p1}</p>
+          <p className={styles.aboutText}>{t.p2}</p>
+          <p className={styles.aboutText}>{t.p3}</p>
+          <p className={styles.aboutText}>{t.p4}</p>
 
-          <p className={styles.aboutText} style={{ marginTop: '16px', marginBottom: 0 }}>
-            Whether you need help catching up or advancing ahead, lessons are always <strong>personalized</strong> to your unique learning style.
-          </p>
+          <p className={styles.aboutText} style={{ marginTop: '16px', marginBottom: 0 }}>{t.p5}</p>
         </div>
 
         <div className={`${styles.videoWrapper} fade-in`}>
