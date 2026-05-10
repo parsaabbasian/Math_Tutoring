@@ -21,13 +21,28 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 200px;
-  /* Overlap circles */
-  margin-left: -24px;
+  width: 180px;
+  /* Overlap so circles touch/connect */
+  margin-left: -40px;
 }
 
 .item:first-child {
   margin-left: 0;
+}
+
+/* Connector bridge between circles */
+.item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* ── The Circle ── */
@@ -102,7 +117,7 @@
 /* ── RTL ── */
 :global([dir='rtl']) .item {
   margin-left: 0;
-  margin-right: -24px;
+  margin-right: -40px;
 }
 
 :global([dir='rtl']) .item:first-child {
