@@ -26,12 +26,12 @@
 }
 
 [data-theme='dark'] {
-  --background: #1a1a1e;
-  --foreground: #fcfcfc;
-  --surface: #252529;
-  --surface-alt: #2d2d33;
-  --border: #3d3d42;
-  --text-muted: #a1a1aa;
+  --background: #0B0F19;
+  --foreground: #F8FAFC;
+  --surface: #161B29;
+  --surface-alt: #1F2636;
+  --border: #2A3347;
+  --text-muted: #94A3B8;
 }
 
 html {
@@ -40,9 +40,10 @@ html {
 
 body {
   font-family: var(--font-main);
+  font-size: 1.05rem;
   color: var(--foreground);
   background: var(--background);
-  line-height: 1.5;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -113,7 +114,7 @@ button {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 120px 0;
   background: linear-gradient(to bottom, rgba(0, 91, 91, 0.12), var(--background));
 }
 

@@ -16,10 +16,10 @@ export default function About() {
         <div className={`${styles.aboutContent} fade-in`}>
           <span className={styles.subtitle}>{t.subtitle}</span>
           <h2 className="section-title" style={{ textAlign: isRTL ? 'right' : 'left', marginBottom: '24px' }}>{t.title}</h2>
-          
+
           <div className={styles.textContent}>
             <p className={styles.aboutText} dangerouslySetInnerHTML={{ __html: t.p1 }}></p>
-            
+
             <div className={`${styles.expandableContent} ${isExpanded ? styles.expanded : ''}`}>
               <p className={styles.aboutText} dangerouslySetInnerHTML={{ __html: t.p2 }}></p>
               <p className={styles.aboutText} dangerouslySetInnerHTML={{ __html: t.p3 }}></p>
@@ -27,8 +27,8 @@ export default function About() {
               <p className={styles.aboutText} style={{ marginTop: '16px', marginBottom: 0 }} dangerouslySetInnerHTML={{ __html: t.p5 }}></p>
             </div>
 
-            <button 
-              onClick={() => setIsExpanded(!isExpanded)} 
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
               className={styles.readMoreBtn}
             >
               {isExpanded ? t.showLess : t.readMore}
@@ -39,7 +39,7 @@ export default function About() {
 
         <div className={`${styles.videoWrapper} fade-in`}>
           <div className={styles.videoContainer}>
-            <video 
+            <video
               className={styles.videoPlayer}
               controls
               playsInline
