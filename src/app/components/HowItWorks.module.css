@@ -10,21 +10,17 @@
 
 .card {
   background: var(--surface);
-  padding: 48px 32px;
+  padding: 40px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
-  transition: var(--transition);
   position: relative;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary);
 }
@@ -32,46 +28,123 @@
 .stepNumber {
   position: absolute;
   top: 20px;
-  right: 32px;
+  right: 30px;
   font-size: 4rem;
   font-weight: 900;
   color: var(--primary);
   opacity: 0.05;
   line-height: 1;
+  pointer-events: none;
 }
 
 .iconWrapper {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   background: var(--primary-light);
+  color: var(--primary);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  font-size: 32px;
-  color: var(--primary);
   transition: var(--transition);
 }
 
 .card:hover .iconWrapper {
   background: var(--primary);
   color: white;
-  transform: scale(1.1) rotate(5deg);
-}
-
-.icon {
-  font-size: 2.5rem;
+  transform: rotate(-5deg) scale(1.1);
 }
 
 .cardTitle {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 16px;
-  color: var(--foreground);
+  margin-bottom: 12px;
 }
 
 .cardDescription {
   color: var(--text-muted);
+  font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.pointList {
+  list-style: none;
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.pointList li {
+  font-size: 0.9rem;
+  color: var(--foreground);
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.pointList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.extraInfo {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.infoBlock {
+  background: var(--surface-alt);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.infoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--primary);
+}
+
+.infoList {
+  list-style: none;
+}
+
+.infoList li {
+  margin-bottom: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.finalNote {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+}
+
+@media (max-width: 992px) {
+  .extraInfo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 30px;
+  }
 }
