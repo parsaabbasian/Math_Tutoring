@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from './login.module.css';
 
 export default function Login() {
@@ -30,7 +31,13 @@ export default function Login() {
       <div className={styles.loginContainer}>
         <div className={styles.loginBox}>
           <div className={styles.brand}>
-            <span className={styles.logo}>Avin <span className="gradient-text">Math Tutoring</span></span>
+            <Image
+              src="/images/logo.png"
+              alt="Avin Math Tutoring Logo"
+              width={160}
+              height={50}
+              className={styles.logoImage}
+            />
             <p className={styles.subtitle}>Welcome back! Please login to your account.</p>
           </div>
 

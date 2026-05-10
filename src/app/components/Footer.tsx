@@ -1,6 +1,7 @@
 'use client';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -12,11 +13,13 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.brand}>
-          {language === 'en' ? (
-            <span className={styles.logo}>Avin <span className="gradient-text">Math Tutoring</span></span>
-          ) : (
-            <span className={styles.logo}>{nav.brand}</span>
-          )}
+          <Image
+            src="/images/logo.png"
+            alt="Avin Math Tutoring Logo"
+            width={120}
+            height={40}
+            className={styles.logoImage}
+          />
           <p className={styles.tagline}>{t.tagline}</p>
         </div>
         <div className={styles.links}>

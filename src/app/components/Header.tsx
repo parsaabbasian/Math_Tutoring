@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggle';
+import Image from 'next/image';
 import styles from './Header.module.css';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
@@ -14,11 +15,14 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`${styles.containerWide} ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
-          {language === 'en' ? (
-            <span className={styles.logoText}>Avin <span className={styles.logoAccent}>Math Tutoring</span></span>
-          ) : (
-            <span className={styles.logoText}>{t.brand}</span>
-          )}
+          <Image
+            src="/images/logo.png"
+            alt="Avin Math Tutoring Logo"
+            width={120}
+            height={40}
+            priority
+            className={styles.logoImage}
+          />
         </Link>
         <nav className={styles.nav}>
           <Link href="/#about" className={styles.navLink}>{t.about}</Link>
