@@ -26,25 +26,17 @@ export default function Hero() {
 
           <p className={`${styles.sub} fade-in`}>
             {language === 'en'
-              ? 'Personalized one-on-one tutoring for middle and high school students by a York University engineering student. Taught in English & Persian.'
-              : 'آموزش خصوصی یک‌به‌یک برای دانش‌آموزان مدرسه راهنمایی و دبیرستان توسط دانشجوی مهندسی دانشگاه یورک. به زبان فارسی و انگلیسی.'}
+              ? 'Personalized one-on-one tutoring for elementary and high school students by a York University Mechanical Engineering student. Lessons are designed to make math easier to understand and more enjoyable to learn.'
+              : 'آموزش خصوصی یک‌به‌یک برای دانش‌آموزان ابتدایی و دبیرستان توسط دانشجوی مهندسی مکانیک دانشگاه یورک. جلسات طراحی شده‌اند تا یادگیری ریاضی آسان‌تر و لذت‌بخش‌تر شود.'}
           </p>
 
           <div className={`${styles.ctaRow} fade-in`}>
             <Link href="/#join" className={styles.ctaPrimary}>
               {language === 'en' ? 'Book a Free Consultation' : 'رزرو مشاوره رایگان'}
             </Link>
-            <button
-              className={styles.ctaVideo}
-              onClick={() => setShowVideo(true)}
-            >
-              <span className={styles.playIcon}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                  <polygon points="5 3 19 12 5 21 5 3"/>
-                </svg>
-              </span>
-              {language === 'en' ? 'Watch Introduction' : 'تماشای معرفی'}
-            </button>
+            <Link href="/#about" className={styles.ctaSecondary}>
+              {language === 'en' ? 'Learn More' : 'بیشتر بدانید'}
+            </Link>
           </div>
 
         </div>
@@ -81,7 +73,7 @@ export default function Hero() {
                 >
                   <span className={styles.playBtn}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="5 3 19 12 5 21 5 3"/>
+                      <polygon points="5 3 19 12 5 21 5 3" />
                     </svg>
                   </span>
                   <span className={styles.playLabel}>{language === 'en' ? 'Watch Intro' : 'تماشای معرفی'}</span>
