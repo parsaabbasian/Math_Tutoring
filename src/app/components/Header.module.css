@@ -3,22 +3,25 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 90px;
   z-index: 9999;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: #ffffff;
+  background-image: 
+    linear-gradient(rgba(0, 91, 91, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 91, 91, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 20px rgba(0, 91, 91, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   transition: var(--transition);
 }
 
 [data-theme='dark'] .header {
-  background: rgba(26, 26, 30, 0.95);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  background: #1a1a1e;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 }
 
 .headerContent {
@@ -34,7 +37,7 @@
 }
 
 .logoImage {
-  height: 75px;
+  height: 65px;
   width: auto;
   display: block;
 }
