@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={`container ${styles.headerContent}`}>
+      <div className={`${styles.containerWide} ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
           {language === 'en' ? (
             <span className={styles.logoText}>Avin <span className={styles.logoAccent}>Math Tutoring</span></span>

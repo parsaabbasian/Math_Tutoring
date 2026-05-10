@@ -8,7 +8,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 70px 0 0; /* 70px is header height */
+  padding: 75px 0 0; /* 75px matches header height */
   position: relative;
   overflow: hidden;
 }
