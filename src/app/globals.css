@@ -26,12 +26,13 @@
 }
 
 [data-theme='dark'] {
-  --background: #0B0F19;
-  --foreground: #F8FAFC;
-  --surface: #161B29;
-  --surface-alt: #1F2636;
-  --border: #2A3347;
-  --text-muted: #94A3B8;
+  --background: #0f1717;
+  --foreground: #f1f5f9;
+  --surface: #1a2626;
+  --surface-alt: #233131;
+  --border: #2d3d3d;
+  --text-muted: #94a3a8;
+  --primary-light: rgba(0, 180, 180, 0.1);
 }
 
 html {
@@ -42,7 +43,7 @@ body {
   font-family: var(--font-main);
   font-size: 1.05rem;
   color: var(--foreground);
-  background: linear-gradient(to bottom, rgba(0, 91, 91, 0.15) 0%, var(--background) 100%);
+  background: linear-gradient(to bottom, var(--primary-light) 0%, var(--background) 100%);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
