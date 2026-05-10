@@ -47,10 +47,10 @@
   height: 80px;
   width: auto;
   object-fit: contain;
-  transform: scale(2.1);
+  transform: scale(2.4);
   transform-origin: left center;
   position: relative;
-  top: 2px;
+  top: 6px;
   /* Fine-tune vertical alignment */
   margin-left: 5px;
 }
