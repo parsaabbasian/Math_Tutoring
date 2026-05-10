@@ -9,10 +9,6 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      {/* Decorative Blobs */}
-      <div className={styles.blob1}></div>
-      <div className={styles.blob2}></div>
-      
       <div className={`${styles.containerWide} ${styles.heroGrid}`}>
 
         {/* ── LEFT: Text ── */}

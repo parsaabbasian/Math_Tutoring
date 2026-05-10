@@ -11,7 +11,6 @@ export default function About() {
 
   return (
     <section id="about" className={`section ${styles.about}`}>
-      <div className={styles.aboutBg}></div>
       <div className={`container ${styles.aboutContainer}`}>
         <div className={`${styles.aboutContent} fade-in`}>
           <span className={styles.subtitle}>{t.subtitle}</span>
