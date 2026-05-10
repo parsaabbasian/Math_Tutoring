@@ -32,10 +32,6 @@ export default function ThemeToggle() {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return <div style={{ width: '44px', height: '44px' }} />;
-  }
-
   const isDark = theme === 'dark';
 
   return (
@@ -44,8 +40,8 @@ export default function ThemeToggle() {
       className={styles.themeToggle}
       aria-label="Toggle Theme"
     >
-      <div key={theme} className={styles.iconContainer}>
-        {isDark ? <SunIcon /> : <MoonIcon />}
+      <div className={`${styles.iconContainer} ${!mounted ? styles.notMounted : ''}`}>
+        {mounted && (isDark ? <SunIcon /> : <MoonIcon />)}
       </div>
     </button>
   );
