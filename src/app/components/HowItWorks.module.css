@@ -10,29 +10,54 @@
 
 .card {
   background: var(--surface);
-  padding: 40px;
+  padding: 48px 32px;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
   border: 1px solid var(--border);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-light);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.stepNumber {
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--primary);
+  opacity: 0.05;
+  line-height: 1;
 }
 
 .iconWrapper {
   width: 80px;
   height: 80px;
   background: var(--primary-light);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 24px auto;
+  margin-bottom: 24px;
+  font-size: 32px;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.card:hover .iconWrapper {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.1) rotate(5deg);
 }
 
 .icon {
