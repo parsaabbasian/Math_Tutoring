@@ -50,7 +50,7 @@
   transform: scale(1.2);
   transform-origin: left center;
   position: relative;
-  top: -3px;
+  top: -6px;
   /* Fine-tune vertical alignment */
   margin-left: 5px;
 }
