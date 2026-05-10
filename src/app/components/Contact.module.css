@@ -368,6 +368,7 @@
     gap: 32px 20px;
     width: 100%;
     margin-top: 32px;
+    justify-items: center;
   }
 
   .detailItem {
@@ -375,6 +376,7 @@
     align-items: center;
     text-align: center;
     gap: 12px;
+    width: 100%;
   }
 }
 
