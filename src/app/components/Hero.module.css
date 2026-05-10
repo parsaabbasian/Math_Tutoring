@@ -21,6 +21,18 @@
   animation: patternMove 40s linear infinite;
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 300px;
+  background: linear-gradient(to bottom, transparent, var(--background));
+  pointer-events: none;
+  z-index: 1;
+}
+
 @keyframes patternMove {
   from { background-position: 0 0; }
   to { background-position: 600px 600px; }
@@ -83,11 +95,13 @@
 }
 
 .title {
-  font-size: 5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
   margin-bottom: 24px;
-  letter-spacing: -2px;
+  color: var(--foreground);
 }
 
 .description {
