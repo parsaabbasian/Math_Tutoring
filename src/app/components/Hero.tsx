@@ -8,13 +8,13 @@ export default function Hero() {
       <div className={styles.blob2}></div>
       <div className={`container ${styles.heroContainer}`}>
         <div className={styles.heroContent}>
-          <div className={`${styles.badge} fade-in`}>✨ Available for personalized online tutoring</div>
+          <div className={`${styles.badge} fade-in`}>🚀 Personalized Online Math Tutoring</div>
           <h1 className={`${styles.title} fade-in`}>
             Master Mathematics with <br />
             <span className="gradient-text">Confidence & Joy</span>
           </h1>
           <p className={`${styles.description} fade-in`}>
-            Unlock your potential with expert guidance tailored to the <strong>Canadian curriculum</strong>. Engineering-level analytical thinking meet personalized teaching.
+            Experience the power of <strong>Engineering-level analytical thinking</strong> combined with a patient, student-focused approach. From <strong>OSSD preparation</strong> to advanced concepts, I provide expert bilingual guidance in <strong>English & Persian</strong> tailored to the Canadian curriculum.
           </p>
           <div className={`${styles.actions} fade-in`}>
             <Link href="/#join" className="btn-primary pulse-btn">Start Learning Today</Link>
