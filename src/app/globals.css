@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary: #0a7373;
-  --primary-hover: #085959;
-  --primary-light: rgba(10, 115, 115, 0.1);
-  --accent: #12b8b8;
-  --background: #fdfdfd;
-  --foreground: #1a1a1a;
+  --primary: #005B5B;
+  --primary-hover: #004d4d;
+  --primary-light: rgba(0, 91, 91, 0.1);
+  --accent: #008080;
+  --background: #f8fafc;
+  --foreground: #0f172a;
   --surface: #ffffff;
-  --surface-alt: #f5f5f7;
-  --border: #eaeaea;
-  --text-muted: #666666;
+  --surface-alt: #f1f5f9;
+  --border: #e2e8f0;
+  --text-muted: #475569;
   
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
-  --shadow-md: 0 12px 32px rgba(0,0,0,0.08);
-  --shadow-lg: 0 24px 60px rgba(0,0,0,0.12);
+  --shadow-sm: 0 2px 8px rgba(0, 50, 50, 0.04);
+  --shadow-md: 0 12px 32px rgba(0, 50, 50, 0.08);
+  --shadow-lg: 0 24px 60px rgba(0, 50, 50, 0.12);
   
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -25,16 +25,12 @@
 }
 
 [data-theme='dark'] {
-  --background: #0f0f11;
-  --foreground: #fcfcfc;
-  --surface: #18181b;
-  --surface-alt: #222226;
-  --border: #333333;
-  --text-muted: #a1a1aa;
-  
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
-  --shadow-md: 0 8px 24px rgba(0,0,0,0.3);
-  --shadow-lg: 0 16px 40px rgba(0,0,0,0.4);
+  --background: #0a0a0b;
+  --foreground: #f8fafc;
+  --surface: #121214;
+  --surface-alt: #1a1a1c;
+  --border: #2d2d30;
+  --text-muted: #94a3b8;
 }
 
 html {
