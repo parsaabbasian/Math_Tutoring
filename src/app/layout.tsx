@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   },
 };
 
+import MathBackground from "./components/MathBackground";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -56,6 +58,7 @@ export default function RootLayout({
       <body>
         <LanguageProvider>
           <ThemeProvider>
+            <MathBackground />
             {children}
           </ThemeProvider>
         </LanguageProvider>
