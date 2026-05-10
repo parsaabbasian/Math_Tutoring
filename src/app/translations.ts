@@ -88,7 +88,7 @@ export const translations = {
         notEligible: "In-person tutoring is currently only available in the North York / Vaughan area. We'd love to help you Online!",
         availability: "Preferred Availability",
         days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-        times: ["Morning", "Afternoon", "Evening"],
+        times: ["Morning (9-12)", "Afternoon (12-4)", "Evening (4-8)"],
       }
     },
     footer: {
@@ -187,7 +187,7 @@ export const translations = {
         notEligible: "آموزش حضوری در حال حاضر فقط در منطقه North York و Vaughan امکان‌پذیر است. خوشحال می‌شویم به صورت آنلاین در خدمت شما باشیم!",
         availability: "زمان‌های پیشنهادی",
         days: ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنج‌شنبه", "جمعه"],
-        times: ["صبح", "عصر", "غروب"],
+        times: ["صبح (۹-۱۲)", "عصر (۱۲-۴)", "غروب (۴-۸)"],
       }
     },
     footer: {
