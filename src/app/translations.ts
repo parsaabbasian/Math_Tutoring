@@ -66,6 +66,7 @@ export const translations = {
       description: "Take the first step towards math excellence. Fill out the form, and I will get back to you within 24 hours to schedule your free initial assessment.",
       info: {
         email: "Email",
+        phone: "Phone",
         bilingual: "Bilingual Support",
         bilingualDesc: "English & Persian (Farsi)",
         location: "Location",
@@ -156,6 +157,7 @@ export const translations = {
       description: "اولین قدم برای تعالی در ریاضی را بردارید. فرم را پر کنید و من تا ۲۴ ساعت آینده برای تعیین وقت ارزیابی رایگان با شما تماس می‌گیرم.",
       info: {
         email: "ایمیل",
+        phone: "تلفن",
         bilingual: "پشتیبانی دوزبانه",
         bilingualDesc: "انگلیسی و فارسی (Farsi)",
         location: "محل برگزاری",
