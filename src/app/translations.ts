@@ -86,6 +86,9 @@ export const translations = {
         inPerson: "In-person",
         address: "Address or Postal Code",
         notEligible: "In-person tutoring is currently only available in the North York / Vaughan area. We'd love to help you Online!",
+        availability: "Preferred Availability",
+        days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        times: ["Morning", "Afternoon", "Evening"],
       }
     },
     footer: {
@@ -182,6 +185,9 @@ export const translations = {
         inPerson: "حضوری",
         address: "آدرس یا کد پستی",
         notEligible: "آموزش حضوری در حال حاضر فقط در منطقه North York و Vaughan امکان‌پذیر است. خوشحال می‌شویم به صورت آنلاین در خدمت شما باشیم!",
+        availability: "زمان‌های پیشنهادی",
+        days: ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنج‌شنبه", "جمعه"],
+        times: ["صبح", "عصر", "غروب"],
       }
     },
     footer: {
