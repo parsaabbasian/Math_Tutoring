@@ -56,6 +56,16 @@
   transition: var(--transition);
 }
 
+[dir="rtl"] .iconWrapper {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+[dir="rtl"] .stepNumber {
+  right: auto;
+  left: 25px;
+}
+
 .card:hover .iconWrapper {
   background: var(--primary);
   color: white;
@@ -90,12 +100,23 @@
   position: relative;
 }
 
+[dir="rtl"] .pointList li {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
 .pointList li::before {
   content: '→';
   position: absolute;
   left: 0;
   color: var(--primary);
   font-weight: bold;
+}
+
+[dir="rtl"] .pointList li::before {
+  content: '←';
+  left: auto;
+  right: 0;
 }
 
 .extraInfo {

@@ -14,7 +14,11 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoText}>Avin <span className={styles.logoAccent}>Math Tutoring</span></span>
+          {language === 'en' ? (
+            <span className={styles.logoText}>Avin <span className={styles.logoAccent}>Math Tutoring</span></span>
+          ) : (
+            <span className={styles.logoText}>{t.brand}</span>
+          )}
         </Link>
         <nav className={styles.nav}>
           <Link href="/#about" className={styles.navLink}>{t.about}</Link>

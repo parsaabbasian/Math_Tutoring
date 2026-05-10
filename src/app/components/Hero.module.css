@@ -6,7 +6,7 @@
   position: relative;
   overflow: hidden;
   background: radial-gradient(circle at 80% 20%, var(--primary-light) 0%, transparent 40%),
-              radial-gradient(circle at 10% 80%, rgba(18, 184, 184, 0.05) 0%, transparent 40%);
+    radial-gradient(circle at 10% 80%, rgba(18, 184, 184, 0.05) 0%, transparent 40%);
 }
 
 .hero::before {
@@ -34,11 +34,17 @@
 }
 
 @keyframes patternMove {
-  from { background-position: 0 0; }
-  to { background-position: 600px 600px; }
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 600px 600px;
+  }
 }
 
-.blob1, .blob2 {
+.blob1,
+.blob2 {
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
@@ -67,9 +73,17 @@
 }
 
 @keyframes blobMove {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-100px, 150px) scale(1.2); }
-  100% { transform: translate(150px, -100px) scale(1); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-100px, 150px) scale(1.2);
+  }
+
+  100% {
+    transform: translate(150px, -100px) scale(1);
+  }
 }
 
 .heroContainer {
@@ -189,7 +203,7 @@
     grid-template-columns: 1fr;
     text-align: center;
   }
-  
+
   .title {
     font-size: 3rem;
   }
