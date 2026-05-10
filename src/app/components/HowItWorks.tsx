@@ -22,7 +22,7 @@ export default function HowItWorks() {
           {/* SVG Connecting Line */}
           <svg className={styles.svgLine} preserveAspectRatio="none" viewBox="0 0 1000 200">
             <path 
-              d="M 100,60 L 300,140 L 500,60 L 700,140 L 900,60" 
+              d="M 100,50 L 300,150 L 500,50 L 700,150 L 900,50" 
               fill="none" 
               stroke="var(--primary)" 
               strokeWidth="4" 
