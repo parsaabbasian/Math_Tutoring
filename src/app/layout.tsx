@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   title: "Avin Math Tutoring",
   description: "Personalized math tutoring by Avin Mousavi, tailored to the Canadian curriculum.",
   icons: {
-    icon: "/images/favicon.png",
-    apple: "/images/favicon.png",
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
   },
 };
 
