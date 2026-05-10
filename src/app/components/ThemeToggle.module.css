@@ -37,9 +37,9 @@
 
 [data-theme='dark'] .themeToggle {
   background: var(--surface);
-  color: #fbbf24; /* Sun/Moon gold */
+  color: var(--primary);
 }
 
 [data-theme='dark'] .themeToggle:hover {
-  background: rgba(251, 191, 36, 0.1);
+  background: var(--primary-light);
 }
