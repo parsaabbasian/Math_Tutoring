@@ -8,7 +8,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 75px 0 60px; /* Increased bottom padding */
+  padding: 75px 0 20px; /* Reduced bottom padding */
   position: relative;
   overflow: hidden;
 }
