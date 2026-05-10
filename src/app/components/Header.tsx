@@ -1,4 +1,5 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggle';
 import styles from './Header.module.css';
@@ -9,9 +10,18 @@ import LanguageSwitcher from './LanguageSwitcher';
 export default function Header() {
   const { language } = useLanguage();
   const t = translations[language].nav;
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
           <div className={styles.logoIcon}>
