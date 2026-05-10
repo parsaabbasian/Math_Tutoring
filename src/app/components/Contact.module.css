@@ -359,6 +359,34 @@
 
   .infoSection {
     text-align: center;
+    align-items: center;
+  }
+
+  .contactDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 20px;
+    width: 100%;
+    margin-top: 32px;
+  }
+
+  .detailItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contactDetails {
+    gap: 24px 12px;
+  }
+  
+  .detailIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
 }
 
