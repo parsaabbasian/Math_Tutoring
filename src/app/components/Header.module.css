@@ -39,7 +39,7 @@
   height: 80px;
   width: auto;
   object-fit: contain;
-  transform: scale(1.6);
+  transform: scale(1.85);
   transform-origin: left center;
   position: relative;
   top: 2px; /* Fine-tune vertical alignment */
