@@ -60,25 +60,36 @@ export default function Hero() {
             {/* Photo placeholder — replace src with Avin's actual photo */}
             <div className={styles.photoFrame}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
+              {/* ─────────────────────────────────────────
+                  TO ADD AVIN'S PHOTO:
+                  Place the image file at:
+                    /public/avin-photo.jpg
+                  It will automatically appear here.
+              ───────────────────────────────────────── */}
               <img
                 src="/avin-photo.jpg"
                 alt="Avin Mousavi — Math Tutor"
                 className={styles.photo}
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = 'none';
+                  const fallback = (e.target as HTMLElement).nextElementSibling as HTMLElement;
+                  if (fallback) fallback.style.display = 'flex';
                 }}
               />
-              {/* Fallback avatar shown when no photo exists */}
-              <div className={styles.avatarFallback}>
-                <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="60" cy="45" r="32" fill="rgba(18,107,107,0.15)" stroke="var(--primary)" strokeWidth="2"/>
-                  <ellipse cx="60" cy="130" rx="50" ry="35" fill="rgba(18,107,107,0.1)" stroke="var(--primary)" strokeWidth="1.5"/>
-                  <circle cx="60" cy="44" r="22" fill="var(--primary)" opacity="0.2"/>
-                  <text x="60" y="53" textAnchor="middle" fontFamily="Lora, serif" fontSize="26" fill="var(--primary)" fontWeight="700">A</text>
+              {/* Placeholder shown until real photo is added */}
+              <div className={styles.photoPlaceholder}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                  <circle cx="12" cy="13" r="4"/>
                 </svg>
-                <p className={styles.avatarName}>Avin Mousavi</p>
-                <p className={styles.avatarTitle}>{language === 'en' ? 'Math Tutor · York Eng.' : 'مدرس ریاضی · مهندسی یورک'}</p>
+                <p className={styles.placeholderText}>Add your photo</p>
+                <p className={styles.placeholderHint}>/public/avin-photo.jpg</p>
               </div>
+            </div>
+            {/* Name & title — always visible below the circle */}
+            <div className={styles.tutorInfo}>
+              <p className={styles.tutorName}>Avin Mousavi</p>
+              <p className={styles.tutorTitle}>{language === 'en' ? 'Math Tutor · York Eng.' : 'مدرس ریاضی · مهندسی یورک'}</p>
             </div>
 
             {/* Floating info chips */}
