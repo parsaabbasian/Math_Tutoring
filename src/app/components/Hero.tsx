@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hero.module.css';
 
@@ -32,20 +31,6 @@ export default function Hero() {
               <span className={styles.statNumber}>$20</span>
               <span className={styles.statLabel}>CAD / Hour</span>
             </div>
-          </div>
-        </div>
-        <div className={styles.heroImage}>
-          <div className={styles.imageWrapper}>
-            <Image 
-              src="/avin_portrait.png" 
-              alt="Avin Mousavi - Math Tutor" 
-              width={500} 
-              height={600} 
-              className={styles.image}
-              priority
-            />
-            <div className={styles.decorativeCircle}></div>
-            <div className={styles.decorativeDots}></div>
           </div>
         </div>
       </div>
