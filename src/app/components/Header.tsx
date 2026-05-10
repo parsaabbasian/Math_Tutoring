@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import ThemeToggle from './ThemeToggle';
 import Image from 'next/image';
 import styles from './Header.module.css';
 import { useLanguage } from '../context/LanguageContext';
@@ -28,7 +27,6 @@ export default function Header() {
           <Link href="/#about" className={styles.navLink}>{t.about}</Link>
           <Link href="/#how-it-works" className={styles.navLink}>{t.howItWorks}</Link>
           <LanguageSwitcher />
-          <ThemeToggle />
           <Link href="/#join" className="btn-primary">{t.join}</Link>
         </nav>
       </div>
