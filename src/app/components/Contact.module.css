@@ -78,7 +78,7 @@
 
 .formContainer {
   background: var(--surface);
-  padding: 24px 32px;
+  padding: 18px 24px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border);
@@ -87,7 +87,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .row {
@@ -231,9 +231,9 @@
 }
 
 .typeBtn {
-  padding: 10px;
+  padding: 8px;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-muted);
   transition: var(--transition);
@@ -322,7 +322,7 @@
 }
 
 .slotBtn {
-  height: 32px;
+  height: 26px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -356,7 +356,7 @@
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  
+
   .infoSection {
     text-align: center;
   }
