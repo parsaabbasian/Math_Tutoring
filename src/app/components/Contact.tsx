@@ -153,13 +153,6 @@ export default function Contact() {
                 <p className={styles.detailValue}>{t.info.locationDesc}</p>
               </div>
             </div>
-            <div className={styles.detailItem}>
-              <div className={styles.detailIcon}><TagIcon /></div>
-              <div>
-                <h4 className={styles.detailTitle}>{t.info.price}</h4>
-                <p className={styles.detailValue}>{t.info.priceDesc}</p>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -178,45 +171,57 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className={styles.form}>
-                <div className={styles.inputGroup}>
-                  <label htmlFor="studentName" className={styles.label}>{t.form.studentName}</label>
-                  <input type="text" id="studentName" name="studentName" className={styles.input} required placeholder={language === 'fa' ? "نام و نام خانوادگی" : "Full Name"} />
+              <>
+                <h3 className={styles.formHeading}>{t.services.title}</h3>
+                
+                {/* Service Selection Cards */}
+                <div className={styles.serviceCards}>
+                  <button
+                    type="button"
+                    className={`${styles.serviceCard} ${tutoringType === 'online' ? styles.serviceActive : ''}`}
+                    onClick={() => { setTutoringType('online'); setIsEligible(true); }}
+                  >
+                    <div className={styles.serviceIcon}><LaptopIcon /></div>
+                    <div className={styles.serviceInfo}>
+                      <span className={styles.serviceTitle}>{t.services.online.title}</span>
+                      <span className={styles.servicePrice}>{t.services.online.price}</span>
+                      <p className={styles.serviceDesc}>{t.services.online.desc}</p>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    className={`${styles.serviceCard} ${tutoringType === 'in-person' ? styles.serviceActive : ''}`}
+                    onClick={() => { setTutoringType('in-person'); checkEligibility(address); }}
+                  >
+                    <div className={styles.serviceIcon}><PhoneIcon /></div>
+                    <div className={styles.serviceInfo}>
+                      <span className={styles.serviceTitle}>{t.services.inPerson.title}</span>
+                      <span className={styles.servicePrice}>{t.services.inPerson.price}</span>
+                      <p className={styles.serviceDesc}>{t.services.inPerson.desc}</p>
+                    </div>
+                  </button>
                 </div>
 
-                <div className={styles.row}>
+                <form onSubmit={handleSubmit} className={styles.form}>
                   <div className={styles.inputGroup}>
-                    <label htmlFor="email" className={styles.label}>{t.form.email}</label>
-                    <input type="email" id="email" name="email" className={styles.input} required placeholder="email@example.com" />
+                    <label htmlFor="studentName" className={styles.label}>{t.form.studentName}</label>
+                    <input type="text" id="studentName" name="studentName" className={styles.input} required placeholder={language === 'fa' ? "نام و نام خانوادگی" : "Full Name"} />
                   </div>
 
-                  <div className={styles.inputGroup}>
-                    <label htmlFor="phone" className={styles.label}>{t.form.phone}</label>
-                    <input type="tel" id="phone" name="phone" className={styles.input} placeholder={language === 'fa' ? "۰۹۱۲۰۰۰۰۰۰۰" : "(555) 000-0000"} />
-                  </div>
-                </div>
+                  <div className={styles.row}>
+                    <div className={styles.inputGroup}>
+                      <label htmlFor="email" className={styles.label}>{t.form.email}</label>
+                      <input type="email" id="email" name="email" className={styles.input} required placeholder="email@example.com" />
+                    </div>
 
-                {/* Tutoring Type Selector */}
-                <div className={styles.inputGroup}>
-                  <label className={styles.label}>{t.form.type}</label>
-                  <div className={styles.typeSelector}>
-                    <button
-                      type="button"
-                      className={`${styles.typeBtn} ${tutoringType === 'online' ? styles.active : ''}`}
-                      onClick={() => { setTutoringType('online'); setIsEligible(true); }}
-                    >
-                      {t.form.online}
-                    </button>
-                    <button
-                      type="button"
-                      className={`${styles.typeBtn} ${tutoringType === 'in-person' ? styles.active : ''}`}
-                      onClick={() => { setTutoringType('in-person'); checkEligibility(address); }}
-                    >
-                      {t.form.inPerson}
-                    </button>
+                    <div className={styles.inputGroup}>
+                      <label htmlFor="phone" className={styles.label}>{t.form.phone}</label>
+                      <input type="tel" id="phone" name="phone" className={styles.input} placeholder={language === 'fa' ? "۰۹۱۲۰۰۰۰۰۰۰" : "(555) 000-0000"} />
+                    </div>
                   </div>
+
                   <input type="hidden" name="tutoringType" value={tutoringType} />
-                </div>
 
                 {/* Conditional Address Field */}
                 {tutoringType === 'in-person' && (
