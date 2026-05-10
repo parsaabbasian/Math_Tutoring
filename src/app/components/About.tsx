@@ -16,10 +16,6 @@ export default function About() {
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className={styles.experienceBadge}>
-            <span className={styles.badgeNumber}>1+</span>
-            <span className={styles.badgeText}>Years of <br />Excellence</span>
-          </div>
         </div>
 
         <div className={`${styles.aboutContent} fade-in`}>
