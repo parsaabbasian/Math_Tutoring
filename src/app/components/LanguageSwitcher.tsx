@@ -18,7 +18,9 @@ export default function LanguageSwitcher() {
         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
       </svg>
       <span className={styles.label}>
-        {language === 'en' ? 'فارسی' : 'English'}
+        {language === 'en'
+          ? <span style={{ fontFamily: 'var(--font-vazir)' }}>فارسی</span>
+          : 'English'}
       </span>
     </button>
   );
