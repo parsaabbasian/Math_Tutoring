@@ -4,87 +4,125 @@ import styles from './Hero.module.css';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
 
-const SparkleIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px' }}>
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-  </svg>
-);
-
 export default function Hero() {
   const { language } = useLanguage();
   const t = translations[language].hero;
 
   return (
     <section className={styles.hero}>
-      <div className={styles.mathSymbols}></div>
       <div className={`container ${styles.heroGrid}`}>
-        <div className={styles.textContent}>
-          <div className={`${styles.badge} fade-in`}>
-            ✨ {language === 'en' ? 'Top-Rated Canadian Math Tutoring' : 'برترین آموزش ریاضی در کانادا'}
-          </div>
-          <h1 className={`${styles.title} fade-in`}>
+
+        {/* ── LEFT: Text ── */}
+        <div className={styles.textSide}>
+          <p className={`${styles.eyebrow} fade-in`}>
+            {language === 'en'
+              ? '⭐ Personalized · OSSD · Bilingual (EN & FA)'
+              : '⭐ شخصی‌سازی شده · OSSD · دوزبانه (FA & EN)'}
+          </p>
+
+          <h1 className={`${styles.headline} fade-in`}>
             {language === 'en' ? (
-              <>Crush Your Math Goals <br /><span className="gradient-text">Without the Stress.</span></>
+              <>Private Math Tutoring <br /><span className={styles.accent}>That Actually Works.</span></>
             ) : (
-              <>ریاضی رو بترکون، <br /><span className="gradient-text">بدون استرس!</span></>
+              <>آموزش خصوصی ریاضی <br /><span className={styles.accent}>که واقعاً جواب میده.</span></>
             )}
           </h1>
-          <p className={`${styles.description} fade-in`}>
-            {language === 'en' 
-              ? "Expert guidance for OSSD & University levels. We don't just teach math; we build the confidence to solve anything. English & Persian supported."
-              : "آموزش تخصصی منطبق با برنامه درسی کانادا (OSSD). ما فقط ریاضی درس نمیدیم؛ ما اعتماد به نفس حل هر مسئله‌ای رو در تو می‌سازیم."}
+
+          <p className={`${styles.sub} fade-in`}>
+            {language === 'en'
+              ? 'Achieve your goals with personalized, one-on-one math sessions — taught by a York University engineering student, in English or Persian.'
+              : 'با جلسات خصوصی یک‌به‌یک ریاضی به اهدافت برس — تدریس شده توسط دانشجوی مهندسی یورک، به انگلیسی یا فارسی.'}
           </p>
-          <div className={`${styles.actions} fade-in`}>
-            <Link href="/#join" className="btn-primary" style={{ padding: '18px 44px', fontSize: '1.2rem', borderRadius: '16px' }}>{t.ctaStart}</Link>
-            <Link href="/#about" className="btn-outline" style={{ padding: '16px 36px', borderRadius: '16px' }}>{t.ctaMeet}</Link>
+
+          <div className={`${styles.ctaRow} fade-in`}>
+            <Link href="/#join" className={styles.ctaPrimary}>
+              {t.ctaStart}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </Link>
+            <Link href="/#about" className={styles.ctaSecondary}>{t.ctaMeet}</Link>
+          </div>
+
+          {/* Grade pills */}
+          <div className={`${styles.grades} fade-in`}>
+            <span className={styles.gradesLabel}>{language === 'en' ? 'Grades:' : 'پایه‌ها:'}</span>
+            {['9', '10', '11', '12', 'Uni'].map(g => (
+              <span key={g} className={styles.gradePill}>{g}</span>
+            ))}
           </div>
         </div>
 
-        <div className={`${styles.visualContent} fade-in`}>
-          <div className={styles.collageContainer}>
-            {/* The "Notebook" Element */}
-            <div className={styles.paperPiece}>
-              <div className={styles.paperHeader}>Lesson Snapshot</div>
-              <div className={styles.paperBody}>
-                <div className={styles.handwriting}>f(x) = sin(x)</div>
-                <div className={styles.graphSketch}>
-                  <svg viewBox="0 0 100 60" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M10 30 Q 30 10 50 30 T 90 30" stroke="var(--primary)" strokeWidth="2" />
-                    <line x1="10" y1="30" x2="90" y2="30" stroke="#eee" />
-                    <line x1="50" y1="10" x2="50" y2="50" stroke="#eee" />
-                  </svg>
-                </div>
-              </div>
-            </div>
+        {/* ── RIGHT: Circle + Photo + Chips ── */}
+        <div className={`${styles.imageSide} fade-in`}>
+          <div className={styles.circleWrap}>
+            {/* Background circle */}
+            <div className={styles.circle}></div>
 
-            {/* The "Polaroid" Photo */}
-            <div className={styles.polaroid}>
-              <div className={styles.photoPlaceholder}>
-                <svg viewBox="0 0 100 100" fill="none" stroke="var(--primary-light)">
-                  <circle cx="50" cy="50" r="30" fill="var(--primary-light)" opacity="0.2" />
-                  <path d="M30 70 L50 30 L70 70" stroke="var(--primary)" strokeWidth="2" />
+            {/* Photo placeholder — replace src with Avin's actual photo */}
+            <div className={styles.photoFrame}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/avin-photo.jpg"
+                alt="Avin Mousavi — Math Tutor"
+                className={styles.photo}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                }}
+              />
+              {/* Fallback avatar shown when no photo exists */}
+              <div className={styles.avatarFallback}>
+                <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="60" cy="45" r="32" fill="rgba(18,107,107,0.15)" stroke="var(--primary)" strokeWidth="2"/>
+                  <ellipse cx="60" cy="130" rx="50" ry="35" fill="rgba(18,107,107,0.1)" stroke="var(--primary)" strokeWidth="1.5"/>
+                  <circle cx="60" cy="44" r="22" fill="var(--primary)" opacity="0.2"/>
+                  <text x="60" y="53" textAnchor="middle" fontFamily="Lora, serif" fontSize="26" fill="var(--primary)" fontWeight="700">A</text>
                 </svg>
-              </div>
-              <div className={styles.photoCaption}>{language === 'en' ? 'Study Mode' : 'وقت مطالعه'}</div>
-            </div>
-
-            {/* The "Goal" Sticky Note */}
-            <div className={styles.stickyNote}>
-              <div className={styles.stickyText}>
-                <strong>Goal:</strong> <br /> 
-                Next Exam: A+ 🚀
+                <p className={styles.avatarName}>Avin Mousavi</p>
+                <p className={styles.avatarTitle}>{language === 'en' ? 'Math Tutor · York Eng.' : 'مدرس ریاضی · مهندسی یورک'}</p>
               </div>
             </div>
 
-            {/* Floating "Stickers" & Decor */}
-            <div className={styles.mathSticker} style={{ top: '-10px', left: '20%' }}>∑</div>
-            <div className={styles.mathSticker} style={{ bottom: '20px', right: '10%', background: 'var(--accent)', color: 'white' }}>π</div>
-            <div className={styles.ruler}></div>
+            {/* Floating info chips */}
+            <div className={`${styles.chip} ${styles.chip1}`}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              {language === 'en' ? 'Bilingual Sessions' : 'جلسات دوزبانه'}
+            </div>
+
+            <div className={`${styles.chip} ${styles.chip2}`}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {language === 'en' ? 'Flexible Schedule' : 'برنامه منعطف'}
+            </div>
+
+            <div className={`${styles.chip} ${styles.chip3}`}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              OSSD Expert
+            </div>
           </div>
+        </div>
+      </div>
 
-          <div className={styles.experienceCard}>
-            <div className={styles.expNumber}>OSSD</div>
-            <div className={styles.expLabel}>{language === 'en' ? 'Curriculum Expert' : 'متخصص برنامه آموزشی'}</div>
+      {/* ── Stats Bar ── */}
+      <div className={styles.statsBar}>
+        <div className="container">
+          <div className={styles.statsRow}>
+            <div className={styles.statItem}>
+              <strong>100%</strong>
+              <span>{t.stats.satisfaction}</span>
+            </div>
+            <div className={styles.statDivider}></div>
+            <div className={styles.statItem}>
+              <strong>{language === 'en' ? 'Bilingual' : 'دوزبانه'}</strong>
+              <span>{language === 'en' ? 'English & Persian' : 'فارسی و انگلیسی'}</span>
+            </div>
+            <div className={styles.statDivider}></div>
+            <div className={styles.statItem}>
+              <strong>OSSD</strong>
+              <span>{language === 'en' ? 'Curriculum Expert' : 'متخصص برنامه درسی'}</span>
+            </div>
+            <div className={styles.statDivider}></div>
+            <div className={styles.statItem}>
+              <strong>$20</strong>
+              <span>{t.stats.price}</span>
+            </div>
           </div>
         </div>
       </div>
