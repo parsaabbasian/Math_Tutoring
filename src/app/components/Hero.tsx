@@ -4,6 +4,8 @@ import styles from './Hero.module.css';
 export default function Hero() {
   return (
     <section className={styles.hero}>
+      <div className={styles.blob1}></div>
+      <div className={styles.blob2}></div>
       <div className={`container ${styles.heroContainer}`}>
         <div className={styles.heroContent}>
           <div className={`${styles.badge} fade-in`}>✨ Available for personalized online tutoring</div>
