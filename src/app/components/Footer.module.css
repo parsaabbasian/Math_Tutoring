@@ -15,12 +15,12 @@
 }
 
 .logoImage {
-  height: 80px;
+  height: 60px;
   width: auto;
   object-fit: contain;
   margin-left: -15px;
-  margin-top: -10px;
-  margin-bottom: -15px;
+  margin-top: -5px;
+  margin-bottom: -10px;
 }
 
 [dir='rtl'] .logoImage {
@@ -92,8 +92,8 @@
   }
 
   .logoImage {
-    height: 60px;
-    margin-bottom: -10px;
+    height: 45px;
+    margin-bottom: -5px;
     margin-left: 0;
     margin-right: 0;
   }
