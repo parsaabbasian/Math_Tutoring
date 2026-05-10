@@ -1,9 +1,7 @@
 .header {
-  background: var(--primary-light);
-  background-image: 
-    linear-gradient(rgba(0, 91, 91, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 91, 91, 0.04) 1px, transparent 1px);
-  background-size: 60px 40px; /* Rectangular grid */
+  background: transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
   left: 0;
@@ -13,15 +11,12 @@
   display: flex;
   align-items: center;
   transition: var(--transition);
-  border-bottom: 1px solid rgba(0, 91, 91, 0.08);
 }
 
 [data-theme='dark'] .header {
-  background: var(--background);
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 60px 40px;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .containerWide {

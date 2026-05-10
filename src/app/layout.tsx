@@ -9,7 +9,7 @@ const vazir = Vazirmatn({
   variable: "--font-vazir",
 });
 
-const outfit = Outfit({ 
+const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
 });
