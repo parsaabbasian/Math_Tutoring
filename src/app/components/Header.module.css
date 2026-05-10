@@ -18,6 +18,13 @@
   background: rgba(18, 18, 20, 0.75);
 }
 
+.containerWide {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
 .headerContent {
   display: flex;
   justify-content: space-between;
@@ -36,6 +43,8 @@
   font-weight: 800;
   color: var(--primary);
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: baseline;
 }
 
 .logoAccent {
