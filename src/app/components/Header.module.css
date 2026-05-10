@@ -36,47 +36,14 @@
   align-items: center;
 }
 
-.logoWrapper {
-  display: flex;
-  align-items: center;
-  gap: 0px;
-  position: relative;
-  padding: 4px 12px;
-  border-radius: var(--radius-md);
-  background-image: 
-    linear-gradient(rgba(0, 102, 102, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 102, 102, 0.05) 1px, transparent 1px);
-  background-size: 8px 8px;
-  overflow: hidden;
-}
-
-.logoIcon {
-  color: #006666;
-  flex-shrink: 0;
-  z-index: 1;
-}
-
 .logoText {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.5px;
   display: flex;
-  flex-direction: column;
-  line-height: 1;
-  margin-left: -4px;
-  z-index: 1;
-}
-
-.brandName {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.4rem;
-  color: #006666;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 32px;
+  align-items: baseline;
+  margin-left: -2px;
 }
 
 .logoAccent {
