@@ -1,3 +1,4 @@
+'use client';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
 import styles from './About.module.css';
