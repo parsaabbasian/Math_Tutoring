@@ -52,7 +52,7 @@ export default function Contact() {
 
   const toggleSlot = (day: string, time: string) => {
     const slot = `${day}-${time}`;
-    setSelectedSlots(prev => 
+    setSelectedSlots(prev =>
       prev.includes(slot) ? prev.filter(s => s !== slot) : [...prev, slot]
     );
   };
@@ -62,10 +62,10 @@ export default function Contact() {
       setIsEligible(true);
       return;
     }
-    
+
     const validRegions = ['north york', 'vaughan', 'm2m', 'm2n', 'm2r', 'm3h', 'm3j', 'm3k', 'm3l', 'm3m', 'm3n', 'l4j', 'l4k', 'l4c', 'l6a'];
     const normalized = val.toLowerCase().trim();
-    
+
     if (normalized.length < 3) {
       setIsEligible(true); // Don't show error while typing early
       return;
@@ -78,7 +78,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (tutoringType === 'in-person' && !isEligible) return;
-    
+
     setStatus('loading');
 
     const form = e.currentTarget;
@@ -112,7 +112,7 @@ export default function Contact() {
           <span className={styles.subtitle}>{t.subtitle}</span>
           <h2 className="section-title" style={{ textAlign: isRTL ? 'right' : 'left', marginBottom: '24px' }}>{t.title}</h2>
           <p className={styles.infoDescription}>{t.description}</p>
-          
+
           <div className={styles.contactDetails}>
             <div className={styles.detailItem}>
               <div className={styles.detailIcon}><MailIcon /></div>
@@ -154,8 +154,8 @@ export default function Contact() {
             {status === 'success' ? (
               <div className={styles.successState}>
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                  <polyline points="22 4 12 14.01 9 11.01"/>
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
                 <h3>{language === 'en' ? 'Request Sent!' : 'درخواست ارسال شد!'}</h3>
                 <p>{t.form.success}</p>
@@ -169,13 +169,13 @@ export default function Contact() {
                   <label htmlFor="studentName" className={styles.label}>{t.form.studentName}</label>
                   <input type="text" id="studentName" name="studentName" className={styles.input} required placeholder={language === 'fa' ? "نام و نام خانوادگی" : "Full Name"} />
                 </div>
-                
+
                 <div className={styles.row}>
                   <div className={styles.inputGroup}>
                     <label htmlFor="email" className={styles.label}>{t.form.email}</label>
                     <input type="email" id="email" name="email" className={styles.input} required placeholder="email@example.com" />
                   </div>
-                  
+
                   <div className={styles.inputGroup}>
                     <label htmlFor="phone" className={styles.label}>{t.form.phone}</label>
                     <input type="tel" id="phone" name="phone" className={styles.input} placeholder={language === 'fa' ? "۰۹۱۲۰۰۰۰۰۰۰" : "(555) 000-0000"} />
@@ -208,15 +208,15 @@ export default function Contact() {
                 {tutoringType === 'in-person' && (
                   <div className={`${styles.inputGroup} fade-in`}>
                     <label htmlFor="address" className={styles.label}>{t.form.address}</label>
-                    <input 
-                      type="text" 
-                      id="address" 
-                      name="address" 
-                      className={`${styles.input} ${!isEligible ? styles.inputError : ''}`} 
-                      required 
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      className={`${styles.input} ${!isEligible ? styles.inputError : ''}`}
+                      required
                       value={address}
                       onChange={(e) => { setAddress(e.target.value); checkEligibility(e.target.value); }}
-                      placeholder={language === 'fa' ? "مثلاً: North York, M2N..." : "e.g. North York, M2N..."} 
+                      placeholder={language === 'fa' ? "مثلاً: North York, M2N..." : "e.g. North York, M2N..."}
                     />
                     {!isEligible && (
                       <p className={styles.eligibilityError}>{t.form.notEligible}</p>
@@ -238,20 +238,20 @@ export default function Contact() {
 
                 {/* Availability Toggle */}
                 <div className={styles.inputGroup}>
-                  <button 
-                    type="button" 
+                  <button
+                    type="button"
                     className={styles.availabilityToggle}
                     onClick={() => setShowAvailability(!showAvailability)}
                   >
                     <span>{t.form.availability}</span>
-                    <svg 
+                    <svg
                       width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                       style={{ transform: showAvailability ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s ease' }}
                     >
                       <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                   </button>
-                  
+
                   {showAvailability && (
                     <div className={`${styles.availabilityGrid} fade-in`}>
                       <div className={styles.timeLabels}>
