@@ -12,61 +12,61 @@
 .symbol {
   position: absolute;
   color: var(--primary);
-  opacity: 0.22;
-  filter: blur(15px);
+  opacity: 0.35;
+  filter: blur(4px);
   transition: all 1s ease-out;
 }
 
 [data-theme='dark'] .symbol {
   color: var(--primary);
-  opacity: 0.18;
-  filter: blur(25px);
+  opacity: 0.25;
+  filter: blur(8px);
 }
 
 .symbol1 {
-  width: 150px;
+  width: 90px;
   top: 8%;
   left: 2%;
   animation: drift 25s ease-in-out infinite alternate;
 }
 
 .symbol2 {
-  width: 120px;
+  width: 70px;
   top: 20%;
   right: 2%;
   animation: drift 30s ease-in-out infinite alternate-reverse;
 }
 
 .symbol3 {
-  width: 180px;
+  width: 100px;
   bottom: 15%;
   left: 3%;
   animation: drift 35s ease-in-out infinite alternate;
 }
 
 .symbol4 {
-  width: 160px;
+  width: 85px;
   bottom: 8%;
   right: 3%;
   animation: drift 28s ease-in-out infinite alternate-reverse;
 }
 
 .symbol5 {
-  width: 110px;
+  width: 65px;
   top: 50%;
-  right: 1%;
+  right: 1.5%;
   animation: drift 40s ease-in-out infinite alternate;
 }
 
 .symbol6 {
-  width: 140px;
+  width: 80px;
   top: 40%;
-  left: 1%;
+  left: 1.5%;
   animation: drift 32s ease-in-out infinite alternate-reverse;
 }
 
 .symbol7 {
-  width: 120px;
+  width: 75px;
   top: 2%;
   left: 25%;
   animation: drift 38s ease-in-out infinite alternate;
