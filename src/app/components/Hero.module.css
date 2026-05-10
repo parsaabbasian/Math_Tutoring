@@ -121,7 +121,7 @@
     0 16px 40px rgba(0, 0, 0, 0.08),
     0 0 0 1px rgba(0, 0, 0, 0.04);
   aspect-ratio: 3 / 4;
-  max-width: 360px;
+  max-width: 300px;
 }
 
 .photo {

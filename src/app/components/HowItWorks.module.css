@@ -1,18 +1,43 @@
 /* ─── HOW IT WORKS — Connected Circles Infographic ───
-   Overlapping circles, alternating up/down rows
+   Zigzag layout with connecting line
 ──────────────────────────────────────────────────── */
 
 .howItWorks {
   background: var(--surface-alt);
 }
 
+.containerWide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 /* ── Circle Row ── */
 .circles {
   display: flex;
-  justify-content: center;
+  justify-content: space-around; /* Better distribution */
   align-items: center;
   position: relative;
-  padding: 160px 0;
+  padding: 180px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.svgLine {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .svgLine {
+    display: none;
+  }
 }
 
 /* ── Each item: circle + text ── */
@@ -21,55 +46,35 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 180px;
-  /* Overlap so circles touch/connect */
-  margin-left: -40px;
-}
-
-.item:first-child {
-  margin-left: 0;
-}
-
-/* Connector bridge between circles */
-.item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
-  border-radius: 50%;
-  z-index: 1;
-  pointer-events: none;
+  flex: 1;
+  z-index: 2;
 }
 
 /* ── The Circle ── */
 .circle {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  border: 5px solid var(--primary);
+  border: 4px solid var(--primary);
   background: var(--surface);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .circle:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
 }
 
 /* Number inside circle */
 .num {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 800;
   line-height: 1;
   color: var(--primary);
@@ -78,75 +83,68 @@
 /* ── Text block: positioned above or below ── */
 .text {
   position: absolute;
-  width: 180px;
+  width: 200px;
   text-align: center;
 }
 
 /* Odd steps (1, 3, 5): circle shifts UP, text ABOVE */
 .item[data-pos='up'] {
-  transform: translateY(-60px);
+  transform: translateY(-70px);
 }
 
 .item[data-pos='up'] .text {
-  bottom: calc(100% + 12px);
+  bottom: calc(100% + 20px);
 }
 
 /* Even steps (2, 4): circle shifts DOWN, text BELOW */
 .item[data-pos='down'] {
-  transform: translateY(60px);
+  transform: translateY(70px);
 }
 
 .item[data-pos='down'] .text {
-  top: calc(100% + 12px);
+  top: calc(100% + 20px);
 }
 
 /* ── Title & description ── */
 .title {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: var(--primary);
 }
 
 .desc {
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  line-height: 1.5;
-}
-
-/* ── RTL ── */
-:global([dir='rtl']) .item {
-  margin-left: 0;
-  margin-right: -40px;
-}
-
-:global([dir='rtl']) .item:first-child {
-  margin-right: 0;
+  line-height: 1.6;
 }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .circles {
     flex-direction: column;
-    padding: 40px 0;
-    gap: 0;
+    padding: 60px 0;
+    gap: 40px;
+  }
+
+  .circles::before {
+    top: 60px;
+    bottom: 60px;
+    left: 45px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    transform: none;
   }
 
   .item {
     width: 100%;
-    max-width: 360px;
+    max-width: 500px;
     flex-direction: row;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
     transform: none !important;
-    margin-top: -20px;
-    gap: 20px;
-  }
-
-  .item:first-child {
-    margin-top: 0;
+    gap: 25px;
   }
 
   .circle {
@@ -166,11 +164,16 @@
     flex: 1;
   }
 
-  :global([dir='rtl']) .text {
+  [dir='rtl'] .text {
     text-align: right;
   }
 
-  :global([dir='rtl']) .item {
+  [dir='rtl'] .item {
     flex-direction: row-reverse;
+  }
+
+  [dir='rtl'] .circles::before {
+    left: auto;
+    right: 45px;
   }
 }

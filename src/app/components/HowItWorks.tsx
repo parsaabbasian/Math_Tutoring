@@ -14,15 +14,24 @@ export default function HowItWorks() {
 
   return (
     <section id="how-it-works" className={`section ${styles.howItWorks}`}>
-      <div className="container">
+      <div className={styles.containerWide}>
         <h2 className="section-title">{t.title}</h2>
         <p className="section-subtitle">{t.subtitle}</p>
 
-        {/* ── Connected circles row ── */}
         <div className={styles.circles}>
+          {/* SVG Connecting Line */}
+          <svg className={styles.svgLine} preserveAspectRatio="none" viewBox="0 0 1000 200">
+            <path 
+              d="M 100,60 L 300,140 L 500,60 L 700,140 L 900,60" 
+              fill="none" 
+              stroke="var(--primary)" 
+              strokeWidth="4" 
+              opacity="0.7"
+            />
+          </svg>
+
           {t.steps.map((step, i) => (
             <div key={i} className={styles.item} data-pos={i % 2 === 0 ? 'up' : 'down'}>
-
               {/* The circle */}
               <div className={styles.circle}>
                 <span className={styles.num}>
