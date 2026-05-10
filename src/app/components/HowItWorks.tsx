@@ -21,11 +21,11 @@ export default function HowItWorks() {
         <div className={styles.circles}>
           {/* SVG Connecting Line */}
           <svg className={styles.svgLine} preserveAspectRatio="none" viewBox="0 0 1000 200">
-            <path 
-              d="M 100,50 L 300,150 L 500,50 L 700,150 L 900,50" 
-              fill="none" 
-              stroke="var(--primary)" 
-              strokeWidth="4" 
+            <path
+              d="M 100,50 L 300,150 L 500,50 L 700,150 L 900,50"
+              fill="none"
+              stroke="var(--primary)"
+              strokeWidth="4"
               opacity="0.7"
             />
           </svg>

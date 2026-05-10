@@ -17,7 +17,7 @@
 .aboutContainer {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 80px;
+  gap: 120px;
   align-items: start;
   position: relative;
   z-index: 1;
