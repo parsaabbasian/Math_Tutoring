@@ -117,7 +117,8 @@
   color: var(--foreground);
 }
 
-.input, .textarea {
+.input,
+.textarea {
   width: 100%;
   padding: 14px 18px;
   border: 1px solid var(--border);
@@ -129,7 +130,8 @@
   transition: var(--transition);
 }
 
-.input:focus, .textarea:focus {
+.input:focus,
+.textarea:focus {
   outline: none;
   border-color: var(--primary);
   background: var(--surface);
@@ -226,7 +228,7 @@
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  
+
   .formContainer {
     padding: 32px;
   }
