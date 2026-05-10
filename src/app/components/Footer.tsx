@@ -27,8 +27,9 @@ export default function Footer() {
         </div>
         <div className={styles.socials}>
           <h4 className={styles.linksTitle}>{t.connect}</h4>
-          <a href="#" className={styles.link}>Instagram</a>
-          <a href="#" className={styles.link}>LinkedIn</a>
+          {/* ── Update these URLs with Avin's real social profiles ── */}
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>Instagram</a>
+          <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className={styles.link}>LinkedIn</a>
           <a href="mailto:avin.math@gmail.com" className={styles.link}>Email</a>
         </div>
       </div>
