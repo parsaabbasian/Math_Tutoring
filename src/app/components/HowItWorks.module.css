@@ -50,7 +50,7 @@
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: 5px solid;
+  border: 5px solid var(--primary);
   background: var(--surface);
   display: flex;
   flex-direction: column;
@@ -72,6 +72,7 @@
   font-size: 2.4rem;
   font-weight: 800;
   line-height: 1;
+  color: var(--primary);
 }
 
 /* ── Text block: positioned above or below ── */
@@ -106,6 +107,7 @@
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-bottom: 6px;
+  color: var(--primary);
 }
 
 .desc {
