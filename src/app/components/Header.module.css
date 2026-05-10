@@ -7,15 +7,13 @@
   z-index: 9999;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--surface);
   border-bottom: 1px solid var(--border);
   transition: var(--transition);
 }
 
 [data-theme='dark'] .header {
-  background: rgba(18, 18, 20, 0.75);
+  background: var(--surface);
 }
 
 .containerWide {
@@ -74,6 +72,7 @@
 
 @media (max-width: 768px) {
   .nav {
-    display: none; /* simple mobile hide for now, would add hamburger in a real scenario */
+    display: none;
+    /* simple mobile hide for now, would add hamburger in a real scenario */
   }
 }
