@@ -73,18 +73,18 @@ export const translations = {
         locationDesc: "100% Online & Flexible",
         price: "Price",
         priceDesc: "$20 / Hour",
-        services: {
-          title: "Select Your Preferred Mode",
-          online: {
-            title: "Online Tutoring",
-            price: "$20 / Hour",
-            desc: "Flexible learning from the comfort of your home."
-          },
-          inPerson: {
-            title: "In-Person Tutoring",
-            price: "$40 / Hour",
-            desc: "Personalized lessons in North York & Vaughan areas."
-          }
+      },
+      services: {
+        title: "Select Your Preferred Mode",
+        online: {
+          title: "Online Tutoring",
+          price: "$20 / Hour",
+          desc: "Flexible learning from the comfort of your home."
+        },
+        inPerson: {
+          title: "In-Person Tutoring",
+          price: "$40 / Hour",
+          desc: "Personalized lessons in North York & Vaughan areas."
         }
       },
       form: {
@@ -187,18 +187,18 @@ export const translations = {
         locationDesc: "۱۰۰٪ آنلاین و منعطف",
         price: "قیمت",
         priceDesc: "۲۰ دلار / ساعت",
-        services: {
-          title: "نوع آموزش مورد نظر را انتخاب کنید",
-          online: {
-            title: "آموزش آنلاین",
-            price: "۲۰ دلار / ساعت",
-            desc: "یادگیری منعطف از راحتی خانه شما."
-          },
-          inPerson: {
-            title: "آموزش حضوری",
-            price: "۴۰ دلار / ساعت",
-            desc: "جلسات حضوری در مناطق نورت یورک و وان."
-          }
+      },
+      services: {
+        title: "نوع آموزش مورد نظر را انتخاب کنید",
+        online: {
+          title: "آموزش آنلاین",
+          price: "۲۰ دلار / ساعت",
+          desc: "یادگیری منعطف از راحتی خانه شما."
+        },
+        inPerson: {
+          title: "آموزش حضوری",
+          price: "۴۰ دلار / ساعت",
+          desc: "جلسات حضوری در مناطق نورت یورک و وان."
         }
       },
       form: {
