@@ -26,15 +26,7 @@
   --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-[data-theme='dark'] {
-  --background: #081414;
-  --foreground: #ffffff;
-  --surface: #0f1f1f;
-  --surface-alt: #1a2f2f;
-  --border: #253f3f;
-  --text-muted: #a3bebe;
-  --primary-light: rgba(0, 180, 180, 0.15);
-}
+
 
 html {
   scroll-behavior: smooth;
@@ -201,8 +193,4 @@ button {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-[data-theme='dark'] .glass {
-  background: rgba(24, 24, 27, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
+
