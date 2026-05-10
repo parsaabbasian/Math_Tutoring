@@ -20,17 +20,6 @@ export default function About() {
             As an engineering student, I use <strong>analytical thinking and structured problem-solving</strong> to help students develop strong foundations for long-term academic success.
           </p>
           
-          <div className={styles.portfolio}>
-            <h3 className={styles.portfolioTitle}>My Goal is to help students:</h3>
-            <ul className={styles.portfolioList}>
-              <li>✨ Build confidence in math</li>
-              <li>🧠 Improve critical thinking</li>
-              <li>🛠️ Develop problem-solving</li>
-              <li>🎓 Prepare for success</li>
-              <li>💬 Learn at their own pace</li>
-            </ul>
-          </div>
-
           <p className={styles.aboutText} style={{ marginTop: '16px', marginBottom: 0 }}>
             Whether you need help catching up or advancing ahead, lessons are always <strong>personalized</strong> to your unique learning style.
           </p>
