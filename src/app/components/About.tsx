@@ -6,10 +6,15 @@ export default function About() {
       <div className={styles.aboutBg}></div>
       <div className={`container ${styles.aboutContainer}`}>
         <div className={`${styles.videoWrapper} fade-in`}>
-          <div className={styles.videoPlaceholder}>
-            <div className={styles.playButton}>▶</div>
-            <p className={styles.videoText}>Watch My Story</p>
-            <div className={styles.videoOverlay}></div>
+          <div className={styles.videoContainer}>
+            <video 
+              className={styles.videoPlayer}
+              controls
+              playsInline
+            >
+              <source src="/videos/309.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className={styles.experienceBadge}>
             <span className={styles.badgeNumber}>1+</span>
