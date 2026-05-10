@@ -15,7 +15,7 @@ export const translations = {
       stats: {
         satisfaction: "Student Satisfaction",
         bilingual: "English & Persian",
-        price: "CAD / Hour"
+        price: "$20 / Hour"
       },
       trust: {
         ontario: "Ontario Curriculum Expert",
@@ -72,7 +72,7 @@ export const translations = {
         location: "Location",
         locationDesc: "100% Online & Flexible",
         price: "Price",
-        priceDesc: "$40 / Hour"
+        priceDesc: "$20 / Hour"
       },
       form: {
         studentName: "Student Name",
@@ -116,7 +116,7 @@ export const translations = {
       stats: {
         satisfaction: "رضایت دانش‌آموزان",
         bilingual: "انگلیسی و فارسی",
-        price: "دلار / ساعت"
+        price: "۲۰ دلار / ساعت"
       },
       trust: {
         ontario: "کارشناس برنامه آموزشی انتاریو",
@@ -173,7 +173,7 @@ export const translations = {
         location: "محل برگزاری",
         locationDesc: "۱۰۰٪ آنلاین و منعطف",
         price: "قیمت",
-        priceDesc: "۴۰ دلار / ساعت"
+        priceDesc: "۲۰ دلار / ساعت"
       },
       form: {
         studentName: "نام دانش‌آموز",
