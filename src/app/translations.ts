@@ -70,7 +70,9 @@ export const translations = {
         bilingual: "Bilingual Support",
         bilingualDesc: "English & Persian (Farsi)",
         location: "Location",
-        locationDesc: "100% Online & Flexible"
+        locationDesc: "100% Online & Flexible",
+        price: "Price",
+        priceDesc: "$40 / Hour"
       },
       form: {
         studentName: "Student Name",
@@ -169,7 +171,9 @@ export const translations = {
         bilingual: "پشتیبانی دوزبانه",
         bilingualDesc: "انگلیسی و فارسی (Farsi)",
         location: "محل برگزاری",
-        locationDesc: "۱۰۰٪ آنلاین و منعطف"
+        locationDesc: "۱۰۰٪ آنلاین و منعطف",
+        price: "قیمت",
+        priceDesc: "۴۰ دلار / ساعت"
       },
       form: {
         studentName: "نام دانش‌آموز",
