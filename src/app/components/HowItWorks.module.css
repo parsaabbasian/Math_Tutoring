@@ -3,7 +3,7 @@
 ──────────────────────────────────────────────────── */
 
 .howItWorks {
-  background: var(--background);
+  background: transparent;
 }
 
 .containerWide {
