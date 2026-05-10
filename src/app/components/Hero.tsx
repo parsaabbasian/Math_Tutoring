@@ -3,11 +3,9 @@
 import Link from 'next/link';
 import styles from './Hero.module.css';
 import { useLanguage } from '../context/LanguageContext';
-import { translations } from '../translations';
 
 export default function Hero() {
   const { language } = useLanguage();
-  const t = translations[language].hero;
 
   return (
     <section className={styles.hero}>

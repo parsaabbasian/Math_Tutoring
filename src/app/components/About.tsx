@@ -43,6 +43,7 @@ export default function About() {
               className={styles.videoPlayer}
               controls
               playsInline
+              poster="/images/avin-photo.webp"
             >
               <source src="/videos/309.mp4" type="video/mp4" />
               Your browser does not support the video tag.
