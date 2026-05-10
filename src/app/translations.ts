@@ -85,6 +85,11 @@ export const translations = {
         success: "Request sent successfully! Avin will contact you soon.",
         grades: ['Middle School', 'High School (Grade 9-12)', 'College / University', 'Other']
       }
+    footer: {
+      tagline: "Empowering students through personalized math excellence.",
+      copyright: "All rights reserved.",
+      quickLinks: "Quick Links",
+      connect: "Connect"
     }
   },
   fa: {
@@ -173,6 +178,11 @@ export const translations = {
         success: "درخواست با موفقیت ارسال شد! آوین به زودی با شما تماس می‌گیرد.",
         grades: ["مدرسه راهنمایی", "دبیرستان (کلاس ۹-۱۲)", "کالج / دانشگاه", "سایر موارد"]
       }
+    footer: {
+      tagline: "توانمندسازی دانش‌آموزان از طریق تعالی در ریاضیات.",
+      copyright: "تمامی حقوق محفوظ است.",
+      quickLinks: "دسترسی سریع",
+      connect: "ارتباط با من"
     }
   }
 };
