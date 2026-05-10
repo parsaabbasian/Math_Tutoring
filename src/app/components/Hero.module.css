@@ -14,7 +14,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='30' font-family='Lora, serif' font-size='16' fill='%23126B6B' opacity='0.03'%3EΣ%3C/text%3E%3Ctext x='60' y='80' font-family='Lora, serif' font-size='14' fill='%23126B6B' opacity='0.03'%3Eπ%3C/text%3E%3Ctext x='100' y='40' font-family='Lora, serif' font-size='18' fill='%23126B6B' opacity='0.02'%3E∫%3C/text%3E%3C/svg%3E");
   background-size: 240px 240px;
   z-index: 0;
@@ -86,75 +86,110 @@
   align-items: center;
 }
 
-.workspaceCard {
-  width: 100%;
-  max-width: 420px;
-  background: var(--surface);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border);
-  overflow: hidden;
+.collageContainer {
   position: relative;
-  transform: rotate(2deg);
-  transition: var(--transition);
-}
-
-.workspaceCard:hover {
-  transform: rotate(0deg) scale(1.02);
-}
-
-.notebookHeader {
-  background: var(--surface-alt);
-  padding: 12px 20px;
+  width: 100%;
+  max-width: 450px;
+  height: 400px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  border-bottom: 1px solid var(--border);
 }
 
-.dots {
+.paperPiece {
+  width: 260px;
+  background: white;
+  padding: 0;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e5de;
+  transform: rotate(-4deg);
+  z-index: 2;
+  position: relative;
+}
+
+.polaroid {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  width: 140px;
+  background: white;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  transform: rotate(6deg);
+  z-index: 4;
+}
+
+.photoPlaceholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f8fafc;
   display: flex;
-  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
 }
 
-.dots span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--border);
-}
-
-.subject {
+.photoCaption {
+  margin-top: 10px;
+  font-family: 'Lora', serif;
   font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-style: italic;
+  text-align: center;
+  color: #666;
 }
 
-.notebookBody {
-  padding: 30px;
+.stickyNote {
+  position: absolute;
+  bottom: 0px;
+  left: -20px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #fef08a 0%, #fde047 100%);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transform: rotate(-8deg);
+  z-index: 3;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  background-image: linear-gradient(var(--border) 1px, transparent 1px);
-  background-size: 100% 28px;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
 }
 
-.mathLine {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
+.ruler {
+  position: absolute;
+  bottom: -40px;
+  left: 20%;
+  width: 300px;
+  height: 30px;
+  background: linear-gradient(to right, #e5e5de 0%, #d4d4d0 100%);
+  opacity: 0.3;
+  border-radius: 4px;
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 9px, #999 10px);
+  z-index: 1;
+  transform: rotate(-2deg);
+}
+
+.mathSticker {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--primary);
-  font-style: italic;
-  padding-left: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--border);
+  z-index: 4;
+  animation: float 4s ease-in-out infinite;
 }
 
-.sketch {
-  height: 80px;
-  margin: 10px 0;
-}
-
-.floatingTag, .floatingTag2 {
+.floatingTag,
+.floatingTag2 {
   position: absolute;
   padding: 8px 16px;
   background: var(--primary);
@@ -215,7 +250,7 @@
     text-align: center;
     gap: 80px;
   }
-  
+
   .textContent {
     align-items: center;
     text-align: center;
@@ -241,10 +276,12 @@
 }
 
 @media (max-width: 480px) {
-  .floatingTag, .floatingTag2 {
+
+  .floatingTag,
+  .floatingTag2 {
     display: none;
   }
-  
+
   .experienceCard {
     right: 0;
   }
