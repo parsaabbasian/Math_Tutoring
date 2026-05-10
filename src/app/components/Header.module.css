@@ -44,10 +44,10 @@
 }
 
 .logoImage {
-  height: 45px;
+  height: 52px;
   width: auto;
   object-fit: contain;
-  transform: scale(1.1);
+  transform: scale(1.2);
   transform-origin: left center;
   position: relative;
   top: -3px;
