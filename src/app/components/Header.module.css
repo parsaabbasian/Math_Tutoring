@@ -7,12 +7,14 @@
   z-index: 9999;
   display: flex;
   align-items: center;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: var(--transition);
 }
 
 [data-theme='dark'] .header {
-  background: var(--surface);
+  background: rgba(15, 17, 21, 0.8);
 }
 
 .containerWide {
