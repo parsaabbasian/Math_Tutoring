@@ -30,7 +30,8 @@ export default function HowItWorks() {
         
         <div className={styles.grid}>
           {steps.map((step) => (
-            <div key={step.id} className={styles.card}>
+            <div key={step.id} className={`${styles.card} fade-in`}>
+              <div className={styles.stepNumber}>{step.id}</div>
               <div className={styles.iconWrapper}>
                 <span className={styles.icon}>{step.icon}</span>
               </div>
