@@ -78,7 +78,7 @@
 
 .formContainer {
   background: var(--surface);
-  padding: 32px 48px;
+  padding: 24px 32px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border);
@@ -87,7 +87,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .row {
@@ -98,7 +98,7 @@
 .inputGroup {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   flex: 1;
 }
 
@@ -111,13 +111,13 @@
 .input,
 .textarea {
   width: 100%;
-  padding: 14px 18px;
+  padding: 10px 14px;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--surface-alt);
   color: var(--foreground);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: var(--transition);
 }
 
