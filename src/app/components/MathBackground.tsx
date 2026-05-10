@@ -20,10 +20,11 @@ const MathBackground = () => {
         </svg>
       </div>
 
-      {/* 3. X */}
+      {/* 3. Cursive x */}
       <div className={`${styles.symbol} ${styles.symbol3}`}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M4 20L20 4M4 4l16 16" />
+          <path d="M8 8c0 0 1 1 2 4s3 4 3 4 1 1 2 1" />
+          <path d="M16 8c0 0-1 1-2 4s-3 4-3 4-1 1-2 1" />
         </svg>
       </div>
 
@@ -34,11 +35,10 @@ const MathBackground = () => {
         </svg>
       </div>
 
-      {/* 5. Sigma (Duplicate) */}
+      {/* 5. Delta */}
       <div className={`${styles.symbol} ${styles.symbol5}`}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M18 6H6l7 6-7 6h12" />
-          <path d="M6 6v1M6 17v1" />
+          <path d="M12 4L4 20h16L12 4z" />
         </svg>
       </div>
     </div>
