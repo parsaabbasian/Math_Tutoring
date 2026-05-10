@@ -105,25 +105,6 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className={styles.extraInfo}>
-          <div className={`${styles.infoBlock} fade-in`} style={{ gridColumn: '1 / -1' }}>
-            <h3 className={styles.infoTitle}>Why Choose Avin Math Tutoring</h3>
-            <ul className={styles.infoList} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '12px' }}>
-              <li>✨ Personalized one-on-one attention</li>
-              <li>🌍 Bilingual teaching support</li>
-              <li>📚 Canadian curriculum expertise</li>
-              <li>🎯 Step-by-step explanations</li>
-              <li>🤝 Friendly and supportive environment</li>
-              <li>🧠 Focus on long-term understanding</li>
-              <li>💻 Flexible online classes</li>
-            </ul>
-          </div>
-        </div>
-
-        <p className={styles.finalNote + " fade-in"}>
-          Mathematics becomes much easier when students are taught in a way that matches how they learn. 
-          My goal is to create a positive learning experience where students feel comfortable, motivated, and capable of succeeding.
-        </p>
       </div>
     </section>
   );
