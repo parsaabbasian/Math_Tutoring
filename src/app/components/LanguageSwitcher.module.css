@@ -1,0 +1,34 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  transition: var(--transition);
+}
+
+.button {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: var(--transition);
+}
+
+.button:hover {
+  color: var(--primary);
+}
+
+.button.active {
+  color: var(--primary);
+}
+
+.divider {
+  color: var(--border);
+  font-size: 0.8rem;
+}
