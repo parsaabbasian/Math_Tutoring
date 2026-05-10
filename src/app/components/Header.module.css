@@ -7,21 +7,46 @@
   z-index: 9999;
   display: flex;
   align-items: center;
-  background: #ffffff;
-  background-image: 
-    linear-gradient(rgba(0, 91, 91, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 91, 91, 0.03) 1px, transparent 1px);
-  background-size: 30px 30px;
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  background: linear-gradient(135deg, #f0f9f9 0%, #e8f5f5 100%);
+  border-bottom: 2px solid var(--primary);
+  box-shadow: 0 8px 32px rgba(0, 91, 91, 0.12);
   transition: var(--transition);
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='5' y='85' font-size='50' font-family='Georgia, serif' fill='%23005B5B' opacity='0.08'%3E∑%3C/text%3E%3Ctext x='65' y='90' font-size='45' font-family='Georgia, serif' fill='%23008080' opacity='0.07'%3Eπ%3C/text%3E%3Ctext x='35' y='35' font-size='35' font-family='Georgia, serif' fill='%23005B5B' opacity='0.06'%3E∞%3C/text%3E%3Ctext x='75' y='45' font-size='40' font-family='Georgia, serif' fill='%23008080' opacity='0.07'%3E∫%3C/text%3E%3Ctext x='10' y='30' font-size='28' font-family='Georgia, serif' fill='%23005B5B' opacity='0.05'%3E∂%3C/text%3E%3Ctext x='95' y='75' font-size='32' font-family='Georgia, serif' fill='%23008080' opacity='0.06'%3E√%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='20' y='130' font-size='60' font-family='Georgia, serif' fill='%23005B5B' opacity='0.06'%3E±%3C/text%3E%3Ctext x='110' y='110' font-size='55' font-family='Georgia, serif' fill='%23008080' opacity='0.055'%3E∮%3C/text%3E%3Ctext x='50' y='50' font-size='45' font-family='Georgia, serif' fill='%23005B5B' opacity='0.05'%3E≈%3C/text%3E%3Ctext x='120' y='60' font-size='50' font-family='Georgia, serif' fill='%23008080' opacity='0.06'%3E∇%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='15' y='100' font-size='55' font-family='Georgia, serif' fill='%23005B5B' opacity='0.065'%3E∴%3C/text%3E%3Ctext x='80' y='80' font-size='48' font-family='Georgia, serif' fill='%23008080' opacity='0.06'%3E∝%3C/text%3E%3Ctext x='45' y='35' font-size='40' font-family='Georgia, serif' fill='%23005B5B' opacity='0.055'%3E≠%3C/text%3E%3Ctext x='95' y='40' font-size='35' font-family='Georgia, serif' fill='%23008080' opacity='0.05'%3Eℵ%3C/text%3E%3C/svg%3E");
+  background-size: 120px 120px, 180px 180px, 140px 140px;
+  background-position: 0 0, 60px 60px, 30px 30px;
+  z-index: 0;
+  pointer-events: none;
+  animation: patternFloat 25s ease-in-out infinite;
+}
+
+@keyframes patternFloat {
+  0%, 100% { opacity: 0.9; transform: translateY(0px); }
+  50% { opacity: 0.95; transform: translateY(-2px); }
 }
 
 [data-theme='dark'] .header {
-  background: #1a1a1e;
+  background: linear-gradient(135deg, #1a1a1e 0%, #252529 100%);
+  border-bottom: 2px solid var(--primary);
+}
+
+[data-theme='dark'] .header::before {
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='5' y='85' font-size='50' font-family='Georgia, serif' fill='%23005B5B' opacity='0.15'%3E∑%3C/text%3E%3Ctext x='65' y='90' font-size='45' font-family='Georgia, serif' fill='%23008080' opacity='0.14'%3Eπ%3C/text%3E%3Ctext x='35' y='35' font-size='35' font-family='Georgia, serif' fill='%23005B5B' opacity='0.12'%3E∞%3C/text%3E%3Ctext x='75' y='45' font-size='40' font-family='Georgia, serif' fill='%23008080' opacity='0.14'%3E∫%3C/text%3E%3Ctext x='10' y='30' font-size='28' font-family='Georgia, serif' fill='%23005B5B' opacity='0.1'%3E∂%3C/text%3E%3Ctext x='95' y='75' font-size='32' font-family='Georgia, serif' fill='%23008080' opacity='0.12'%3E√%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='20' y='130' font-size='60' font-family='Georgia, serif' fill='%23005B5B' opacity='0.12'%3E±%3C/text%3E%3Ctext x='110' y='110' font-size='55' font-family='Georgia, serif' fill='%23008080' opacity='0.11'%3E∮%3C/text%3E%3Ctext x='50' y='50' font-size='45' font-family='Georgia, serif' fill='%23005B5B' opacity='0.1'%3E≈%3C/text%3E%3Ctext x='120' y='60' font-size='50' font-family='Georgia, serif' fill='%23008080' opacity='0.12'%3E∇%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='15' y='100' font-size='55' font-family='Georgia, serif' fill='%23005B5B' opacity='0.13'%3E∴%3C/text%3E%3Ctext x='80' y='80' font-size='48' font-family='Georgia, serif' fill='%23008080' opacity='0.12'%3E∝%3C/text%3E%3Ctext x='45' y='35' font-size='40' font-family='Georgia, serif' fill='%23005B5B' opacity='0.11'%3E≠%3C/text%3E%3Ctext x='95' y='40' font-size='35' font-family='Georgia, serif' fill='%23008080' opacity='0.1'%3Eℵ%3C/text%3E%3C/svg%3E");
 }
 
 .headerContent {
@@ -29,11 +54,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .logoText {
@@ -44,6 +72,7 @@
   display: flex;
   align-items: baseline;
   margin-left: -2px;
+  text-shadow: 0 2px 4px rgba(0, 91, 91, 0.1);
 }
 
 .logoAccent {
@@ -61,14 +90,24 @@
 .navLink {
   font-weight: 500;
   color: var(--text-muted);
+  transition: var(--transition);
 }
 
 .navLink:hover {
   color: var(--primary);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
   .nav {
-    display: none; /* simple mobile hide for now, would add hamburger in a real scenario */
+    display: none;
+  }
+  
+  .header {
+    height: 70px;
+  }
+  
+  .logoText {
+    font-size: 1.4rem;
   }
 }
