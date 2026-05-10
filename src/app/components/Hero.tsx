@@ -31,9 +31,6 @@ export default function Hero() {
             <Link href="/#join" className={styles.ctaPrimary}>
               {language === 'en' ? 'Book a Free Consultation' : 'رزرو مشاوره رایگان'}
             </Link>
-            <Link href="/#about" className={styles.ctaSecondary}>
-              {language === 'en' ? 'Learn More' : 'بیشتر بدانید'}
-            </Link>
           </div>
 
         </div>
