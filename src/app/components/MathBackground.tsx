@@ -20,11 +20,10 @@ const MathBackground = () => {
         </svg>
       </div>
 
-      {/* 3. Cursive x */}
+      {/* 3. Algebra x */}
       <div className={`${styles.symbol} ${styles.symbol3}`}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M8 8c0 0 1 1 2 4s3 4 3 4 1 1 2 1" />
-          <path d="M16 8c0 0-1 1-2 4s-3 4-3 4-1 1-2 1" />
+          <path d="M8 8c0 0 3 4 3 8 0 4-3 4-3 4M16 8c0 0-3 4-3 8 0 4 3 4 3 4" />
         </svg>
       </div>
 
