@@ -6,9 +6,12 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
 import LanguageSwitcher from './LanguageSwitcher';
 
+import { useState } from 'react';
+
 export default function Header() {
   const { language } = useLanguage();
   const t = translations[language].nav;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className={styles.header}>
@@ -23,11 +26,27 @@ export default function Header() {
             className={styles.logoImage}
           />
         </Link>
-        <nav className={styles.nav}>
-          <Link href="/#about" className={styles.navLink}>{t.about}</Link>
-          <Link href="/#how-it-works" className={styles.navLink}>{t.howItWorks}</Link>
-          <LanguageSwitcher />
-          <Link href="/#join" className="btn-primary">{t.join}</Link>
+
+        {/* Mobile Menu Toggle */}
+        <button 
+          className={styles.mobileMenuToggle}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle Menu"
+        >
+          <div className={`${styles.hamburger} ${isMenuOpen ? styles.open : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+
+        <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
+          <Link href="/#about" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.about}</Link>
+          <Link href="/#how-it-works" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.howItWorks}</Link>
+          <div className={styles.switcherWrapper}>
+            <LanguageSwitcher />
+          </div>
+          <Link href="/#join" className="btn-primary" onClick={() => setIsMenuOpen(false)}>{t.join}</Link>
         </nav>
       </div>
     </header>

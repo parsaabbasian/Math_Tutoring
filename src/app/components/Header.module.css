@@ -87,9 +87,86 @@
   transform: translateY(-1px);
 }
 
+.mobileMenuToggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 10px;
+  z-index: 10001;
+}
+
+.hamburger {
+  width: 24px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.switcherWrapper {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
+  .mobileMenuToggle {
+    display: block;
+  }
+
   .nav {
-    display: none;
-    /* simple mobile hide for now, would add hamburger in a real scenario */
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--surface);
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10000;
+  }
+
+  [dir='rtl'] .nav {
+    right: auto;
+    left: -100%;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.navOpen {
+    right: 0;
+  }
+
+  [dir='rtl'] .nav.navOpen {
+    right: auto;
+    left: 0;
+  }
+
+  .navLink {
+    font-size: 1.2rem;
   }
 }
