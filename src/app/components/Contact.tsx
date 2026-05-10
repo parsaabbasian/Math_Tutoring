@@ -88,16 +88,17 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className={styles.inputGroup}>
-                <label htmlFor="grade" className={styles.label}>Current Grade / Level</label>
-                <select id="grade" name="grade" className={styles.select} required>
-                  <option value="" disabled selected>Select Grade</option>
-                  <option value="middle_school">Middle School</option>
-                  <option value="high_school">High School (Grade 9-12)</option>
-                  <option value="college">College / University</option>
-                  <option value="other">Other</option>
-                </select>
+            <div className={styles.inputGroup}>
+              <label className={styles.label}>Current Grade / Level</label>
+              <div className={styles.gradeGrid}>
+                {['Middle School', 'High School (Grade 9-12)', 'College / University', 'Other'].map((grade) => (
+                  <label key={grade} className={styles.gradeCard}>
+                    <input type="radio" name="grade" value={grade} required className={styles.radioInput} />
+                    <span className={styles.gradeName}>{grade}</span>
+                  </label>
+                ))}
               </div>
+            </div>
 
               <div className={styles.inputGroup}>
                 <label htmlFor="message" className={styles.label}>Additional Info (Optional)</label>
