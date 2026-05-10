@@ -7,12 +7,16 @@
   z-index: 9999;
   display: flex;
   align-items: center;
-  background: var(--surface);
+  background: #ffffff url('/images/header-bg.png') repeat;
+  background-size: 300px;
+  border-bottom: 1px solid var(--border);
   transition: var(--transition);
 }
 
 [data-theme='dark'] .header {
-  background: var(--surface);
+  background: #0f1f1f url('/images/header-bg.png') repeat;
+  background-blend-mode: overlay;
+  background-size: 300px;
 }
 
 .containerWide {
