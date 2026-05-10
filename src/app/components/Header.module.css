@@ -36,10 +36,20 @@
   align-items: center;
 }
 
-.logoImage {
-  height: 65px;
-  width: auto;
-  display: block;
+.logoText {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: baseline;
+  margin-left: -2px;
+}
+
+.logoAccent {
+  font-weight: 500;
+  margin-left: 8px;
+  opacity: 0.9;
 }
 
 .nav {
