@@ -16,7 +16,7 @@
 }
 
 [data-theme='dark'] .header {
-  background: rgba(10, 10, 11, 0.95);
+  background: rgba(26, 26, 30, 0.95);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
@@ -29,9 +29,14 @@
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 .nav {
