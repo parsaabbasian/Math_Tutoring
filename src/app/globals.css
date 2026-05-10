@@ -86,10 +86,10 @@ button {
 .btn-primary {
   background: var(--primary);
   color: white;
-  padding: 12px 24px;
+  padding: 8px 20px;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
