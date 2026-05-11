@@ -86,15 +86,15 @@ export default function Header() {
           </div>
           <Link href="/#join" className="btn-primary" onClick={() => setIsMenuOpen(false)}>
             {t.join}
-            <svg 
-              width="22" 
-              height="22" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className={styles.buttonArrow}
             >
               <line x1="5" y1="12" x2="19" y2="12"></line>
