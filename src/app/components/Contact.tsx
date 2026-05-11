@@ -70,11 +70,19 @@ export default function Contact() {
       return;
     }
 
-    const validRegions = ['north york', 'vaughan', 'm2m', 'm2n', 'm2r', 'm3h', 'm3j', 'm3k', 'm3l', 'm3m', 'm3n', 'l4j', 'l4k', 'l4c', 'l6a'];
+    const validRegions = ['north york', 'vaughan', 'richmond hill', 'm2m', 'm2n', 'm2r', 'm3h', 'm3j', 'm3k', 'm3l', 'm3m', 'l4j', 'l4k', 'l4c', 'l6a', 'l4b', 'l4e', 'l4s'];
+    const invalidRegions = ['jane and finch', 'jane & finch', 'jane finch', 'jane/finch', 'm3n'];
+    
     const normalized = val.toLowerCase().trim();
 
     if (normalized.length < 3) {
       setIsEligible(true); // Don't show error while typing early
+      return;
+    }
+
+    const isInvalid = invalidRegions.some(region => normalized.includes(region));
+    if (isInvalid) {
+      setIsEligible(false);
       return;
     }
 
