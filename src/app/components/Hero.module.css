@@ -283,14 +283,14 @@
   }
 }
 
-/* iPad specific adjustments to shift hero slightly right */
+/* iPad specific adjustments to shift hero text slightly right */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .heroGrid {
-    padding-left: 32px;
+  .textSide {
+    margin-left: 48px;
   }
   
-  [dir='rtl'] .heroGrid {
-    padding-left: 0;
-    padding-right: 32px;
+  [dir='rtl'] .textSide {
+    margin-left: 0;
+    margin-right: 48px;
   }
 }
