@@ -44,15 +44,13 @@
 }
 
 .logoImage {
-  height: 52px;
+  height: 55px;
   width: auto;
   object-fit: contain;
-  transform: scale(1.2);
   transform-origin: left center;
   position: relative;
-  top: -6px;
-  /* Fine-tune vertical alignment */
-  margin-left: 5px;
+  top: -5;
+  margin-left: 18px;
 }
 
 [dir='rtl'] .logoImage {
