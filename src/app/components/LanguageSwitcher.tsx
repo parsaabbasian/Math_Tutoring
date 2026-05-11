@@ -19,8 +19,8 @@ export default function LanguageSwitcher() {
       </svg>
       <span className={styles.label}>
         {language === 'en'
-          ? <span style={{ fontFamily: 'var(--font-vazir)' }}>فارسی</span>
-          : 'English'}
+          ? <span lang="fa" dir="rtl" className="font-vazir">فارسی</span>
+          : <span lang="en" dir="ltr" className="font-english">English</span>}
       </span>
     </button>
   );
