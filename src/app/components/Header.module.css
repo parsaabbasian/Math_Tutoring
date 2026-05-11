@@ -190,7 +190,12 @@
     height: 38px;
     transform: scale(1.0);
     top: 0;
+    margin-left: 15px;
+  }
+
+  [dir='rtl'] .logoImage {
     margin-left: 0;
+    margin-right: 15px;
   }
 
   .headerDecor {
