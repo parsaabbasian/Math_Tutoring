@@ -135,7 +135,7 @@ export default function Contact() {
               <div>
                 <h4 className={styles.detailTitle}>{t.info.phone}</h4>
                 <p className={styles.detailValue}>
-                  <a href="tel:+16475642846" style={{ color: 'inherit' }}>+1 (647) 564-2846</a>
+                  <a href="tel:+16475642846" className={styles.phoneNumber} style={{ color: 'inherit' }}>+1 (647) 564-2846</a>
                 </p>
               </div>
             </div>
