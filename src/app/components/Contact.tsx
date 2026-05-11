@@ -47,6 +47,13 @@ const TagIcon = () => (
   </svg>
 );
 
+const ClockIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="12 6 12 12 16 14"></polyline>
+  </svg>
+);
+
 export default function Contact() {
   const { language, isRTL } = useLanguage();
   const t = translations[language].contact;
@@ -151,6 +158,13 @@ export default function Contact() {
               <div>
                 <h4 className={styles.detailTitle}>{t.info.location}</h4>
                 <p className={styles.detailValue}>{t.info.locationDesc}</p>
+              </div>
+            </div>
+            <div className={styles.detailItem}>
+              <div className={styles.detailIcon}><ClockIcon /></div>
+              <div>
+                <h4 className={styles.detailTitle}>{t.info.duration}</h4>
+                <p className={styles.detailValue}>{t.info.durationDesc}</p>
               </div>
             </div>
           </div>
