@@ -106,6 +106,33 @@ export const translations = {
         times: ["Morning (9-12)", "Afternoon (12-4)", "Evening (4-8)"],
       }
     },
+    stats: {
+      items: [
+        { value: "100%", label: "Satisfaction Rate" },
+        { value: "2", label: "Languages Spoken" },
+        { value: "1-on-1", label: "Personalized Focus" }
+      ]
+    },
+    testimonials: {
+      title: "What Students & Parents Say",
+      items: [
+        {
+          quote: "Avin is an incredible tutor. My daughter's grade improved significantly and she no longer fears math.",
+          name: "Sarah M.",
+          role: "Parent of Grade 9 Student"
+        },
+        {
+          quote: "Very patient and explains concepts clearly. Being able to explain in Farsi was a huge plus for us.",
+          name: "Reza T.",
+          role: "Parent of Grade 11 Student"
+        },
+        {
+          quote: "I actually look forward to math lessons now! Everything makes so much more sense.",
+          name: "Daniel H.",
+          role: "Grade 10 Student"
+        }
+      ]
+    },
     footer: {
       tagline: "Empowering students through personalized math excellence.",
       copyright: "All rights reserved.",
@@ -219,6 +246,33 @@ export const translations = {
         days: ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنج‌شنبه", "جمعه"],
         times: ["صبح (۹-۱۲)", "عصر (۱۲-۴)", "غروب (۴-۸)"],
       }
+    },
+    stats: {
+      items: [
+        { value: "۱۰۰٪", label: "رضایت دانش‌آموزان" },
+        { value: "۲", label: "زبان آموزشی" },
+        { value: "۱-به-۱", label: "تمرکز شخصی‌سازی شده" }
+      ]
+    },
+    testimonials: {
+      title: "نظرات دانش‌آموزان و والدین",
+      items: [
+        {
+          quote: "آوین معلم فوق‌العاده‌ای است. نمره دخترم به طور چشمگیری بهبود یافت و دیگر از ریاضی نمی‌ترسد.",
+          name: "سارا م.",
+          role: "ولی دانش‌آموز کلاس نهم"
+        },
+        {
+          quote: "بسیار صبور است و مفاهیم را واضح توضیح می‌دهد. تدریس به زبان فارسی برای ما یک مزیت بزرگ بود.",
+          name: "رضا ت.",
+          role: "ولی دانش‌آموز کلاس یازدهم"
+        },
+        {
+          quote: "حالا واقعاً منتظر کلاس‌های ریاضی هستم! همه چیز خیلی منطقی‌تر و قابل فهم‌تر شده است.",
+          name: "دانیال ح.",
+          role: "دانش‌آموز کلاس دهم"
+        }
+      ]
     },
     footer: {
       tagline: "توانمندسازی دانش‌آموزان از طریق تعالی در ریاضیات.",

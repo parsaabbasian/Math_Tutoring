@@ -282,3 +282,15 @@
     aspect-ratio: 1 / 1;
   }
 }
+
+/* iPad specific adjustments to shift hero slightly right */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .heroGrid {
+    padding-left: 32px;
+  }
+  
+  [dir='rtl'] .heroGrid {
+    padding-left: 0;
+    padding-right: 32px;
+  }
+}
