@@ -56,6 +56,41 @@ export default function Contact() {
   const [isEligible, setIsEligible] = useState(true);
   const [selectedSlots, setSelectedSlots] = useState<string[]>([]);
   const [showAvailability, setShowAvailability] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState<string>('ca');
+  const [selectedSchoolLevel, setSelectedSchoolLevel] = useState<string | null>(null);
+
+  const getSpecificGrades = (country: string, levelId: string) => {
+    if (levelId === 'college' || levelId === 'university' || levelId === 'sixth') {
+      if (levelId === 'sixth') return [12, 13];
+      return ['Calculus 1', 'Calculus 3'];
+    }
+
+    switch(country) {
+      case 'ca':
+        if (levelId === 'elementary') return [1, 2, 3, 4, 5, 6, 7, 8];
+        if (levelId === 'secondary') return [9, 10, 11, 12];
+        break;
+      case 'us':
+        if (levelId === 'elementary') return [1, 2, 3, 4, 5];
+        if (levelId === 'middle') return [6, 7, 8];
+        if (levelId === 'high') return [9, 10, 11, 12];
+        break;
+      case 'uk':
+        if (levelId === 'primary') return [1, 2, 3, 4, 5, 6];
+        if (levelId === 'secondary') return [7, 8, 9, 10, 11];
+        break;
+      case 'au':
+        if (levelId === 'primary') return [1, 2, 3, 4, 5, 6];
+        if (levelId === 'secondary') return [7, 8, 9, 10, 11, 12];
+        break;
+      case 'ir':
+        if (levelId === 'primary') return [1, 2, 3, 4, 5, 6];
+        if (levelId === 'middle') return [7, 8, 9];
+        if (levelId === 'high') return [10, 11, 12];
+        break;
+    }
+    return [];
+  };
 
   const toggleSlot = (day: string, time: string) => {
     const slot = `${day}-${time}`;
@@ -111,6 +146,7 @@ export default function Contact() {
         form.reset();
         setTutoringType('online');
         setAddress('');
+        setSelectedSchoolLevel(null);
       } else {
         setStatus('error');
       }
@@ -233,7 +269,7 @@ export default function Contact() {
 
                 {/* Conditional Address Field */}
                 {tutoringType === 'in-person' && (
-                  <div className={`${styles.inputGroup} fade-in`}>
+                  <div className={styles.inputGroup}>
                     <label htmlFor="address" className={styles.label}>{t.form.address}</label>
                     <input
                       type="text"
@@ -251,17 +287,66 @@ export default function Contact() {
                   </div>
                 )}
 
+                <div className={styles.row}>
+                  <div className={styles.inputGroup}>
+                    <label className={styles.label}>{t.form.country}</label>
+                    <select 
+                      className={styles.input} 
+                      value={selectedCountry} 
+                      onChange={(e) => {
+                        setSelectedCountry(e.target.value);
+                        setSelectedSchoolLevel(null);
+                      }}
+                      name="country"
+                    >
+                      {t.form.countries.map((c: {id: string, label: string}) => (
+                        <option key={c.id} value={c.id}>{c.label}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
                 <div className={styles.inputGroup}>
                   <label className={styles.label}>{t.form.grade}</label>
                   <div className={styles.gradeGrid}>
-                    {t.form.grades.map((grade) => (
-                      <label key={grade} className={styles.gradeCard}>
-                        <input type="radio" name="grade" value={grade} required className={styles.radioInput} />
-                        <span className={styles.gradeName}>{grade}</span>
+                    {t.form.systems[selectedCountry as keyof typeof t.form.systems].levels.map((level: {id: string, label: string}) => (
+                      <label key={level.id} className={styles.gradeCard}>
+                        <input 
+                          type="radio" 
+                          name="schoolLevel" 
+                          value={level.label} 
+                          required 
+                          className={styles.radioInput} 
+                          checked={selectedSchoolLevel === level.id}
+                          onChange={() => setSelectedSchoolLevel(level.id)}
+                        />
+                        <span className={styles.gradeName}>{level.label}</span>
                       </label>
                     ))}
                   </div>
                 </div>
+
+                {selectedSchoolLevel && (
+                  <div className={`${styles.inputGroup} fade-in`}>
+                    <label className={styles.label}>
+                      {(selectedSchoolLevel === 'college' || selectedSchoolLevel === 'university') 
+                        ? (language === 'fa' ? 'انتخاب درس' : 'Select Course') 
+                        : t.form.specificGrade}
+                    </label>
+                    <div className={styles.gradeGrid} style={{ gridTemplateColumns: (selectedSchoolLevel === 'college' || selectedSchoolLevel === 'university') ? 'repeat(auto-fill, minmax(110px, 1fr))' : 'repeat(auto-fill, minmax(80px, 1fr))' }}>
+                      {getSpecificGrades(selectedCountry, selectedSchoolLevel).map((gradeNum) => (
+                        <label key={gradeNum} className={styles.gradeCard}>
+                          <input type="radio" name="specificGrade" value={gradeNum} required className={styles.radioInput} />
+                          <span className={styles.gradeName} style={{ textAlign: 'center', whiteSpace: 'nowrap' }}>
+                            {gradeNum === 'K' || String(gradeNum).startsWith('Calculus')
+                              ? String(gradeNum)
+                              : `${t.form.systems[selectedCountry as keyof typeof t.form.systems].gradePrefix}${gradeNum}`}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Availability Toggle */}
                 <div className={styles.inputGroup}>
@@ -270,7 +355,7 @@ export default function Contact() {
                     className={styles.availabilityToggle}
                     onClick={() => setShowAvailability(!showAvailability)}
                   >
-                    <span>{t.form.availability}</span>
+                    <span>{t.form.availability} ({t.form.systems[selectedCountry as keyof typeof t.form.systems].timezone})</span>
                     <svg
                       width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                       style={{ transform: showAvailability ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s ease' }}
