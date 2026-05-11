@@ -289,11 +289,11 @@
 /* iPad specific adjustments to shift hero text slightly right */
 @media (min-width: 768px) and (max-width: 1024px) {
   .textSide {
-    margin-left: 48px;
+    margin-left: 58px;
   }
 
   [dir='rtl'] .textSide {
     margin-left: 0;
-    margin-right: 48px;
+    margin-right: 58px;
   }
 }
