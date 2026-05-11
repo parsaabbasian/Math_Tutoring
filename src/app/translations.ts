@@ -11,6 +11,8 @@ export const translations = {
       title: "Math Doesn't Have to Be Hard or Stressful.",
       description: "Clear, step-by-step tutoring that actually makes sense. Whether you're struggling to pass or aiming for top grades, I'll help you build the confidence you need to succeed.",
       ctaStart: "Start Learning Today",
+      ctaBook: "Book a Free Consultation",
+      ctaRegistration: "Registration Form",
       ctaMeet: "Meet Your Tutor",
       stats: {
         satisfaction: "Student Satisfaction",
@@ -88,6 +90,8 @@ export const translations = {
         }
       },
       form: {
+        bookDirect: "Schedule a 30-Min Intro Call",
+        or: "OR",
         studentName: "Student Name",
         email: "Email Address",
         phone: "Phone Number",
@@ -183,6 +187,8 @@ export const translations = {
       title: "ریاضی نباید سخت یا استرس‌زا باشد.",
       description: "آموزش واضح و قدم‌به‌قدم که واقعاً قابل فهم است. چه برای قبولی تلاش می‌کنید و چه هدف‌تان نمرات بالاست، به شما کمک می‌کنم تا با اعتماد به نفس به موفقیت برسید.",
       ctaStart: "همین امروز شروع کنید",
+      ctaBook: "رزرو مشاوره رایگان",
+      ctaRegistration: "فرم ثبت‌نام",
       ctaMeet: "آشنایی با استاد",
       stats: {
         satisfaction: "رضایت دانش‌آموزان",
@@ -260,6 +266,8 @@ export const translations = {
         }
       },
       form: {
+        bookDirect: "رزرو جلسه معارفه ۳۰ دقیقه‌ای",
+        or: "یا",
         studentName: "نام دانش‌آموز",
         email: "آدرس ایمیل",
         phone: "شماره تماس",
