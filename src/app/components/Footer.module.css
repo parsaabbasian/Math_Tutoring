@@ -20,7 +20,7 @@
   object-fit: contain;
   margin-left: -5px;
   margin-top: -5px;
-  margin-bottom: -10px;
+  margin-bottom: 12px;
 }
 
 [dir='rtl'] .logoImage {
