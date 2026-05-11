@@ -539,3 +539,9 @@
   cursor: not-allowed;
   transform: none !important;
 }
+
+.phoneNumber {
+  direction: ltr;
+  display: inline-block;
+  unicode-bidi: embed;
+}
