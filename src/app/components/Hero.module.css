@@ -35,11 +35,14 @@
   flex-direction: column;
   gap: 40px;
   align-items: flex-start;
+  margin-left: 10px;
 }
 
 [dir='rtl'] .textSide {
   align-items: flex-start;
   text-align: right;
+  margin-left: 0;
+  margin-right: 10px;
 }
 
 /* Headline */
@@ -288,7 +291,7 @@
   .textSide {
     margin-left: 48px;
   }
-  
+
   [dir='rtl'] .textSide {
     margin-left: 0;
     margin-right: 48px;
