@@ -73,8 +73,6 @@ export const translations = {
         locationDesc: "Online & In-person",
         price: "Price",
         priceDesc: "$20 / Hour",
-        duration: "Class Duration",
-        durationDesc: "60 Minutes",
       },
       services: {
         title: "Select Your Preferred Mode",
@@ -216,8 +214,6 @@ export const translations = {
         locationDesc: "آنلاین و حضوری",
         price: "قیمت",
         priceDesc: "۲۰ دلار / ساعت",
-        duration: "مدت زمان کلاس",
-        durationDesc: "۶۰ دقیقه",
       },
       services: {
         title: "نوع آموزش مورد نظر را انتخاب کنید",
