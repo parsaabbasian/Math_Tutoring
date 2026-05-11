@@ -47,13 +47,6 @@ const TagIcon = () => (
   </svg>
 );
 
-const ClockIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10"></circle>
-    <polyline points="12 6 12 12 16 14"></polyline>
-  </svg>
-);
-
 export default function Contact() {
   const { language, isRTL } = useLanguage();
   const t = translations[language].contact;
@@ -142,7 +135,7 @@ export default function Contact() {
               <div>
                 <h4 className={styles.detailTitle}>{t.info.phone}</h4>
                 <p className={styles.detailValue}>
-                  <a href="tel:+16475642846" className={styles.phoneNumber} style={{ color: 'inherit' }}>+1 (647) 564-2846</a>
+                  <a href="tel:+16479977324" className={styles.phoneNumber} style={{ color: 'inherit' }}>+1 (647) 997-7324</a>
                 </p>
               </div>
             </div>
@@ -158,13 +151,6 @@ export default function Contact() {
               <div>
                 <h4 className={styles.detailTitle}>{t.info.location}</h4>
                 <p className={styles.detailValue}>{t.info.locationDesc}</p>
-              </div>
-            </div>
-            <div className={styles.detailItem}>
-              <div className={styles.detailIcon}><ClockIcon /></div>
-              <div>
-                <h4 className={styles.detailTitle}>{t.info.duration}</h4>
-                <p className={styles.detailValue}>{t.info.durationDesc}</p>
               </div>
             </div>
           </div>
