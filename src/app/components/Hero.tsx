@@ -3,9 +3,12 @@
 import Link from 'next/link';
 import styles from './Hero.module.css';
 import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
+import { useModal } from '../context/ModalContext';
 
 export default function Hero() {
   const { language } = useLanguage();
+  const { openBooking } = useModal();
 
   return (
     <section className={styles.hero}>
@@ -28,9 +31,13 @@ export default function Hero() {
           </p>
 
           <div className={`${styles.ctaRow} fade-in`}>
-            <Link href="/#join" className={styles.ctaPrimary}>
-              {language === 'en' ? 'Book a Free Consultation' : 'رزرو مشاوره رایگان'}
-            </Link>
+            <button
+              onClick={openBooking}
+              className={styles.ctaPrimary}
+              type="button"
+            >
+              {translations[language].hero.ctaBook}
+            </button>
           </div>
 
         </div>
