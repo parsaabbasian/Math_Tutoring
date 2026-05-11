@@ -95,7 +95,65 @@ export const translations = {
         message: "Additional Info (Optional)",
         submit: "Send Request",
         success: "Request sent successfully! Avin will contact you soon.",
-        grades: ['Middle School', 'High School (Grade 9-12)', 'College / University'],
+        country: "Select Your Country",
+        countries: [
+          { id: 'ca', label: 'Canada' },
+          { id: 'us', label: 'United States' },
+          { id: 'uk', label: 'United Kingdom' },
+          { id: 'au', label: 'Australia' },
+          { id: 'ir', label: 'Iran' }
+        ],
+        systems: {
+          ca: {
+            levels: [
+              { id: 'elementary', label: 'Elementary School' },
+              { id: 'secondary', label: 'Secondary School' },
+              { id: 'college', label: 'College / University' }
+            ],
+            gradePrefix: "Grade ",
+            timezone: "EST"
+          },
+          us: {
+            levels: [
+              { id: 'elementary', label: 'Elementary School' },
+              { id: 'middle', label: 'Middle School' },
+              { id: 'high', label: 'High School' },
+              { id: 'college', label: 'College / University' }
+            ],
+            gradePrefix: "Grade ",
+            timezone: "EST"
+          },
+          uk: {
+            levels: [
+              { id: 'primary', label: 'Primary School' },
+              { id: 'secondary', label: 'Secondary School' },
+              { id: 'sixth', label: 'Sixth Form' },
+              { id: 'college', label: 'University' }
+            ],
+            gradePrefix: "Year ",
+            timezone: "GMT"
+          },
+          au: {
+            levels: [
+              { id: 'primary', label: 'Primary School' },
+              { id: 'secondary', label: 'Secondary School' },
+              { id: 'college', label: 'University' }
+            ],
+            gradePrefix: "Year ",
+            timezone: "AEST"
+          },
+          ir: {
+            levels: [
+              { id: 'primary', label: 'Primary School' },
+              { id: 'middle', label: 'Middle School' },
+              { id: 'high', label: 'High School' },
+              { id: 'college', label: 'University' }
+            ],
+            gradePrefix: "Grade ",
+            timezone: "IRST"
+          }
+        },
+        specificGrade: "Select Specific Grade",
         type: "Tutoring Type",
         online: "Online",
         inPerson: "In-person",
@@ -209,7 +267,65 @@ export const translations = {
         message: "اطلاعات بیشتر (اختیاری)",
         submit: "ارسال درخواست",
         success: "درخواست با موفقیت ارسال شد! آوین به زودی با شما تماس می‌گیرد.",
-        grades: ["مدرسه راهنمایی", "دبیرستان (کلاس ۹-۱۲)", "کالج / دانشگاه"],
+        country: "کشور خود را انتخاب کنید",
+        countries: [
+          { id: 'ca', label: 'کانادا (Canada)' },
+          { id: 'us', label: 'ایالات متحده (USA)' },
+          { id: 'uk', label: 'انگلستان (UK)' },
+          { id: 'au', label: 'استرالیا (Australia)' },
+          { id: 'ir', label: 'ایران (Iran)' }
+        ],
+        systems: {
+          ca: {
+            levels: [
+              { id: 'elementary', label: 'دبستان و راهنمایی' },
+              { id: 'secondary', label: 'دبیرستان' },
+              { id: 'college', label: 'کالج / دانشگاه' }
+            ],
+            gradePrefix: "پایه ",
+            timezone: "EST"
+          },
+          us: {
+            levels: [
+              { id: 'elementary', label: 'دبستان' },
+              { id: 'middle', label: 'راهنمایی' },
+              { id: 'high', label: 'دبیرستان' },
+              { id: 'college', label: 'کالج / دانشگاه' }
+            ],
+            gradePrefix: "پایه ",
+            timezone: "EST"
+          },
+          uk: {
+            levels: [
+              { id: 'primary', label: 'دبستان (Primary)' },
+              { id: 'secondary', label: 'دبیرستان (Secondary)' },
+              { id: 'sixth', label: 'پیش‌دانشگاهی (Sixth Form)' },
+              { id: 'college', label: 'دانشگاه' }
+            ],
+            gradePrefix: "سال ",
+            timezone: "GMT"
+          },
+          au: {
+            levels: [
+              { id: 'primary', label: 'دبستان (Primary)' },
+              { id: 'secondary', label: 'دبیرستان (Secondary)' },
+              { id: 'college', label: 'دانشگاه' }
+            ],
+            gradePrefix: "سال ",
+            timezone: "AEST"
+          },
+          ir: {
+            levels: [
+              { id: 'primary', label: 'دبستان' },
+              { id: 'middle', label: 'متوسطه اول' },
+              { id: 'high', label: 'متوسطه دوم' },
+              { id: 'college', label: 'دانشگاه' }
+            ],
+            gradePrefix: "پایه ",
+            timezone: "IRST"
+          }
+        },
+        specificGrade: "انتخاب پایه دقیق",
         type: "نوع آموزش",
         online: "آنلاین",
         inPerson: "حضوری",
