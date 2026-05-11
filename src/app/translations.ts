@@ -8,8 +8,8 @@ export const translations = {
     },
     hero: {
       badge: "Personalized Online Math Tutoring",
-      title: "Master Mathematics with Confidence & Joy",
-      description: "Expert math guidance tailored to the Canadian curriculum. Engineering-level thinking meets personalized teaching in English & Persian.",
+      title: "Math Doesn't Have to Be Hard or Stressful.",
+      description: "Clear, step-by-step tutoring that actually makes sense. Whether you're struggling to pass or aiming for top grades, I'll help you build the confidence you need to succeed.",
       ctaStart: "Start Learning Today",
       ctaMeet: "Meet Your Tutor",
       stats: {
@@ -122,8 +122,8 @@ export const translations = {
     },
     hero: {
       badge: "آموزش خصوصی ریاضی آنلاین",
-      title: "ریاضی را با اعتماد به نفس و لذت بیاموزید",
-      description: "آموزش تخصصی ریاضی بر اساس برنامه آموزشی کانادا. تلفیق تفکر مهندسی و تدریس خصوصی به زبان‌های انگلیسی و فارسی.",
+      title: "ریاضی نباید سخت یا استرس‌زا باشد.",
+      description: "آموزش واضح و قدم‌به‌قدم که واقعاً قابل فهم است. چه برای قبولی تلاش می‌کنید و چه هدف‌تان نمرات بالاست، به شما کمک می‌کنم تا با اعتماد به نفس به موفقیت برسید.",
       ctaStart: "همین امروز شروع کنید",
       ctaMeet: "آشنایی با استاد",
       stats: {
