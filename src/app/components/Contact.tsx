@@ -236,11 +236,25 @@ export default function Contact() {
           <div className={styles.contactDetails}>
             <div className={styles.detailItem}>
               <div className={styles.detailIcon}><MailIcon /></div>
-              <div><h4 className={styles.detailTitle}>{t.info.email}</h4><p className={styles.detailValue}><a href="mailto:avin.math@gmail.com" style={{ color: 'inherit' }}>avin.math@gmail.com</a></p></div>
+              <div>
+                <h4 className={styles.detailTitle}>{t.info.email}</h4>
+                <p className={styles.detailValue} dir="ltr" style={{ textAlign: isRTL ? 'right' : 'left' }}>
+                  <a href="mailto:avin.math@gmail.com" style={{ color: 'inherit' }}>
+                    avin.math@gmail.com
+                  </a>
+                </p>
+              </div>
             </div>
             <div className={styles.detailItem}>
               <div className={styles.detailIcon}><PhoneIcon /></div>
-              <div><h4 className={styles.detailTitle}>{t.info.phone}</h4><p className={styles.detailValue}><a href="tel:+16479977324" className={styles.phoneNumber} style={{ color: 'inherit' }}>+1 (647) 997-7324</a></p></div>
+              <div>
+                <h4 className={styles.detailTitle}>{t.info.phone}</h4>
+                <p className={styles.detailValue} dir="ltr" style={{ textAlign: isRTL ? 'right' : 'left' }}>
+                  <a href="tel:+16479977324" className={styles.phoneNumber} style={{ color: 'inherit' }}>
+                    +1 (647) 997-7324
+                  </a>
+                </p>
+              </div>
             </div>
             <div className={styles.detailItem}>
               <div className={styles.detailIcon}><GlobeIcon /></div>
@@ -300,7 +314,7 @@ export default function Contact() {
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label htmlFor="email" className={styles.label}>{t.form.email}</label>
-                  <input type="email" id="email" name="email" className={styles.input} required placeholder="email@example.com" />
+                  <input type="email" id="email" name="email" className={styles.input} required placeholder="email@example.com" dir="ltr" />
                 </div>
                 <div className={styles.inputGroup}>
                   <label htmlFor="phone" className={styles.label}>{t.form.phone}</label>
