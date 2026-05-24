@@ -4,9 +4,18 @@ import { useEffect, useRef } from 'react';
 interface CalendlyModalProps {
   isOpen: boolean;
   onClose: () => void;
+  prefill?: {
+    name?: string;
+    email?: string;
+    phone?: string;
+    tutoringMode?: string;
+    country?: string;
+    grade?: string;
+    address?: string;
+  };
 }
 
-const CalendlyModal = ({ isOpen, onClose }: CalendlyModalProps) => {
+const CalendlyModal = ({ isOpen, onClose, prefill }: CalendlyModalProps) => {
   const calendlyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -15,23 +24,31 @@ const CalendlyModal = ({ isOpen, onClose }: CalendlyModalProps) => {
         if (e.key === 'Escape') onClose();
       };
       window.addEventListener('keydown', handleEsc);
-      
-      // Initialize Calendly inline widget inside the modal
+
       if (typeof window !== 'undefined' && (window as any).Calendly) {
-        // Clear any existing content
         if (calendlyRef.current) calendlyRef.current.innerHTML = '';
-        
+
         (window as any).Calendly.initInlineWidget({
           url: 'https://calendly.com/parsa-abbasian-06/30min',
           parentElement: calendlyRef.current,
-          prefill: {},
+          prefill: {
+            name: prefill?.name || '',
+            email: prefill?.email || '',
+            customAnswers: {
+              a1: prefill?.phone || '',
+              a2: prefill?.tutoringMode || '',
+              a3: prefill?.country || '',
+              a4: prefill?.grade || '',
+              a5: prefill?.address || '',
+            },
+          },
           utm: {}
         });
       }
 
       return () => window.removeEventListener('keydown', handleEsc);
     }
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, prefill]);
 
   return (
     <div className={`modal-overlay ${isOpen ? 'modal-active' : ''}`} onClick={onClose}>
