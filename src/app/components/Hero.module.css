@@ -104,19 +104,36 @@
 .ctaSecondary {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--foreground);
   border: 2px solid var(--border);
   padding: 14px 28px;
   border-radius: 12px;
-  transition: var(--transition);
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .ctaSecondary:hover {
   border-color: var(--primary);
   color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 91, 91, 0.15);
+}
+
+.ctaSecondary svg {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  width: 18px;
+  height: 18px;
+}
+
+.ctaSecondary:hover svg {
+  transform: translateX(4px);
 }
 
 /* ── RIGHT: Photo + Video ── */

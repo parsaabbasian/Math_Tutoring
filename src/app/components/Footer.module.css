@@ -49,10 +49,36 @@
 .link {
   color: var(--text-muted);
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .link:hover {
   color: var(--primary);
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.socialLink svg {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.socialLink:hover svg {
+  transform: scale(1.1);
 }
 
 .bottomBar {
