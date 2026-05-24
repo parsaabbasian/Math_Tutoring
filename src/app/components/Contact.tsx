@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
 import styles from './Contact.module.css';
@@ -49,6 +49,7 @@ export default function Contact() {
   const [postalCheck, setPostalCheck] = useState('');
   const [postalResult, setPostalResult] = useState<{ status: 'idle' | 'eligible' | 'blocked' | 'unknown'; area?: string }>({ status: 'idle' });
   const [calendlyOpen, setCalendlyOpen] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
   const [prefill, setPrefill] = useState<{
     name: string; email: string; phone: string;
     tutoringMode: string; country: string; grade: string; address: string;
@@ -151,6 +152,32 @@ export default function Contact() {
     setPostalResult({ status: 'unknown' });
   };
 
+  const isFormValid = () => {
+    if (!formRef.current) return false;
+    const formData = new FormData(formRef.current);
+    const studentName = (formData.get('studentName') as string || '').trim();
+    const email = (formData.get('email') as string || '').trim();
+
+    // Check required fields
+    if (!studentName || !email || !selectedSchoolLevel) return false;
+
+    // Check if specific grade is selected when school level is selected
+    if (selectedSchoolLevel) {
+      const specificGrade = formRef.current.querySelector('input[name="specificGrade"]:checked');
+      if (!specificGrade) return false;
+    }
+
+    // Check in-person requirements
+    if (tutoringType === 'in-person') {
+      const addressField = (formData.get('address') as string || '').trim();
+      if (!addressField || !postalCheck.trim() || postalResult.status !== 'eligible') {
+        return false;
+      }
+    }
+
+    return true;
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (tutoringType === 'in-person' && (postalResult.status === 'blocked' || postalResult.status === 'unknown')) return;
@@ -242,7 +269,7 @@ export default function Contact() {
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className={styles.form}>
+            <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.inputGroup}>
                 <label htmlFor="studentName" className={styles.label}>{t.form.studentName}</label>
                 <input
@@ -403,7 +430,7 @@ export default function Contact() {
               <button
                 type="submit"
                 className={`btn-primary ${styles.submitButton}`}
-                disabled={tutoringType === 'in-person' && (postalResult.status === 'blocked' || postalResult.status === 'unknown')}
+                disabled={!isFormValid()}
               >
                 {t.form.bookDirect}
                 <span style={{ transform: isRTL ? 'rotate(180deg)' : 'none', display: 'inline-block', marginLeft: isRTL ? '0' : '8px', marginRight: isRTL ? '8px' : '0' }}>→</span>
