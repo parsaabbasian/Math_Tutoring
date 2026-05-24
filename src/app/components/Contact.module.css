@@ -905,3 +905,10 @@
   display: inline-block;
   unicode-bidi: embed;
 }
+
+.formHint {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: -8px;
+  animation: fadeIn 0.3s ease-out;
+}
