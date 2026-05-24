@@ -30,10 +30,29 @@ export default function Footer() {
         </div>
         <div className={styles.socials}>
           <h4 className={styles.linksTitle}>{t.connect}</h4>
-          {/* ── Update these URLs with Avin's real social profiles ── */}
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>Instagram</a>
-          <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className={styles.link}>LinkedIn</a>
-          <a href="mailto:avin.math@gmail.com" className={styles.link}>Email</a>
+          <a href="mailto:avin.math@gmail.com" title="Email" className={`${styles.link} ${styles.socialLink}`}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span>Email</span>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram" className={`${styles.link} ${styles.socialLink}`}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <circle cx="17.5" cy="6.5" r="1.5" />
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" title="LinkedIn" className={`${styles.link} ${styles.socialLink}`}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
         </div>
       </div>
       <div className={styles.bottomBar}>

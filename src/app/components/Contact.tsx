@@ -479,10 +479,18 @@ export default function Contact() {
                 type="submit"
                 className={`btn-primary ${styles.submitButton}`}
                 disabled={!isFormValid()}
+                title={!isFormValid() ? (language === 'en' ? 'Please fill in all required fields' : 'لطفاً تمام فیلدهای الزامی را پر کنید') : ''}
               >
                 {t.form.bookDirect}
                 <span style={{ transform: isRTL ? 'rotate(180deg)' : 'none', display: 'inline-block', marginLeft: isRTL ? '0' : '8px', marginRight: isRTL ? '8px' : '0' }}>→</span>
               </button>
+              {!isFormValid() && selectedSchoolLevel && (
+                <p className={styles.formHint}>
+                  {language === 'en'
+                    ? 'Fill in all fields above to continue'
+                    : 'لطفاً تمام فیلدهای بالا را پر کنید تا ادامه دهید'}
+                </p>
+              )}
             </form>
           </div>
         </div>
