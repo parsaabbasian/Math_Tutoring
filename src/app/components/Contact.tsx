@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
 import styles from './Contact.module.css';
@@ -49,7 +49,9 @@ export default function Contact() {
   const [postalCheck, setPostalCheck] = useState('');
   const [postalResult, setPostalResult] = useState<{ status: 'idle' | 'eligible' | 'blocked' | 'unknown'; area?: string }>({ status: 'idle' });
   const [calendlyOpen, setCalendlyOpen] = useState(false);
+  const [countryDropdownOpen, setCountryDropdownOpen] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const countryDropdownRef = useRef<HTMLDivElement>(null);
   const [prefill, setPrefill] = useState<{
     name: string; email: string; phone: string;
     tutoringMode: string; country: string; grade: string; address: string;
@@ -151,6 +153,19 @@ export default function Contact() {
     }
     setPostalResult({ status: 'unknown' });
   };
+
+  // Close country dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (countryDropdownRef.current && !countryDropdownRef.current.contains(e.target as Node)) {
+        setCountryDropdownOpen(false);
+      }
+    };
+    if (countryDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [countryDropdownOpen]);
 
   const isFormValid = () => {
     if (!formRef.current) return false;
@@ -374,14 +389,47 @@ export default function Contact() {
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label className={styles.label}>{t.form.country}</label>
-                  <select
-                    className={styles.input}
-                    value={selectedCountry}
-                    onChange={(e) => { setSelectedCountry(e.target.value); setSelectedSchoolLevel(null); }}
-                    name="country"
-                  >
-                    {t.form.countries.map((c: any) => <option key={c.id} value={c.id}>{c.label}</option>)}
-                  </select>
+                  <div ref={countryDropdownRef} className={styles.countryDropdown}>
+                    <button
+                      type="button"
+                      className={`${styles.countryButton} ${countryDropdownOpen ? styles.countryButtonOpen : ''}`}
+                      onClick={() => setCountryDropdownOpen(!countryDropdownOpen)}
+                      aria-haspopup="listbox"
+                      aria-expanded={countryDropdownOpen}
+                    >
+                      <span className={styles.countryLabel}>
+                        {t.form.countries.find((c: any) => c.id === selectedCountry)?.label || 'Select'}
+                      </span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={styles.countryChevron}>
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </button>
+
+                    {countryDropdownOpen && (
+                      <div className={styles.countryMenu}>
+                        {t.form.countries.map((country: any) => (
+                          <button
+                            key={country.id}
+                            type="button"
+                            className={`${styles.countryOption} ${selectedCountry === country.id ? styles.countryOptionSelected : ''}`}
+                            onClick={() => {
+                              setSelectedCountry(country.id);
+                              setSelectedSchoolLevel(null);
+                              setCountryDropdownOpen(false);
+                            }}
+                          >
+                            <span>{country.label}</span>
+                            {selectedCountry === country.id && (
+                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                                <polyline points="20 6 9 17 4 12" />
+                              </svg>
+                            )}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                    <input type="hidden" name="country" value={selectedCountry} />
+                  </div>
                 </div>
               </div>
 
