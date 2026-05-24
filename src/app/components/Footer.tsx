@@ -28,9 +28,8 @@ export default function Footer() {
           <a href="/#about" className={styles.link}>{nav.about}</a>
           <a href="/#join" className={styles.link}>{nav.join}</a>
         </div>
-        <div className={styles.socialsContainer}>
+        <div className={styles.socials}>
           <h4 className={styles.linksTitle}>{t.connect}</h4>
-          <div className={styles.socials}>
           <a href="mailto:avin.math@gmail.com" title="Email" className={`${styles.link} ${styles.socialLink}`}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -54,7 +53,6 @@ export default function Footer() {
             </svg>
             <span>LinkedIn</span>
           </a>
-          </div>
         </div>
       </div>
       <div className={styles.bottomBar}>
