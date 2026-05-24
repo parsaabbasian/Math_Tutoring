@@ -267,7 +267,7 @@
 
 .countryLabel {
   flex: 1;
-  text-align: left;
+  text-align: start;
 }
 
 .countryChevron {
@@ -318,7 +318,7 @@
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.15s ease;
-  text-align: left;
+  text-align: start;
 }
 
 .countryOption:hover {
@@ -334,7 +334,7 @@
 
 .countryOption svg {
   flex-shrink: 0;
-  margin-left: 8px;
+  margin-inline-start: 8px;
   opacity: 0;
   transition: opacity 0.2s ease;
 }

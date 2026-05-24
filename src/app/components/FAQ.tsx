@@ -90,9 +90,10 @@ export default function FAQ() {
             <div
               key={index}
               className={`${styles.faqItem} ${openIndex === index ? styles.open : ''}`}
+              dir={language === 'fa' ? 'rtl' : 'ltr'}
             >
               <button
-                className={styles.faqQuestion}
+                className={`${styles.faqQuestion} ${language === 'fa' ? styles.rtl : ''}`}
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 aria-expanded={openIndex === index}
               >

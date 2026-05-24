@@ -284,7 +284,7 @@ export default function Contact() {
               </button>
             </div>
 
-            <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
+            <form ref={formRef} onSubmit={handleSubmit} className={styles.form} dir={isRTL ? 'rtl' : 'ltr'}>
               <div className={styles.inputGroup}>
                 <label htmlFor="studentName" className={styles.label}>{t.form.studentName}</label>
                 <input
@@ -406,7 +406,7 @@ export default function Contact() {
                     </button>
 
                     {countryDropdownOpen && (
-                      <div className={styles.countryMenu}>
+                      <div className={styles.countryMenu} dir={isRTL ? 'rtl' : 'ltr'}>
                         {t.form.countries.map((country: any) => (
                           <button
                             key={country.id}
