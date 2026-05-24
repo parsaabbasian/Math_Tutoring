@@ -44,12 +44,15 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  align-items: flex-start;
 }
 
 .link {
   color: var(--text-muted);
   font-weight: 500;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .link:hover {
@@ -59,26 +62,30 @@
 .socialLink {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
+  gap: 12px;
+  padding: 0;
   border-radius: 8px;
   background: transparent;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
 .socialLink:hover {
-  background: var(--primary-light);
+  background: transparent;
   color: var(--primary);
-  transform: translateY(-2px);
 }
 
 .socialLink svg {
   flex-shrink: 0;
   transition: transform 0.3s ease;
+  width: 20px;
+  height: 20px;
+  color: inherit;
 }
 
 .socialLink:hover svg {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .bottomBar {
