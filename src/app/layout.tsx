@@ -44,9 +44,9 @@ export default function RootLayout({
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
       </head>
       <body>
-        <Script 
-          src="https://assets.calendly.com/assets/external/widget.js" 
-          strategy="lazyOnload" 
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="lazyOnload"
         />
         <LanguageProvider>
           <ModalProvider>
