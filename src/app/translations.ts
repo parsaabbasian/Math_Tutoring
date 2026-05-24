@@ -90,7 +90,7 @@ export const translations = {
         }
       },
       form: {
-        bookDirect: "Schedule a 30-Min Intro Call",
+        bookDirect: "Book Your Class",
         or: "OR",
         studentName: "Student Name",
         email: "Email Address",
@@ -266,7 +266,7 @@ export const translations = {
         }
       },
       form: {
-        bookDirect: "رزرو جلسه معارفه ۳۰ دقیقه‌ای",
+        bookDirect: "رزرو کلاس",
         or: "یا",
         studentName: "نام دانش‌آموز",
         email: "آدرس ایمیل",
