@@ -52,6 +52,7 @@ async function detectGeo(): Promise<Geo | null> {
 }
 
 function computeAllowInPerson(geo: Geo | null): boolean {
+  // In-person is Canada-only. Iran and all other international visitors see online tutoring only.
   if (!geo || geo.country !== 'CA') return false;
   const region = geo.region.toLowerCase();
   const city = geo.city.toLowerCase();
