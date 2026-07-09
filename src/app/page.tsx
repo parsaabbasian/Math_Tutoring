@@ -8,11 +8,6 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-export const metadata = {
-  title: 'Avin Math Tutoring',
-  description: 'Personalized online math tutoring with Avin Mousavi.',
-};
-
 export default function Home() {
   return (
     <main>
@@ -22,7 +17,7 @@ export default function Home() {
       <HowItWorks />
       <GlobalTutoring />
       <Packages />
-      <FAQ />
+      <FAQ limit={4} />
       <Contact />
       <Footer />
     </main>

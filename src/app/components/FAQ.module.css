@@ -12,6 +12,48 @@
   margin: 0 auto;
 }
 
+.seeAllWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.seeAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--border);
+  background: var(--surface);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.seeAllBtn:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.seeAllArrow {
+  transition: transform 0.3s ease;
+}
+
+.seeAllBtn:hover .seeAllArrow {
+  transform: translateX(4px);
+}
+
+[dir='rtl'] .seeAllArrow {
+  transform: rotate(180deg);
+}
+
+[dir='rtl'] .seeAllBtn:hover .seeAllArrow {
+  transform: rotate(180deg) translateX(4px);
+}
+
 .faqItem {
   background: var(--surface);
   border: 1px solid var(--border);
