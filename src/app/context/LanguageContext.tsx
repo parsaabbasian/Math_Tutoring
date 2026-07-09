@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useLocation } from './LocationContext';
 
 type Language = 'en' | 'fa';
 
@@ -12,25 +13,10 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Detect the visitor's country via IP. Returns an ISO 3166 alpha-2 code (e.g. "IR"), or null.
-async function detectCountry(): Promise<string | null> {
-  const sources: Array<() => Promise<string>> = [
-    async () => (await (await fetch('https://ipapi.co/country/')).text()).trim(),
-    async () => ((await (await fetch('https://ipwho.is/')).json()).country_code as string),
-  ];
-  for (const get of sources) {
-    try {
-      const code = await get();
-      if (code && /^[A-Za-z]{2}$/.test(code)) return code.toUpperCase();
-    } catch {
-      // try the next source
-    }
-  }
-  return null;
-}
-
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const { geo, loading } = useLocation();
   const [language, setLanguageState] = useState<Language>('en');
+  const [decided, setDecided] = useState(false);
 
   const applyLanguage = (lang: Language, persist: boolean) => {
     setLanguageState(lang);
@@ -40,23 +26,22 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   useEffect(() => {
+    if (decided) return;
+
     const savedLang = localStorage.getItem('language') as Language | null;
     if (savedLang === 'en' || savedLang === 'fa') {
       // Respect an explicit choice made previously.
       applyLanguage(savedLang, false);
+      setDecided(true);
       return;
     }
 
     // First visit with no saved choice: default by location — Iran → Persian, elsewhere → English.
-    let cancelled = false;
-    detectCountry().then((country) => {
-      if (cancelled) return;
-      applyLanguage(country === 'IR' ? 'fa' : 'en', true);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+    // Wait for the shared IP lookup to finish before deciding.
+    if (loading) return;
+    applyLanguage(geo?.country === 'IR' ? 'fa' : 'en', true);
+    setDecided(true);
+  }, [decided, loading, geo]);
 
   const setLanguage = (lang: Language) => {
     applyLanguage(lang, true);

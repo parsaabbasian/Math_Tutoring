@@ -1,6 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useLocation } from '../context/LocationContext';
 import { translations } from '../translations';
 import styles from './Contact.module.css';
 import CalendlyModal from './CalendlyModal';
@@ -35,8 +36,18 @@ const PhoneIcon = () => (
 
 export default function Contact() {
   const { language, isRTL } = useLanguage();
+  const { allowInPerson } = useLocation();
   const t = translations[language].contact;
   const [tutoringType, setTutoringType] = useState<'online' | 'in-person'>('online');
+
+  // In-person is only offered in the Toronto / GTA area. If a non-local visitor
+  // somehow has in-person selected, fall back to online.
+  useEffect(() => {
+    if (!allowInPerson && tutoringType === 'in-person') {
+      setTutoringType('online');
+      setEligibility({ status: 'idle' });
+    }
+  }, [allowInPerson, tutoringType]);
   const [address, setAddress] = useState('');
   const [eligibility, setEligibility] = useState<
     | { status: 'idle' }
@@ -262,7 +273,7 @@ export default function Contact() {
             </div>
             <div className={styles.detailItem}>
               <div className={styles.detailIcon}><LaptopIcon /></div>
-              <div><h4 className={styles.detailTitle}>{t.info.location}</h4><p className={styles.detailValue}>{t.info.locationDesc}</p></div>
+              <div><h4 className={styles.detailTitle}>{t.info.location}</h4><p className={styles.detailValue}>{allowInPerson ? t.info.locationDesc : (language === 'fa' ? 'آنلاین' : 'Online')}</p></div>
             </div>
           </div>
         </div>
@@ -271,7 +282,10 @@ export default function Contact() {
           <div className={styles.formContainer}>
             <h3 className={styles.formHeading}>{t.services.title}</h3>
 
-            <div className={styles.serviceCards}>
+            <div
+              className={styles.serviceCards}
+              style={allowInPerson ? undefined : { gridTemplateColumns: '1fr' }}
+            >
               <button
                 type="button"
                 className={`${styles.serviceCard} ${tutoringType === 'online' ? styles.serviceActive : ''}`}
@@ -284,18 +298,20 @@ export default function Contact() {
                   <p className={styles.serviceDesc}>{t.services.online.desc}</p>
                 </div>
               </button>
-              <button
-                type="button"
-                className={`${styles.serviceCard} ${tutoringType === 'in-person' ? styles.serviceActive : ''}`}
-                onClick={() => { setTutoringType('in-person'); if (address) checkEligibility(address); }}
-              >
-                <div className={styles.serviceIcon}><PhoneIcon /></div>
-                <div className={styles.serviceInfo}>
-                  <span className={styles.serviceTitle}>{t.services.inPerson.title}</span>
-                  <span className={styles.servicePrice}>{t.services.inPerson.price}</span>
-                  <p className={styles.serviceDesc}>{t.services.inPerson.desc}</p>
-                </div>
-              </button>
+              {allowInPerson && (
+                <button
+                  type="button"
+                  className={`${styles.serviceCard} ${tutoringType === 'in-person' ? styles.serviceActive : ''}`}
+                  onClick={() => { setTutoringType('in-person'); if (address) checkEligibility(address); }}
+                >
+                  <div className={styles.serviceIcon}><PhoneIcon /></div>
+                  <div className={styles.serviceInfo}>
+                    <span className={styles.serviceTitle}>{t.services.inPerson.title}</span>
+                    <span className={styles.servicePrice}>{t.services.inPerson.price}</span>
+                    <p className={styles.serviceDesc}>{t.services.inPerson.desc}</p>
+                  </div>
+                </button>
+              )}
             </div>
 
             <p className={styles.trialNote} dir={isRTL ? 'rtl' : 'ltr'}>{t.services.trialNote}</p>
