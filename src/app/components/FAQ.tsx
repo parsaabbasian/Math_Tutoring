@@ -5,73 +5,73 @@ import styles from './FAQ.module.css';
 
 export default function FAQ() {
   const { language } = useLanguage();
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = language === 'en' ? [
     {
       q: "What are your qualifications?",
-      a: "I'm a Mechanical Engineering student at York University and OSSD graduate. I've worked privately with 50+ students from elementary through high school, and I'm fluent in both English and Persian."
+      a: "I'm an engineering student at York University and a graduate of the Ontario Secondary School Diploma (OSSD) program, so I'm fully familiar with the Canadian math curriculum and how it's taught at every grade level. I have hands-on experience tutoring students privately from elementary through high school."
     },
     {
       q: "How long before I see improvement?",
-      a: "Most students notice improvement in 2-3 weeks. However, it depends on their starting point and consistency. We focus on building confidence and understanding, not just grades."
+      a: "Every student is different, but most families notice a shift in confidence and comprehension within the first few sessions. Real, lasting improvement (better grades and less anxiety around math) typically builds over 4 to 6 weeks of consistent lessons."
     },
     {
       q: "What grades do you tutor?",
-      a: "I work with elementary through high school students (Grades 1-12). I also help with college-level Calculus. Subject areas include all math topics aligned with Canadian and international curricula."
+      a: "I work with students from elementary school through high school, covering the full range of the Ontario math curriculum."
     },
     {
       q: "How does online tutoring work?",
-      a: "We use video calls with a digital whiteboard where I can write, draw, and solve problems in real-time. You'll have the same personalized experience as in-person, just from home."
+      a: "Lessons take place over video call using a shared digital whiteboard, so your child can follow along, ask questions, and work through problems in real time, just like an in-person lesson."
     },
     {
       q: "Do you offer a free trial?",
-      a: "Yes! The first 30-minute intro call is completely free. We'll assess your current level, discuss goals, and make sure we're a good fit before you commit to paid lessons."
+      a: "Every new student starts with a free 15 minute introduction meeting (a chance for me to meet your child, learn about their current level and goals, and for us to see if the connection feels right). If you'd like to continue after that, the first full session is just $15, so your child can experience a real lesson before you commit to anything further."
     },
     {
       q: "What if I'm not happy with the lessons?",
-      a: "If you're not satisfied after the first lesson, we can discuss what would work better. I'm flexible and adjust my teaching style to match how each student learns best."
+      a: "Your satisfaction matters to me. If a lesson isn't the right fit, tell me and we'll adjust the approach (pacing, style, or focus) together. There's no long-term contract, so you're never locked in."
     },
     {
       q: "Do you provide homework help?",
-      a: "Yes! I help with understanding concepts and working through problems. My focus is on teaching you how to solve problems, not just giving answers."
+      a: "Yes. In addition to core lessons, I can help your child work through school assignments and prepare for upcoming tests and exams."
     },
     {
       q: "What about lesson cancellations?",
-      a: "Give 24 hours notice for cancellations. Life happens, and I'm flexible with rescheduling within reason."
+      a: "I understand plans change. Please give at least 24 hours' notice to reschedule or cancel a lesson at no charge. Late cancellations may be subject to the full lesson fee."
     },
   ] : [
     {
-      q: "شما چه مدارکی دارید؟",
-      a: "من دانشجوی مهندسی مکانیک در دانشگاه یورک و فارغ‌التحصیل OSSD هستم. من با بیش از ۵۰ دانش‌آموز از دبستان تا دبیرستان کار کرده‌ام و به انگلیسی و فارسی روان صحبت می‌کنم."
+      q: "مدارک و سوابق شما چیست؟",
+      a: "من دانشجوی مهندسی در دانشگاه یورک و فارغ‌التحصیل برنامه دیپلم متوسطه انتاریو (OSSD) هستم، بنابراین با برنامه درسی ریاضی کانادا و نحوه تدریس آن در همه پایه‌ها کاملاً آشنا هستم. تجربه عملی تدریس خصوصی به دانش‌آموزان از دبستان تا دبیرستان را دارم."
     },
     {
       q: "چقدر طول می‌کشد تا بهبود را ببینم؟",
-      a: "اکثر دانش‌آموزان در ۲-۳ هفته بهبود می‌بینند. البته این به نقطه شروع و سازگاری بستگی دارد. ما بر روی ایجاد اعتماد به نفس و درک، نه فقط نمرات تمرکز می‌کنیم."
+      a: "هر دانش‌آموزی متفاوت است، اما بیشتر خانواده‌ها در همان چند جلسه اول تغییری در اعتماد به نفس و درک مطلب احساس می‌کنند. بهبود واقعی و ماندگار (نمرات بهتر و اضطراب کمتر نسبت به ریاضی) معمولاً طی ۴ تا ۶ هفته کلاس منظم شکل می‌گیرد."
     },
     {
-      q: "شما با چه پایه‌هایی کار می‌کنید؟",
-      a: "من با دانش‌آموزان دبستان تا دبیرستان (پایه ۱-۱۲) کار می‌کنم. من همچنین با Calculus سطح کالج کمک می‌کنم. موضوعات شامل تمام مباحث ریاضی هستند."
+      q: "با چه پایه‌هایی کار می‌کنید؟",
+      a: "با دانش‌آموزان از دبستان تا دبیرستان کار می‌کنم و کل برنامه درسی ریاضی انتاریو را پوشش می‌دهم."
     },
     {
       q: "تدریس آنلاین چگونه کار می‌کند؟",
-      a: "ما از ویدئو کال با تخته سفید دیجیتالی استفاده می‌کنیم. همان تجربه شخصی‌سازی شده‌ای که در حضوری دارید، اما از خانه."
+      a: "کلاس‌ها از طریق تماس ویدیویی و با استفاده از تخته دیجیتال مشترک برگزار می‌شوند، بنابراین فرزند شما می‌تواند همراهی کند، سؤال بپرسد و مسائل را به‌صورت زنده حل کند، درست مثل کلاس حضوری."
     },
     {
-      q: "آیا یک جلسه رایگان وجود دارد؟",
-      a: "بله! اولین جلسه ۳۰ دقیقه‌ای کاملاً رایگان است. ما سطح فعلی شما را بررسی می‌کنیم و در مورد اهداف صحبت می‌کنیم."
+      q: "آیا جلسه آزمایشی رایگان دارید؟",
+      a: "هر دانش‌آموز جدید با یک جلسه آشنایی رایگان ۱۵ دقیقه‌ای شروع می‌کند (فرصتی برای آشنایی من با فرزند شما، شناخت سطح و اهداف فعلی او، و اینکه ببینیم ارتباط مناسبی شکل می‌گیرد یا نه). اگر بعد از آن بخواهید ادامه دهید، اولین جلسه کامل فقط ۱۵ دلار است تا فرزندتان پیش از هر تعهدی، یک درس واقعی را تجربه کند."
     },
     {
-      q: "اگر از درس‌ها راضی نباشم چه؟",
-      a: "اگر بعد از اولین درس راضی نباشید، می‌توانیم در مورد بهتری صحبت کنیم. من انعطاف‌پذیر هستم و سبک تدریس خود را متناسب با یادگیری هر دانش‌آموز تنظیم می‌کنم."
+      q: "اگر از کلاس‌ها راضی نباشم چه؟",
+      a: "رضایت شما برای من مهم است. اگر کلاس مناسب نبود، به من بگویید تا رویکرد را با هم تنظیم کنیم (سرعت، سبک یا تمرکز). قرارداد بلندمدتی وجود ندارد، بنابراین هرگز مقید نیستید."
     },
     {
-      q: "آیا شما کمک تکلیف می‌کنید؟",
-      a: "بله! من با درک مفاهیم و کار کردن مسائل کمک می‌کنم. تمرکز من بر تدریس نحوه حل مسائل است، نه فقط دادن پاسخ."
+      q: "آیا در انجام تکالیف هم کمک می‌کنید؟",
+      a: "بله. علاوه بر کلاس‌های اصلی، می‌توانم به فرزند شما در انجام تکالیف مدرسه و آمادگی برای امتحان‌ها و آزمون‌های پیش رو کمک کنم."
     },
     {
-      q: "درباره لغو درس‌ها چه می‌دانید؟",
-      a: "۲۴ ساعت قبل اطلاع دهید. زندگی پیش می‌آید و من انعطاف‌پذیر هستم."
+      q: "لغو کلاس‌ها چگونه است؟",
+      a: "می‌دانم که برنامه‌ها تغییر می‌کنند. لطفاً برای تغییر زمان یا لغو رایگان کلاس، حداقل ۲۴ ساعت قبل اطلاع دهید. لغوهای دیرهنگام ممکن است مشمول هزینه کامل جلسه شوند."
     },
   ];
 
