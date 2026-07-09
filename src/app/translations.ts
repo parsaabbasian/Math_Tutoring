@@ -220,7 +220,11 @@ export const translations = {
       tagline: "Empowering students through personalized math excellence.",
       copyright: "All rights reserved.",
       quickLinks: "Quick Links",
-      connect: "Connect"
+      connect: "Connect",
+      whatsapp: "WhatsApp",
+      instagram: "Instagram",
+      telegram: "Telegram",
+      email: "Email"
     }
   },
   fa: {
@@ -444,7 +448,11 @@ export const translations = {
       tagline: "توانمندسازی دانش‌آموزان از طریق تعالی در ریاضیات.",
       copyright: "تمامی حقوق محفوظ است.",
       quickLinks: "دسترسی سریع",
-      connect: "ارتباط با من"
+      connect: "ارتباط با من",
+      whatsapp: "واتساپ",
+      instagram: "اینستاگرام",
+      telegram: "تلگرام",
+      email: "ایمیل"
     }
   }
 };
