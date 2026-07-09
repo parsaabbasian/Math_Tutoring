@@ -22,8 +22,6 @@ export default function About() {
             <div className={`${styles.expandableContent} ${isExpanded ? styles.expanded : ''}`}>
               <p className={styles.aboutText} dangerouslySetInnerHTML={{ __html: t.p2 }}></p>
               <p className={styles.aboutText} dangerouslySetInnerHTML={{ __html: t.p3 }}></p>
-              <p className={styles.aboutText} dangerouslySetInnerHTML={{ __html: t.p4 }}></p>
-              <p className={styles.aboutText} dangerouslySetInnerHTML={{ __html: t.p5 }}></p>
             </div>
 
             <button
