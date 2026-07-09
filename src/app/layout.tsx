@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Outfit, Inter, Vazirmatn } from "next/font/google";
 
+import { LocationProvider } from "./context/LocationContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import { ModalProvider } from "./context/ModalContext";
 import "./globals.css";
@@ -48,14 +49,16 @@ export default function RootLayout({
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="afterInteractive"
         />
-        <LanguageProvider>
-          <ModalProvider>
-            <MathBackground />
-            <main style={{ position: 'relative', zIndex: 1 }}>
-              {children}
-            </main>
-          </ModalProvider>
-        </LanguageProvider>
+        <LocationProvider>
+          <LanguageProvider>
+            <ModalProvider>
+              <MathBackground />
+              <main style={{ position: 'relative', zIndex: 1 }}>
+                {children}
+              </main>
+            </ModalProvider>
+          </LanguageProvider>
+        </LocationProvider>
       </body>
     </html>
   );

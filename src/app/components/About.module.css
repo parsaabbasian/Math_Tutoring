@@ -160,6 +160,19 @@
     text-align: center;
   }
 
+  .aboutContent {
+    align-items: center;
+  }
+
+  /* Override the inline text-align set on the heading in About.tsx */
+  .aboutContent h2 {
+    text-align: center !important;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
   .textContent {
     align-items: center;
   }
