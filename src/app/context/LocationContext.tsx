@@ -18,9 +18,12 @@ interface LocationContextType {
 const LocationContext = createContext<LocationContextType | undefined>(undefined);
 
 // Cities in Avin's in-person service area (North York & Vaughan) and the surrounding GTA.
+// IP city names vary (e.g. "York", "North York", "Toronto"), so this is a best-effort
+// fast-path; the Ontario region check below is the reliable gate.
 const GTA_CITIES = [
-  'toronto', 'north york', 'vaughan', 'richmond hill', 'markham', 'thornhill',
-  'concord', 'maple', 'woodbridge', 'scarborough', 'etobicoke', 'east york',
+  'toronto', 'york', 'north york', 'east york', 'scarborough', 'etobicoke',
+  'vaughan', 'thornhill', 'concord', 'maple', 'woodbridge', 'richmond hill',
+  'markham', 'unionville', 'mississauga', 'brampton', 'aurora', 'newmarket',
 ];
 
 function toGeo(d: Record<string, unknown>): Geo {
@@ -34,8 +37,8 @@ function toGeo(d: Record<string, unknown>): Geo {
 
 async function detectGeo(): Promise<Geo | null> {
   const sources: Array<() => Promise<Geo>> = [
-    async () => toGeo(await (await fetch('https://ipapi.co/json/')).json()),
     async () => toGeo(await (await fetch('https://ipwho.is/')).json()),
+    async () => toGeo(await (await fetch('https://ipapi.co/json/')).json()),
   ];
   for (const get of sources) {
     try {
@@ -50,8 +53,12 @@ async function detectGeo(): Promise<Geo | null> {
 
 function computeAllowInPerson(geo: Geo | null): boolean {
   if (!geo || geo.country !== 'CA') return false;
+  const region = geo.region.toLowerCase();
   const city = geo.city.toLowerCase();
-  return GTA_CITIES.some((c) => city.includes(c));
+  // Reliable gate: anyone in Ontario (where the GTA in-person area is).
+  if (region.includes('ontario') || region === 'on') return true;
+  // Fallback in case the region name is missing but the city is a known GTA city.
+  return GTA_CITIES.some((c) => city.includes(c) || c.includes(city));
 }
 
 export function LocationProvider({ children }: { children: React.ReactNode }) {
