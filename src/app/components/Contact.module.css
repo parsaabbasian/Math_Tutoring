@@ -1,8 +1,14 @@
+/* Light conversion panel */
 .contact {
-  background: transparent;
   position: relative;
   overflow: hidden;
   scroll-margin-top: 55px;
+  width: min(1264px, calc(100% - 32px));
+  margin: 0 auto 72px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-alt) 100%);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
 }
 
 .contactContainer {
@@ -20,12 +26,30 @@
 }
 
 .subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
   color: var(--primary);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
+  letter-spacing: 1.6px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.subtitle::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
 }
 
 .infoDescription {
@@ -95,7 +119,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  margin-bottom: 12px;
+}
+
+.trialNote {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: var(--primary-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
   margin-bottom: 24px;
+  line-height: 1.5;
 }
 
 .serviceCard {

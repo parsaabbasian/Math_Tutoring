@@ -18,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 160px 0;
+  padding: 230px 0;
   width: 100%;
 }
 
@@ -82,7 +82,7 @@
 /* ── Text block: positioned above or below ── */
 .text {
   position: absolute;
-  width: 170px;
+  width: 210px;
   text-align: center;
 }
 
@@ -118,6 +118,10 @@
   font-size: 0.8rem;
   color: var(--text-muted);
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ── Responsive ── */
