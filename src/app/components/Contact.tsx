@@ -207,7 +207,7 @@ export default function Contact() {
       ?.levels.find((l: any) => l.id === selectedSchoolLevel)?.label || '';
 
     const gradeLabel = selectedSpecificGrade
-      ? `${levelLabel} — ${selectedSpecificGrade}`
+      ? `${levelLabel}, ${selectedSpecificGrade}`
       : levelLabel;
 
     setPrefill({
@@ -216,7 +216,7 @@ export default function Contact() {
       phone: (data.get('phone') as string) || '',
       tutoringMode: tutoringType === 'online'
         ? (language === 'en' ? 'Online Tutoring ($20/hr)' : 'آموزش آنلاین (۲۰ دلار/ساعت)')
-        : (language === 'en' ? 'In-Person Tutoring ($40/hr)' : 'آموزش حضوری (۴۰ دلار/ساعت)'),
+        : (language === 'en' ? 'In Person Tutoring ($40/hr)' : 'آموزش حضوری (۴۰ دلار/ساعت)'),
       country: countryLabel,
       grade: gradeLabel,
       address: tutoringType === 'in-person' ? `${address}, ${postalCheck}`.trim().replace(/^,\s*/, '') : '',
@@ -251,7 +251,7 @@ export default function Contact() {
                 <h4 className={styles.detailTitle}>{t.info.phone}</h4>
                 <p className={styles.detailValue} dir="ltr" style={{ textAlign: isRTL ? 'right' : 'left' }}>
                   <a href="tel:+16479977324" className={styles.phoneNumber} style={{ color: 'inherit' }}>
-                    +1 (647) 997-7324
+                    +1 (647) 997 7324
                   </a>
                 </p>
               </div>
@@ -297,6 +297,8 @@ export default function Contact() {
                 </div>
               </button>
             </div>
+
+            <p className={styles.trialNote} dir={isRTL ? 'rtl' : 'ltr'}>{t.services.trialNote}</p>
 
             <form ref={formRef} onSubmit={handleSubmit} className={styles.form} dir={isRTL ? 'rtl' : 'ltr'}>
               <div className={styles.inputGroup}>
@@ -378,8 +380,8 @@ export default function Contact() {
                     {postalResult.status === 'eligible' && (
                       <p className={styles.eligibilitySuccess}>
                         {language === 'fa'
-                          ? `${postalResult.area} — در محدوده ارائه خدمات است`
-                          : `${postalResult.area} — in-person is available in your area`}
+                          ? `${postalResult.area} (در محدوده ارائه خدمات است)`
+                          : `${postalResult.area} (in person is available in your area)`}
                       </p>
                     )}
                     {postalResult.status === 'blocked' && (

@@ -9,7 +9,7 @@ export const translations = {
     hero: {
       badge: "Personalized Online Math Tutoring",
       title: "Math Doesn't Have to Be Hard or Stressful.",
-      description: "Clear, step-by-step tutoring that actually makes sense. Whether you're struggling to pass or aiming for top grades, I'll help you build the confidence you need to succeed.",
+      description: "Clear, step by step tutoring that actually makes sense. Whether you're struggling to pass or aiming for top grades, I'll help you build the confidence you need to succeed.",
       ctaStart: "Start Learning Today",
       ctaBook: "Book a Free Consultation",
       ctaRegistration: "Registration Form",
@@ -28,11 +28,11 @@ export const translations = {
     about: {
       subtitle: "My Journey",
       title: "Who I Am",
-      p1: "Hi! My name is <strong>Avin</strong>, and I am a <strong>Mechanical Engineering</strong> student at <strong>York University</strong> with a strong passion for mathematics, teaching, and helping students build confidence in their learning journey.",
-      p2: "I graduated from the <strong>OSSD program</strong> in Canada and am highly familiar with the Canadian teaching system, learning expectations, and methods used across different grade levels.",
-      p3: "Over the past years, I have worked privately with students from elementary to high school, focusing on making <strong>math simple, understandable, and enjoyable</strong>. My unique <strong>bilingual</strong> approach allows me to teach fluently in both <strong>English and Persian (Farsi)</strong> – especially helpful for bilingual families.",
-      p4: "As an engineering student, I use <strong>analytical thinking and structured problem-solving</strong> to help students develop strong foundations for long-term academic success.",
-      p5: "Whether you need help catching up or advancing ahead, lessons are always personalized to your unique learning style.",
+      p1: "Hi! I'm <strong>Avin</strong>, an engineering student at <strong>York University</strong> with a genuine passion for mathematics and teaching. I graduated from the <strong>Ontario Secondary School Diploma (OSSD)</strong> program, so I know exactly what Canadian students are expected to learn, how it's taught, and where they typically get stuck.",
+      p2: "Over the past year, I've tutored students privately, from elementary school through high school, helping them go from confused and frustrated to confident and independent. I don't believe in memorization. I believe in building <strong>real understanding</strong>, one concept at a time, so math finally makes sense.",
+      p3: "I teach fluently in both <strong>English and Persian (Farsi)</strong>, which makes lessons especially comfortable for bilingual families and students who feel more confident learning in their first language.",
+      p4: "As an engineering student, I bring <strong>structured, analytical thinking</strong> into every lesson, the same problem solving approach I use in my own coursework, so students don't just get the right answer, they understand why it's right.",
+      p5: "Whether your child needs to catch up, keep up, or get ahead, every lesson is built around <strong>how they learn best</strong>.",
       readMore: "Read More",
       showLess: "Show Less"
     },
@@ -41,38 +41,87 @@ export const translations = {
       subtitle: "A personalized process designed for your academic success.",
       steps: [
         {
-          title: "Initial Assessment",
-          description: "A free session to identify your current level and learning goals."
+          title: "Free 15 Minute Introduction Meeting",
+          description: "A relaxed video call with you and your child (no lesson yet). I'll ask about their current math mark, general ability, and what you're hoping to work on, and we'll both get a feel for whether the connection and teaching style are the right fit."
         },
         {
-          title: "Customized Plans",
-          description: "Every lesson is tailored to your school's curriculum and pace."
+          title: "First Trial Session ($15)",
+          description: "If you'd like to move forward, your child's first full session costs just $15. It's a low pressure way for them to experience a real lesson before deciding whether to continue."
         },
         {
-          title: "Bilingual Lessons",
-          description: "Fluent instruction in both English and Persian for your comfort."
+          title: "Customized Learning Plan",
+          description: "From there, every lesson is mapped to your child's school curriculum (or worksheets, for international students), pace, and specific gaps, not a generic template."
         },
         {
-          title: "Conceptual Growth",
-          description: "Focus on deep understanding rather than simple memorization."
+          title: "Bilingual Instruction",
+          description: "Lessons run fluently in English or Persian, whichever helps your child learn best."
         },
         {
-          title: "Flexible & Online",
-          description: "Learn from home with scheduling that fits your busy life."
+          title: "Flexible, Online or In Person",
+          description: "Sessions fit around your family's schedule, with both online and in person options available (in person for North York & Vaughan; online everywhere else, including the US, UK, Australia, and Iran)."
         }
       ]
+    },
+    global: {
+      subtitle: "Global Tutoring",
+      title: "Teaching Students Around the World",
+      p1: "In addition to Ontario curriculum students, I also tutor students in the United States, United Kingdom, Australia, and Iran.",
+      p2: "Since every country (and often every school) follows a different math curriculum, these lessons are built directly around your child's own school worksheets, textbooks, and assignments. Rather than teaching a fixed curriculum, I work with the material your child is already using in class, and focus on strengthening the fundamental math skills underneath it, so gaps don't get carried forward and turn into bigger problems in higher grades.",
+      p3: "This approach is especially valuable for younger students: a shaky foundation in fractions, ratios, or basic algebra rarely shows up as a problem right away. It often shows up two or three grades later, when the material builds on skills that were never fully solidified. My goal is to catch and fix that early.",
+      features: [
+        {
+          icon: "📝",
+          title: "Worksheet based lessons",
+          desc: "We use your child's actual school material, so everything we cover is directly relevant to their class."
+        },
+        {
+          icon: "🧱",
+          title: "Foundational focus",
+          desc: "Extra attention on core math fundamentals to prevent future struggles as material gets more advanced."
+        },
+        {
+          icon: "🌍",
+          title: "Fully online",
+          desc: "Sessions work across time zones (US, UK, Australia, Iran) with flexible scheduling."
+        },
+        {
+          icon: "🗣",
+          title: "English or Persian (Farsi)",
+          desc: "Available in both languages depending on your child's comfort."
+        }
+      ]
+    },
+    packages: {
+      subtitle: "Packages & Pricing",
+      title: "Choosing How to Continue",
+      intro: "Once you and your child have completed the free introduction meeting and the $15 trial session, you can choose whichever option fits your family best. There's no obligation to commit to a package:",
+      options: [
+        {
+          title: "5 Session Package",
+          desc: "Great for a focused, short term push (e.g., before a test or report card)."
+        },
+        {
+          title: "10 Session Package",
+          desc: "Ideal for ongoing weekly or biweekly support across a month."
+        },
+        {
+          title: "Pay Per Session",
+          desc: "Book and pay one session at a time, due before each lesson, with no long term commitment."
+        }
+      ],
+      outro: "Start small, see how it feels, and scale up whenever you're ready."
     },
     contact: {
       subtitle: "Get in Touch",
       title: "Join The Classes",
-      description: "Take the first step towards math excellence. Fill out the form, and I will get back to you within 24 hours to schedule your free initial assessment.",
+      description: "Take the first step toward math success. Fill out the form below and I'll get back to you within 24 hours to schedule your free 15 minute introduction meeting.",
       info: {
         email: "Email",
         phone: "Phone",
         bilingual: "Bilingual Support",
         bilingualDesc: "English & Persian (Farsi)",
         location: "Location",
-        locationDesc: "Online & In-person",
+        locationDesc: "Online & In person",
         price: "Price",
         priceDesc: "$20 / Hour",
       },
@@ -84,10 +133,11 @@ export const translations = {
           desc: "Flexible learning from the comfort of your home."
         },
         inPerson: {
-          title: "In-Person Tutoring",
+          title: "In Person Tutoring",
           price: "$40 / Hour",
           desc: "Personalized lessons in North York & Vaughan areas."
-        }
+        },
+        trialNote: "Note: your very first session is $15. The rates above apply starting from your second session onward."
       },
       form: {
         bookDirect: "Book Your Class",
@@ -160,12 +210,12 @@ export const translations = {
         specificGrade: "Select Specific Grade",
         type: "Tutoring Type",
         online: "Online",
-        inPerson: "In-person",
+        inPerson: "In person",
         address: "Address or Postal Code",
-        notEligible: "In-person tutoring is currently only available in the North York, Vaughan, and Richmond Hill areas. We'd love to help you Online!",
+        notEligible: "In person tutoring is currently only available in the North York, Vaughan, and Richmond Hill areas. We'd love to help you Online!",
         availability: "Preferred Availability",
         days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-        times: ["Morning (9-12)", "Afternoon (12-4)", "Evening (4-8)"],
+        times: ["Morning (9 to 12)", "Afternoon (12 to 4)", "Evening (4 to 8)"],
       }
     },
     footer: {
@@ -204,11 +254,11 @@ export const translations = {
     about: {
       subtitle: "مسیر من",
       title: "درباره من",
-      p1: "سلام! نام من <strong>آوین</strong> است، دانشجوی <strong>مهندسی مکانیک در دانشگاه یورک</strong>. من اشتیاق زیادی به ریاضیات و تدریس دارم و هدفم کمک به دانش‌آموزان برای کسب اعتماد به نفس در مسیر یادگیری است.",
-      p2: "من فارغ‌التحصیل <strong>برنامه OSSD</strong> در کانادا هستم و با سیستم آموزشی، انتظارات یادگیری و روش‌های تدریس در تمامی پایه‌ها کاملاً آشنایی دارم.",
-      p3: "در سال‌های گذشته، به طور خصوصی با دانش‌آموزان از مقطع ابتدایی تا دبیرستان کار کرده‌ام و تمرکزم بر <strong>ساده، قابل فهم و لذت‌بخش کردن ریاضی</strong> بوده است. رویکرد <strong>دوزبانه</strong> من اجازه می‌دهد تا به هر دو زبان <strong>انگلیسی و فارسی</strong> تدریس کنم که برای خانواده‌های دوزبانه بسیار مفید است.",
-      p4: "به عنوان یک دانشجوی مهندسی، از <strong>تفکر تحلیلی و حل مسئله ساختاریافته</strong> برای کمک به دانش‌آموزان در ایجاد پایه‌ای قوی برای موفقیت تحصیلی بلندمدت استفاده می‌کنم.",
-      p5: "چه برای جبران عقب‌افتادگی و چه برای پیشرفت بیشتر، جلسات همیشه بر اساس سبک یادگیری منحصر به فرد شما <strong>شخصی‌سازی</strong> می‌شوند.",
+      p1: "سلام! من <strong>آوین</strong> هستم، دانشجوی مهندسی در <strong>دانشگاه یورک</strong> با علاقه‌ای واقعی به ریاضیات و تدریس. من فارغ‌التحصیل برنامه <strong>دیپلم متوسطه انتاریو (OSSD)</strong> هستم، بنابراین دقیقاً می‌دانم دانش‌آموزان کانادایی چه چیزهایی باید یاد بگیرند، چگونه تدریس می‌شود و معمولاً کجا دچار مشکل می‌شوند.",
+      p2: "در یک سال گذشته، به‌صورت خصوصی به دانش‌آموزان از دبستان تا دبیرستان تدریس کرده‌ام و کمکشان کرده‌ام از سردرگمی و کلافگی به اعتماد به نفس و استقلال برسند. من به حفظ کردن اعتقادی ندارم؛ به ساختن <strong>درک واقعی</strong>، مفهوم به مفهوم، باور دارم تا ریاضی بالاخره معنا پیدا کند.",
+      p3: "من به هر دو زبان <strong>انگلیسی و فارسی</strong> روان تدریس می‌کنم؛ این موضوع کلاس‌ها را برای خانواده‌های دوزبانه و دانش‌آموزانی که با زبان مادری‌شان راحت‌تر یاد می‌گیرند، بسیار راحت‌تر می‌کند.",
+      p4: "به‌عنوان یک دانشجوی مهندسی، <strong>تفکر ساختاریافته و تحلیلی</strong> را به هر جلسه می‌آورم، همان رویکرد حل مسئله‌ای که در درس‌های خودم استفاده می‌کنم، تا دانش‌آموزان فقط به جواب درست نرسند، بلکه بفهمند چرا درست است.",
+      p5: "چه فرزند شما نیاز به جبران عقب‌ماندگی داشته باشد، چه همراهی با کلاس و چه پیشرفت فراتر از آن، هر جلسه بر اساس <strong>بهترین شیوه یادگیری او</strong> طراحی می‌شود.",
       readMore: "ادامه مطلب",
       showLess: "نمایش کمتر"
     },
@@ -217,31 +267,80 @@ export const translations = {
       subtitle: "فرآیندی شخصی‌سازی شده برای موفقیت تحصیلی شما.",
       steps: [
         {
-          title: "ارزیابی اولیه",
-          description: "جلسه‌ای رایگان برای تعیین سطح و مشخص کردن اهداف آموزشی شما."
+          title: "جلسه آشنایی رایگان ۱۵ دقیقه‌ای",
+          description: "یک تماس ویدیویی راحت با شما و فرزندتان (هنوز خبری از درس نیست). درباره نمره فعلی ریاضی، توانایی کلی و اهدافتان می‌پرسم و هر دو طرف متوجه می‌شویم که آیا ارتباط و سبک تدریس مناسب است یا نه."
         },
         {
-          title: "برنامه‌های اختصاصی",
-          description: "هر جلسه بر اساس برنامه درسی مدرسه و سرعت یادگیری شما طراحی می‌شود."
+          title: "اولین جلسه آزمایشی (۱۵ دلار)",
+          description: "اگر بخواهید ادامه دهید، اولین جلسه کامل فرزندتان فقط ۱۵ دلار است (راهی کم‌فشار برای تجربه یک درس واقعی پیش از تصمیم به ادامه)."
+        },
+        {
+          title: "برنامه یادگیری اختصاصی",
+          description: "از آنجا به بعد، هر جلسه بر اساس برنامه درسی مدرسه فرزند شما (یا کاربرگ‌ها، برای دانش‌آموزان بین‌المللی)، سرعت یادگیری و نقاط ضعف مشخص او طراحی می‌شود، نه یک الگوی عمومی."
         },
         {
           title: "آموزش دوزبانه",
-          description: "تدریس مسلط به دو زبان انگلیسی و فارسی برای درک و راحتی حداکثری."
+          description: "کلاس‌ها به‌صورت روان به زبان انگلیسی یا فارسی برگزار می‌شوند؛ هر کدام که به یادگیری بهتر فرزند شما کمک کند."
         },
         {
-          title: "رشد مفهومی",
-          description: "تمرکز بر درک عمیق مفاهیم به جای حفظ کردن ساده مطالب."
-        },
-        {
-          title: "آنلاین و منعطف",
-          description: "یادگیری در خانه با زمان‌بندی متناسب با برنامه‌های روزمره شما."
+          title: "منعطف، آنلاین یا حضوری",
+          description: "جلسات متناسب با برنامه خانواده شما تنظیم می‌شوند و هر دو گزینه آنلاین و حضوری در دسترس است (حضوری برای نورت یورک و وان؛ آنلاین برای همه جای دیگر از جمله آمریکا، انگلستان، استرالیا و ایران)."
         }
       ]
+    },
+    global: {
+      subtitle: "تدریس بین‌المللی",
+      title: "تدریس به دانش‌آموزان در سراسر جهان",
+      p1: "علاوه بر دانش‌آموزان برنامه درسی انتاریو، به دانش‌آموزانی در ایالات متحده، انگلستان، استرالیا و ایران نیز تدریس می‌کنم.",
+      p2: "از آنجا که هر کشور (و اغلب هر مدرسه) برنامه درسی ریاضی متفاوتی دارد، این کلاس‌ها مستقیماً بر اساس کاربرگ‌ها، کتاب‌های درسی و تکالیف مدرسه فرزند شما طراحی می‌شوند. به‌جای تدریس یک برنامه درسی ثابت، با همان مطالبی کار می‌کنم که فرزند شما در کلاس استفاده می‌کند و بر تقویت مهارت‌های پایه‌ای ریاضیِ زیربنای آن تمرکز می‌کنم تا ضعف‌ها به پایه‌های بالاتر منتقل نشوند و به مشکلات بزرگ‌تری تبدیل نشوند.",
+      p3: "این رویکرد به‌ویژه برای دانش‌آموزان کوچک‌تر ارزشمند است: پایه ضعیف در کسرها، نسبت‌ها یا جبر مقدماتی معمولاً بلافاصله خودش را نشان نمی‌دهد. این مشکل معمولاً دو یا سه پایه بعد، وقتی مطالب بر مهارت‌هایی بنا می‌شوند که هرگز کاملاً محکم نشده‌اند، آشکار می‌شود. هدف من این است که این ضعف‌ها را زود پیدا و برطرف کنم.",
+      features: [
+        {
+          icon: "📝",
+          title: "کلاس‌های مبتنی بر کاربرگ",
+          desc: "از مطالب واقعی مدرسه فرزندتان استفاده می‌کنیم تا هر آنچه پوشش می‌دهیم مستقیماً به کلاس او مربوط باشد."
+        },
+        {
+          icon: "🧱",
+          title: "تمرکز بر پایه",
+          desc: "توجه ویژه به مبانی اصلی ریاضی برای پیشگیری از مشکلات آینده با پیشرفته‌تر شدن مطالب."
+        },
+        {
+          icon: "🌍",
+          title: "کاملاً آنلاین",
+          desc: "جلسات در مناطق زمانی مختلف (آمریکا، انگلستان، استرالیا، ایران) با زمان‌بندی منعطف برگزار می‌شوند."
+        },
+        {
+          icon: "🗣",
+          title: "انگلیسی یا فارسی",
+          desc: "بسته به راحتی فرزند شما، تدریس به هر دو زبان در دسترس است."
+        }
+      ]
+    },
+    packages: {
+      subtitle: "پکیج‌ها و قیمت‌گذاری",
+      title: "انتخاب نحوه ادامه",
+      intro: "پس از اینکه شما و فرزندتان جلسه آشنایی رایگان و جلسه آزمایشی ۱۵ دلاری را پشت سر گذاشتید، می‌توانید هر گزینه‌ای را که برای خانواده شما مناسب‌تر است انتخاب کنید. هیچ الزامی برای خرید پکیج وجود ندارد:",
+      options: [
+        {
+          title: "پکیج ۵ جلسه‌ای",
+          desc: "عالی برای یک دوره متمرکز و کوتاه‌مدت (مثلاً قبل از امتحان یا کارنامه)."
+        },
+        {
+          title: "پکیج ۱۰ جلسه‌ای",
+          desc: "ایده‌آل برای پشتیبانی مستمر هفتگی یا دوهفتگی در طول یک ماه."
+        },
+        {
+          title: "پرداخت به‌ازای هر جلسه",
+          desc: "هر بار یک جلسه رزرو و پرداخت کنید (پرداخت پیش از هر جلسه و بدون هیچ تعهد بلندمدت)."
+        }
+      ],
+      outro: "کوچک شروع کنید، ببینید چه حسی دارد و هر وقت آماده بودید ادامه دهید."
     },
     contact: {
       subtitle: "در تماس باشید",
       title: "ثبت‌نام در کلاس‌ها",
-      description: "اولین قدم برای تعالی در ریاضی را بردارید. فرم را پر کنید و من تا ۲۴ ساعت آینده برای تعیین وقت ارزیابی رایگان با شما تماس می‌گیرم.",
+      description: "اولین قدم به سوی موفقیت در ریاضی را بردارید. فرم زیر را پر کنید و من تا ۲۴ ساعت آینده برای تعیین وقت جلسه آشنایی رایگان ۱۵ دقیقه‌ای با شما تماس می‌گیرم.",
       info: {
         email: "ایمیل",
         phone: "تلفن",
@@ -263,7 +362,8 @@ export const translations = {
           title: "آموزش حضوری",
           price: "۴۰ دلار / ساعت",
           desc: "جلسات حضوری در مناطق نورت یورک و وان."
-        }
+        },
+        trialNote: "توجه: اولین جلسه شما فقط ۱۵ دلار است. قیمت‌های بالا از جلسه دوم به بعد اعمال می‌شوند."
       },
       form: {
         bookDirect: "رزرو کلاس",
@@ -341,7 +441,7 @@ export const translations = {
         notEligible: "آموزش حضوری در حال حاضر فقط در مناطق North York، Vaughan و Richmond Hill امکان‌پذیر است. خوشحال می‌شویم به صورت آنلاین در خدمت شما باشیم!",
         availability: "زمان‌های پیشنهادی",
         days: ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنج‌شنبه", "جمعه"],
-        times: ["صبح (۹-۱۲)", "عصر (۱۲-۴)", "غروب (۴-۸)"],
+        times: ["صبح (۹ تا ۱۲)", "عصر (۱۲ تا ۴)", "غروب (۴ تا ۸)"],
       }
     },
     footer: {
