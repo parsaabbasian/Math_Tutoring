@@ -12,7 +12,7 @@ export const faqs: { en: FaqItem[]; fa: FaqItem[] } = {
     },
     {
       q: "How long before I see improvement?",
-      a: "Every student is different, but most families notice a shift in confidence and comprehension within the first few sessions. Real, lasting improvement — better grades, less anxiety around math — typically builds over 4–6 weeks of consistent lessons.",
+      a: "Every student is different, but most families notice a shift in confidence and comprehension within the first few sessions. Real, lasting improvement (better grades and less anxiety around math) typically builds over 4 to 6 weeks of consistent lessons.",
     },
     {
       q: "What grades do you tutor?",
@@ -20,15 +20,15 @@ export const faqs: { en: FaqItem[]; fa: FaqItem[] } = {
     },
     {
       q: "How does online tutoring work?",
-      a: "Lessons take place over video call using a shared digital whiteboard, so your child can follow along, ask questions, and work through problems in real time — just like an in-person lesson.",
+      a: "Lessons take place over video call using a shared digital whiteboard, so your child can follow along, ask questions, and work through problems in real time, just like an in-person lesson.",
     },
     {
       q: "Do you offer a free trial?",
-      a: "Every new student starts with a free 15-minute introduction meeting — a chance for me to meet your child, learn about their current level and goals, and for us to see if the connection feels right. If you'd like to continue after that, the first full session is just $15 and is held online (even if you plan to continue with in-person classes), so your child can experience a real lesson before you commit to anything further.",
+      a: "Every new student starts with a free 15-minute introduction meeting (a chance for me to meet your child, learn about their current level and goals, and for us to see if the connection feels right). If you'd like to continue after that, the first full session is just $15 and is held online (even if you plan to continue with in-person classes), so your child can experience a real lesson before you commit to anything further.",
     },
     {
       q: "What if I'm not happy with the lessons?",
-      a: "Your satisfaction matters to me. If a lesson isn't the right fit, tell me and we'll adjust the approach — pacing, style, or focus — together. There's no long-term contract, so you're never locked in.",
+      a: "Your satisfaction matters to me. If a lesson isn't the right fit, tell me and we'll adjust the approach (pacing, style, or focus) together. There's no long-term contract, so you're never locked in.",
     },
     {
       q: "Do you provide homework help?",
@@ -46,7 +46,7 @@ export const faqs: { en: FaqItem[]; fa: FaqItem[] } = {
     },
     {
       q: "چقدر طول می‌کشد تا بهبود را ببینم؟",
-      a: "هر دانش‌آموزی متفاوت است، اما بیشتر خانواده‌ها در همان چند جلسه اول تغییری در اعتماد به نفس و درک مطلب احساس می‌کنند. بهبود واقعی و ماندگار — نمرات بهتر و اضطراب کمتر نسبت به ریاضی — معمولاً طی ۴ تا ۶ هفته کلاس منظم شکل می‌گیرد.",
+      a: "هر دانش‌آموزی متفاوت است، اما بیشتر خانواده‌ها در همان چند جلسه اول تغییری در اعتماد به نفس و درک مطلب احساس می‌کنند. بهبود واقعی و ماندگار (نمرات بهتر و اضطراب کمتر نسبت به ریاضی) معمولاً طی ۴ تا ۶ هفته کلاس منظم شکل می‌گیرد.",
     },
     {
       q: "با چه پایه‌هایی کار می‌کنید؟",
@@ -54,15 +54,15 @@ export const faqs: { en: FaqItem[]; fa: FaqItem[] } = {
     },
     {
       q: "تدریس آنلاین چگونه کار می‌کند؟",
-      a: "کلاس‌ها از طریق تماس ویدیویی و با استفاده از تخته دیجیتال مشترک برگزار می‌شوند، بنابراین فرزند شما می‌تواند همراهی کند، سؤال بپرسد و مسائل را به‌صورت زنده حل کند — درست مثل کلاس حضوری.",
+      a: "کلاس‌ها از طریق تماس ویدیویی و با استفاده از تخته دیجیتال مشترک برگزار می‌شوند، بنابراین فرزند شما می‌تواند همراهی کند، سؤال بپرسد و مسائل را به‌صورت زنده حل کند، درست مثل کلاس حضوری.",
     },
     {
       q: "آیا جلسه آزمایشی رایگان دارید؟",
-      a: "هر دانش‌آموز جدید با یک جلسه آشنایی رایگان ۱۵ دقیقه‌ای شروع می‌کند — فرصتی برای آشنایی من با فرزند شما، شناخت سطح و اهداف فعلی او، و اینکه ببینیم ارتباط مناسبی شکل می‌گیرد یا نه. اگر بعد از آن بخواهید ادامه دهید، اولین جلسه کامل فقط ۱۵ دلار است و به‌صورت آنلاین برگزار می‌شود (حتی اگر قصد ادامه به‌صورت حضوری را داشته باشید) تا فرزندتان پیش از هر تعهدی، یک درس واقعی را تجربه کند.",
+      a: "هر دانش‌آموز جدید با یک جلسه آشنایی رایگان ۱۵ دقیقه‌ای شروع می‌کند (فرصتی برای آشنایی من با فرزند شما، شناخت سطح و اهداف فعلی او، و اینکه ببینیم ارتباط مناسبی شکل می‌گیرد یا نه). اگر بعد از آن بخواهید ادامه دهید، اولین جلسه کامل فقط ۱۵ دلار است و به‌صورت آنلاین برگزار می‌شود (حتی اگر قصد ادامه به‌صورت حضوری را داشته باشید) تا فرزندتان پیش از هر تعهدی، یک درس واقعی را تجربه کند.",
     },
     {
       q: "اگر از کلاس‌ها راضی نباشم چه؟",
-      a: "رضایت شما برای من مهم است. اگر کلاس مناسب نبود، به من بگویید تا رویکرد را با هم تنظیم کنیم — سرعت، سبک یا تمرکز. قرارداد بلندمدتی وجود ندارد، بنابراین هرگز مقید نیستید.",
+      a: "رضایت شما برای من مهم است. اگر کلاس مناسب نبود، به من بگویید تا رویکرد را با هم تنظیم کنیم (سرعت، سبک یا تمرکز). قرارداد بلندمدتی وجود ندارد، بنابراین هرگز مقید نیستید.",
     },
     {
       q: "آیا در انجام تکالیف هم کمک می‌کنید؟",
