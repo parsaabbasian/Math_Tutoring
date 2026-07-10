@@ -19,14 +19,14 @@ export default function Hero() {
 
           <h1 className={`${styles.headline} fade-in`}>
             {language === 'en'
-              ? <>Math tutoring that builds <span className={styles.accent}>confidence</span>, not just grades.</>
-              : <>آموزش ریاضی که <span className={styles.accent}>اعتماد به نفس</span> می‌سازد، نه فقط نمره.</>
+              ? <>Math tutoring that builds <span className={styles.accent}>confidence</span> — not just grades.</>
+              : <>آموزش ریاضی که <span className={styles.accent}>اعتماد به نفس</span> می‌سازد — نه فقط نمره.</>
             }
           </h1>
 
           <p className={`${styles.sub} fade-in`}>
             {language === 'en'
-              ? 'Personalized one on one lessons for elementary and high school students, taught by a bilingual (English/Persian) engineering student who makes math simple, structured, and actually enjoyable.'
+              ? 'Personalized one-on-one lessons for elementary and high school students, taught by a bilingual (English/Persian) engineering student who makes math simple, structured, and actually enjoyable.'
               : 'کلاس‌های خصوصی یک‌به‌یک برای دانش‌آموزان ابتدایی و دبیرستان، با تدریس دانشجوی مهندسی دوزبانه (انگلیسی/فارسی) که ریاضی را ساده، ساختارمند و واقعاً لذت‌بخش می‌کند.'}
           </p>
 
