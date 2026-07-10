@@ -278,7 +278,7 @@
   background: var(--surface-alt);
   color: var(--foreground);
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -416,7 +416,7 @@
   background: var(--surface-alt);
   color: var(--foreground);
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: var(--transition);
 }
 
@@ -886,6 +886,33 @@
   .row {
     flex-direction: column;
     gap: 24px;
+  }
+
+  .formContainer {
+    padding: 20px 16px;
+  }
+
+  .serviceCards {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard {
+    flex-direction: row;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 14px;
+  }
+
+  [dir='rtl'] .serviceCard {
+    text-align: right;
+  }
+
+  .serviceInfo {
+    align-items: flex-start;
+  }
+
+  [dir='rtl'] .serviceInfo {
+    align-items: flex-end;
   }
 }
 
