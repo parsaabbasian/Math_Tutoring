@@ -113,6 +113,9 @@
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--foreground);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .serviceCards {
@@ -393,6 +396,15 @@
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--foreground);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.requiredMark {
+  color: #dc2626;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .input,

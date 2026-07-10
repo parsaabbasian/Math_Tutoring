@@ -34,6 +34,10 @@ const PhoneIcon = () => (
   </svg>
 );
 
+const RequiredMark = ({ className }: { className?: string }) => (
+  <span className={className} aria-hidden="true">*</span>
+);
+
 export default function Contact() {
   const { language, isRTL } = useLanguage();
   const { allowInPerson } = useLocation();
@@ -280,7 +284,10 @@ export default function Contact() {
 
         <div className={`${styles.formWrapper} fade-in`}>
           <div className={styles.formContainer}>
-            <h3 className={styles.formHeading}>{t.services.title}</h3>
+            <h3 className={styles.formHeading}>
+              {t.services.title}
+              <RequiredMark className={styles.requiredMark} />
+            </h3>
 
             <div
               className={styles.serviceCards}
@@ -316,7 +323,10 @@ export default function Contact() {
 
             <form ref={formRef} onSubmit={handleSubmit} className={styles.form} dir={isRTL ? 'rtl' : 'ltr'}>
               <div className={styles.inputGroup}>
-                <label htmlFor="studentName" className={styles.label}>{t.form.studentName}</label>
+                <label htmlFor="studentName" className={styles.label}>
+                  {t.form.studentName}
+                  <RequiredMark className={styles.requiredMark} />
+                </label>
                 <input
                   type="text"
                   id="studentName"
@@ -329,7 +339,10 @@ export default function Contact() {
 
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="email" className={styles.label}>{t.form.email}</label>
+                  <label htmlFor="email" className={styles.label}>
+                    {t.form.email}
+                    <RequiredMark className={styles.requiredMark} />
+                  </label>
                   <input type="email" id="email" name="email" className={styles.input} required placeholder="email@example.com" dir="ltr" />
                 </div>
                 <div className={styles.inputGroup}>
@@ -343,6 +356,7 @@ export default function Contact() {
                   <div className={styles.inputGroup}>
                     <label htmlFor="address" className={styles.label}>
                       {language === 'fa' ? 'آدرس خیابان' : 'Street Address'}
+                      <RequiredMark className={styles.requiredMark} />
                     </label>
                     <input
                       type="text"
@@ -360,6 +374,7 @@ export default function Contact() {
                   <div className={styles.inputGroup}>
                     <label htmlFor="postalCode" className={styles.label}>
                       {language === 'fa' ? 'کد پستی' : 'Postal Code'}
+                      <RequiredMark className={styles.requiredMark} />
                     </label>
                     <p className={styles.addressHint}>
                       {language === 'fa'
@@ -418,7 +433,10 @@ export default function Contact() {
 
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label className={styles.label}>{t.form.country}</label>
+                  <label className={styles.label}>
+                    {t.form.country}
+                    <RequiredMark className={styles.requiredMark} />
+                  </label>
                   <div ref={countryDropdownRef} className={styles.countryDropdown}>
                     <button
                       type="button"
@@ -464,7 +482,10 @@ export default function Contact() {
               </div>
 
               <div className={styles.inputGroup}>
-                <label className={styles.label}>{t.form.grade}</label>
+                <label className={styles.label}>
+                  {t.form.grade}
+                  <RequiredMark className={styles.requiredMark} />
+                </label>
                 <div className={styles.gradeGrid}>
                   {t.form.systems[selectedCountry as keyof typeof t.form.systems].levels.map((level: any) => (
                     <label key={level.id} className={styles.gradeCard}>
@@ -489,6 +510,7 @@ export default function Contact() {
                     {(selectedSchoolLevel === 'college' || selectedSchoolLevel === 'university')
                       ? (language === 'fa' ? 'انتخاب درس' : 'Select Course')
                       : t.form.specificGrade}
+                    <RequiredMark className={styles.requiredMark} />
                   </label>
                   <div className={styles.gradeGrid}>
                     {getSpecificGrades(selectedCountry, selectedSchoolLevel).map((gradeNum) => (
