@@ -20,7 +20,7 @@ export const faqs: { en: FaqItem[]; fa: FaqItem[] } = {
     },
     {
       q: "How does online tutoring work?",
-      a: "Lessons take place over video call using a shared digital whiteboard, so your child can follow along, ask questions, and work through problems in real time, just like an in-person lesson.",
+      a: "Lessons take place over Google Meet or Zoom using a shared digital whiteboard, so your child can follow along, ask questions, and work through problems in real time, just like an in-person lesson.",
     },
     {
       q: "Do you offer a free trial?",
@@ -46,7 +46,7 @@ export const faqs: { en: FaqItem[]; fa: FaqItem[] } = {
     },
     {
       q: "تدریس آنلاین چگونه کار می‌کند؟",
-      a: "کلاس‌ها از طریق تماس ویدیویی و با استفاده از تخته دیجیتال مشترک برگزار می‌شوند، بنابراین فرزند شما می‌تواند همراهی کند، سؤال بپرسد و مسائل را به‌صورت زنده حل کند، درست مثل کلاس حضوری.",
+      a: "کلاس‌ها از طریق گوگل میت یا زوم و با استفاده از تخته دیجیتال مشترک برگزار می‌شوند، بنابراین فرزند شما می‌تواند همراهی کند، سؤال بپرسد و مسائل را به‌صورت زنده حل کند، درست مثل کلاس حضوری.",
     },
     {
       q: "آیا جلسه آزمایشی رایگان دارید؟",
