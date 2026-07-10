@@ -308,7 +308,6 @@ export default function Contact() {
                   <div className={styles.serviceInfo}>
                     <span className={styles.serviceTitle}>{t.services.inPerson.title}</span>
                     <span className={styles.servicePrice}>{t.services.inPerson.price}</span>
-                    <p className={styles.serviceDesc}>{t.services.inPerson.desc}</p>
                   </div>
                 </button>
               )}
