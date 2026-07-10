@@ -27,16 +27,8 @@ export const faqs: { en: FaqItem[]; fa: FaqItem[] } = {
       a: "Every new student starts with a free 15 minute introduction meeting (a chance for me to meet your child, learn about their current level and goals, and for us to see if the connection feels right). If you'd like to continue after that, the first full session is just $15, so your child can experience a real lesson before you commit to anything further.",
     },
     {
-      q: "What if I'm not happy with the lessons?",
-      a: "Your satisfaction matters to me. If a lesson isn't the right fit, tell me and we'll adjust the approach (pacing, style, or focus) together. There's no long-term contract, so you're never locked in.",
-    },
-    {
       q: "Do you provide homework help?",
       a: "Yes. In addition to core lessons, I can help your child work through school assignments and prepare for upcoming tests and exams.",
-    },
-    {
-      q: "What about lesson cancellations?",
-      a: "I understand plans change. Please give at least 24 hours' notice to reschedule or cancel a lesson at no charge. Late cancellations may be subject to the full lesson fee.",
     },
   ],
   fa: [
@@ -61,16 +53,8 @@ export const faqs: { en: FaqItem[]; fa: FaqItem[] } = {
       a: "هر دانش‌آموز جدید با یک جلسه آشنایی رایگان ۱۵ دقیقه‌ای شروع می‌کند (فرصتی برای آشنایی من با فرزند شما، شناخت سطح و اهداف فعلی او، و اینکه ببینیم ارتباط مناسبی شکل می‌گیرد یا نه). اگر بعد از آن بخواهید ادامه دهید، اولین جلسه کامل فقط ۱۵ دلار است تا فرزندتان پیش از هر تعهدی، یک درس واقعی را تجربه کند.",
     },
     {
-      q: "اگر از کلاس‌ها راضی نباشم چه؟",
-      a: "رضایت شما برای من مهم است. اگر کلاس مناسب نبود، به من بگویید تا رویکرد را با هم تنظیم کنیم (سرعت، سبک یا تمرکز). قرارداد بلندمدتی وجود ندارد، بنابراین هرگز مقید نیستید.",
-    },
-    {
       q: "آیا در انجام تکالیف هم کمک می‌کنید؟",
       a: "بله. علاوه بر کلاس‌های اصلی، می‌توانم به فرزند شما در انجام تکالیف مدرسه و آمادگی برای امتحان‌ها و آزمون‌های پیش رو کمک کنم.",
-    },
-    {
-      q: "لغو کلاس‌ها چگونه است؟",
-      a: "می‌دانم که برنامه‌ها تغییر می‌کنند. لطفاً برای تغییر زمان یا لغو رایگان کلاس، حداقل ۲۴ ساعت قبل اطلاع دهید. لغوهای دیرهنگام ممکن است مشمول هزینه کامل جلسه شوند.",
     },
   ],
 };
