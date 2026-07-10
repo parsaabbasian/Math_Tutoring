@@ -295,7 +295,6 @@ export default function Contact() {
                 <div className={styles.serviceInfo}>
                   <span className={styles.serviceTitle}>{t.services.online.title}</span>
                   <span className={styles.servicePrice}>{t.services.online.price}</span>
-                  <p className={styles.serviceDesc}>{t.services.online.desc}</p>
                 </div>
               </button>
               {allowInPerson && (
