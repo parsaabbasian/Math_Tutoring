@@ -45,11 +45,11 @@ export const translations = {
       steps: [
         {
           title: "Free 15-Minute Introduction Meeting",
-          description: "A relaxed video call with you and your child, no lesson yet. I'll ask about their current math mark, general ability, and what you're hoping to work on, and we'll both get a feel for whether the connection and teaching style are the right fit."
+          description: "A relaxed video call with you and your child, no lesson yet, just getting to know their goals and current level."
         },
         {
           title: "First Trial Session ($15, Online)",
-          description: "If you'd like to move forward, your child's first full session costs just $15 and is held online, even if you plan to continue with in-person classes afterward. It's a low-pressure way for them to experience a real lesson before deciding whether to continue."
+          description: "Your child's first full session is just $15, held online, even if you'll continue in person afterward."
         },
         {
           title: "Customized Learning Plan",
@@ -61,7 +61,7 @@ export const translations = {
         },
         {
           title: "Flexible, Online or In-Person",
-          description: "Sessions fit around your family's schedule, with both online and in-person options available (in-person for North York & Vaughan; online everywhere else, including the US, UK, Australia, and Iran)."
+          description: "Sessions fit your schedule: in person for North York & Vaughan, online everywhere else worldwide."
         }
       ]
     },
@@ -276,11 +276,11 @@ export const translations = {
       steps: [
         {
           title: "جلسه آشنایی رایگان ۱۵ دقیقه‌ای",
-          description: "یک تماس ویدیویی راحت با شما و فرزندتان، هنوز خبری از درس نیست. درباره نمره فعلی ریاضی، توانایی کلی و اهدافتان می‌پرسم و هر دو طرف متوجه می‌شویم که آیا ارتباط و سبک تدریس مناسب است یا نه."
+          description: "یک تماس ویدیویی راحت با شما و فرزندتان، هنوز خبری از درس نیست؛ فقط آشنایی با سطح و اهداف او."
         },
         {
           title: "اولین جلسه آزمایشی (۱۵ دلار، آنلاین)",
-          description: "اگر بخواهید ادامه دهید، اولین جلسه کامل فرزندتان فقط ۱۵ دلار است و به‌صورت آنلاین برگزار می‌شود، حتی اگر قصد ادامه به‌صورت حضوری را داشته باشید. راهی کم‌فشار برای تجربه یک درس واقعی پیش از تصمیم به ادامه."
+          description: "اولین جلسه کامل فرزندتان فقط ۱۵ دلار و به‌صورت آنلاین است، حتی اگر بعداً حضوری ادامه دهید."
         },
         {
           title: "برنامه یادگیری اختصاصی",
@@ -292,7 +292,7 @@ export const translations = {
         },
         {
           title: "منعطف، آنلاین یا حضوری",
-          description: "جلسات متناسب با برنامه خانواده شما تنظیم می‌شوند و هر دو گزینه آنلاین و حضوری در دسترس است (حضوری برای نورت یورک و وان؛ آنلاین برای همه جای دیگر از جمله آمریکا، انگلستان، استرالیا و ایران)."
+          description: "جلسات متناسب با برنامه شما تنظیم می‌شود: حضوری برای نورت یورک و وان، آنلاین برای همه‌جای دیگر."
         }
       ]
     },
