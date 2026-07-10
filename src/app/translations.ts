@@ -32,9 +32,9 @@ export const translations = {
       subtitle: "My Journey",
       title: "Who I Am",
       p1: "Hi! I'm <strong>Avin</strong>, an engineering student at <strong>York University</strong> with a genuine passion for mathematics and teaching. I graduated from the <strong>Ontario Secondary School Diploma (OSSD)</strong> program, so I know exactly what Canadian students are expected to learn, how it's taught, and where they typically get stuck.",
-      p2: "Over the past year, I've tutored students privately — from elementary school through high school — helping them go from confused and frustrated to confident and independent. I don't believe in memorization. I believe in building <strong>real understanding</strong>, one concept at a time, so math finally makes sense.",
+      p2: "Over the past year, I've tutored students privately, from elementary school through high school, helping them go from confused and frustrated to confident and independent. I don't believe in memorization. I believe in building <strong>real understanding</strong>, one concept at a time, so math finally makes sense.",
       p3: "I teach fluently in both <strong>English and Persian (Farsi)</strong>, which makes lessons especially comfortable for bilingual families and students who feel more confident learning in their first language.",
-      p4: "As an engineering student, I bring <strong>structured, analytical thinking</strong> into every lesson — the same problem-solving approach I use in my own coursework — so students don't just get the right answer, they understand why it's right.",
+      p4: "As an engineering student, I bring <strong>structured, analytical thinking</strong> into every lesson, the same problem-solving approach I use in my own coursework, so students don't just get the right answer, they understand why it's right.",
       p5: "Whether your child needs to catch up, keep up, or get ahead, every lesson is built around <strong>how they learn best</strong>.",
       readMore: "Read More",
       showLess: "Show Less"
@@ -45,15 +45,15 @@ export const translations = {
       steps: [
         {
           title: "Free 15-Minute Introduction Meeting",
-          description: "A relaxed video call with you and your child — no lesson yet. I'll ask about their current math mark, general ability, and what you're hoping to work on, and we'll both get a feel for whether the connection and teaching style are the right fit."
+          description: "A relaxed video call with you and your child, no lesson yet. I'll ask about their current math mark, general ability, and what you're hoping to work on, and we'll both get a feel for whether the connection and teaching style are the right fit."
         },
         {
           title: "First Trial Session ($15, Online)",
-          description: "If you'd like to move forward, your child's first full session costs just $15 and is held online — even if you plan to continue with in-person classes afterward. It's a low-pressure way for them to experience a real lesson before deciding whether to continue."
+          description: "If you'd like to move forward, your child's first full session costs just $15 and is held online, even if you plan to continue with in-person classes afterward. It's a low-pressure way for them to experience a real lesson before deciding whether to continue."
         },
         {
           title: "Customized Learning Plan",
-          description: "From there, every lesson is mapped to your child's school curriculum (or worksheets, for international students), pace, and specific gaps — not a generic template."
+          description: "From there, every lesson is mapped to your child's school curriculum (or worksheets, for international students), pace, and specific gaps, not a generic template."
         },
         {
           title: "Bilingual Instruction",
@@ -69,8 +69,8 @@ export const translations = {
       subtitle: "Global Tutoring",
       title: "Teaching Students Around the World",
       p1: "In addition to Ontario-curriculum students, I also tutor students in the United States, United Kingdom, Australia, and Iran.",
-      p2: "Since every country — and often every school — follows a different math curriculum, these lessons are built directly around your child's own school worksheets, textbooks, and assignments. Rather than teaching a fixed curriculum, I work with the material your child is already using in class, and focus on strengthening the fundamental math skills underneath it — so gaps don't get carried forward and turn into bigger problems in higher grades.",
-      p3: "This approach is especially valuable for younger students: a shaky foundation in fractions, ratios, or basic algebra rarely shows up as a problem right away — it shows up two or three grades later, when the material builds on skills that were never fully solidified. My goal is to catch and fix that early.",
+      p2: "Since every country, and often every school, follows a different math curriculum, these lessons are built directly around your child's own school worksheets, textbooks, and assignments. Rather than teaching a fixed curriculum, I work with the material your child is already using in class, and focus on strengthening the fundamental math skills underneath it, so gaps don't get carried forward and turn into bigger problems in higher grades.",
+      p3: "This approach is especially valuable for younger students: a shaky foundation in fractions, ratios, or basic algebra rarely shows up as a problem right away. It shows up two or three grades later, when the material builds on skills that were never fully solidified. My goal is to catch and fix that early.",
       features: [
         {
           icon: "📝",
@@ -97,7 +97,7 @@ export const translations = {
     packages: {
       subtitle: "Packages & Pricing",
       title: "Choosing How to Continue",
-      intro: "Once you and your child have completed the free introduction meeting and the $15 online trial session, you can choose whichever option fits your family best — there's no obligation to commit to a package:",
+      intro: "Once you and your child have completed the free introduction meeting and the $15 online trial session, you can choose whichever option fits your family best. There's no obligation to commit to a package:",
       options: [
         {
           title: "5-Session Package",
@@ -140,7 +140,7 @@ export const translations = {
           price: "$40 / Hour",
           desc: "Personalized lessons in North York & Vaughan areas."
         },
-        trialNote: "Note: Your very first session (the $15 trial) is always held online, even if you select In-Person Tutoring — regular in-person lessons begin after that."
+        trialNote: "Note: Your very first session (the $15 trial) is always held online, even if you select In-Person Tutoring. Regular in-person lessons begin after that."
       },
       form: {
         bookDirect: "Book Your Class",
@@ -265,9 +265,9 @@ export const translations = {
       subtitle: "مسیر من",
       title: "درباره من",
       p1: "سلام! من <strong>آوین</strong> هستم، دانشجوی مهندسی در <strong>دانشگاه یورک</strong> با علاقه‌ای واقعی به ریاضیات و تدریس. من فارغ‌التحصیل برنامه <strong>دیپلم متوسطه انتاریو (OSSD)</strong> هستم، بنابراین دقیقاً می‌دانم دانش‌آموزان کانادایی چه چیزهایی باید یاد بگیرند، چگونه تدریس می‌شود و معمولاً کجا دچار مشکل می‌شوند.",
-      p2: "در یک سال گذشته، به‌صورت خصوصی به دانش‌آموزان — از دبستان تا دبیرستان — تدریس کرده‌ام و کمکشان کرده‌ام از سردرگمی و کلافگی به اعتماد به نفس و استقلال برسند. من به حفظ کردن اعتقادی ندارم؛ به ساختن <strong>درک واقعی</strong>، مفهوم به مفهوم، باور دارم تا ریاضی بالاخره معنا پیدا کند.",
+      p2: "در یک سال گذشته، به‌صورت خصوصی به دانش‌آموزان، از دبستان تا دبیرستان، تدریس کرده‌ام و کمکشان کرده‌ام از سردرگمی و کلافگی به اعتماد به نفس و استقلال برسند. من به حفظ کردن اعتقادی ندارم؛ به ساختن <strong>درک واقعی</strong>، مفهوم به مفهوم، باور دارم تا ریاضی بالاخره معنا پیدا کند.",
       p3: "من به هر دو زبان <strong>انگلیسی و فارسی</strong> روان تدریس می‌کنم؛ این موضوع کلاس‌ها را برای خانواده‌های دوزبانه و دانش‌آموزانی که با زبان مادری‌شان راحت‌تر یاد می‌گیرند، بسیار راحت‌تر می‌کند.",
-      p4: "به‌عنوان یک دانشجوی مهندسی، <strong>تفکر ساختاریافته و تحلیلی</strong> را به هر جلسه می‌آورم — همان رویکرد حل مسئله‌ای که در درس‌های خودم استفاده می‌کنم — تا دانش‌آموزان فقط به جواب درست نرسند، بلکه بفهمند چرا درست است.",
+      p4: "به‌عنوان یک دانشجوی مهندسی، <strong>تفکر ساختاریافته و تحلیلی</strong> را به هر جلسه می‌آورم، همان رویکرد حل مسئله‌ای که در درس‌های خودم استفاده می‌کنم، تا دانش‌آموزان فقط به جواب درست نرسند، بلکه بفهمند چرا درست است.",
       p5: "چه فرزند شما نیاز به جبران عقب‌ماندگی داشته باشد، چه همراهی با کلاس و چه پیشرفت فراتر از آن، هر جلسه بر اساس <strong>بهترین شیوه یادگیری او</strong> طراحی می‌شود.",
       readMore: "ادامه مطلب",
       showLess: "نمایش کمتر"
@@ -278,15 +278,15 @@ export const translations = {
       steps: [
         {
           title: "جلسه آشنایی رایگان ۱۵ دقیقه‌ای",
-          description: "یک تماس ویدیویی راحت با شما و فرزندتان — هنوز خبری از درس نیست. درباره نمره فعلی ریاضی، توانایی کلی و اهدافتان می‌پرسم و هر دو طرف متوجه می‌شویم که آیا ارتباط و سبک تدریس مناسب است یا نه."
+          description: "یک تماس ویدیویی راحت با شما و فرزندتان، هنوز خبری از درس نیست. درباره نمره فعلی ریاضی، توانایی کلی و اهدافتان می‌پرسم و هر دو طرف متوجه می‌شویم که آیا ارتباط و سبک تدریس مناسب است یا نه."
         },
         {
           title: "اولین جلسه آزمایشی (۱۵ دلار، آنلاین)",
-          description: "اگر بخواهید ادامه دهید، اولین جلسه کامل فرزندتان فقط ۱۵ دلار است و به‌صورت آنلاین برگزار می‌شود — حتی اگر قصد ادامه به‌صورت حضوری را داشته باشید. راهی کم‌فشار برای تجربه یک درس واقعی پیش از تصمیم به ادامه."
+          description: "اگر بخواهید ادامه دهید، اولین جلسه کامل فرزندتان فقط ۱۵ دلار است و به‌صورت آنلاین برگزار می‌شود، حتی اگر قصد ادامه به‌صورت حضوری را داشته باشید. راهی کم‌فشار برای تجربه یک درس واقعی پیش از تصمیم به ادامه."
         },
         {
           title: "برنامه یادگیری اختصاصی",
-          description: "از آنجا به بعد، هر جلسه بر اساس برنامه درسی مدرسه فرزند شما (یا کاربرگ‌ها، برای دانش‌آموزان بین‌المللی)، سرعت یادگیری و نقاط ضعف مشخص او طراحی می‌شود — نه یک الگوی عمومی."
+          description: "از آنجا به بعد، هر جلسه بر اساس برنامه درسی مدرسه فرزند شما (یا کاربرگ‌ها، برای دانش‌آموزان بین‌المللی)، سرعت یادگیری و نقاط ضعف مشخص او طراحی می‌شود، نه یک الگوی عمومی."
         },
         {
           title: "آموزش دوزبانه",
@@ -302,8 +302,8 @@ export const translations = {
       subtitle: "تدریس بین‌المللی",
       title: "تدریس به دانش‌آموزان در سراسر جهان",
       p1: "علاوه بر دانش‌آموزان برنامه درسی انتاریو، به دانش‌آموزانی در ایالات متحده، انگلستان، استرالیا و ایران نیز تدریس می‌کنم.",
-      p2: "از آنجا که هر کشور — و اغلب هر مدرسه — برنامه درسی ریاضی متفاوتی دارد، این کلاس‌ها مستقیماً بر اساس کاربرگ‌ها، کتاب‌های درسی و تکالیف مدرسه فرزند شما طراحی می‌شوند. به‌جای تدریس یک برنامه درسی ثابت، با همان مطالبی کار می‌کنم که فرزند شما در کلاس استفاده می‌کند و بر تقویت مهارت‌های پایه‌ای ریاضیِ زیربنای آن تمرکز می‌کنم — تا ضعف‌ها به پایه‌های بالاتر منتقل نشوند و به مشکلات بزرگ‌تری تبدیل نشوند.",
-      p3: "این رویکرد به‌ویژه برای دانش‌آموزان کوچک‌تر ارزشمند است: پایه ضعیف در کسرها، نسبت‌ها یا جبر مقدماتی معمولاً بلافاصله خودش را نشان نمی‌دهد — دو یا سه پایه بعد، وقتی مطالب بر مهارت‌هایی بنا می‌شوند که هرگز کاملاً محکم نشده‌اند، آشکار می‌شود. هدف من این است که این ضعف‌ها را زود پیدا و برطرف کنم.",
+      p2: "از آنجا که هر کشور، و اغلب هر مدرسه، برنامه درسی ریاضی متفاوتی دارد، این کلاس‌ها مستقیماً بر اساس کاربرگ‌ها، کتاب‌های درسی و تکالیف مدرسه فرزند شما طراحی می‌شوند. به‌جای تدریس یک برنامه درسی ثابت، با همان مطالبی کار می‌کنم که فرزند شما در کلاس استفاده می‌کند و بر تقویت مهارت‌های پایه‌ای ریاضیِ زیربنای آن تمرکز می‌کنم، تا ضعف‌ها به پایه‌های بالاتر منتقل نشوند و به مشکلات بزرگ‌تری تبدیل نشوند.",
+      p3: "این رویکرد به‌ویژه برای دانش‌آموزان کوچک‌تر ارزشمند است: پایه ضعیف در کسرها، نسبت‌ها یا جبر مقدماتی معمولاً بلافاصله خودش را نشان نمی‌دهد. دو یا سه پایه بعد، وقتی مطالب بر مهارت‌هایی بنا می‌شوند که هرگز کاملاً محکم نشده‌اند، آشکار می‌شود. هدف من این است که این ضعف‌ها را زود پیدا و برطرف کنم.",
       features: [
         {
           icon: "📝",
@@ -330,7 +330,7 @@ export const translations = {
     packages: {
       subtitle: "پکیج‌ها و قیمت‌گذاری",
       title: "انتخاب نحوه ادامه",
-      intro: "پس از اینکه شما و فرزندتان جلسه آشنایی رایگان و جلسه آزمایشی آنلاین ۱۵ دلاری را پشت سر گذاشتید، می‌توانید هر گزینه‌ای را که برای خانواده شما مناسب‌تر است انتخاب کنید — هیچ الزامی برای خرید پکیج وجود ندارد:",
+      intro: "پس از اینکه شما و فرزندتان جلسه آشنایی رایگان و جلسه آزمایشی آنلاین ۱۵ دلاری را پشت سر گذاشتید، می‌توانید هر گزینه‌ای را که برای خانواده شما مناسب‌تر است انتخاب کنید. هیچ الزامی برای خرید پکیج وجود ندارد:",
       options: [
         {
           title: "پکیج ۵ جلسه‌ای",
@@ -373,7 +373,7 @@ export const translations = {
           price: "۴۰ دلار / ساعت",
           desc: "جلسات حضوری در مناطق نورت یورک و وان."
         },
-        trialNote: "توجه: اولین جلسه شما (جلسه آزمایشی ۱۵ دلاری) همیشه به‌صورت آنلاین برگزار می‌شود، حتی اگر آموزش حضوری را انتخاب کرده باشید — کلاس‌های حضوری از جلسه بعد آغاز می‌شوند."
+        trialNote: "توجه: اولین جلسه شما (جلسه آزمایشی ۱۵ دلاری) همیشه به‌صورت آنلاین برگزار می‌شود، حتی اگر آموزش حضوری را انتخاب کرده باشید. کلاس‌های حضوری از جلسه بعد آغاز می‌شوند."
       },
       form: {
         bookDirect: "رزرو کلاس",

@@ -19,8 +19,8 @@ export default function Hero() {
 
           <h1 className={`${styles.headline} fade-in`}>
             {language === 'en'
-              ? <>Math tutoring that builds <span className={styles.accent}>confidence</span> — not just grades.</>
-              : <>آموزش ریاضی که <span className={styles.accent}>اعتماد به نفس</span> می‌سازد — نه فقط نمره.</>
+              ? <>Math tutoring that builds <span className={styles.accent}>confidence</span>, not just grades.</>
+              : <>آموزش ریاضی که <span className={styles.accent}>اعتماد به نفس</span> می‌سازد، نه فقط نمره.</>
             }
           </h1>
 

@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 // Social share card shown when the site link is posted on WhatsApp, Instagram, etc.
-export const alt = 'Avin Math Tutoring — bilingual math tutoring that builds confidence';
+export const alt = 'Avin Math Tutoring, bilingual math tutoring that builds confidence';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
