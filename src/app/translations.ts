@@ -132,8 +132,7 @@ export const translations = {
         title: "Select Your Preferred Mode",
         online: {
           title: "Online Tutoring",
-          price: "$20 / Hour",
-          desc: "Flexible learning from the comfort of your home."
+          price: "$20 / Hour"
         },
         inPerson: {
           title: "In-Person Tutoring",
@@ -364,8 +363,7 @@ export const translations = {
         title: "نوع آموزش مورد نظر را انتخاب کنید",
         online: {
           title: "آموزش آنلاین",
-          price: "۲۰ دلار / ساعت",
-          desc: "یادگیری منعطف از راحتی خانه شما."
+          price: "۲۰ دلار / ساعت"
         },
         inPerson: {
           title: "آموزش حضوری",
