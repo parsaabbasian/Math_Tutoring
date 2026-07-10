@@ -137,8 +137,7 @@ export const translations = {
         },
         inPerson: {
           title: "In-Person Tutoring",
-          price: "$40 / Hour",
-          desc: "Personalized lessons in North York & Vaughan areas."
+          price: "$40 / Hour"
         },
         trialNote: "Note: Your very first session (the $15 trial) is always held online, even if you select In-Person Tutoring. Regular in-person lessons begin after that."
       },
@@ -370,8 +369,7 @@ export const translations = {
         },
         inPerson: {
           title: "آموزش حضوری",
-          price: "۴۰ دلار / ساعت",
-          desc: "جلسات حضوری در مناطق نورت یورک و وان."
+          price: "۴۰ دلار / ساعت"
         },
         trialNote: "توجه: اولین جلسه شما (جلسه آزمایشی ۱۵ دلاری) همیشه به‌صورت آنلاین برگزار می‌شود، حتی اگر آموزش حضوری را انتخاب کرده باشید. کلاس‌های حضوری از جلسه بعد آغاز می‌شوند."
       },
