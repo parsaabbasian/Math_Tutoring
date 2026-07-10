@@ -83,7 +83,6 @@ export default function Header() {
           <Link href="/#how-it-works" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.howItWorks}</Link>
           <Link href="/#global" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.global}</Link>
           <Link href="/#packages" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.packages}</Link>
-          <Link href="/faq" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.faq}</Link>
           <div className={styles.switcherWrapper}>
             <LanguageSwitcher />
           </div>
