@@ -6,7 +6,7 @@ export const translations = {
       howItWorks: "How it Works",
       global: "Global Tutoring",
       packages: "Packages & Pricing",
-      faq: "Frequently Asked Questions",
+      faq: "FAQ",
       join: "Join Classes"
     },
     hero: {
@@ -20,7 +20,7 @@ export const translations = {
       stats: {
         satisfaction: "Student Satisfaction",
         bilingual: "English & Persian",
-        price: "$20 / Hour"
+        price: "$20 / session"
       },
       trust: {
         ontario: "Ontario Curriculum Expert",
@@ -40,28 +40,29 @@ export const translations = {
       showLess: "Show Less"
     },
     howItWorks: {
+      eyebrow: "How It Works",
       title: "How Classes Work",
-      subtitle: "A personalized process designed for your academic success.",
+      intro: "A personalized process designed for your academic success.",
       steps: [
         {
-          title: "Free 15-Minute Introduction Meeting",
-          description: "A relaxed video call with you and your child, no lesson yet, just getting to know their goals and current level."
+          title: "Free 15-Min Intro Call",
+          description: "A quick video call to meet your child and learn their goals and level. No lesson yet."
         },
         {
-          title: "First Trial Session ($15, Online)",
-          description: "Your child's first full session is just $15, held online, even if you'll continue in person afterward."
+          title: "First Trial Session\n($15)",
+          description: "A full online session for just $15, even if you plan to continue in person."
         },
         {
           title: "Customized Learning Plan",
-          description: "From there, every lesson is mapped to your child's school curriculum (or worksheets, for international students), pace, and specific gaps, not a generic template."
+          description: "Lessons tailored to your child's curriculum, pace, and specific gaps."
         },
         {
           title: "Bilingual Instruction",
-          description: "Lessons run fluently in English or Persian, whichever helps your child learn best."
+          description: "Taught in English or Persian, whichever your child prefers."
         },
         {
-          title: "Flexible, Online or In-Person",
-          description: "Sessions fit your schedule: in person for North York, Vaughan & Scarborough, online everywhere else worldwide."
+          title: "Online or In-Person",
+          description: "In person in North York, Vaughan, Richmond Hill & Scarborough. Online everywhere else."
         }
       ]
     },
@@ -97,37 +98,27 @@ export const translations = {
     packages: {
       subtitle: "Packages & Pricing",
       title: "Choosing How to Continue",
-      intro: "Your child's very first lesson is a one-time $15 online trial, a low-cost way to try a real session. After that, regular lessons are $20/session online or $40/session in-person, and you can pick whichever option below fits your family best:",
-      popular: "Most Popular",
+      intro: "Your child's very first lesson is a one-time $15 online trial, a low-cost way to try a real session. After that, regular lessons are $20/session online or $40/session in-person:",
       perSession: "session",
       onlineLabel: "online",
       inPersonRate: "$40 / session in-person",
-      options: [
-        {
-          title: "5-Session Package",
-          sessions: "5 sessions",
-          price: "$20",
-          desc: "Great for a focused, short-term push, like before a test or report card."
-        },
-        {
-          title: "10-Session Package",
-          sessions: "10 sessions",
-          price: "$20",
-          desc: "Ideal for ongoing weekly or biweekly support across a month."
-        },
-        {
-          title: "Pay Per Session",
-          sessions: "Pay as you go",
-          price: "$20",
-          desc: "Book one session at a time, due before each lesson, with no long-term commitment."
-        }
-      ],
+      plan: {
+        title: "Pay Per Session",
+        sessions: "Pay as you go",
+        price: "$20",
+        desc: "Book one session at a time, due before each lesson, with no long-term commitment."
+      },
       outro: "Start small, see how it feels, and scale up whenever you're ready."
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "Got questions? We've got answers. Here are the most common questions parents and students ask.",
+      seeAll: "See all FAQs"
     },
     contact: {
       subtitle: "Get in Touch",
       title: "Join The Classes",
-      description: "Take the first step toward math success. Fill out the form below and I'll get back to you within 24 hours to schedule your free 15-minute introduction meeting.",
+      description: "Take the first step toward math success. Fill out the form below, then pick a time for your free 15-minute introduction meeting.",
       info: {
         email: "Email",
         phone: "Phone",
@@ -136,17 +127,17 @@ export const translations = {
         location: "Location",
         locationDesc: "Online & In person",
         price: "Price",
-        priceDesc: "$20 / Hour",
+        priceDesc: "$20 / session",
       },
       services: {
         title: "Select Your Preferred Mode",
         online: {
           title: "Online Tutoring",
-          price: "$20 / Hour"
+          price: "$20 / session"
         },
         inPerson: {
           title: "In-Person Tutoring",
-          price: "$40 / Hour"
+          price: "$40 / session"
         },
         coverageNote: "In-person lessons are currently available in North York, Vaughan, Richmond Hill & Scarborough. You'll be able to confirm your exact address below.",
         trialNote: "Note: Your very first session (the $15 trial) is always held online, even if you select In-Person Tutoring. Regular in-person lessons begin after that."
@@ -261,7 +252,7 @@ export const translations = {
       stats: {
         satisfaction: "رضایت دانش‌آموزان",
         bilingual: "انگلیسی و فارسی",
-        price: "۲۰ دلار / ساعت"
+        price: "۲۰ دلار / جلسه"
       },
       trust: {
         ontario: "کارشناس برنامه آموزشی انتاریو",
@@ -281,28 +272,29 @@ export const translations = {
       showLess: "نمایش کمتر"
     },
     howItWorks: {
+      eyebrow: "نحوه برگزاری",
       title: "نحوه برگزاری کلاس‌ها",
-      subtitle: "فرآیندی شخصی‌سازی شده برای موفقیت تحصیلی شما.",
+      intro: "فرآیندی شخصی‌سازی شده برای موفقیت تحصیلی شما.",
       steps: [
         {
           title: "جلسه آشنایی رایگان ۱۵ دقیقه‌ای",
-          description: "یک تماس ویدیویی راحت با شما و فرزندتان، هنوز خبری از درس نیست؛ فقط آشنایی با سطح و اهداف او."
+          description: "تماس ویدیویی کوتاه برای آشنایی با سطح و اهداف فرزندتان. بدون درس."
         },
         {
-          title: "اولین جلسه آزمایشی (۱۵ دلار، آنلاین)",
-          description: "اولین جلسه کامل فرزندتان فقط ۱۵ دلار و به‌صورت آنلاین است، حتی اگر بعداً حضوری ادامه دهید."
+          title: "اولین جلسه آزمایشی\n(۱۵ دلار)",
+          description: "اولین جلسه کامل آنلاین، فقط ۱۵ دلار، حتی برای ادامه حضوری."
         },
         {
           title: "برنامه یادگیری اختصاصی",
-          description: "از آنجا به بعد، هر جلسه بر اساس برنامه درسی مدرسه فرزند شما (یا کاربرگ‌ها، برای دانش‌آموزان بین‌المللی)، سرعت یادگیری و نقاط ضعف مشخص او طراحی می‌شود، نه یک الگوی عمومی."
+          description: "هر جلسه بر اساس برنامه مدرسه، سرعت و نقاط ضعف فرزند شما طراحی می‌شود."
         },
         {
           title: "آموزش دوزبانه",
-          description: "کلاس‌ها به‌صورت روان به زبان انگلیسی یا فارسی برگزار می‌شوند؛ هر کدام که به یادگیری بهتر فرزند شما کمک کند."
+          description: "به زبان انگلیسی یا فارسی، بسته به راحتی فرزند شما."
         },
         {
-          title: "منعطف، آنلاین یا حضوری",
-          description: "جلسات متناسب با برنامه شما تنظیم می‌شود: حضوری برای نورت یورک، وان و اسکاربورو، آنلاین برای همه‌جای دیگر."
+          title: "آنلاین یا حضوری",
+          description: "حضوری در نورت یورک، وان، ریچموند هیل و اسکاربورو. آنلاین در همه‌جا."
         }
       ]
     },
@@ -338,37 +330,27 @@ export const translations = {
     packages: {
       subtitle: "پکیج‌ها و قیمت‌گذاری",
       title: "انتخاب نحوه ادامه",
-      intro: "اولین جلسه فرزند شما یک جلسه آزمایشی آنلاین یک‌بار و فقط ۱۵ دلاری است، راهی کم‌هزینه برای تجربه یک جلسه واقعی. پس از آن، جلسات عادی آنلاین ۲۰ دلار و حضوری ۴۰ دلار برای هر جلسه است و می‌توانید هر گزینه‌ای را که برای خانواده شما مناسب‌تر است انتخاب کنید:",
-      popular: "محبوب‌ترین",
+      intro: "اولین جلسه فرزند شما یک جلسه آزمایشی آنلاین یک‌بار و فقط ۱۵ دلاری است، راهی کم‌هزینه برای تجربه یک جلسه واقعی. پس از آن، جلسات عادی آنلاین ۲۰ دلار و حضوری ۴۰ دلار برای هر جلسه است:",
       perSession: "جلسه",
       onlineLabel: "آنلاین",
       inPersonRate: "۴۰ دلار / هر جلسه حضوری",
-      options: [
-        {
-          title: "پکیج ۵ جلسه‌ای",
-          sessions: "۵ جلسه",
-          price: "۲۰ دلار",
-          desc: "عالی برای یک دوره متمرکز و کوتاه‌مدت، مثلاً قبل از امتحان یا کارنامه."
-        },
-        {
-          title: "پکیج ۱۰ جلسه‌ای",
-          sessions: "۱۰ جلسه",
-          price: "۲۰ دلار",
-          desc: "ایده‌آل برای پشتیبانی مستمر هفتگی یا دوهفتگی در طول یک ماه."
-        },
-        {
-          title: "پرداخت به‌ازای هر جلسه",
-          sessions: "پرداخت مرحله‌ای",
-          price: "۲۰ دلار",
-          desc: "هر بار یک جلسه رزرو کنید، پرداخت پیش از هر جلسه و بدون هیچ تعهد بلندمدت."
-        }
-      ],
+      plan: {
+        title: "پرداخت به‌ازای هر جلسه",
+        sessions: "پرداخت مرحله‌ای",
+        price: "۲۰ دلار",
+        desc: "هر بار یک جلسه رزرو کنید، پرداخت پیش از هر جلسه و بدون هیچ تعهد بلندمدت."
+      },
       outro: "کوچک شروع کنید، ببینید چه حسی دارد و هر وقت آماده بودید ادامه دهید."
+    },
+    faq: {
+      title: "سوالات متداول",
+      subtitle: "سوال دارید؟ ما پاسخ داریم. اینجا رایج‌ترین سوالات والدین و دانش‌آموزان است.",
+      seeAll: "مشاهده همه سوالات"
     },
     contact: {
       subtitle: "در تماس باشید",
       title: "ثبت‌نام در کلاس‌ها",
-      description: "اولین قدم به سوی موفقیت در ریاضی را بردارید. فرم زیر را پر کنید و من تا ۲۴ ساعت آینده برای تعیین وقت جلسه آشنایی رایگان ۱۵ دقیقه‌ای با شما تماس می‌گیرم.",
+      description: "اولین قدم به سوی موفقیت در ریاضی را بردارید. فرم زیر را پر کنید و سپس زمان جلسه آشنایی رایگان ۱۵ دقیقه‌ای را انتخاب کنید.",
       info: {
         email: "ایمیل",
         phone: "تلفن",
@@ -377,17 +359,17 @@ export const translations = {
         location: "محل برگزاری",
         locationDesc: "آنلاین و حضوری",
         price: "قیمت",
-        priceDesc: "۲۰ دلار / ساعت",
+        priceDesc: "۲۰ دلار / جلسه",
       },
       services: {
         title: "نوع آموزش مورد نظر را انتخاب کنید",
         online: {
           title: "آموزش آنلاین",
-          price: "۲۰ دلار / ساعت"
+          price: "۲۰ دلار / جلسه"
         },
         inPerson: {
           title: "آموزش حضوری",
-          price: "۴۰ دلار / ساعت"
+          price: "۴۰ دلار / جلسه"
         },
         coverageNote: "کلاس‌های حضوری در حال حاضر در مناطق نورت یورک، وان، ریچموند هیل و اسکاربورو ارائه می‌شوند. آدرس دقیق شما در ادامه بررسی خواهد شد.",
         trialNote: "توجه: اولین جلسه شما (جلسه آزمایشی ۱۵ دلاری) همیشه به‌صورت آنلاین برگزار می‌شود، حتی اگر آموزش حضوری را انتخاب کرده باشید. کلاس‌های حضوری از جلسه بعد آغاز می‌شوند."
