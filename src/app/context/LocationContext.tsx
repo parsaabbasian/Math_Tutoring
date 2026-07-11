@@ -17,7 +17,7 @@ interface LocationContextType {
 
 const LocationContext = createContext<LocationContextType | undefined>(undefined);
 
-// Cities in Avin's in-person service area (North York & Vaughan) and the surrounding GTA.
+// Cities in Avin's in-person service area (North York, Vaughan & Scarborough) and the surrounding GTA.
 // IP city names vary (e.g. "York", "North York", "Toronto"), so this is a best-effort
 // fast-path; the Ontario region check below is the reliable gate.
 const GTA_CITIES = [

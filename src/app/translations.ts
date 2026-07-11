@@ -61,7 +61,7 @@ export const translations = {
         },
         {
           title: "Flexible, Online or In-Person",
-          description: "Sessions fit your schedule: in person for North York & Vaughan, online everywhere else worldwide."
+          description: "Sessions fit your schedule: in person for North York, Vaughan & Scarborough, online everywhere else worldwide."
         }
       ]
     },
@@ -213,7 +213,7 @@ export const translations = {
         online: "Online",
         inPerson: "In person",
         address: "Address or Postal Code",
-        notEligible: "In person tutoring is currently only available in the North York, Vaughan, and Richmond Hill areas. We'd love to help you Online!",
+        notEligible: "In person tutoring is currently only available in the North York, Vaughan, Richmond Hill, and Scarborough areas. We'd love to help you Online!",
         availability: "Preferred Availability",
         days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         times: ["Morning (9 to 12)", "Afternoon (12 to 4)", "Evening (4 to 8)"],
@@ -292,7 +292,7 @@ export const translations = {
         },
         {
           title: "منعطف، آنلاین یا حضوری",
-          description: "جلسات متناسب با برنامه شما تنظیم می‌شود: حضوری برای نورت یورک و وان، آنلاین برای همه‌جای دیگر."
+          description: "جلسات متناسب با برنامه شما تنظیم می‌شود: حضوری برای نورت یورک، وان و اسکاربورو، آنلاین برای همه‌جای دیگر."
         }
       ]
     },
@@ -444,7 +444,7 @@ export const translations = {
         online: "آنلاین",
         inPerson: "حضوری",
         address: "آدرس یا کد پستی",
-        notEligible: "آموزش حضوری در حال حاضر فقط در مناطق North York، Vaughan و Richmond Hill امکان‌پذیر است. خوشحال می‌شویم به صورت آنلاین در خدمت شما باشیم!",
+        notEligible: "آموزش حضوری در حال حاضر فقط در مناطق North York، Vaughan، Richmond Hill و Scarborough امکان‌پذیر است. خوشحال می‌شویم به صورت آنلاین در خدمت شما باشیم!",
         availability: "زمان‌های پیشنهادی",
         days: ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنج‌شنبه", "جمعه"],
         times: ["صبح (۹ تا ۱۲)", "عصر (۱۲ تا ۴)", "غروب (۴ تا ۸)"],
