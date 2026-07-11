@@ -23,8 +23,6 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// TODO: update to the real domain once purchased (e.g. https://avinmath.com).
-// This makes Open Graph / social-share image URLs resolve to absolute links.
 const SITE_URL = "https://avinmath.com";
 
 export const metadata: Metadata = {
@@ -34,12 +32,13 @@ export const metadata: Metadata = {
     template: "%s | Avin Math Tutoring",
   },
   description:
-    "Personalized 1-on-1 math tutoring for elementary and high school students by Avin Mousavi, a York University engineering student. Bilingual English & Persian (Farsi). Online worldwide, in-person in North York, Vaughan & Scarborough.",
+    "Personalized 1-on-1 math tutoring for elementary and high school students by Avin Mousavi, a York University engineering student. Bilingual English & Persian (Farsi). Online worldwide, in-person in North York, Vaughan, Richmond Hill & Scarborough.",
   keywords: [
     "math tutor Toronto",
     "math tutoring North York",
     "math tutor Vaughan",
     "math tutor Scarborough",
+    "math tutor Richmond Hill",
     "Persian math tutor",
     "Farsi math tutor",
     "bilingual math tutor",
@@ -64,7 +63,7 @@ export const metadata: Metadata = {
     siteName: "Avin Math Tutoring",
     title: "Avin Math Tutoring | Math That Builds Confidence, Not Just Grades",
     description:
-      "Personalized bilingual (English & Persian) math tutoring for elementary and high school students. Online worldwide, in-person in North York, Vaughan & Scarborough.",
+      "Personalized bilingual (English & Persian) math tutoring for elementary and high school students. Online worldwide, in-person in North York, Vaughan, Richmond Hill & Scarborough.",
     url: "/",
     locale: "en_CA",
     alternateLocale: ["fa_IR"],
@@ -73,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Avin Math Tutoring",
     description:
-      "Personalized bilingual math tutoring for elementary and high school students. Online & in-person (North York, Vaughan & Scarborough).",
+      "Personalized bilingual math tutoring for elementary and high school students. Online & in-person (North York, Vaughan, Richmond Hill & Scarborough).",
   },
   robots: {
     index: true,
@@ -106,9 +105,9 @@ export default function RootLayout({
           <LanguageProvider>
             <ModalProvider>
               <MathBackground />
-              <main style={{ position: 'relative', zIndex: 1 }}>
+              <div style={{ position: 'relative', zIndex: 1 }}>
                 {children}
-              </main>
+              </div>
             </ModalProvider>
           </LanguageProvider>
         </LocationProvider>
