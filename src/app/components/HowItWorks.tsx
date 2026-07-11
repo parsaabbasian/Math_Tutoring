@@ -4,7 +4,7 @@ import { translations } from '../translations';
 import styles from './HowItWorks.module.css';
 
 export default function HowItWorks() {
-  const { language } = useLanguage();
+  const { language, isRTL } = useLanguage();
   const t = translations[language].howItWorks;
 
   const toPersianNumber = (num: number) => {
@@ -14,13 +14,13 @@ export default function HowItWorks() {
 
   return (
     <section id="how-it-works" className={`section ${styles.howItWorks}`}>
-      <div className={styles.containerWide}>
+      <div className={styles.containerWide} dir={isRTL ? 'rtl' : 'ltr'}>
+        <span className={styles.eyebrow}>{t.eyebrow}</span>
         <h2 className="section-title">{t.title}</h2>
-        <p className="section-subtitle">{t.subtitle}</p>
+        <p className={`${styles.intro} fade-in`}>{t.intro}</p>
 
         <div className={styles.circles}>
-          {/* SVG Connecting Line */}
-          <svg className={styles.svgLine} preserveAspectRatio="none" viewBox="0 0 1000 200">
+          <svg className={styles.svgLine} preserveAspectRatio="none" viewBox="0 0 1000 200" aria-hidden="true">
             <path
               d="M 100,50 L 300,150 L 500,50 L 700,150 L 900,50"
               fill="none"
@@ -32,17 +32,17 @@ export default function HowItWorks() {
 
           {t.steps.map((step, i) => (
             <div key={i} className={styles.item} data-pos={i % 2 === 0 ? 'up' : 'down'}>
-              {/* The circle */}
               <div className={styles.circle}>
                 <span className={styles.num}>
                   {language === 'fa' ? toPersianNumber(i + 1) : `0${i + 1}`}
                 </span>
               </div>
 
-              {/* Text content */}
               <div className={styles.text}>
-                <h3 className={styles.title}>{step.title}</h3>
-                <p className={styles.desc}>{step.description}</p>
+                <div className={styles.textCard}>
+                  <h3 className={styles.title}>{step.title}</h3>
+                  <p className={styles.desc}>{step.description}</p>
+                </div>
               </div>
             </div>
           ))}

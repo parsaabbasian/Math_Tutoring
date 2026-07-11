@@ -40,28 +40,29 @@ export const translations = {
       showLess: "Show Less"
     },
     howItWorks: {
+      eyebrow: "How It Works",
       title: "How Classes Work",
-      subtitle: "A personalized process designed for your academic success.",
+      intro: "A personalized process designed for your academic success.",
       steps: [
         {
-          title: "Free 15-Minute Introduction Meeting",
-          description: "A relaxed video call with you and your child, no lesson yet, just getting to know their goals and current level."
+          title: "Free 15-Min Intro Call",
+          description: "A quick video call to meet your child and learn their goals and level. No lesson yet."
         },
         {
-          title: "First Trial Session ($15, Online)",
-          description: "Your child's first full session is just $15, held online, even if you'll continue in person afterward."
+          title: "First Trial Session\n($15)",
+          description: "A full online session for just $15, even if you plan to continue in person."
         },
         {
           title: "Customized Learning Plan",
-          description: "From there, every lesson is mapped to your child's school curriculum (or worksheets, for international students), pace, and specific gaps, not a generic template."
+          description: "Lessons tailored to your child's curriculum, pace, and specific gaps."
         },
         {
           title: "Bilingual Instruction",
-          description: "Lessons run fluently in English or Persian, whichever helps your child learn best."
+          description: "Taught in English or Persian, whichever your child prefers."
         },
         {
-          title: "Flexible, Online or In-Person",
-          description: "Sessions fit your schedule: in person for North York, Vaughan & Scarborough, online everywhere else worldwide."
+          title: "Online or In-Person",
+          description: "In person in North York, Vaughan & Scarborough. Online everywhere else."
         }
       ]
     },
@@ -266,28 +267,29 @@ export const translations = {
       showLess: "نمایش کمتر"
     },
     howItWorks: {
+      eyebrow: "نحوه برگزاری",
       title: "نحوه برگزاری کلاس‌ها",
-      subtitle: "فرآیندی شخصی‌سازی شده برای موفقیت تحصیلی شما.",
+      intro: "فرآیندی شخصی‌سازی شده برای موفقیت تحصیلی شما.",
       steps: [
         {
           title: "جلسه آشنایی رایگان ۱۵ دقیقه‌ای",
-          description: "یک تماس ویدیویی راحت با شما و فرزندتان، هنوز خبری از درس نیست؛ فقط آشنایی با سطح و اهداف او."
+          description: "تماس ویدیویی کوتاه برای آشنایی با سطح و اهداف فرزندتان. بدون درس."
         },
         {
-          title: "اولین جلسه آزمایشی (۱۵ دلار، آنلاین)",
-          description: "اولین جلسه کامل فرزندتان فقط ۱۵ دلار و به‌صورت آنلاین است، حتی اگر بعداً حضوری ادامه دهید."
+          title: "اولین جلسه آزمایشی\n(۱۵ دلار)",
+          description: "اولین جلسه کامل آنلاین، فقط ۱۵ دلار، حتی برای ادامه حضوری."
         },
         {
           title: "برنامه یادگیری اختصاصی",
-          description: "از آنجا به بعد، هر جلسه بر اساس برنامه درسی مدرسه فرزند شما (یا کاربرگ‌ها، برای دانش‌آموزان بین‌المللی)، سرعت یادگیری و نقاط ضعف مشخص او طراحی می‌شود، نه یک الگوی عمومی."
+          description: "هر جلسه بر اساس برنامه مدرسه، سرعت و نقاط ضعف فرزند شما طراحی می‌شود."
         },
         {
           title: "آموزش دوزبانه",
-          description: "کلاس‌ها به‌صورت روان به زبان انگلیسی یا فارسی برگزار می‌شوند؛ هر کدام که به یادگیری بهتر فرزند شما کمک کند."
+          description: "به زبان انگلیسی یا فارسی، بسته به راحتی فرزند شما."
         },
         {
-          title: "منعطف، آنلاین یا حضوری",
-          description: "جلسات متناسب با برنامه شما تنظیم می‌شود: حضوری برای نورت یورک، وان و اسکاربورو، آنلاین برای همه‌جای دیگر."
+          title: "آنلاین یا حضوری",
+          description: "حضوری در نورت یورک، وان و اسکاربورو. آنلاین در همه‌جا."
         }
       ]
     },
