@@ -23,6 +23,13 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       {/* Decorative Symbols for Header Background */}
@@ -65,11 +72,12 @@ export default function Header() {
           />
         </Link>
 
-        {/* Mobile Menu Toggle */}
         <button
           className={styles.mobileMenuToggle}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
         >
           <div className={`${styles.hamburger} ${isMenuOpen ? styles.open : ''}`}>
             <span></span>
@@ -78,11 +86,15 @@ export default function Header() {
           </div>
         </button>
 
-        <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
+        <nav
+          id="primary-navigation"
+          className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}
+        >
           <Link href="/#about" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.about}</Link>
           <Link href="/#how-it-works" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.howItWorks}</Link>
           <Link href="/global" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.global}</Link>
           <Link href="/#packages" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.packages}</Link>
+          <Link href="/faq" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.faq}</Link>
           <div className={styles.switcherWrapper}>
             <LanguageSwitcher />
           </div>
