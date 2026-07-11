@@ -121,6 +121,11 @@ export default function Contact() {
       keywords: ['vaughan', 'woodbridge', 'thornhill', 'maple', 'concord', 'kleinburg', 'vellore', 'patterson'],
       postal: ['L4H', 'L4J', 'L4K', 'L4L', 'L6A'],
     },
+    {
+      name: 'Scarborough',
+      keywords: ['scarborough', 'agincourt', 'malvern', 'rouge', 'guildwood', 'birchmount', 'kennedy park', 'clairlea', 'wexford', 'woburn', 'cliffcrest', 'highland creek', 'morningside', 'west hill', 'ionview', 'dorset park'],
+      postal: ['M1B', 'M1C', 'M1E', 'M1G', 'M1H', 'M1J', 'M1K', 'M1L', 'M1M', 'M1N', 'M1P', 'M1R', 'M1S', 'M1T', 'M1V', 'M1W', 'M1X'],
+    },
   ] as const;
 
   const BLOCKED_AREAS = {
@@ -378,8 +383,8 @@ export default function Contact() {
                     </label>
                     <p className={styles.addressHint}>
                       {language === 'fa'
-                        ? 'مناطق تحت پوشش: North York · Richmond Hill · Vaughan'
-                        : 'Covered areas: North York · Richmond Hill · Vaughan'}
+                        ? 'مناطق تحت پوشش: North York · Richmond Hill · Vaughan · Scarborough'
+                        : 'Covered areas: North York · Richmond Hill · Vaughan · Scarborough'}
                     </p>
                     <div className={styles.addressInputWrap}>
                       <input

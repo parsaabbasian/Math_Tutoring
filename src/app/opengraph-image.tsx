@@ -34,7 +34,7 @@ export default function Image() {
           Personalized 1-on-1 tutoring · Elementary to High School
         </div>
         <div style={{ display: 'flex', marginTop: 12, fontSize: 30, color: '#a9cfcc' }}>
-          Bilingual English &amp; Persian (Farsi) · Online &amp; In-Person (North York &amp; Vaughan)
+          Bilingual English &amp; Persian (Farsi) · Online &amp; In-Person (North York, Vaughan &amp; Scarborough)
         </div>
       </div>
     ),
