@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import styles from './Hero.module.css';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';

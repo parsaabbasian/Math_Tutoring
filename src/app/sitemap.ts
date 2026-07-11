@@ -1,6 +1,5 @@
 import type { MetadataRoute } from 'next';
 
-// Keep in sync with SITE_URL in layout.tsx once the real domain is purchased.
 const SITE_URL = 'https://avinmath.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -10,6 +9,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
+    },
+    {
+      url: `${SITE_URL}/faq`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/global`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
   ];
 }
