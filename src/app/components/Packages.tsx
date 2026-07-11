@@ -1,7 +1,6 @@
 'use client';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
-import { useModal } from '../context/ModalContext';
 import styles from './Packages.module.css';
 
 const LaptopIcon = () => (
@@ -22,7 +21,6 @@ const SessionsIcon = () => (
 
 export default function Packages() {
   const { language, isRTL } = useLanguage();
-  const { openBooking } = useModal();
   const t = translations[language].packages;
 
   return (
@@ -60,14 +58,6 @@ export default function Packages() {
                 </span>
 
                 <p className={styles.cardDesc}>{option.desc}</p>
-
-                <button
-                  type="button"
-                  className={`${styles.cardCta} ${popular ? styles.cardCtaPrimary : ''}`}
-                  onClick={openBooking}
-                >
-                  {t.cta}
-                </button>
               </div>
             );
           })}
