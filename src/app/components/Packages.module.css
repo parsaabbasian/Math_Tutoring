@@ -160,41 +160,7 @@
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 24px;
   flex: 1;
-}
-
-.cardCta {
-  width: 100%;
-  padding: 12px 20px;
-  border-radius: var(--radius-full);
-  border: 2px solid var(--border);
-  background: transparent;
-  color: var(--primary);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.cardCta:hover {
-  border-color: var(--primary);
-  background: var(--primary-light);
-  transform: translateY(-2px);
-}
-
-.cardCtaPrimary {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: #fff;
-  box-shadow: 0 8px 20px rgba(0, 91, 91, 0.25);
-}
-
-.cardCtaPrimary:hover {
-  background: var(--primary-hover);
-  border-color: var(--primary-hover);
-  color: #fff;
 }
 
 .outro {
