@@ -6,7 +6,7 @@ export const translations = {
       howItWorks: "How it Works",
       global: "Global Tutoring",
       packages: "Packages & Pricing",
-      faq: "Frequently Asked Questions",
+      faq: "FAQ",
       join: "Join Classes"
     },
     hero: {
@@ -20,7 +20,7 @@ export const translations = {
       stats: {
         satisfaction: "Student Satisfaction",
         bilingual: "English & Persian",
-        price: "$20 / Hour"
+        price: "$20 / session"
       },
       trust: {
         ontario: "Ontario Curriculum Expert",
@@ -62,7 +62,7 @@ export const translations = {
         },
         {
           title: "Online or In-Person",
-          description: "In person in North York, Vaughan & Scarborough. Online everywhere else."
+          description: "In person in North York, Vaughan, Richmond Hill & Scarborough. Online everywhere else."
         }
       ]
     },
@@ -110,10 +110,15 @@ export const translations = {
       },
       outro: "Start small, see how it feels, and scale up whenever you're ready."
     },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "Got questions? We've got answers. Here are the most common questions parents and students ask.",
+      seeAll: "See all FAQs"
+    },
     contact: {
       subtitle: "Get in Touch",
       title: "Join The Classes",
-      description: "Take the first step toward math success. Fill out the form below and I'll get back to you within 24 hours to schedule your free 15-minute introduction meeting.",
+      description: "Take the first step toward math success. Fill out the form below, then pick a time for your free 15-minute introduction meeting.",
       info: {
         email: "Email",
         phone: "Phone",
@@ -122,17 +127,17 @@ export const translations = {
         location: "Location",
         locationDesc: "Online & In person",
         price: "Price",
-        priceDesc: "$20 / Hour",
+        priceDesc: "$20 / session",
       },
       services: {
         title: "Select Your Preferred Mode",
         online: {
           title: "Online Tutoring",
-          price: "$20 / Hour"
+          price: "$20 / session"
         },
         inPerson: {
           title: "In-Person Tutoring",
-          price: "$40 / Hour"
+          price: "$40 / session"
         },
         coverageNote: "In-person lessons are currently available in North York, Vaughan, Richmond Hill & Scarborough. You'll be able to confirm your exact address below.",
         trialNote: "Note: Your very first session (the $15 trial) is always held online, even if you select In-Person Tutoring. Regular in-person lessons begin after that."
@@ -247,7 +252,7 @@ export const translations = {
       stats: {
         satisfaction: "رضایت دانش‌آموزان",
         bilingual: "انگلیسی و فارسی",
-        price: "۲۰ دلار / ساعت"
+        price: "۲۰ دلار / جلسه"
       },
       trust: {
         ontario: "کارشناس برنامه آموزشی انتاریو",
@@ -289,7 +294,7 @@ export const translations = {
         },
         {
           title: "آنلاین یا حضوری",
-          description: "حضوری در نورت یورک، وان و اسکاربورو. آنلاین در همه‌جا."
+          description: "حضوری در نورت یورک، وان، ریچموند هیل و اسکاربورو. آنلاین در همه‌جا."
         }
       ]
     },
@@ -337,10 +342,15 @@ export const translations = {
       },
       outro: "کوچک شروع کنید، ببینید چه حسی دارد و هر وقت آماده بودید ادامه دهید."
     },
+    faq: {
+      title: "سوالات متداول",
+      subtitle: "سوال دارید؟ ما پاسخ داریم. اینجا رایج‌ترین سوالات والدین و دانش‌آموزان است.",
+      seeAll: "مشاهده همه سوالات"
+    },
     contact: {
       subtitle: "در تماس باشید",
       title: "ثبت‌نام در کلاس‌ها",
-      description: "اولین قدم به سوی موفقیت در ریاضی را بردارید. فرم زیر را پر کنید و من تا ۲۴ ساعت آینده برای تعیین وقت جلسه آشنایی رایگان ۱۵ دقیقه‌ای با شما تماس می‌گیرم.",
+      description: "اولین قدم به سوی موفقیت در ریاضی را بردارید. فرم زیر را پر کنید و سپس زمان جلسه آشنایی رایگان ۱۵ دقیقه‌ای را انتخاب کنید.",
       info: {
         email: "ایمیل",
         phone: "تلفن",
@@ -349,17 +359,17 @@ export const translations = {
         location: "محل برگزاری",
         locationDesc: "آنلاین و حضوری",
         price: "قیمت",
-        priceDesc: "۲۰ دلار / ساعت",
+        priceDesc: "۲۰ دلار / جلسه",
       },
       services: {
         title: "نوع آموزش مورد نظر را انتخاب کنید",
         online: {
           title: "آموزش آنلاین",
-          price: "۲۰ دلار / ساعت"
+          price: "۲۰ دلار / جلسه"
         },
         inPerson: {
           title: "آموزش حضوری",
-          price: "۴۰ دلار / ساعت"
+          price: "۴۰ دلار / جلسه"
         },
         coverageNote: "کلاس‌های حضوری در حال حاضر در مناطق نورت یورک، وان، ریچموند هیل و اسکاربورو ارائه می‌شوند. آدرس دقیق شما در ادامه بررسی خواهد شد.",
         trialNote: "توجه: اولین جلسه شما (جلسه آزمایشی ۱۵ دلاری) همیشه به‌صورت آنلاین برگزار می‌شود، حتی اگر آموزش حضوری را انتخاب کرده باشید. کلاس‌های حضوری از جلسه بعد آغاز می‌شوند."

@@ -198,7 +198,8 @@
 
   .textCard {
     width: 100%;
-    height: 148px;
+    min-height: 148px;
+    height: auto;
     text-align: left;
     padding: 12px 14px;
   }
