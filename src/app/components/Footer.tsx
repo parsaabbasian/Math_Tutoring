@@ -26,7 +26,7 @@ export default function Footer() {
           <h4 className={styles.linksTitle}>{t.quickLinks}</h4>
           <a href="/#about" className={styles.link}>{nav.about}</a>
           <a href="/#how-it-works" className={styles.link}>{nav.howItWorks}</a>
-          <a href="/#global" className={styles.link}>{nav.global}</a>
+          <a href="/global" className={styles.link}>{nav.global}</a>
           <a href="/#packages" className={styles.link}>{nav.packages}</a>
           <a href="/faq" className={styles.link}>{nav.faq}</a>
           <a href="/#join" className={styles.link}>{nav.join}</a>
