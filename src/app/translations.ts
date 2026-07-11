@@ -97,7 +97,7 @@ export const translations = {
     packages: {
       subtitle: "Packages & Pricing",
       title: "Choosing How to Continue",
-      intro: "After the free intro meeting and the $15 online trial session, pick whichever option fits your family best. Every regular session is the same simple rate, no matter which you choose:",
+      intro: "Your child's very first lesson is a one-time $15 online trial, a low-cost way to try a real session. After that, regular lessons are $20/session online or $40/session in-person, and you can pick whichever option below fits your family best:",
       popular: "Most Popular",
       perSession: "session",
       onlineLabel: "online",
@@ -237,7 +237,6 @@ export const translations = {
       connect: "Connect",
       whatsapp: "WhatsApp",
       instagram: "Instagram",
-      telegram: "Telegram",
       email: "Email"
     }
   },
@@ -339,7 +338,7 @@ export const translations = {
     packages: {
       subtitle: "پکیج‌ها و قیمت‌گذاری",
       title: "انتخاب نحوه ادامه",
-      intro: "پس از جلسه آشنایی رایگان و جلسه آزمایشی آنلاین ۱۵ دلاری، هر گزینه‌ای را که برای خانواده شما مناسب‌تر است انتخاب کنید. نرخ هر جلسه عادی، فارغ از انتخاب شما، یکسان است:",
+      intro: "اولین جلسه فرزند شما یک جلسه آزمایشی آنلاین یک‌بار و فقط ۱۵ دلاری است، راهی کم‌هزینه برای تجربه یک جلسه واقعی. پس از آن، جلسات عادی آنلاین ۲۰ دلار و حضوری ۴۰ دلار برای هر جلسه است و می‌توانید هر گزینه‌ای را که برای خانواده شما مناسب‌تر است انتخاب کنید:",
       popular: "محبوب‌ترین",
       perSession: "جلسه",
       onlineLabel: "آنلاین",
@@ -479,7 +478,6 @@ export const translations = {
       connect: "ارتباط با من",
       whatsapp: "واتساپ",
       instagram: "اینستاگرام",
-      telegram: "تلگرام",
       email: "ایمیل"
     }
   }
