@@ -102,7 +102,6 @@ export const translations = {
       perSession: "session",
       onlineLabel: "online",
       inPersonRate: "$40 / session in-person",
-      cta: "Get Started",
       options: [
         {
           title: "5-Session Package",
@@ -345,7 +344,6 @@ export const translations = {
       perSession: "جلسه",
       onlineLabel: "آنلاین",
       inPersonRate: "۴۰ دلار / هر جلسه حضوری",
-      cta: "شروع کنید",
       options: [
         {
           title: "پکیج ۵ جلسه‌ای",
