@@ -138,6 +138,7 @@ export const translations = {
           title: "In-Person Tutoring",
           price: "$40 / Hour"
         },
+        coverageNote: "In-person lessons are currently available in North York, Vaughan, Richmond Hill & Scarborough. You'll be able to confirm your exact address below.",
         trialNote: "Note: Your very first session (the $15 trial) is always held online, even if you select In-Person Tutoring. Regular in-person lessons begin after that."
       },
       form: {
@@ -369,6 +370,7 @@ export const translations = {
           title: "آموزش حضوری",
           price: "۴۰ دلار / ساعت"
         },
+        coverageNote: "کلاس‌های حضوری در حال حاضر در مناطق نورت یورک، وان، ریچموند هیل و اسکاربورو ارائه می‌شوند. آدرس دقیق شما در ادامه بررسی خواهد شد.",
         trialNote: "توجه: اولین جلسه شما (جلسه آزمایشی ۱۵ دلاری) همیشه به‌صورت آنلاین برگزار می‌شود، حتی اگر آموزش حضوری را انتخاب کرده باشید. کلاس‌های حضوری از جلسه بعد آغاز می‌شوند."
       },
       form: {

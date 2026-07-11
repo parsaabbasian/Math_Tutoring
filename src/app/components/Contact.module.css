@@ -135,6 +135,26 @@
   line-height: 1.5;
 }
 
+.coverageNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 500;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.coverageNote svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
 .serviceCard {
   display: flex;
   flex-direction: column;
