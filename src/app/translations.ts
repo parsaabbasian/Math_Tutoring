@@ -97,31 +97,16 @@ export const translations = {
     packages: {
       subtitle: "Packages & Pricing",
       title: "Choosing How to Continue",
-      intro: "Your child's very first lesson is a one-time $15 online trial, a low-cost way to try a real session. After that, regular lessons are $20/session online or $40/session in-person, and you can pick whichever option below fits your family best:",
-      popular: "Most Popular",
+      intro: "Your child's very first lesson is a one-time $15 online trial, a low-cost way to try a real session. After that, regular lessons are $20/session online or $40/session in-person:",
       perSession: "session",
       onlineLabel: "online",
       inPersonRate: "$40 / session in-person",
-      options: [
-        {
-          title: "5-Session Package",
-          sessions: "5 sessions",
-          price: "$20",
-          desc: "Great for a focused, short-term push, like before a test or report card."
-        },
-        {
-          title: "10-Session Package",
-          sessions: "10 sessions",
-          price: "$20",
-          desc: "Ideal for ongoing weekly or biweekly support across a month."
-        },
-        {
-          title: "Pay Per Session",
-          sessions: "Pay as you go",
-          price: "$20",
-          desc: "Book one session at a time, due before each lesson, with no long-term commitment."
-        }
-      ],
+      plan: {
+        title: "Pay Per Session",
+        sessions: "Pay as you go",
+        price: "$20",
+        desc: "Book one session at a time, due before each lesson, with no long-term commitment."
+      },
       outro: "Start small, see how it feels, and scale up whenever you're ready."
     },
     contact: {
@@ -338,31 +323,16 @@ export const translations = {
     packages: {
       subtitle: "پکیج‌ها و قیمت‌گذاری",
       title: "انتخاب نحوه ادامه",
-      intro: "اولین جلسه فرزند شما یک جلسه آزمایشی آنلاین یک‌بار و فقط ۱۵ دلاری است، راهی کم‌هزینه برای تجربه یک جلسه واقعی. پس از آن، جلسات عادی آنلاین ۲۰ دلار و حضوری ۴۰ دلار برای هر جلسه است و می‌توانید هر گزینه‌ای را که برای خانواده شما مناسب‌تر است انتخاب کنید:",
-      popular: "محبوب‌ترین",
+      intro: "اولین جلسه فرزند شما یک جلسه آزمایشی آنلاین یک‌بار و فقط ۱۵ دلاری است، راهی کم‌هزینه برای تجربه یک جلسه واقعی. پس از آن، جلسات عادی آنلاین ۲۰ دلار و حضوری ۴۰ دلار برای هر جلسه است:",
       perSession: "جلسه",
       onlineLabel: "آنلاین",
       inPersonRate: "۴۰ دلار / هر جلسه حضوری",
-      options: [
-        {
-          title: "پکیج ۵ جلسه‌ای",
-          sessions: "۵ جلسه",
-          price: "۲۰ دلار",
-          desc: "عالی برای یک دوره متمرکز و کوتاه‌مدت، مثلاً قبل از امتحان یا کارنامه."
-        },
-        {
-          title: "پکیج ۱۰ جلسه‌ای",
-          sessions: "۱۰ جلسه",
-          price: "۲۰ دلار",
-          desc: "ایده‌آل برای پشتیبانی مستمر هفتگی یا دوهفتگی در طول یک ماه."
-        },
-        {
-          title: "پرداخت به‌ازای هر جلسه",
-          sessions: "پرداخت مرحله‌ای",
-          price: "۲۰ دلار",
-          desc: "هر بار یک جلسه رزرو کنید، پرداخت پیش از هر جلسه و بدون هیچ تعهد بلندمدت."
-        }
-      ],
+      plan: {
+        title: "پرداخت به‌ازای هر جلسه",
+        sessions: "پرداخت مرحله‌ای",
+        price: "۲۰ دلار",
+        desc: "هر بار یک جلسه رزرو کنید، پرداخت پیش از هر جلسه و بدون هیچ تعهد بلندمدت."
+      },
       outro: "کوچک شروع کنید، ببینید چه حسی دارد و هر وقت آماده بودید ادامه دهید."
     },
     contact: {

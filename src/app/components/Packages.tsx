@@ -22,6 +22,7 @@ const SessionsIcon = () => (
 export default function Packages() {
   const { language, isRTL } = useLanguage();
   const t = translations[language].packages;
+  const plan = t.plan;
 
   return (
     <section id="packages" className={`section ${styles.packages}`}>
@@ -30,37 +31,27 @@ export default function Packages() {
         <h2 className="section-title">{t.title}</h2>
         <p className={`${styles.intro} fade-in`}>{t.intro}</p>
 
-        <div className={styles.grid}>
-          {t.options.map((option: any, i: number) => {
-            const popular = i === 1;
-            return (
-              <div
-                key={i}
-                className={`${styles.card} ${popular ? styles.popular : ''} fade-in`}
-              >
-                {popular && <span className={styles.badge}>{t.popular}</span>}
+        <div className={styles.cardWrapper}>
+          <div className={`${styles.card} fade-in`}>
+            <h3 className={styles.cardTitle}>{plan.title}</h3>
 
-                <h3 className={styles.cardTitle}>{option.title}</h3>
+            <div className={styles.priceBlock}>
+              <span className={styles.price}>{plan.price}</span>
+              <span className={styles.priceUnit}>/ {t.perSession}</span>
+            </div>
+            <p className={styles.priceSub}>
+              <span className={styles.priceMode}><LaptopIcon /> {t.onlineLabel}</span>
+              <span className={styles.priceDot}>·</span>
+              <span>{t.inPersonRate}</span>
+            </p>
 
-                <div className={styles.priceBlock}>
-                  <span className={styles.price}>{option.price}</span>
-                  <span className={styles.priceUnit}>/ {t.perSession}</span>
-                </div>
-                <p className={styles.priceSub}>
-                  <span className={styles.priceMode}><LaptopIcon /> {t.onlineLabel}</span>
-                  <span className={styles.priceDot}>·</span>
-                  <span>{t.inPersonRate}</span>
-                </p>
+            <span className={styles.sessionsTag}>
+              <SessionsIcon />
+              {plan.sessions}
+            </span>
 
-                <span className={styles.sessionsTag}>
-                  <SessionsIcon />
-                  {option.sessions}
-                </span>
-
-                <p className={styles.cardDesc}>{option.desc}</p>
-              </div>
-            );
-          })}
+            <p className={styles.cardDesc}>{plan.desc}</p>
+          </div>
         </div>
 
         <p className={styles.outro}>{t.outro}</p>
