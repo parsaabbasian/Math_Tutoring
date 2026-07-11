@@ -1,31 +1,5 @@
 // Deployment Trigger: 2026-05-10
 import type { Metadata } from "next";
-import Script from "next/script";
-import { Outfit, Inter, Vazirmatn } from "next/font/google";
-
-import { LocationProvider } from "./context/LocationContext";
-import { LanguageProvider } from "./context/LanguageContext";
-import { ModalProvider } from "./context/ModalContext";
-import "./globals.css";
-
-const vazir = Vazirmatn({
-  subsets: ["arabic"],
-  variable: "--font-vazir",
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-// TODO: update to the real domain once purchased (e.g. https://avinmath.com).
-// This makes Open Graph / social-share image URLs resolve to absolute links.
-const SITE_URL = "https://avinmath.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
