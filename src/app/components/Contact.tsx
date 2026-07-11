@@ -38,6 +38,13 @@ const RequiredMark = ({ className }: { className?: string }) => (
   <span className={className} aria-hidden="true">*</span>
 );
 
+const MapPinIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+);
+
 export default function Contact() {
   const { language, isRTL } = useLanguage();
   const { allowInPerson } = useLocation();
@@ -323,6 +330,13 @@ export default function Contact() {
                 </button>
               )}
             </div>
+
+            {tutoringType === 'in-person' && (
+              <p className={styles.coverageNote} dir={isRTL ? 'rtl' : 'ltr'}>
+                <MapPinIcon />
+                <span>{t.services.coverageNote}</span>
+              </p>
+            )}
 
             <p className={styles.trialNote} dir={isRTL ? 'rtl' : 'ltr'}>{t.services.trialNote}</p>
 
