@@ -97,19 +97,30 @@ export const translations = {
     packages: {
       subtitle: "Packages & Pricing",
       title: "Choosing How to Continue",
-      intro: "Once you and your child have completed the free introduction meeting and the $15 online trial session, you can choose whichever option fits your family best. There's no obligation to commit to a package:",
+      intro: "After the free intro meeting and the $15 online trial session, pick whichever option fits your family best. Every regular session is the same simple rate, no matter which you choose:",
+      popular: "Most Popular",
+      perSession: "session",
+      onlineLabel: "online",
+      inPersonRate: "$40 / session in-person",
+      cta: "Get Started",
       options: [
         {
           title: "5-Session Package",
-          desc: "Great for a focused, short-term push (e.g., before a test or report card)."
+          sessions: "5 sessions",
+          price: "$20",
+          desc: "Great for a focused, short-term push, like before a test or report card."
         },
         {
           title: "10-Session Package",
+          sessions: "10 sessions",
+          price: "$20",
           desc: "Ideal for ongoing weekly or biweekly support across a month."
         },
         {
           title: "Pay Per Session",
-          desc: "Book and pay one session at a time, due before each lesson, with no long-term commitment."
+          sessions: "Pay as you go",
+          price: "$20",
+          desc: "Book one session at a time, due before each lesson, with no long-term commitment."
         }
       ],
       outro: "Start small, see how it feels, and scale up whenever you're ready."
@@ -329,19 +340,30 @@ export const translations = {
     packages: {
       subtitle: "پکیج‌ها و قیمت‌گذاری",
       title: "انتخاب نحوه ادامه",
-      intro: "پس از اینکه شما و فرزندتان جلسه آشنایی رایگان و جلسه آزمایشی آنلاین ۱۵ دلاری را پشت سر گذاشتید، می‌توانید هر گزینه‌ای را که برای خانواده شما مناسب‌تر است انتخاب کنید. هیچ الزامی برای خرید پکیج وجود ندارد:",
+      intro: "پس از جلسه آشنایی رایگان و جلسه آزمایشی آنلاین ۱۵ دلاری، هر گزینه‌ای را که برای خانواده شما مناسب‌تر است انتخاب کنید. نرخ هر جلسه عادی، فارغ از انتخاب شما، یکسان است:",
+      popular: "محبوب‌ترین",
+      perSession: "جلسه",
+      onlineLabel: "آنلاین",
+      inPersonRate: "۴۰ دلار / هر جلسه حضوری",
+      cta: "شروع کنید",
       options: [
         {
           title: "پکیج ۵ جلسه‌ای",
-          desc: "عالی برای یک دوره متمرکز و کوتاه‌مدت (مثلاً قبل از امتحان یا کارنامه)."
+          sessions: "۵ جلسه",
+          price: "۲۰ دلار",
+          desc: "عالی برای یک دوره متمرکز و کوتاه‌مدت، مثلاً قبل از امتحان یا کارنامه."
         },
         {
           title: "پکیج ۱۰ جلسه‌ای",
+          sessions: "۱۰ جلسه",
+          price: "۲۰ دلار",
           desc: "ایده‌آل برای پشتیبانی مستمر هفتگی یا دوهفتگی در طول یک ماه."
         },
         {
           title: "پرداخت به‌ازای هر جلسه",
-          desc: "هر بار یک جلسه رزرو و پرداخت کنید (پرداخت پیش از هر جلسه و بدون هیچ تعهد بلندمدت)."
+          sessions: "پرداخت مرحله‌ای",
+          price: "۲۰ دلار",
+          desc: "هر بار یک جلسه رزرو کنید، پرداخت پیش از هر جلسه و بدون هیچ تعهد بلندمدت."
         }
       ],
       outro: "کوچک شروع کنید، ببینید چه حسی دارد و هر وقت آماده بودید ادامه دهید."
