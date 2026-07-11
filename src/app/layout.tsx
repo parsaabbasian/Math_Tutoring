@@ -28,7 +28,7 @@ const SITE_URL = "https://avinmath.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Avin Math Tutoring | Bilingual Math Tutor in Toronto (Online & In-Person)",
+    default: "Avin Math Tutoring",
     template: "%s | Avin Math Tutoring",
   },
   description:
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Avin Math Tutoring",
-    title: "Avin Math Tutoring | Math That Builds Confidence, Not Just Grades",
+    title: "Avin Math Tutoring",
     description:
       "Personalized bilingual (English & Persian) math tutoring for elementary and high school students. Online worldwide, in-person in North York, Vaughan, Richmond Hill & Scarborough.",
     url: "/",
