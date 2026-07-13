@@ -4,6 +4,21 @@
   padding-bottom: 60px;
 }
 
+.eyebrow {
+  display: block;
+  text-align: center;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+[dir="rtl"] .eyebrow {
+  letter-spacing: 0;
+}
+
 .faqList {
   display: flex;
   flex-direction: column;

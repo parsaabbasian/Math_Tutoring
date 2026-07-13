@@ -112,6 +112,7 @@ export const translations = {
       packageNote: "Prefer a bundle of sessions instead? Custom packages tailored to your child's needs are available too, we'll go over the options together during your free 15-minute intro session."
     },
     faq: {
+      eyebrow: "FAQ",
       title: "Frequently Asked Questions",
       subtitle: "Got questions? We've got answers. Here are the most common questions parents and students ask.",
       seeAll: "See all FAQs"
@@ -345,6 +346,7 @@ export const translations = {
       packageNote: "ترجیح می‌دهید یک بسته چند جلسه‌ای تهیه کنید؟ پکیج‌های سفارشی متناسب با نیاز فرزند شما هم موجود است؛ گزینه‌ها را در جلسه معارفه رایگان ۱۵ دقیقه‌ای با هم بررسی می‌کنیم."
     },
     faq: {
+      eyebrow: "FAQ",
       title: "سوالات متداول",
       subtitle: "سوال دارید؟ ما پاسخ داریم. اینجا رایج‌ترین سوالات والدین و دانش‌آموزان است.",
       seeAll: "مشاهده همه سوالات"
