@@ -15,7 +15,7 @@ export default function Footer() {
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.brand}>
           <Image
-            src="/images/logo.png"
+            src="/images/logo.png?v=2"
             alt="Avin Math Tutoring Logo"
             width={200}
             height={50}

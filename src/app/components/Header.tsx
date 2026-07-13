@@ -63,7 +63,7 @@ export default function Header() {
       <div className={`${styles.containerWide} ${styles.headerContent}`}>
         <Link href="/" className={styles.logo}>
           <Image
-            src="/images/logo.png"
+            src="/images/logo.png?v=2"
             alt="Avin Math Tutoring Logo"
             width={200}
             height={50}
