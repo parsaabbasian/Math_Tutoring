@@ -1,0 +1,8 @@
+import { getCurrentUser } from '@/lib/dal';
+
+export async function GET() {
+  const user = await getCurrentUser();
+  return Response.json({
+    user: user ? { name: user.name, email: user.email } : null,
+  });
+}

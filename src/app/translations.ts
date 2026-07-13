@@ -7,7 +7,9 @@ export const translations = {
       global: "Global Tutoring",
       packages: "Pricing",
       faq: "FAQ",
-      join: "Join Classes"
+      join: "Join Classes",
+      login: "Log In",
+      account: "My Account"
     },
     hero: {
       badge: "Personalized Online Math Tutoring",
@@ -223,6 +225,73 @@ export const translations = {
         times: ["Morning (9 to 12)", "Afternoon (12 to 4)", "Evening (4 to 8)"],
       }
     },
+    auth: {
+      loginTitle: "Welcome Back",
+      loginSubtitle: "Log in to manage your sessions and payments.",
+      signupTitle: "Create Your Account",
+      signupSubtitle: "Sign up to buy sessions and keep track of your bookings and payments.",
+      name: "Full Name",
+      email: "Email Address",
+      password: "Password",
+      passwordHint: "At least 8 characters",
+      loginButton: "Log In",
+      signupButton: "Create Account",
+      noAccount: "Don't have an account?",
+      haveAccount: "Already have an account?",
+      signupLink: "Sign up",
+      loginLink: "Log in",
+      errors: {
+        nameRequired: "Please enter your full name.",
+        invalidEmail: "Please enter a valid email address.",
+        passwordTooShort: "Password must be at least 8 characters.",
+        emailTaken: "An account with this email already exists.",
+        invalidCredentials: "Incorrect email or password.",
+        generic: "Something went wrong. Please try again."
+      }
+    },
+    account: {
+      title: "My Account",
+      greeting: "Hi",
+      memberSince: "Member since",
+      logout: "Log Out",
+      balancesTitle: "Session Balance",
+      onlineSessions: "Online sessions",
+      inPersonSessions: "In-person sessions",
+      balancesNote: "Sessions you buy below are added here automatically after payment.",
+      buyTitle: "Buy Sessions",
+      buyIntro: "Pay securely through Stripe. Your balance updates as soon as the payment completes.",
+      products: {
+        trial: {
+          title: "Trial Session",
+          desc: "Your very first lesson - a full online session at a one-time price.",
+          price: "$15"
+        },
+        online: {
+          title: "Online Sessions",
+          desc: "Regular one-on-one online lessons.",
+          price: "$20 / session"
+        },
+        inPerson: {
+          title: "In-Person Sessions",
+          desc: "In person in North York, Vaughan, Richmond Hill & Scarborough.",
+          price: "$30 / session"
+        }
+      },
+      trialUsedNote: "You've already purchased your trial session.",
+      quantity: "Quantity",
+      checkout: "Pay with Stripe",
+      redirecting: "Redirecting to Stripe...",
+      paymentsNotConfigured: "Online payment isn't fully set up yet (Stripe keys are missing). Please contact us to pay for sessions.",
+      checkoutError: "We couldn't start the payment. Please try again.",
+      purchaseSuccess: "Payment received! Your sessions have been added to your balance.",
+      purchaseCanceled: "Payment canceled - you have not been charged.",
+      historyTitle: "Payment History",
+      historyEmpty: "No payments yet. Your Stripe payments will show up here.",
+      historyDate: "Date",
+      historyItem: "Item",
+      historyQty: "Qty",
+      historyAmount: "Amount"
+    },
     footer: {
       tagline: "Empowering students through personalized math excellence.",
       copyright: "All rights reserved.",
@@ -241,7 +310,9 @@ export const translations = {
       global: "تدریس بین‌المللی",
       packages: "قیمت‌گذاری",
       faq: "سوالات متداول",
-      join: "ثبت‌نام کلاس‌ها"
+      join: "ثبت‌نام کلاس‌ها",
+      login: "ورود",
+      account: "حساب کاربری"
     },
     hero: {
       badge: "آموزش خصوصی ریاضی آنلاین",
@@ -456,6 +527,73 @@ export const translations = {
         days: ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنج‌شنبه", "جمعه"],
         times: ["صبح (۹ تا ۱۲)", "عصر (۱۲ تا ۴)", "غروب (۴ تا ۸)"],
       }
+    },
+    auth: {
+      loginTitle: "خوش برگشتید",
+      loginSubtitle: "برای مدیریت جلسات و پرداخت‌های خود وارد شوید.",
+      signupTitle: "ساخت حساب کاربری",
+      signupSubtitle: "ثبت‌نام کنید تا جلسات را خریداری کرده و رزروها و پرداخت‌های خود را دنبال کنید.",
+      name: "نام و نام خانوادگی",
+      email: "آدرس ایمیل",
+      password: "رمز عبور",
+      passwordHint: "حداقل ۸ کاراکتر",
+      loginButton: "ورود",
+      signupButton: "ساخت حساب",
+      noAccount: "حساب کاربری ندارید؟",
+      haveAccount: "قبلاً حساب ساخته‌اید؟",
+      signupLink: "ثبت‌نام",
+      loginLink: "ورود",
+      errors: {
+        nameRequired: "لطفاً نام و نام خانوادگی خود را وارد کنید.",
+        invalidEmail: "لطفاً یک آدرس ایمیل معتبر وارد کنید.",
+        passwordTooShort: "رمز عبور باید حداقل ۸ کاراکتر باشد.",
+        emailTaken: "حسابی با این ایمیل از قبل وجود دارد.",
+        invalidCredentials: "ایمیل یا رمز عبور اشتباه است.",
+        generic: "مشکلی پیش آمد. لطفاً دوباره تلاش کنید."
+      }
+    },
+    account: {
+      title: "حساب کاربری",
+      greeting: "سلام",
+      memberSince: "عضو از",
+      logout: "خروج",
+      balancesTitle: "موجودی جلسات",
+      onlineSessions: "جلسات آنلاین",
+      inPersonSessions: "جلسات حضوری",
+      balancesNote: "جلساتی که در پایین خریداری می‌کنید، پس از پرداخت به‌صورت خودکار اینجا اضافه می‌شوند.",
+      buyTitle: "خرید جلسات",
+      buyIntro: "پرداخت امن از طریق Stripe. موجودی شما بلافاصله پس از تکمیل پرداخت به‌روزرسانی می‌شود.",
+      products: {
+        trial: {
+          title: "جلسه آزمایشی",
+          desc: "اولین جلسه شما - یک جلسه کامل آنلاین با قیمت یک‌بار.",
+          price: "۱۵ دلار"
+        },
+        online: {
+          title: "جلسات آنلاین",
+          desc: "کلاس‌های خصوصی آنلاین.",
+          price: "۲۰ دلار / جلسه"
+        },
+        inPerson: {
+          title: "جلسات حضوری",
+          desc: "حضوری در نورت یورک، وان، ریچموند هیل و اسکاربورو.",
+          price: "۳۰ دلار / جلسه"
+        }
+      },
+      trialUsedNote: "شما قبلاً جلسه آزمایشی خود را خریداری کرده‌اید.",
+      quantity: "تعداد",
+      checkout: "پرداخت با Stripe",
+      redirecting: "در حال انتقال به Stripe...",
+      paymentsNotConfigured: "پرداخت آنلاین هنوز به‌طور کامل راه‌اندازی نشده است (کلیدهای Stripe موجود نیستند). لطفاً برای پرداخت با ما تماس بگیرید.",
+      checkoutError: "امکان شروع پرداخت وجود نداشت. لطفاً دوباره تلاش کنید.",
+      purchaseSuccess: "پرداخت دریافت شد! جلسات به موجودی شما اضافه شدند.",
+      purchaseCanceled: "پرداخت لغو شد - مبلغی از شما کسر نشده است.",
+      historyTitle: "تاریخچه پرداخت‌ها",
+      historyEmpty: "هنوز پرداختی ندارید. پرداخت‌های Stripe شما اینجا نمایش داده می‌شوند.",
+      historyDate: "تاریخ",
+      historyItem: "مورد",
+      historyQty: "تعداد",
+      historyAmount: "مبلغ"
     },
     footer: {
       tagline: "توانمندسازی دانش‌آموزان از طریق تعالی در ریاضیات.",
