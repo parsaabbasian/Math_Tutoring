@@ -98,10 +98,10 @@ export const translations = {
     packages: {
       subtitle: "Packages & Pricing",
       title: "Choosing How to Continue",
-      intro: "Your child's very first lesson is a one-time $15 online trial, a low-cost way to try a real session. After that, regular lessons are $20/session online or $40/session in-person:",
+      intro: "Your child's very first lesson is a one-time $15 online trial, a low-cost way to try a real session. After that, regular lessons are $20/session online or $30/session in-person:",
       perSession: "session",
       onlineLabel: "online",
-      inPersonRate: "$40 / session in-person",
+      inPersonRate: "$30 / session in-person",
       plan: {
         title: "Pay Per Session",
         sessions: "Pay as you go",
@@ -137,7 +137,7 @@ export const translations = {
         },
         inPerson: {
           title: "In-Person Tutoring",
-          price: "$40 / session"
+          price: "$30 / session"
         },
         coverageNote: "In-person lessons are currently available in North York, Vaughan, Richmond Hill & Scarborough. You'll be able to confirm your exact address below.",
         trialNote: "Note: Your very first session (the $15 trial) is always held online, even if you select In-Person Tutoring. Regular in-person lessons begin after that."
@@ -330,10 +330,10 @@ export const translations = {
     packages: {
       subtitle: "پکیج‌ها و قیمت‌گذاری",
       title: "انتخاب نحوه ادامه",
-      intro: "اولین جلسه فرزند شما یک جلسه آزمایشی آنلاین یک‌بار و فقط ۱۵ دلاری است، راهی کم‌هزینه برای تجربه یک جلسه واقعی. پس از آن، جلسات عادی آنلاین ۲۰ دلار و حضوری ۴۰ دلار برای هر جلسه است:",
+      intro: "اولین جلسه فرزند شما یک جلسه آزمایشی آنلاین یک‌بار و فقط ۱۵ دلاری است، راهی کم‌هزینه برای تجربه یک جلسه واقعی. پس از آن، جلسات عادی آنلاین ۲۰ دلار و حضوری ۳۰ دلار برای هر جلسه است:",
       perSession: "جلسه",
       onlineLabel: "آنلاین",
-      inPersonRate: "۴۰ دلار / هر جلسه حضوری",
+      inPersonRate: "۳۰ دلار / هر جلسه حضوری",
       plan: {
         title: "پرداخت به‌ازای هر جلسه",
         sessions: "پرداخت مرحله‌ای",
@@ -369,7 +369,7 @@ export const translations = {
         },
         inPerson: {
           title: "آموزش حضوری",
-          price: "۴۰ دلار / جلسه"
+          price: "۳۰ دلار / جلسه"
         },
         coverageNote: "کلاس‌های حضوری در حال حاضر در مناطق نورت یورک، وان، ریچموند هیل و اسکاربورو ارائه می‌شوند. آدرس دقیق شما در ادامه بررسی خواهد شد.",
         trialNote: "توجه: اولین جلسه شما (جلسه آزمایشی ۱۵ دلاری) همیشه به‌صورت آنلاین برگزار می‌شود، حتی اگر آموزش حضوری را انتخاب کرده باشید. کلاس‌های حضوری از جلسه بعد آغاز می‌شوند."

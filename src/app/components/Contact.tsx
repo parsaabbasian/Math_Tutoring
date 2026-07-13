@@ -243,7 +243,7 @@ export default function Contact() {
       phone: (data.get('phone') as string) || '',
       tutoringMode: tutoringType === 'online'
         ? (language === 'en' ? 'Online Tutoring ($20/hr)' : 'آموزش آنلاین (۲۰ دلار/ساعت)')
-        : (language === 'en' ? 'In Person Tutoring ($40/hr)' : 'آموزش حضوری (۴۰ دلار/ساعت)'),
+        : (language === 'en' ? 'In Person Tutoring ($30/hr)' : 'آموزش حضوری (۳۰ دلار/ساعت)'),
       country: countryLabel,
       grade: gradeLabel,
       address: tutoringType === 'in-person' ? `${address}, ${postalCheck}`.trim().replace(/^,\s*/, '') : '',
