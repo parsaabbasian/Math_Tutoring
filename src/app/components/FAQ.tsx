@@ -9,7 +9,7 @@ import styles from './FAQ.module.css';
 // `limit` shows only the first N questions plus a "See all" link (landing-page preview).
 // Omit it to render the full list (the dedicated /faq page).
 export default function FAQ({ limit }: { limit?: number }) {
-  const { language } = useLanguage();
+  const { language, isRTL } = useLanguage();
   const t = translations[language].faq;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -19,7 +19,8 @@ export default function FAQ({ limit }: { limit?: number }) {
 
   return (
     <section id="faq" className={`section ${styles.faq}`}>
-      <div className="container">
+      <div className="container" dir={isRTL ? 'rtl' : 'ltr'}>
+        <span className={styles.eyebrow}>{t.eyebrow}</span>
         <h2 className="section-title">{t.title}</h2>
         <p className="section-subtitle">{t.subtitle}</p>
 
