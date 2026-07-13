@@ -5,7 +5,7 @@ export const translations = {
       about: "Who I Am",
       howItWorks: "How it Works",
       global: "Global Tutoring",
-      packages: "Packages & Pricing",
+      packages: "Pricing",
       faq: "FAQ",
       join: "Join Classes"
     },
@@ -96,7 +96,7 @@ export const translations = {
       ]
     },
     packages: {
-      subtitle: "Packages & Pricing",
+      subtitle: "Pricing",
       title: "Choosing How to Continue",
       intro: "Your child's very first lesson is a one-time $15 online trial, a low-cost way to try a real session. After that, regular lessons are $20/session online or $30/session in-person:",
       perSession: "session",
@@ -237,7 +237,7 @@ export const translations = {
       about: "درباره من",
       howItWorks: "نحوه برگزاری",
       global: "تدریس بین‌المللی",
-      packages: "پکیج‌ها و قیمت‌گذاری",
+      packages: "قیمت‌گذاری",
       faq: "سوالات متداول",
       join: "ثبت‌نام کلاس‌ها"
     },
@@ -328,7 +328,7 @@ export const translations = {
       ]
     },
     packages: {
-      subtitle: "پکیج‌ها و قیمت‌گذاری",
+      subtitle: "قیمت‌گذاری",
       title: "انتخاب نحوه ادامه",
       intro: "اولین جلسه فرزند شما یک جلسه آزمایشی آنلاین یک‌بار و فقط ۱۵ دلاری است، راهی کم‌هزینه برای تجربه یک جلسه واقعی. پس از آن، جلسات عادی آنلاین ۲۰ دلار و حضوری ۳۰ دلار برای هر جلسه است:",
       perSession: "جلسه",
