@@ -266,8 +266,8 @@ export default function Contact() {
               <div>
                 <h4 className={styles.detailTitle}>{t.info.email}</h4>
                 <p className={styles.detailValue} dir="ltr" style={{ textAlign: isRTL ? 'right' : 'left' }}>
-                  <a href="mailto:avin.math@gmail.com" style={{ color: 'inherit' }}>
-                    avin.math@gmail.com
+                  <a href="mailto:avinmathtutoring@gmail.com" style={{ color: 'inherit' }}>
+                    avinmathtutoring@gmail.com
                   </a>
                 </p>
               </div>
