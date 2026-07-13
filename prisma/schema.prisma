@@ -21,8 +21,8 @@ model User {
   inPersonCredits Int      @default(0)
   trialUsed       Boolean  @default(false)
 
-  purchases   Purchase[]
-  submissions ContactSubmission[]
+  purchases Purchase[]
+  bookings  Booking[]
 }
 
 model Purchase {
@@ -39,18 +39,17 @@ model Purchase {
   createdAt       DateTime @default(now())
 }
 
-model ContactSubmission {
-  id           String   @id @default(cuid())
-  userId       String?
-  user         User?    @relation(fields: [userId], references: [id])
-  studentName  String
-  email        String
-  phone        String
-  country      String
-  gradeLevel   String
-  tutoringType String // online | in-person
-  address      String?
-  postalCode   String?
-  language     String   @default("en")
-  createdAt    DateTime @default(now())
+model Booking {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  // Class start, stored as wall-clock Toronto time encoded as UTC
+  // (constructed with Date.UTC, displayed with the UTC timezone).
+  start     DateTime
+  type      String // online | inPerson
+  status    String   @default("scheduled") // scheduled | canceled
+  createdAt DateTime @default(now())
+
+  @@index([userId, status])
+  @@index([start])
 }

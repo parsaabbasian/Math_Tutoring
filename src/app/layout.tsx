@@ -1,11 +1,9 @@
 // Deployment Trigger: 2026-05-10
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Outfit, Inter, Vazirmatn } from "next/font/google";
 
 import { LocationProvider } from "./context/LocationContext";
 import { LanguageProvider } from "./context/LanguageContext";
-import { ModalProvider } from "./context/ModalContext";
 import "./globals.css";
 
 const vazir = Vazirmatn({
@@ -93,22 +91,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable} ${vazir.variable}`}>
-      <head>
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-      </head>
       <body>
-        <Script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="afterInteractive"
-        />
         <LocationProvider>
           <LanguageProvider>
-            <ModalProvider>
-              <MathBackground />
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                {children}
-              </div>
-            </ModalProvider>
+            <MathBackground />
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              {children}
+            </div>
           </LanguageProvider>
         </LocationProvider>
       </body>

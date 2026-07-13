@@ -30,7 +30,7 @@ export default function Footer() {
           <Link href="/global" className={styles.link}>{nav.global}</Link>
           <Link href="/#packages" className={styles.link}>{nav.packages}</Link>
           <Link href="/faq" className={styles.link}>{nav.faq}</Link>
-          <Link href="/#join" className={styles.link}>{nav.join}</Link>
+          <Link href="/signup" className={styles.link}>{nav.getStarted}</Link>
         </div>
         <div className={styles.socials}>
           <h4 className={styles.linksTitle}>{t.connect}</h4>

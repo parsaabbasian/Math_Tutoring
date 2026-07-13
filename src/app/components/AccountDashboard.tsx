@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
 import { logout } from '../actions/auth';
 import { startCheckout, type CheckoutState } from '../actions/checkout';
+import MyClasses, { type BookingItem } from './MyClasses';
 import styles from './AccountDashboard.module.css';
 
 type ProductKey = 'trial' | 'online' | 'inPerson';
@@ -27,6 +28,7 @@ type Props = {
     createdAt: string;
   };
   purchases: PurchaseItem[];
+  bookings: BookingItem[];
   banner: 'success' | 'canceled' | null;
   stripeConfigured: boolean;
 };
@@ -93,7 +95,13 @@ function ProductCard({
   );
 }
 
-export default function AccountDashboard({ user, purchases, banner, stripeConfigured }: Props) {
+export default function AccountDashboard({
+  user,
+  purchases,
+  bookings,
+  banner,
+  stripeConfigured,
+}: Props) {
   const { language, isRTL } = useLanguage();
   const t = translations[language].account;
 
@@ -152,6 +160,16 @@ export default function AccountDashboard({ user, purchases, banner, stripeConfig
         </div>
 
         <div className={`${styles.card} fade-in`}>
+          <h3 className={styles.cardTitle}>{t.classes.title}</h3>
+          <p className={styles.buyIntro}>{t.classes.intro}</p>
+          <MyClasses
+            bookings={bookings}
+            onlineCredits={user.onlineCredits}
+            inPersonCredits={user.inPersonCredits}
+          />
+        </div>
+
+        <div id="buy" className={`${styles.card} fade-in`}>
           <h3 className={styles.cardTitle}>{t.buyTitle}</h3>
           <p className={styles.buyIntro}>{t.buyIntro}</p>
           {!stripeConfigured && (

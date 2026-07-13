@@ -39,10 +39,16 @@ export default async function AccountPage({
   }
 
   const user = await requireUser();
-  const purchases = await db.purchase.findMany({
-    where: { userId: user.id },
-    orderBy: { createdAt: 'desc' },
-  });
+  const [purchases, bookings] = await Promise.all([
+    db.purchase.findMany({
+      where: { userId: user.id },
+      orderBy: { createdAt: 'desc' },
+    }),
+    db.booking.findMany({
+      where: { userId: user.id, status: 'scheduled' },
+      orderBy: { start: 'asc' },
+    }),
+  ]);
 
   return (
     <main>
@@ -65,6 +71,11 @@ export default async function AccountPage({
             amountTotal: p.amountTotal,
             currency: p.currency,
             createdAt: p.createdAt.toISOString(),
+          }))}
+          bookings={bookings.map((b) => ({
+            id: b.id,
+            start: b.start.toISOString(),
+            type: b.type,
           }))}
           banner={banner}
           stripeConfigured={isStripeConfigured()}
