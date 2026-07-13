@@ -65,8 +65,8 @@ export default function Header() {
           <Image
             src="/images/logo.png"
             alt="Avin Math Tutoring Logo"
-            width={120}
-            height={40}
+            width={200}
+            height={50}
             priority
             className={styles.logoImage}
           />
