@@ -17,8 +17,8 @@ export default function Footer() {
           <Image
             src="/images/logo.png"
             alt="Avin Math Tutoring Logo"
-            width={120}
-            height={40}
+            width={200}
+            height={50}
             className={styles.logoImage}
           />
           <p className={styles.tagline}>{t.tagline}</p>
