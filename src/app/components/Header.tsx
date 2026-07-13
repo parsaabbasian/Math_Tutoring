@@ -14,6 +14,23 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [scrolled, setScrolled] = useState(false);
+  // null = auth state unknown (avoids flashing the wrong link while loading)
+  const [loggedIn, setLoggedIn] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/api/auth/me')
+      .then((res) => res.json())
+      .then((data) => {
+        if (!cancelled) setLoggedIn(Boolean(data.user));
+      })
+      .catch(() => {
+        if (!cancelled) setLoggedIn(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,6 +112,15 @@ export default function Header() {
           <Link href="/global" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.global}</Link>
           <Link href="/#packages" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.packages}</Link>
           <Link href="/faq" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t.faq}</Link>
+          {loggedIn !== null && (
+            <Link
+              href={loggedIn ? '/account' : '/login'}
+              className={styles.navLink}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {loggedIn ? t.account : t.login}
+            </Link>
+          )}
           <div className={styles.switcherWrapper}>
             <LanguageSwitcher />
           </div>

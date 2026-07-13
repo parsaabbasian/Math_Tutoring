@@ -5,6 +5,7 @@ import { useLocation } from '../context/LocationContext';
 import { translations } from '../translations';
 import styles from './Contact.module.css';
 import CalendlyModal from './CalendlyModal';
+import { saveContactSubmission } from '../actions/contact';
 import {
   PHONE_COUNTRIES,
   PhoneCountryId,
@@ -273,6 +274,20 @@ export default function Contact() {
       : levelLabel;
 
     const fullPhone = formatFullPhone(getPhoneCountry(phoneCountryId).dial, phoneLocal);
+
+    // Persist the submission in the database (fire-and-forget so the booking
+    // modal opens immediately even if the save is slow or fails).
+    void saveContactSubmission({
+      studentName: (data.get('studentName') as string) || '',
+      email: (data.get('email') as string) || '',
+      phone: fullPhone,
+      country: countryLabel,
+      gradeLevel: gradeLabel,
+      tutoringType,
+      address: tutoringType === 'in-person' ? address : undefined,
+      postalCode: tutoringType === 'in-person' ? postalCheck : undefined,
+      language,
+    }).catch(() => {});
 
     setPrefill({
       name: (data.get('studentName') as string) || '',
