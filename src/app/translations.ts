@@ -108,7 +108,8 @@ export const translations = {
         price: "$20",
         desc: "Book one session at a time, due before each lesson, with no long-term commitment."
       },
-      outro: "Start small, see how it feels, and scale up whenever you're ready."
+      outro: "Start small, see how it feels, and scale up whenever you're ready.",
+      packageNote: "Prefer a bundle of sessions instead? Custom packages tailored to your child's needs are available too, we'll go over the options together during your free 15-minute intro session."
     },
     faq: {
       title: "Frequently Asked Questions",
@@ -340,7 +341,8 @@ export const translations = {
         price: "۲۰ دلار",
         desc: "هر بار یک جلسه رزرو کنید، پرداخت پیش از هر جلسه و بدون هیچ تعهد بلندمدت."
       },
-      outro: "کوچک شروع کنید، ببینید چه حسی دارد و هر وقت آماده بودید ادامه دهید."
+      outro: "کوچک شروع کنید، ببینید چه حسی دارد و هر وقت آماده بودید ادامه دهید.",
+      packageNote: "ترجیح می‌دهید یک بسته چند جلسه‌ای تهیه کنید؟ پکیج‌های سفارشی متناسب با نیاز فرزند شما هم موجود است؛ گزینه‌ها را در جلسه معارفه رایگان ۱۵ دقیقه‌ای با هم بررسی می‌کنیم."
     },
     faq: {
       title: "سوالات متداول",
