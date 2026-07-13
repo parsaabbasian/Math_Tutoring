@@ -48,6 +48,12 @@ export default function Footer() {
             </svg>
             <span>{t.instagram}</span>
           </a>
+          <span title={t.telegram} className={`${styles.link} ${styles.socialLink}`}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M23.91 3.79 20.3 20.84c-.25 1.21-.98 1.5-1.98.94l-5.5-4.06-2.66 2.56c-.29.29-.54.54-1.1.54l.4-5.56 10.11-9.14c.44-.39-.1-.61-.68-.22L7.17 12.9l-5.5-1.72c-1.2-.37-1.21-1.2.26-1.77l21.4-8.25c.9-.33 1.7.2 1.58 1.62z" />
+            </svg>
+            <span>{t.telegram}</span>
+          </span>
           <a href="mailto:avinmathtutoring@gmail.com" title={t.email} className={`${styles.link} ${styles.socialLink}`}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />

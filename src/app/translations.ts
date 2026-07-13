@@ -224,6 +224,7 @@ export const translations = {
       connect: "Connect",
       whatsapp: "WhatsApp",
       instagram: "Instagram",
+      telegram: "Telegram",
       email: "Email"
     }
   },
@@ -452,6 +453,7 @@ export const translations = {
       connect: "ارتباط با من",
       whatsapp: "واتساپ",
       instagram: "اینستاگرام",
+      telegram: "تلگرام",
       email: "ایمیل"
     }
   }
