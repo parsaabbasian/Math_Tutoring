@@ -199,9 +199,10 @@ export default function Contact() {
     const formData = new FormData(formRef.current);
     const studentName = (formData.get('studentName') as string || '').trim();
     const email = (formData.get('email') as string || '').trim();
+    const phone = (formData.get('phone') as string || '').trim();
 
     // Check required fields
-    if (!studentName || !email || !selectedSchoolLevel) return false;
+    if (!studentName || !email || !phone || !selectedSchoolLevel) return false;
 
     // Check if specific grade is selected when school level is selected
     if (selectedSchoolLevel) {
@@ -365,8 +366,11 @@ export default function Contact() {
                   <input type="email" id="email" name="email" className={styles.input} required placeholder="email@example.com" dir="ltr" />
                 </div>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="phone" className={styles.label}>{t.form.phone}</label>
-                  <input type="tel" id="phone" name="phone" className={styles.input} placeholder={language === 'fa' ? '۰۹۱۲۰۰۰۰۰۰۰' : '(555) 000-0000'} />
+                  <label htmlFor="phone" className={styles.label}>
+                    {t.form.phone}
+                    <RequiredMark className={styles.requiredMark} />
+                  </label>
+                  <input type="tel" id="phone" name="phone" className={styles.input} required placeholder={language === 'fa' ? '۰۹۱۲۰۰۰۰۰۰۰' : '(555) 000-0000'} />
                 </div>
               </div>
 
