@@ -55,6 +55,7 @@ export default function Packages() {
         </div>
 
         <p className={styles.outro}>{t.outro}</p>
+        <p className={styles.outro}>{t.packageNote}</p>
       </div>
     </section>
   );
