@@ -124,8 +124,12 @@ export default function Header() {
           <div className={styles.switcherWrapper}>
             <LanguageSwitcher />
           </div>
-          <Link href="/#join" className="btn-primary" onClick={() => setIsMenuOpen(false)}>
-            {t.join}
+          <Link
+            href={loggedIn ? '/account#buy' : '/signup'}
+            className="btn-primary"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {loggedIn ? t.buySessions : t.getStarted}
             <svg
               width="22"
               height="22"

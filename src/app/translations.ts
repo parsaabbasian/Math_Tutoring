@@ -7,7 +7,8 @@ export const translations = {
       global: "Global Tutoring",
       packages: "Pricing",
       faq: "FAQ",
-      join: "Join Classes",
+      getStarted: "Get Started",
+      buySessions: "Buy Sessions",
       login: "Log In",
       account: "My Account"
     },
@@ -119,112 +120,6 @@ export const translations = {
       subtitle: "Got questions? We've got answers. Here are the most common questions parents and students ask.",
       seeAll: "See all FAQs"
     },
-    contact: {
-      subtitle: "Get in Touch",
-      title: "Join The Classes",
-      description: "Take the first step toward math success. Fill out the form below, then pick a time for your free 15-minute introduction meeting.",
-      info: {
-        email: "Email",
-        phone: "Phone",
-        bilingual: "Bilingual Support",
-        bilingualDesc: "English & Persian (Farsi)",
-        location: "Location",
-        locationDesc: "Online & In person",
-        price: "Price",
-        priceDesc: "$20 / session",
-      },
-      services: {
-        title: "Select Your Preferred Mode",
-        online: {
-          title: "Online Tutoring",
-          price: "$20 / session"
-        },
-        inPerson: {
-          title: "In-Person Tutoring",
-          price: "$30 / session"
-        },
-        coverageNote: "In-person lessons are currently available in North York, Vaughan, Richmond Hill & Scarborough. You'll be able to confirm your exact address below.",
-        trialNote: "Note: Your very first session (the $15 trial) is always held online, even if you select In-Person Tutoring. Regular in-person lessons begin after that."
-      },
-      form: {
-        bookDirect: "Book Your Class",
-        or: "OR",
-        studentName: "Student Full Name",
-        email: "Email Address",
-        phone: "Phone Number",
-        grade: "Current Grade / Level",
-        message: "Additional Info (Optional)",
-        submit: "Send Request",
-        success: "Request sent successfully! Avin will contact you soon.",
-        country: "Select Your Country",
-        countries: [
-          { id: 'ca', label: 'Canada' },
-          { id: 'us', label: 'United States' },
-          { id: 'uk', label: 'United Kingdom' },
-          { id: 'au', label: 'Australia' },
-          { id: 'ir', label: 'Iran' }
-        ],
-        systems: {
-          ca: {
-            levels: [
-              { id: 'elementary', label: 'Elementary School' },
-              { id: 'secondary', label: 'Secondary School' },
-              { id: 'college', label: 'College / University' }
-            ],
-            gradePrefix: "Grade ",
-            timezone: "EST"
-          },
-          us: {
-            levels: [
-              { id: 'elementary', label: 'Elementary School' },
-              { id: 'middle', label: 'Middle School' },
-              { id: 'high', label: 'High School' },
-              { id: 'college', label: 'College / University' }
-            ],
-            gradePrefix: "Grade ",
-            timezone: "EST"
-          },
-          uk: {
-            levels: [
-              { id: 'primary', label: 'Primary School' },
-              { id: 'secondary', label: 'Secondary School' },
-              { id: 'sixth', label: 'Sixth Form' },
-              { id: 'college', label: 'University' }
-            ],
-            gradePrefix: "Year ",
-            timezone: "GMT"
-          },
-          au: {
-            levels: [
-              { id: 'primary', label: 'Primary School' },
-              { id: 'secondary', label: 'Secondary School' },
-              { id: 'college', label: 'University' }
-            ],
-            gradePrefix: "Year ",
-            timezone: "AEST"
-          },
-          ir: {
-            levels: [
-              { id: 'primary', label: 'Primary School' },
-              { id: 'middle', label: 'Middle School' },
-              { id: 'high', label: 'High School' },
-              { id: 'college', label: 'University' }
-            ],
-            gradePrefix: "Grade ",
-            timezone: "IRST"
-          }
-        },
-        specificGrade: "Select Specific Grade",
-        type: "Tutoring Type",
-        online: "Online",
-        inPerson: "In person",
-        address: "Address or Postal Code",
-        notEligible: "In person tutoring is currently only available in the North York, Vaughan, Richmond Hill, and Scarborough areas. We'd love to help you Online!",
-        availability: "Preferred Availability",
-        days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-        times: ["Morning (9 to 12)", "Afternoon (12 to 4)", "Evening (4 to 8)"],
-      }
-    },
     auth: {
       loginTitle: "Welcome Back",
       loginSubtitle: "Log in to manage your sessions and payments.",
@@ -290,7 +185,37 @@ export const translations = {
       historyDate: "Date",
       historyItem: "Item",
       historyQty: "Qty",
-      historyAmount: "Amount"
+      historyAmount: "Amount",
+      classes: {
+        title: "My Classes",
+        intro: "Book your classes with your session balance and see them on your calendar.",
+        bookTitle: "Book a Class",
+        typeLabel: "Session type",
+        onlineOption: "Online",
+        inPersonOption: "In-person",
+        creditsSuffix: "left",
+        dateLabel: "Date",
+        timeLabel: "Time (Toronto)",
+        bookButton: "Book Class",
+        booking: "Booking...",
+        booked: "Class booked! It's on your calendar.",
+        upcomingTitle: "Upcoming Classes",
+        noUpcoming: "No classes booked yet.",
+        cancelButton: "Cancel",
+        confirmCancel: "Cancel this class? The session will be returned to your balance.",
+        needCredits: "You don't have any sessions left.",
+        needCreditsLink: "Buy sessions below to book a class.",
+        timezoneNote: "All times are Toronto time (Eastern).",
+        legendToday: "Today",
+        legendClass: "Class day",
+        errors: {
+          invalidSlot: "Please choose a valid date and time.",
+          pastDate: "Please choose a time in the future.",
+          slotTaken: "That time slot is already taken. Please pick another one.",
+          noCredits: "You don't have enough session credits for this type.",
+          generic: "Something went wrong. Please try again."
+        }
+      }
     },
     footer: {
       tagline: "Empowering students through personalized math excellence.",
@@ -310,7 +235,8 @@ export const translations = {
       global: "تدریس بین‌المللی",
       packages: "قیمت‌گذاری",
       faq: "سوالات متداول",
-      join: "ثبت‌نام کلاس‌ها",
+      getStarted: "شروع کنید",
+      buySessions: "خرید جلسات",
       login: "ورود",
       account: "حساب کاربری"
     },
@@ -422,112 +348,6 @@ export const translations = {
       subtitle: "سوال دارید؟ ما پاسخ داریم. اینجا رایج‌ترین سوالات والدین و دانش‌آموزان است.",
       seeAll: "مشاهده همه سوالات"
     },
-    contact: {
-      subtitle: "در تماس باشید",
-      title: "ثبت‌نام در کلاس‌ها",
-      description: "اولین قدم به سوی موفقیت در ریاضی را بردارید. فرم زیر را پر کنید و سپس زمان جلسه آشنایی رایگان ۱۵ دقیقه‌ای را انتخاب کنید.",
-      info: {
-        email: "ایمیل",
-        phone: "تلفن",
-        bilingual: "پشتیبانی دوزبانه",
-        bilingualDesc: "انگلیسی و فارسی (Farsi)",
-        location: "محل برگزاری",
-        locationDesc: "آنلاین و حضوری",
-        price: "قیمت",
-        priceDesc: "۲۰ دلار / جلسه",
-      },
-      services: {
-        title: "نوع آموزش مورد نظر را انتخاب کنید",
-        online: {
-          title: "آموزش آنلاین",
-          price: "۲۰ دلار / جلسه"
-        },
-        inPerson: {
-          title: "آموزش حضوری",
-          price: "۳۰ دلار / جلسه"
-        },
-        coverageNote: "کلاس‌های حضوری در حال حاضر در مناطق نورت یورک، وان، ریچموند هیل و اسکاربورو ارائه می‌شوند. آدرس دقیق شما در ادامه بررسی خواهد شد.",
-        trialNote: "توجه: اولین جلسه شما (جلسه آزمایشی ۱۵ دلاری) همیشه به‌صورت آنلاین برگزار می‌شود، حتی اگر آموزش حضوری را انتخاب کرده باشید. کلاس‌های حضوری از جلسه بعد آغاز می‌شوند."
-      },
-      form: {
-        bookDirect: "رزرو کلاس",
-        or: "یا",
-        studentName: "نام و نام خانوادگی دانش‌آموز",
-        email: "آدرس ایمیل",
-        phone: "شماره تماس",
-        grade: "پایه تحصیلی فعلی",
-        message: "اطلاعات بیشتر (اختیاری)",
-        submit: "ارسال درخواست",
-        success: "درخواست با موفقیت ارسال شد! آوین به زودی با شما تماس می‌گیرد.",
-        country: "کشور خود را انتخاب کنید",
-        countries: [
-          { id: 'ca', label: 'کانادا (Canada)' },
-          { id: 'us', label: 'ایالات متحده (USA)' },
-          { id: 'uk', label: 'انگلستان (UK)' },
-          { id: 'au', label: 'استرالیا (Australia)' },
-          { id: 'ir', label: 'ایران (Iran)' }
-        ],
-        systems: {
-          ca: {
-            levels: [
-              { id: 'elementary', label: 'دبستان و راهنمایی' },
-              { id: 'secondary', label: 'دبیرستان' },
-              { id: 'college', label: 'کالج / دانشگاه' }
-            ],
-            gradePrefix: "پایه ",
-            timezone: "EST"
-          },
-          us: {
-            levels: [
-              { id: 'elementary', label: 'دبستان' },
-              { id: 'middle', label: 'راهنمایی' },
-              { id: 'high', label: 'دبیرستان' },
-              { id: 'college', label: 'کالج / دانشگاه' }
-            ],
-            gradePrefix: "پایه ",
-            timezone: "EST"
-          },
-          uk: {
-            levels: [
-              { id: 'primary', label: 'دبستان (Primary)' },
-              { id: 'secondary', label: 'دبیرستان (Secondary)' },
-              { id: 'sixth', label: 'پیش‌دانشگاهی (Sixth Form)' },
-              { id: 'college', label: 'دانشگاه' }
-            ],
-            gradePrefix: "سال ",
-            timezone: "GMT"
-          },
-          au: {
-            levels: [
-              { id: 'primary', label: 'دبستان (Primary)' },
-              { id: 'secondary', label: 'دبیرستان (Secondary)' },
-              { id: 'college', label: 'دانشگاه' }
-            ],
-            gradePrefix: "سال ",
-            timezone: "AEST"
-          },
-          ir: {
-            levels: [
-              { id: 'primary', label: 'دبستان' },
-              { id: 'middle', label: 'متوسطه اول' },
-              { id: 'high', label: 'متوسطه دوم' },
-              { id: 'college', label: 'دانشگاه' }
-            ],
-            gradePrefix: "پایه ",
-            timezone: "IRST"
-          }
-        },
-        specificGrade: "انتخاب پایه دقیق",
-        type: "نوع آموزش",
-        online: "آنلاین",
-        inPerson: "حضوری",
-        address: "آدرس یا کد پستی",
-        notEligible: "آموزش حضوری در حال حاضر فقط در مناطق North York، Vaughan، Richmond Hill و Scarborough امکان‌پذیر است. خوشحال می‌شویم به صورت آنلاین در خدمت شما باشیم!",
-        availability: "زمان‌های پیشنهادی",
-        days: ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنج‌شنبه", "جمعه"],
-        times: ["صبح (۹ تا ۱۲)", "عصر (۱۲ تا ۴)", "غروب (۴ تا ۸)"],
-      }
-    },
     auth: {
       loginTitle: "خوش برگشتید",
       loginSubtitle: "برای مدیریت جلسات و پرداخت‌های خود وارد شوید.",
@@ -593,7 +413,37 @@ export const translations = {
       historyDate: "تاریخ",
       historyItem: "مورد",
       historyQty: "تعداد",
-      historyAmount: "مبلغ"
+      historyAmount: "مبلغ",
+      classes: {
+        title: "کلاس‌های من",
+        intro: "با موجودی جلسات خود کلاس رزرو کنید و آن‌ها را در تقویم ببینید.",
+        bookTitle: "رزرو کلاس",
+        typeLabel: "نوع جلسه",
+        onlineOption: "آنلاین",
+        inPersonOption: "حضوری",
+        creditsSuffix: "باقی‌مانده",
+        dateLabel: "تاریخ",
+        timeLabel: "ساعت (به وقت تورنتو)",
+        bookButton: "رزرو کلاس",
+        booking: "در حال رزرو...",
+        booked: "کلاس رزرو شد! در تقویم شما نمایش داده می‌شود.",
+        upcomingTitle: "کلاس‌های پیش رو",
+        noUpcoming: "هنوز کلاسی رزرو نکرده‌اید.",
+        cancelButton: "لغو",
+        confirmCancel: "این کلاس لغو شود؟ جلسه به موجودی شما بازگردانده می‌شود.",
+        needCredits: "جلسه‌ای باقی نمانده است.",
+        needCreditsLink: "برای رزرو کلاس، از بخش زیر جلسه بخرید.",
+        timezoneNote: "همه ساعت‌ها به وقت تورنتو است.",
+        legendToday: "امروز",
+        legendClass: "روز کلاس",
+        errors: {
+          invalidSlot: "لطفاً تاریخ و ساعت معتبری انتخاب کنید.",
+          pastDate: "لطفاً زمانی در آینده انتخاب کنید.",
+          slotTaken: "این بازه زمانی قبلاً رزرو شده است. لطفاً زمان دیگری انتخاب کنید.",
+          noCredits: "برای این نوع جلسه، موجودی کافی ندارید.",
+          generic: "مشکلی پیش آمد. لطفاً دوباره تلاش کنید."
+        }
+      }
     },
     footer: {
       tagline: "توانمندسازی دانش‌آموزان از طریق تعالی در ریاضیات.",
