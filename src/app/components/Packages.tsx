@@ -38,10 +38,9 @@ export default function Packages() {
             <div className={styles.priceBlock}>
               <span className={styles.price}>{plan.price}</span>
               <span className={styles.priceUnit}>/ {t.perSession}</span>
+              <span className={styles.priceMode}><LaptopIcon /> {t.onlineLabel}</span>
             </div>
             <p className={styles.priceSub}>
-              <span className={styles.priceMode}><LaptopIcon /> {t.onlineLabel}</span>
-              <span className={styles.priceDot}>·</span>
               <span>{t.inPersonRate}</span>
             </p>
 
