@@ -146,7 +146,7 @@ export const translations = {
       form: {
         bookDirect: "Book Your Class",
         or: "OR",
-        studentName: "Student Name",
+        studentName: "Student Full Name",
         email: "Email Address",
         phone: "Phone Number",
         grade: "Current Grade / Level",
@@ -379,7 +379,7 @@ export const translations = {
       form: {
         bookDirect: "رزرو کلاس",
         or: "یا",
-        studentName: "نام دانش‌آموز",
+        studentName: "نام و نام خانوادگی دانش‌آموز",
         email: "آدرس ایمیل",
         phone: "شماره تماس",
         grade: "پایه تحصیلی فعلی",

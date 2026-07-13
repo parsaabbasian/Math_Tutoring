@@ -9,6 +9,7 @@ interface CalendlyModalProps {
     email?: string;
     phone?: string;
     tutoringMode?: string;
+    tutoringType?: 'online' | 'in-person';
     country?: string;
     grade?: string;
     address?: string;
@@ -25,19 +26,24 @@ const CalendlyModal = ({ isOpen, onClose, prefill }: CalendlyModalProps) => {
     calendlyRef.current.innerHTML = '';
     setLoaded(false);
 
+    const customAnswers: Record<string, string> = {
+      a1: prefill?.phone || '',
+      a2: prefill?.tutoringMode || '',
+      a3: prefill?.country || '',
+      a4: prefill?.grade || '',
+    };
+
+    if (prefill?.tutoringType === 'in-person' && prefill?.address) {
+      customAnswers.a5 = prefill.address;
+    }
+
     (window as any).Calendly.initInlineWidget({
-      url: 'https://calendly.com/parsa-abbasian-06/30min',
+      url: 'https://calendly.com/parsa-abbasian-06/new-meeting',
       parentElement: calendlyRef.current,
       prefill: {
         name: prefill?.name || '',
         email: prefill?.email || '',
-        customAnswers: {
-          a1: prefill?.phone || '',
-          a2: prefill?.tutoringMode || '',
-          a3: prefill?.country || '',
-          a4: prefill?.grade || '',
-          a5: prefill?.address || '',
-        },
+        customAnswers,
       },
       utm: {},
     });
@@ -83,7 +89,7 @@ const CalendlyModal = ({ isOpen, onClose, prefill }: CalendlyModalProps) => {
       if (pollRef.current) clearInterval(pollRef.current);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen]);
+  }, [isOpen, prefill]);
 
   return (
     <div className={`modal-overlay ${isOpen ? 'modal-active' : ''}`} onClick={onClose}>

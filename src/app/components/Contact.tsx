@@ -5,6 +5,16 @@ import { useLocation } from '../context/LocationContext';
 import { translations } from '../translations';
 import styles from './Contact.module.css';
 import CalendlyModal from './CalendlyModal';
+import {
+  PHONE_COUNTRIES,
+  PhoneCountryId,
+  formatFullPhone,
+  formatPhoneCountryLabel,
+  getPhoneCountry,
+  isoToPhoneCountryId,
+  isValidLocalPhone,
+  phonePlaceholder,
+} from '../utils/phoneCountries';
 
 const MailIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -47,7 +57,7 @@ const MapPinIcon = () => (
 
 export default function Contact() {
   const { language, isRTL } = useLanguage();
-  const { allowInPerson } = useLocation();
+  const { allowInPerson, geo } = useLocation();
   const t = translations[language].contact;
   const [tutoringType, setTutoringType] = useState<'online' | 'in-person'>('online');
 
@@ -59,6 +69,7 @@ export default function Contact() {
       setEligibility({ status: 'idle' });
     }
   }, [allowInPerson, tutoringType]);
+
   const [address, setAddress] = useState('');
   const [eligibility, setEligibility] = useState<
     | { status: 'idle' }
@@ -76,9 +87,32 @@ export default function Contact() {
   const countryDropdownRef = useRef<HTMLDivElement>(null);
   const [prefill, setPrefill] = useState<{
     name: string; email: string; phone: string;
-    tutoringMode: string; country: string; grade: string; address: string;
-  }>({ name: '', email: '', phone: '', tutoringMode: '', country: '', grade: '', address: '' });
+    tutoringMode: string; tutoringType: 'online' | 'in-person';
+    country: string; grade: string; address: string;
+  }>({ name: '', email: '', phone: '', tutoringMode: '', tutoringType: 'online', country: '', grade: '', address: '' });
   const [selectedSpecificGrade, setSelectedSpecificGrade] = useState<string>('');
+  const [phoneCountryId, setPhoneCountryId] = useState<PhoneCountryId>('ca');
+  const [phoneLocal, setPhoneLocal] = useState('');
+  const phoneCountryTouched = useRef(false);
+  const geoInitialized = useRef(false);
+
+  // Auto-detect country from visitor location on first load
+  useEffect(() => {
+    if (geoInitialized.current || !geo?.country) return;
+    geoInitialized.current = true;
+    const detected = isoToPhoneCountryId(geo.country);
+    setSelectedCountry(detected);
+    if (!phoneCountryTouched.current) {
+      setPhoneCountryId(detected);
+    }
+  }, [geo]);
+
+  // Keep phone dial code in sync with the school-country selection
+  useEffect(() => {
+    if (PHONE_COUNTRIES.some((c) => c.id === selectedCountry)) {
+      setPhoneCountryId(selectedCountry as PhoneCountryId);
+    }
+  }, [selectedCountry]);
 
   const getSpecificGrades = (country: string, levelId: string) => {
     if (levelId === 'college' || levelId === 'university' || levelId === 'sixth') {
@@ -199,10 +233,10 @@ export default function Contact() {
     const formData = new FormData(formRef.current);
     const studentName = (formData.get('studentName') as string || '').trim();
     const email = (formData.get('email') as string || '').trim();
-    const phone = (formData.get('phone') as string || '').trim();
+    const phone = formatFullPhone(getPhoneCountry(phoneCountryId).dial, phoneLocal);
 
     // Check required fields
-    if (!studentName || !email || !phone || !selectedSchoolLevel) return false;
+    if (!studentName || !email || !isValidLocalPhone(phoneLocal) || !selectedSchoolLevel) return false;
 
     // Check if specific grade is selected when school level is selected
     if (selectedSchoolLevel) {
@@ -238,10 +272,13 @@ export default function Contact() {
       ? `${levelLabel}, ${selectedSpecificGrade}`
       : levelLabel;
 
+    const fullPhone = formatFullPhone(getPhoneCountry(phoneCountryId).dial, phoneLocal);
+
     setPrefill({
       name: (data.get('studentName') as string) || '',
       email: (data.get('email') as string) || '',
-      phone: (data.get('phone') as string) || '',
+      phone: fullPhone,
+      tutoringType,
       tutoringMode: tutoringType === 'online'
         ? (language === 'en' ? 'Online Tutoring ($20/hr)' : 'آموزش آنلاین (۲۰ دلار/ساعت)')
         : (language === 'en' ? 'In Person Tutoring ($30/hr)' : 'آموزش حضوری (۳۰ دلار/ساعت)'),
@@ -357,20 +394,47 @@ export default function Contact() {
                 />
               </div>
 
-              <div className={styles.row}>
-                <div className={styles.inputGroup}>
-                  <label htmlFor="email" className={styles.label}>
-                    {t.form.email}
-                    <RequiredMark className={styles.requiredMark} />
-                  </label>
-                  <input type="email" id="email" name="email" className={styles.input} required placeholder="email@example.com" dir="ltr" />
-                </div>
-                <div className={styles.inputGroup}>
-                  <label htmlFor="phone" className={styles.label}>
-                    {t.form.phone}
-                    <RequiredMark className={styles.requiredMark} />
-                  </label>
-                  <input type="tel" id="phone" name="phone" className={styles.input} required placeholder={language === 'fa' ? '۰۹۱۲۰۰۰۰۰۰۰' : '(555) 000-0000'} />
+              <div className={styles.inputGroup}>
+                <label htmlFor="email" className={styles.label}>
+                  {t.form.email}
+                  <RequiredMark className={styles.requiredMark} />
+                </label>
+                <input type="email" id="email" name="email" className={styles.input} required placeholder="email@example.com" dir="ltr" />
+              </div>
+
+              <div className={styles.inputGroup}>
+                <label htmlFor="phone" className={styles.label}>
+                  {t.form.phone}
+                  <RequiredMark className={styles.requiredMark} />
+                </label>
+                <div className={styles.phoneInputWrap} dir="ltr">
+                  <select
+                    id="phoneCountry"
+                    className={styles.phoneCountrySelect}
+                    value={phoneCountryId}
+                    onChange={(e) => {
+                      phoneCountryTouched.current = true;
+                      setPhoneCountryId(e.target.value as PhoneCountryId);
+                    }}
+                    aria-label={language === 'fa' ? 'کد کشور' : 'Country code'}
+                  >
+                    {PHONE_COUNTRIES.map((country) => (
+                      <option key={country.id} value={country.id} title={country.label}>
+                        {formatPhoneCountryLabel(country)}
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className={styles.phoneLocalInput}
+                    required
+                    value={phoneLocal}
+                    onChange={(e) => setPhoneLocal(e.target.value)}
+                    placeholder={phonePlaceholder(phoneCountryId, language)}
+                    autoComplete="tel-national"
+                  />
                 </div>
               </div>
 
